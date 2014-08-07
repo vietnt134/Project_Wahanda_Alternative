@@ -1,12 +1,10 @@
 <?php
 
-// Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', '//'.$_SERVER['HTTP_HOST'].'/VeMayBay/');
-define('LIBS', 'Libs/');
 
+// Config database
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'dbvemaybay');
+define('DB_NAME', 'db_');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 

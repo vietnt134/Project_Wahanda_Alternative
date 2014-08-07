@@ -11,7 +11,7 @@ class Auth
         $isAdmin = $_SESSION['Admin'];
         if ($isAdmin == false) {
             session_destroy();
-            header('location:' . URL .'admincp');
+            header('location:' . URL . 'admincp');
             exit;
         }
     }
