@@ -1,0 +1,40 @@
+body {
+	background: url(../images/bodybg.gif);
+	background-position: right top;
+}
+
+#header {
+	padding: 20px;
+	background: gold;
+}
+
+.error{
+	color: #DB0000;
+	/*font-weight: bold;*/
+}
+
+a{
+	text-decoration: none !important;
+}
+
+*{
+	border-radius: 0px !important;
+}
+
+.text-orange{
+	color: #F5740A;
+}
+
+.text-yellow{
+	color: #EEBD39;
+}
+
+#content {
+	background: #fff;
+	padding: 20px;
+}
+
+#footer {
+	background: green;
+	padding: 20px;
+}
