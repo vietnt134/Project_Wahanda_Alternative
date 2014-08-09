@@ -32,4 +32,14 @@ class View {
 		}
 	}
 
+	public function render_spaCMS($name, $noInclude = false) {
+		if ($noInclude == TRUE) {
+			require 'Views/spaCMS/' . $name . '.php';
+		} else {
+			require 'Views/spaCMS/header.php';
+			require 'Views/spaCMS/' . $name . '.php';
+			require 'Views/spaCMS/footer.php';
+		}
+	}
+
 }
