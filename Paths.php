@@ -9,14 +9,14 @@ define('PJ_NAME', 'Project_Wahanda_Alternative');
 define('DS', DIRECTORY_SEPARATOR);
 
 // Always provide a TRAILING SLASH (/) AFTER A PATH
-define('URL', DS . DS . $_SERVER['HTTP_HOST'] . DS . PJ_NAME . DS);
+define('URL', '//' . $_SERVER['HTTP_HOST'] . '/' . PJ_NAME . '/');
 
-define('LIBS', 'Libs' . DS);
+define('LIBS', 'Libs/');
 
-define('OTHER_LIBS', 'Libs' . DS . 'other' . DS);
+define('OTHER_LIBS', 'Libs/other/');
 
-define('PUBLIC', URL . 'public' . DS);
+define('PUBLIC', URL . 'public/');
 
-define('ASSETS', URL . 'public' . DS . 'assets' . DS);
+define('ASSETS', URL . 'public/assets/');
 
 

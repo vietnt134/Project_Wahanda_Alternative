@@ -13,7 +13,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <title>Website desktop version</title>
+        <title></title>
         <meta name="description" content="" />
         <meta name="author" content="TrongLoi" />
 
@@ -24,61 +24,58 @@
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
         <!-- Chèn link CSS -->
-        <link rel="stylesheet" href="<?php echo URL ?>public/css/bootstrap.min.css" type="text/css"  />
+        <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/spaCMS.css" type="text/css"  />
 
 
         <!-- Chèn link JavaScript-->
         <script src="<?php echo URL ?>public/js/jquery.min.js" type="text/javascript"></script>
         <script src="<?php echo URL ?>public/js/bootstrap.min.js" type="text/javascript"></script>
-
-        <!-- Extends -->
-        <link rel="stylesheet" href="<?php echo URL ?>public/css/admincp/admin.login.css" type="text/css"  />
     
     </head>
 
-    <body>
-        	<header>
-            
-        	</header>
-
-			<section class='admin-login'>
-    		<div class="container">
-		        <div class="panel panel-primary">
-		                    <div class="panel-heading">
-		                        <h4 class="text-center"><b>ADMIN CONTROL PANEL</b></h4>
-		                    </div>
-		                    <div class="panel-body">
-		                        <div class="panel-inner">
-		                            <form role="form" action="<?php echo URL ?>admincp/login" method="POST" class='admin-login-form'>
-		                                <fieldset>
-		                                    <div class="form-group">
-		                                        <label for="admin-email">Email:</label>
-		                                        <input id="admin-email" type="email" class="form-control" placeholder="Admin Email" name="user_email"/>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <label for="admin-password">Password: </label>
-		                                        <input id="admin-password" type="password" class="form-control" placeholder="Admin Password" name="user_password"/>
-		                                    </div>
-		                                    <div class="form-group">
-		                                        <input type="submit" class="btn btn-primary" value="Login" name="login"/>
-		                                        <a href="<?php echo URL ?>" class="btn btn-default">Trở về trang chủ</a>
-		                                    </div>
-		                                </fieldset>
-		                            </form>
-		                        </div>
-		                    </div>
-		                    <div class="panel-footer">
-		                        <p class="text-warning pull-right"><i>Just only for admin</i></p>
-		                        <div class="clearfix"></div>
-		                    </div>
-		        </div>  
-        	</div>
-    	</section>
-
-
-    	<footer>
-        	
-    	</footer>
+    <body class="loading login-page">
+		<div id="login-page">
+			<div class="wrapper1">
+			    <div class="wrapper2">
+			        <div data-web-developer-element-ancestors-outline="true" style="outline: 1px solid rgb(185, 74, 72);" class="wrapper3">
+			            <h1>Wahanda Connect</h1>
+			            <form novalidate="novalidate" class="login-form">
+				            <label class="unauthorised-error-message error-message hidden">
+			        			Sorry, we were unable to log you in. Please check your username and password are correct.
+			        		</label>
+				            <div class="no-venues-error-message error-message hidden">
+			        			Sorry, there are no venues associated with this account.
+			        		</div>
+		                	<input name="user" class="required v-email-or-profilename valid" placeholder="Email" type="email">
+			                <input name="password" class="required" placeholder="Password" type="password">
+			
+			                <label class="remember">
+			                    <input name="remember" type="checkbox">
+			                    <span class="text">Keep me logged in</span>
+			                </label>
+			                <a class="forgot" href="https://www.wahanda.com/request-password/">Forgot your password?</a> 
+			
+			                <button class="button">Log in</button>
+			            </form>
+			
+			            <div class="signup">
+			                <h2>Don't have business profile?</h2>
+			                <a href="https://www.wahanda.com/business/signup/" class="button">Register</a>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			
+			<div class="footer">
+			    <div class="logo"></div>
+			    <ul>
+			        <li><a href="https://www.wahanda.com/info/about-us/">About Us</a></li>
+			        <li><a href="https://www.wahanda.com/info/get-in-touch/">Contact Us</a></li>
+			        <li class="terms">Terms Of Service</li>
+			        <li>© 2009-2014 WAHANDA</li>
+			    </ul>
+			</div>
+		</div>
     </body>
 </html>
 
