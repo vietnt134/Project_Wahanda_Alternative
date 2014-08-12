@@ -18,7 +18,17 @@
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
         <!-- Chèn link CSS -->
+        <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/bootstrap.min.css" type="text/css"  />
+
+        <link rel="stylesheet" href="<?php echo URL ?>public/assets/plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />
+
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/spaCMS.css" type="text/css"  />
+
+        <style type="text/css">
+            * {
+                box-sizing: content-box !important;
+            }
+        </style>
 
         <?php
             if(isset($this->style)){
@@ -53,7 +63,7 @@
                             </li>
 
                             <li>
-                                <a href="/settings?prevalidate=fulfillment#venue/285925/notifications-settings/fulfillment"> <span class="notification-item">Fulfillment address not set</span> </a>
+                                <a href="./settings?prevalidate=fulfillment#venue/285925/notifications-settings/fulfillment"> <span class="notification-item">Fulfillment address not set</span> </a>
                             </li>
                         </ul>
                         <div class="notification-badge-wrapper">
@@ -63,7 +73,7 @@
 
                 </li>
                 <li id="nav-home">
-                    <a title="Home" href="./dashboard"> <div class="icons-nav-home"></div>
+                    <a title="Home" href="./home"> <div class="icons-nav-home"></div>
                     <div class="title">
                         Home
                     </div> </a>

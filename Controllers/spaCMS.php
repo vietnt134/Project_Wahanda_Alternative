@@ -13,9 +13,9 @@
 			$this->view->render_spaCMS('index', true);
 		}
 		
-		function dashboard() {
+		function home() {
 			// Auth::handleLogin();
-			$this->view->render_spaCMS('dashboard/index');
+			$this->view->render_spaCMS('home/index');
 		}
 
 		function menu() {

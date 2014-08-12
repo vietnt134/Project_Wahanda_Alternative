@@ -9,6 +9,7 @@
 
     <script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
 
+   
     <script type="text/javascript">
 	  	// Active menu	
         $(function() {
@@ -22,7 +23,9 @@
         });
     </script>
     
+
     <?php
+        // Include script modul
         if(isset($this->script)){
             foreach ($this->script as $script) {
                 echo '<script type="text/javascript" src="'. $script .'" ></script>';

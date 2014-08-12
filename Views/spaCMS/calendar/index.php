@@ -3,12 +3,83 @@
 		<div class="calendar-wrapper">
 			<div class="calendar-buttons">
 				<div class="redeem-evoucher-box">
-					<button class="button button-primary button-flexible redeem" type="button"><div class="button-inner"><div class="button-icon icons-voucher"></div>Redeem an eVoucher</div></button>
+					<button class="button button-primary button-flexible redeem" type="button" data-toggle="modal" data-target="#redeemVoucher_modal">
+						<div class="button-inner">
+							<div class="button-icon icons-voucher"></div>
+							Redeem an eVoucher
+
+						</div>
+					</button>
 				</div>
 			</div>
 
-			<div id="calendar-datepicker" class="small-calendar hasDatepicker"><div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;"><div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all"><a title="Prev" data-event="click" data-handler="prev" class="ui-datepicker-prev ui-corner-all"><span class="ui-icon ui-icon-circle-triangle-w">Prev</span></a><a title="Next" data-event="click" data-handler="next" class="ui-datepicker-next ui-corner-all"><span class="ui-icon ui-icon-circle-triangle-e">Next</span></a><div class="ui-datepicker-title"><span class="ui-datepicker-month">August</span>&nbsp;<span class="ui-datepicker-year">2014</span></div></div><table class="ui-datepicker-calendar"><thead><tr><th><span title="Monday">Mo</span></th><th><span title="Tuesday">Tu</span></th><th><span title="Wednesday">We</span></th><th><span title="Thursday">Th</span></th><th><span title="Friday">Fr</span></th><th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th><th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th></tr></thead><tbody><tr><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">1</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">2</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">3</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">4</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">5</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">6</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">7</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">8</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">9</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-calendar-visible-week non-working-hours ui-datepicker-current-day ui-datepicker-today"><a href="#" class="ui-state-default ui-state-highlight ui-state-active ui-state-hover">10</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">11</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">12</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">13</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">14</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">15</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">16</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">17</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">18</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">19</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">20</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">21</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">22</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">23</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">24</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">25</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">26</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">27</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">28</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">29</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">30</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">31</a></td></tr></tbody></table></div></div>
-			<div id="month-calendar" class="month-calendar"><div class="month-calendar-header"><a title="Prev" class="month-calendar-prev"><span class="arrow-left">Prev</span></a><a title="Next" class="month-calendar-next"><span class="arrow-right">Next</span></a><span class="month-calendar-year">2014</span></div><table class="month-calendar-body"><tbody><tr><td data-month="0"><a class="" href="#">Jan</a></td><td data-month="1"><a class="" href="#">Feb</a></td><td data-month="2"><a class="" href="#">Mar</a></td></tr><tr><td data-month="3"><a class="" href="#">Apr</a></td><td data-month="4"><a class="" href="#">May</a></td><td data-month="5"><a class="" href="#">Jun</a></td></tr><tr><td data-month="6"><a class="" href="#">Jul</a></td><td data-month="7"><a class="month-calendar-this-month month-calendar-selected " href="#">Aug</a></td><td data-month="8"><a class="" href="#">Sep</a></td></tr><tr><td data-month="9"><a class="" href="#">Oct</a></td><td data-month="10"><a class="" href="#">Nov</a></td><td data-month="11"><a class="" href="#">Dec</a></td></tr></tbody></table></div>
+			<div id="calendar-datepicker" class="small-calendar hasDatepicker">
+				<div class="ui-datepicker-inline ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" style="display: block;">
+					<div class="ui-datepicker-header ui-widget-header ui-helper-clearfix ui-corner-all">
+						<a title="Prev" data-event="click" data-handler="prev" class="ui-datepicker-prev ui-corner-all">
+							<span class="ui-icon ui-icon-circle-triangle-w">Prev</span>
+						</a>
+						<a title="Next" data-event="click" data-handler="next" class="ui-datepicker-next ui-corner-all">
+							<span class="ui-icon ui-icon-circle-triangle-e">Next</span>
+						</a>
+						<div class="ui-datepicker-title">
+							<span class="ui-datepicker-month">August</span>&nbsp;<span class="ui-datepicker-year">2014</span>
+						</div>
+					</div>
+					<table class="ui-datepicker-calendar">
+						<thead>
+							<tr>
+								<th><span title="Monday">Mo</span></th>
+								<th><span title="Tuesday">Tu</span></th>
+								<th><span title="Wednesday">We</span></th>
+								<th><span title="Thursday">Th</span></th>
+								<th><span title="Friday">Fr</span></th>
+								<th class="ui-datepicker-week-end"><span title="Saturday">Sa</span></th>
+								<th class="ui-datepicker-week-end"><span title="Sunday">Su</span></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td class=" ui-datepicker-other-month ui-datepicker-unselectable ui-state-disabled">&nbsp;</td>
+								<td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">1</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">2</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">3</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">4</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">5</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">6</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">7</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class="  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">8</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  ui-datepicker-calendar-visible-week"><a href="#" class="ui-state-default">9</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end ui-datepicker-days-cell-over  ui-datepicker-calendar-visible-week non-working-hours ui-datepicker-current-day ui-datepicker-today"><a href="#" class="ui-state-default ui-state-highlight ui-state-active ui-state-hover">10</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">11</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">12</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">13</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">14</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">15</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">16</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">17</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">18</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">19</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">20</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">21</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">22</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">23</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">24</a></td></tr><tr><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">25</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">26</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">27</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">28</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" "><a href="#" class="ui-state-default">29</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end "><a href="#" class="ui-state-default">30</a></td><td data-year="2014" data-month="7" data-event="click" data-handler="selectDay" class=" ui-datepicker-week-end  non-working-hours"><a href="#" class="ui-state-default">31</a></td></tr></tbody></table></div></div>
+			<div id="month-calendar" class="month-calendar">
+				<div class="month-calendar-header">
+					<a title="Prev" class="month-calendar-prev">
+						<i class="fa fa-arrow-left"></i>
+					</a>
+					<a title="Next" class="month-calendar-next">
+						<i class="fa fa-arrow-right"></i>
+					</a>
+					<span class="month-calendar-year">2014</span>
+				</div>
+				<table class="month-calendar-body">
+					<tbody>
+						<tr>
+							<td data-month="0"><a class="" href="#">Jan</a></td>
+							<td data-month="1"><a class="" href="#">Feb</a></td>
+							<td data-month="2"><a class="" href="#">Mar</a></td>
+						</tr>
+						<tr>
+							<td data-month="3"><a class="" href="#">Apr</a></td>
+							<td data-month="4"><a class="" href="#">May</a></td>
+							<td data-month="5"><a class="" href="#">Jun</a></td>
+						</tr>
+						<tr>
+							<td data-month="6"><a class="" href="#">Jul</a></td>
+							<td data-month="7"><a class="month-calendar-this-month month-calendar-selected " href="#">Aug</a></td>
+							<td data-month="8"><a class="" href="#">Sep</a></td>
+						</tr>
+						<tr>
+							<td data-month="9"><a class="" href="#">Oct</a></td>
+							<td data-month="10"><a class="" href="#">Nov</a></td>
+							<td data-month="11"><a class="" href="#">Dec</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 
 		<div style="top: 254px; display: none;" id="calendar-alerts" class="hidden">
@@ -146,6 +217,119 @@
 		            <div class="button-icon icons-sync"></div>
 		        </div>
 		    </button>
+		</div>
+	</div>
+</div>
+
+
+<!-- Modal redeemVoucher_modal-->
+<div id="redeemVoucher_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-voucher-redemption" aria-hidden="true">
+	<div class="modal-dialog ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+	    <div class="modal-content">
+		    <div style="height: auto; width: 500px;" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-voucher-redemption">
+		    	<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+		    		<span class="ui-dialog-title" id="ui-dialog-title-voucher-redemption">eVoucher</span>
+		    		<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
+		    			<span class="ui-icon ui-icon-closethick">close</span>
+		    		</a>
+		    	</div>
+		    	<div id="voucher-redemption" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
+					<div class="voucher-search">
+						<form novalidate="novalidate">
+							<div class="icon icons-logo-vouchers"></div>
+
+							<div class="reference-container txt-input txt-input-big">
+								<input type="tel" class="required evoucher-code valid" name="voucher-reference">
+								<div class="clear-search"><div class="icons-delete3"></div></div>
+							</div>
+							<button class="button action action-default button-primary find-action" type="submit"><div class="button-inner"><span class="msg msg-action-default">Find</span><span class="msg msg-action-doing">Searching...</span></div></button>
+						</form>
+					</div>
+					<div class="voucher-redemption-wrapper">
+						<div class="voucher-note voucher-start" style="position: relative;">
+							<div class="voucher-note-inner vertically-centered" style="position: absolute; height: 101px; top: 50%; margin-top: -50.5px;">
+								<p class="main-title">Please enter eVoucher number</p>
+								<ul class="simple-list">
+									<li>Look for eVoucher number on the booking confirmation email.</li>
+									<li>Redeem eVoucher bookings only. For appointments, you just need to confirm them to get paid.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="voucher-note voucher-searching hidden">
+							<div class="voucher-note-inner vertically-centered">
+								<div class="icon"></div>
+								Searching...
+							</div>
+						</div>
+						<div class="voucher-note voucher-not-found hidden">
+							<div class="voucher-note-inner vertically-centered">
+								Voucher not found.
+								<span>Please check that you have entered the voucher number correctly.</span>
+							</div>
+						</div>
+						<div class="voucher-note voucher-belongs hidden">
+							<div class="voucher-note-inner vertically-centered">
+								Voucher belongs to another venue
+								<span><a class="login-link" target="_blank" href="/login?route=%2Fhome">Do you want to login as different user?</a></span>
+							</div>
+						</div>
+						<div class="voucher-info hidden">
+							<ul class="voucher-container">
+								<li class="price-wrapper">
+									<span class="evoucher-price"></span>
+								</li>
+								<li class="title-wrapper">
+									<span class="title"></span>
+								</li>
+								<li class="status-wrapper status-active">
+									Status:
+									<span class="evoucher-status status-txt"></span>
+								</li>
+								<li class="expiration-wrapper">
+									<span class="label-wrapper">Expires on</span>
+									<span class="evoucher-expiry"></span>
+								</li>
+								<li class="recipient-wrapper">
+									<span class="label-wrapper">Recipient</span>
+									<span class="evoucher-recipient"></span>
+								</li>
+							</ul>
+							<div class="meta-wrapper">
+								Order ref#:
+								<span class="evoucher-order-ref"></span>
+
+								<span class="b-booking-link hidden">
+									<span class="separator">|</span>
+									Booking ID:
+									<a class="evoucher-booking-id" href="javascript:;"></a>
+								</span>
+							</div>
+							<div class="venue-wrapper hidden">
+								<form novalidate="novalidate">
+									<table cellspacing="0" cellpadding="0" class="default-form ">
+										<tbody><tr class="form-row">
+											<td class="label-part"><label for="voucher-redemption-venue-id">Redeem at this venue:</label></td>
+											<td class="input-part evoucher-venue-container"></td>
+										</tr>
+									</tbody></table>
+								</form>
+							</div>
+							<div class="message-wrapper message-valid hidden">
+								<div class="message">
+									<span class="v-message-title">Voucher redeemed</span>
+									<span class="payment-date b-payment-date v-payment-date"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="dialog-actions">
+						<button class="button action action-default button-primary redeem-another hidden" type="button"><div class="button-inner"><div class="button-icon icons-voucher"></div>Redeem another</div></button>
+						<button class="button action action-default button-primary redeem-action hidden" type="button"><div class="button-inner"><div class="button-icon icons-voucher"></div><span class="msg msg-action-default">Redeem</span><span class="msg msg-action-doing">Working...</span></div></button>
+						<button class="button button-primary a-create-appointment hidden" type="button"><div class="button-inner"><div class="button-icon icons-plus"></div>Book an appointment</div></button>
+						<a class="button-cancel a-cancel" data-dismiss="modal" href="javascript:;">Cancel</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
