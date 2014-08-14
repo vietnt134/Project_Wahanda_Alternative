@@ -266,7 +266,7 @@
 			<table>
 				<tbody>
 					<tr>
-						<td data-tooltip="&lt;strong&gt;Wahanda Bookings&lt;/strong&gt; - Number of bookings done so far this month" class="b-bookings">
+						<td title="Number of bookings done so far this month" class="tooltips b-bookings">
 						<div class="graph graph-clicks">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 1" class="bar" style="height: 100%"></span><span title="Aug 2014: 1" class="bar" style="height: 100%"></span>
 						</div>
@@ -274,7 +274,7 @@
 							<span class="title">Wahanda bookings</span>
 							<span class="value v-value">1</span>
 						</div></td>
-						<td data-tooltip="&lt;strong&gt;Visits to Venue Page&lt;/strong&gt; - Number of people who visited the venue page on Wahanda this month" class="b-visits">
+						<td title="Number of people who visited the venue page on Wahanda this month" class="tooltips b-visits">
 						<div class="graph graph-visits">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 1" class="bar" style="height: 100%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>
@@ -282,7 +282,7 @@
 							<span class="title">Visits to Venue Page</span>
 							<span class="value v-value">0</span>
 						</div></td>
-						<td data-tooltip="&lt;strong&gt;Phone views&lt;/strong&gt; - Number of times customers clicked to see the phone number on the venue page this month" class="b-phoneViews">
+						<td title="Number of times customers clicked to see the phone number on the venue page this month" class="tooltips b-phoneViews">
 						<div class="graph graph-pviews">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 0" class="bar" style="height: 5%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>
@@ -290,7 +290,7 @@
 							<span class="title">Phone views</span>
 							<span class="value v-value">0</span>
 						</div></td>
-						<td data-tooltip="&lt;strong&gt;Enquiries&lt;/strong&gt; - Number of sales leads sent from the venue page by Wahanda customers this month" class="b-enquiries">
+						<td title="Number of sales leads sent from the venue page by Wahanda customers this month" class="tooltips b-enquiries">
 						<div class="graph graph-enquiries">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 0" class="bar" style="height: 5%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>

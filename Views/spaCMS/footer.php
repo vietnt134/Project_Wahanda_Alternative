@@ -8,6 +8,8 @@
     <script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
 
     <script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+    
+	<script src="<?php echo URL ?>public/assets/js/spaCMS/spaCMS.js" type="text/javascript"></script>
 
    
     <script type="text/javascript">

@@ -61,7 +61,7 @@
 										<div class="edit"><a class="set-logo" href="javascript:;">Set logo</a></div>
 									</div>
 									<table cellspacing="0" cellpadding="0" class="default-form">
-										<tbody><tr data-tooltip="&lt;strong&gt;Venue name&lt;/strong&gt; - Enter your venue name here - make sure it's all spelt correctly." class="form-row">
+										<tbody><tr title="Venue name - Enter your venue name here - make sure it's all spelt correctly." class="tooltips form-row">
 											<td colspan="2">
 												<div class="txt-input txt-input-big"><input type="text" id="" name="venue-details-name" class="required"></div>
 												<div class="part-of hidden">part of <span class="chain-name"></span></div>

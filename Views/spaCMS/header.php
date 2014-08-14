@@ -18,6 +18,8 @@
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
         <!-- Chèn link CSS -->
+        <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/tooltip.css" type="text/css"  />
+        
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/bootstrap.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />

@@ -118,7 +118,7 @@
 			</div>
 		</div>
 		<div class="data-actions b-menu-edit-actions">
-			<div data-tooltip="&lt;strong&gt;Add a group&lt;/strong&gt; - Menu groups allow you to arrange your services in the way you prefer our customers to see them. Using generic treatment types like &amp;#34;Hair&amp;#34;, &amp;#34;Nails&amp;#34; or &amp;#34;Spa days&amp;#34; works best." class="button-wrapper b-action">
+			<div title='Menu groups allow you to arrange your services in the way you prefer our customers to see them. Using generic treatment types like "Hair&amp", "Nails" or "Spa days" works best.' class="tooltips button-wrapper b-action">
 				<button class="button button-primary add-group" type="button" data-toggle="modal" data-target="#addGroupName_modal">
 					<div class="button-inner">
 						<div class="button-icon icons-plus"></div> Add a group
