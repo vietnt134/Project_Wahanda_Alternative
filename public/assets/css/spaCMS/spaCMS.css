@@ -1262,7 +1262,7 @@ table {
      color: #ffffff;
      cursor: pointer;
      display: inline-block;
-     font-family: DINWebPro,Arial,Helvetica,sans-serif;
+     font-family: OpenSans,Arial,Helvetica,sans-serif;
      font-size: 14px;
      font-weight: bold;
      height: 29px;
@@ -1399,7 +1399,7 @@ a.button {
 }
 
 .button-mini {
-     height: 21px;
+     height: 24px;
 }
 
 .button-mini .button-inner {
@@ -5165,7 +5165,7 @@ table.wc-time-slots {
      padding-right: 5px;
 }
 
-.dated-day-form .dialog-tabs .count, .dated-day-form .dialog-tabs ul .ui-tabs-selected .count, .dated-day-form .dialog-tabs ul .ui-tabs-selected.ui-state-hover .count {
+.dated-day-form .dialog-tabs .count, .dated-day-form .dialog-tabs ul .active .count, .dated-day-form .dialog-tabs ul .active.ui-state-hover .count {
      background: none repeat scroll 0% 0% #9fad00;
      color: #ffffff;
 }
@@ -6714,7 +6714,7 @@ table.wc-time-slots {
 
 .sidebar {
      background: none repeat scroll 0% 0% #f5f5f5;
-     bottom: 0px;
+     /*bottom: 0px;*/
      left: 0px;
      position: absolute;
      top: 0px;
@@ -7442,8 +7442,19 @@ table.wc-time-slots {
 }
 
 @font-face {
+    font-family: 'OpenSans';
+    src: url('OpenSans-Regular-webfont.eot');
+    src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-Regular-webfont.woff') format('woff'),
+         url('OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
   font-family: "DINWebPro";
-  src: url("DINWebPro-eadee3052db73ff3cd7aec0050c765da.eot");
+  src: url("DINWebPro.eot");
 }
 
 @font-face {
@@ -7470,7 +7481,7 @@ html, body {
 body {
      background: none repeat scroll 0% 0% #e5e5e5;
      color: #333333;
-     font: 87% DINWebPro,Arial,Helvetica,sans-serif;
+     font: 87% OpenSans,Arial,Helvetica,sans-serif;
      overflow: hidden;
      z-index: 1;
 }
@@ -7491,7 +7502,7 @@ input, select, textarea {
 
 input, textarea, button {
      color: #111111;
-     font-family: DINWebPro,Arial,Helvetica,sans-serif;
+     font-family: OpenSans,Arial,Helvetica,sans-serif;
      font-size: 14px;
 }
 
@@ -7533,7 +7544,7 @@ input:-moz-placeholder {
      height: 14px;
      line-height: 14px;
      min-width: 12px;
-     padding: 2px 4px 0px;
+     padding: 0px 4px 0px;
      text-align: center;
 }
 
@@ -7549,7 +7560,7 @@ input:-moz-placeholder {
      display: inline-block;
      font-size: 11px;
      font-weight: normal;
-     height: 9px;
+     height: 16px;
      line-height: normal;
      margin-left: 5px;
      padding: 0px 4px 6px;
@@ -7711,7 +7722,7 @@ table .status-wrapper .status-note {
 }
 
 .top-shadow {
-     background: url("/assets/top-shadow-7a51abcde4018259cca104e2033bec89.png") no-repeat scroll center top / 100% 9px transparent;
+     background: url("top-shadow-7a51abcde4018259cca104e2033bec89.png") no-repeat scroll center top / 100% 9px transparent;
      bottom: auto;
      height: 9px;
      left: 0px;
@@ -7723,7 +7734,7 @@ table .status-wrapper .status-note {
 }
 
 .bottom-shadow {
-     background: url("/assets/bottom-shadow-35e91508b502da0e227cd135c54c668a.png") no-repeat scroll center bottom / 100% 9px transparent;
+     background: url("bottom-shadow-35e91508b502da0e227cd135c54c668a.png") no-repeat scroll center bottom / 100% 9px transparent;
      bottom: 65px;
      height: 9px;
      left: 0px;
@@ -7819,12 +7830,12 @@ table .status-wrapper .status-note {
 }
 
 .tab-content {
-     bottom: 0px;
-     left: 0px;
+     /*bottom: 0px;*/
+     /*left: 0px;*/
      padding: 17px;
      position: absolute;
-     right: 0px;
-     top: 31px;
+     /*right: 0px;*/
+     /*top: 31px;*/
 }
 
 .data-content {
@@ -8166,7 +8177,7 @@ table .status-wrapper .status-note {
 }
 
 .date-input {
-     background: url("/assets/icons/calendar-d488ca4f42e54c553965965ec9fb14cc.png") no-repeat scroll 81px 3px #ffffff;
+     background: url("calendar-d488ca4f42e54c553965965ec9fb14cc.png") no-repeat scroll 81px 3px #ffffff;
      display: inline-block;
      width: 100px;
 }
@@ -8593,8 +8604,8 @@ input[disabled="disabled"], input.disabled, textarea[disabled="disabled"], texta
      border: 1px solid #383836;
      box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.65);
      overflow: hidden;
-     position: absolute;
-     width: 490px;
+     /*position: absolute;*/
+     /*width: 490px;*/
 }
 
 .ui-dialog .ui-dialog-titlebar {
@@ -8603,7 +8614,7 @@ input[disabled="disabled"], input.disabled, textarea[disabled="disabled"], texta
      border-top-left-radius: 1px;
      border-top-right-radius: 1px;
      color: #ffffff;
-     cursor: move;
+     /*cursor: move;*/
      font-size: 12px;
      font-weight: bold;
      height: 23px;
@@ -9370,7 +9381,7 @@ body.loading #header {
 }
 
 .person-pic-small {
-     background: url("/assets/person-small-7ab1cd9cb164b5469da8664b4301bd32.png") no-repeat scroll 0px 0px transparent;
+     background: url("person-small-7ab1cd9cb164b5469da8664b4301bd32.png") no-repeat scroll 0px 0px transparent;
      height: 32px;
      width: 32px;
 }
@@ -9615,7 +9626,7 @@ body.loading #header {
 }
 
 .top-search .txt-input input {
-     background: url("/assets/icons/search-d2c56f04574a0685ed1f16573e3a63f8.png") no-repeat scroll 6px 49% transparent;
+     background: url("search-d2c56f04574a0685ed1f16573e3a63f8.png") no-repeat scroll 6px 49% transparent;
      padding-left: 20px;
      padding-right: 4px;
      position: relative;
@@ -9942,22 +9953,22 @@ body.loading #header {
      background: none repeat scroll 0% 0% rgba(193, 194, 187, 0.2);
 }
 
-.dialog-tabs ul .ui-tabs-selected, .dialog-tabs ul .ui-tabs-selected.ui-state-hover {
+.dialog-tabs ul .active, .dialog-tabs ul .active.ui-state-hover {
      background: none repeat scroll 0% 0% #ffffff;
      border-bottom: 1px solid #ffffff;
      font-weight: bold;
 }
 
-.dialog-tabs ul .ui-tabs-selected a, .dialog-tabs ul .ui-tabs-selected.ui-state-hover a {
+.dialog-tabs ul .active a, .dialog-tabs ul .active.ui-state-hover a {
      color: #111111;
 }
 
-.dialog-tabs ul .ui-tabs-selected .count, .dialog-tabs ul .ui-tabs-selected.ui-state-hover .count {
+.dialog-tabs ul .active .count, .dialog-tabs ul .active.ui-state-hover .count {
      background-color: #d8d8d1;
      font-weight: normal;
 }
 
-.dialog-tabs ul li.ui-tabs-selected:first-child, .dialog-tabs ul li.ui-tabs-selected.ui-state-hover:first-child {
+.dialog-tabs ul li.active:first-child, .dialog-tabs ul li.active.ui-state-hover:first-child {
      border-top-left-radius: 6px;
 }
 
@@ -10650,7 +10661,7 @@ body.login-page .signup h2 {
 
 #menu-holder .section-aside2 {
      padding: 13px 15px 15px;
-     width: 234px;
+     /*width: 234px;*/
 }
 
 #menu-holder .data-content {
@@ -10800,9 +10811,9 @@ body.login-page .signup h2 {
      border-bottom: 1px solid #c9cac5;
      font-size: 16px;
      font-weight: bold;
-     height: 50px;
+     /*height: 50px;*/
      margin: -25px -25px 0px;
-     padding: 25px 25px 0px;
+     padding: 20px;
      position: relative;
      text-transform: uppercase;
 }
@@ -10839,7 +10850,7 @@ body.login-page .signup h2 {
 }
 
 .menu-group-form .jit select {
-     margin: 0px 5px;
+     /*margin: 0px 5px;*/
 }
 
 .menu-group-form .note {
@@ -10876,7 +10887,7 @@ body.login-page .signup h2 {
 }
 
 .menu-group-form .off-peak-table td div {
-     width: 91px;
+     /*width: 91px;*/
 }
 
 .menu-group-form .off-peak-table td.time div {
@@ -10898,7 +10909,7 @@ body.login-page .signup h2 {
 }
 
 .menu-group-form .off-peak-table td.discount-cell div {
-     padding-left: 13px;
+     padding: 13px;
 }
 
 .menu-group-form .off-peak-table td.closed {
@@ -10946,7 +10957,7 @@ body.login-page .signup h2 {
      overflow: hidden;
      padding: 0px 75px 0px 17px;
      position: relative;
-     width: 208px;
+     /*width: 208px;*/
 }
 
 .filter-current a {
@@ -11097,7 +11108,7 @@ a.reset {
 
 .offer-group .group-title {
      font-size: 16px;
-     height: 37px;
+     /*height: 37px;*/
      line-height: 39px;
      margin-left: 39px;
      overflow: hidden;
@@ -11465,10 +11476,11 @@ a.reset {
 
 .featured .offer .pic {
      float: right;
-     height: auto;
+     /*height: auto;*/
+     height: 50px;
      margin: 0px -107px 0px 0px;
      max-height: 66px;
-     width: 94px;
+     /*width: 94px;*/
 }
 
 .featured .offer .title {
@@ -11602,15 +11614,15 @@ a.reset {
      display: none;
 }
 
-#multiple-services-tabs .multiple-services-groups li.ui-state-hover a, #multiple-services-tabs .multiple-services-groups li.ui-tabs-selected a, #multiple-services-tabs .multiple-services-groups li:hover a {
+#multiple-services-tabs .multiple-services-groups li.ui-state-hover a, #multiple-services-tabs .multiple-services-groups li.active a, #multiple-services-tabs .multiple-services-groups li:hover a {
      background: none repeat scroll 0% 0% #d8d9d2;
 }
 
-#multiple-services-tabs .multiple-services-groups li.ui-tabs-selected {
+#multiple-services-tabs .multiple-services-groups li.active {
      border-top: 1px solid #d8d9d2;
 }
 
-#multiple-services-tabs .multiple-services-groups li.ui-tabs-selected a {
+#multiple-services-tabs .multiple-services-groups li.active a {
      color: #111111;
      font-weight: bold;
 }
@@ -11763,11 +11775,12 @@ a.reset {
      bottom: 58px;
      left: auto;
      overflow: auto;
-     padding: 14px 17px;
+     /*padding: 14px 17px;*/
+     padding: 14px;
      position: absolute;
      right: 0px;
      top: 0px;
-     width: 120px;
+     /*width: 120px;*/
 }
 
 .offer-form-aside .part-title {
@@ -12921,7 +12934,7 @@ a.reset {
 
 .offer-form .cke_skin_kama .cke_contents, .form-venue-details .cke_skin_kama .cke_contents, .default-form .cke_skin_kama .cke_contents {
      color: #333333;
-     font-family: DINWebPro,Arial,Helvetica,sans-serif ! important;
+     font-family: OpenSans,Arial,Helvetica,sans-serif ! important;
      font-size: 14px ! important;
      line-height: 1.2em;
      padding: 0px ! important;
@@ -12970,7 +12983,7 @@ a.reset {
      line-height: 10px;
      padding: 0px 4px;
      text-align: center;
-     width: 96px;
+     width: 100px;
 }
 
 .menu-item-pictures li .single-picture-title span {
@@ -15101,7 +15114,7 @@ html body.menu-module #feedbackify .fby-tab {
      background: none repeat scroll 0% 0% rgba(193, 194, 187, 0.2);
 }
 
-#nav2 .ui-tabs-selected, #nav2 .ui-tabs-selected.ui-state-hover {
+#nav2 .active, #nav2 .active.ui-state-hover {
      border-bottom: 1px solid #989893;
      border-top: 1px solid #989893;
      font-weight: bold;
@@ -15109,12 +15122,12 @@ html body.menu-module #feedbackify .fby-tab {
      z-index: 5;
 }
 
-#nav2 .ui-tabs-selected a, #nav2 .ui-tabs-selected.ui-state-hover a {
+#nav2 .active a, #nav2 .active.ui-state-hover a {
      background: none repeat scroll 0% 0% #c1c2bb;
      color: #111111;
 }
 
-#nav2 li.ui-tabs-selected:first-child {
+#nav2 li.active:first-child {
      border-top: 1px solid #989893;
 }
 
@@ -15161,17 +15174,17 @@ html body.menu-module #feedbackify .fby-tab {
      background: none repeat scroll 0% 0% rgba(193, 194, 187, 0.2);
 }
 
-.nav3 ul .ui-tabs-selected, .nav3 ul .ui-tabs-selected.ui-state-hover {
+.nav3 ul .active, .nav3 ul .active.ui-state-hover {
      background: none repeat scroll 0% 0% #ffffff;
      border-bottom: 1px solid #ffffff;
      font-weight: bold;
 }
 
-.nav3 ul .ui-tabs-selected a, .nav3 ul .ui-tabs-selected.ui-state-hover a {
+.nav3 ul .active a, .nav3 ul .active.ui-state-hover a {
      color: #111111;
 }
 
-.nav3 ul li.ui-tabs-selected:first-child, .nav3 ul li.ui-tabs-selected.ui-state-hover:first-child {
+.nav3 ul li.active:first-child, .nav3 ul li.active.ui-state-hover:first-child {
      border-top-left-radius: 6px;
 }
 
@@ -15374,7 +15387,7 @@ html body.menu-module #feedbackify .fby-tab {
      float: left;
      font-size: 12px;
      margin-right: 1px;
-     width: 211px;
+     width: 214px;  
 }
 
 #bookings .home-filters .filter-wrapper:first-child {
@@ -15382,13 +15395,13 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 #bookings .home-filters .filter-wrapper:first-child .filter-ddown {
-     border-top-left-radius: 6px;
+     /*border-top-left-radius: 6px;*/
 }
 
 #bookings .home-filters .filter-current {
      border-right: 1px solid #bbbcb5;
      padding: 0px 55px 0px 10px;
-     width: 146px;
+     /*width: 146px;*/
 }
 
 #bookings .home-filters .filter-current .count {
@@ -15410,7 +15423,7 @@ html body.menu-module #feedbackify .fby-tab {
 
 #bookings .home-filters #filter-date .filter-current {
      padding-right: 34px;
-     width: 97px;
+     width: 192px;
 }
 
 #bookings .home-filters #filter-date .filter-ddown {
@@ -15504,9 +15517,10 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 #bookings .home-data table .icon-column {
-     padding-left: 0px;
-     padding-right: 0px;
-     width: 28px;
+     /*padding-left: 0px;*/
+     /*padding-right: 0px;*/
+     /*width: 28px;*/
+     width: 37px;
 }
 
 #bookings .home-data table .icon-column .icon {
@@ -15587,7 +15601,8 @@ html body.menu-module #feedbackify .fby-tab {
      border-right: 1px solid #eaebe6;
      border-style: solid;
      border-width: 1px;
-     height: 28px;
+     /*height: 28px;*/
+     padding: 10px;
 }
 
 #bookings .home-data .status {
@@ -15735,7 +15750,7 @@ html body.menu-module #feedbackify .fby-tab {
 
 .date-range-selector .current, .date-range-selector .selection .title {
      cursor: pointer;
-     font-weight: bold;
+     /*font-weight: bold;*/
      height: 36px;
      line-height: 38px;
      overflow: hidden;
@@ -15789,6 +15804,7 @@ html body.menu-module #feedbackify .fby-tab {
      float: left;
      line-height: 36px;
      padding-left: 37px;
+     padding-right: 54px;
      position: relative;
      width: 57px;
 }
@@ -15819,7 +15835,7 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 .date-range-selector .selection .date .date-input {
-     background-position: 103px 3px;
+     background-position: 102px 2px;
      cursor: pointer;
      width: 122px;
 }
@@ -18822,7 +18838,7 @@ html body.menu-module #feedbackify .fby-tab {
      box-shadow: 0px 1px 0px 0px #bdc648 inset;
      color: #ffffff;
      display: inline-block;
-     font-family: DINWebPro,Arial,Helvetica,sans-serif;
+     font-family: OpenSans,Arial,Helvetica,sans-serif;
      font-size: 14px;
      font-weight: bold;
      height: 29px;

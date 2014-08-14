@@ -24,11 +24,6 @@
 
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/spaCMS.css" type="text/css"  />
 
-        <style type="text/css">
-            * {
-                box-sizing: content-box !important;
-            }
-        </style>
 
         <?php
             if(isset($this->style)){

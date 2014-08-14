@@ -9,14 +9,14 @@
 		<div class="data-content menu-content ui-sortable">
 			<div data-offer-group-id="22810" class="offer-group">
 				<div class="icon icons-drag"></div>
-				<h2 class="group-title"><a href="javascript:;"> Body </a>
+				<h2 class="group-title"><a href="javascript:;" data-toggle="modal" data-target="#editGroupName_modal"> Body </a>
 				<button class="button button-basic button-mini discount-button " type="button" data-toggle="modal" data-target="#editGroupName_modal">
 					<div class="button-inner">
 						Discounts: Off
 					</div>
 					<div class="button-icon icons-edit"></div>
-				</button>
-				<button class="button button-basic button-mini add-offer" type="button">
+				</button>	
+				<button class="button button-basic button-mini add-offer" type="button" data-toggle="modal" data-target="#addServices_modal">
 					<div class="button-inner">
 						<div class="button-icon icons-plus4"></div>
 						Add new service
@@ -121,7 +121,7 @@
 			<div data-tooltip="&lt;strong&gt;Add a group&lt;/strong&gt; - Menu groups allow you to arrange your services in the way you prefer our customers to see them. Using generic treatment types like &amp;#34;Hair&amp;#34;, &amp;#34;Nails&amp;#34; or &amp;#34;Spa days&amp;#34; works best." class="button-wrapper b-action">
 				<button class="button button-primary add-group" type="button" data-toggle="modal" data-target="#addGroupName_modal">
 					<div class="button-inner">
-						<i class="fa fa-plus"></i> Add a group
+						<div class="button-icon icons-plus"></div> Add a group
 					</div>
 				</button>
 			</div>
@@ -215,10 +215,10 @@
 
 
 <!-- Modal Add group name -->
-<div id="addGroupName_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-802" aria-hidden="true">
-	<div class="modal-dialog">
+<div id="addGroupName_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-802" aria-hidden="true">
+	<div class="modal-dialog" style="width: 700px;">
 		<div class="modal-content">
-			<div style="height: auto; width: 700px;" class="ui-dialog ui-widget ui-widget-content ui-corner-all no-title ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-802">
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all no-title ui-draggable">
 				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
 					<span class="ui-dialog-title" id="ui-dialog-title-802">Menu group</span>
 					<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
@@ -260,7 +260,7 @@
 									<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
 								</div>
 							</button>
-							<button class="button action action-default button-secondary delete-action" type="button" style="display: none;">
+							<button class="button action action-default button-secondary delete-action" type="button">
 								<div class="button-inner">
 									<div class="button-icon icons-delete"></div><span class="msg msg-action-default">Delete</span><span class="msg msg-action-doing">Deleting...</span>
 								</div>
@@ -281,11 +281,11 @@
 
 
 
-<!-- Modal Add group name -->
+<!-- Modal Quick menu setup -->
 <div id="servicesList_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1089" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width: 685px;">
 		<div class="modal-content">
-			<div style="height: auto; width: 685px;" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1089">
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable">
 				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
 					<span class="ui-dialog-title" id="ui-dialog-title-1089">Select services to add to your menu</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
 				</div>
@@ -461,9 +461,9 @@
 
 <!-- Modal Edit group name -->
 <div id="editGroupName_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-685" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog" style="width: 925px;">
 		<div class="modal-content">
-			<div style="height: auto; width: 925px; width: 0 auto;" class="ui-dialog ui-widget ui-widget-content ui-corner-all no-title ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-685">
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all no-title ui-draggable">
 				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
 					<span class="ui-dialog-title" id="ui-dialog-title-685">Menu group</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
 				</div>
@@ -496,7 +496,7 @@
 								<h2 class="part-title">Last minute discounts</h2>
 								<input type="checkbox" name="jitPricingDiscount-enabled" id="jit-checkbox">
 								<label for="jit-checkbox">Discount last minute appointments</label>
-								<div class="settings">
+								<div class="settings hidden" style="margin: 10px 0">
 									<select id="jit-discount-select" name="jitPricingDiscount-percentage">
 										<option value="5">5%</option>
 										<option value="10">10%</option>
@@ -545,7 +545,7 @@
 								<input type="checkbox" name="offPeakDiscount-enabled" id="off-peak-checkbox">
 								<label for="off-peak-checkbox">Enable time based discount for appointments</label>
 
-								<div class="settings">
+								<div class="settings hidden">
 									<div></div>
 									<table class="off-peak-table">
 										<tbody>
@@ -1128,6 +1128,354 @@
 									<div class="button-icon icons-delete"></div><span class="msg msg-action-default">Delete</span><span class="msg msg-action-doing">Deleting...</span>
 								</div>
 							</button>
+							<a class="button-cancel" href="javascript:;" data-dismiss="modal">Cancel</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<!-- Modal Add services -->
+<div id="addServices_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1" aria-hidden="true">
+	<div class="modal-dialog" style="width: 800px;">
+		<div class="modal-content">
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable">
+				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+					<span class="ui-dialog-title" id="ui-dialog-title-1">Service</span><a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"><span class="ui-icon ui-icon-closethick">close</span></a>
+				</div>
+				<div class="offer-form ui-dialog-content ui-widget-content" style="height: 550px;" scrolltop="0" scrollleft="0">
+					<form novalidate="novalidate">
+						<div class="dialog-content clearfix">
+							<div class="offer-form-main">
+								<div class="offer-type">
+									<div class="icon icons-treatment-big"></div>
+									<div class="type-select">
+										<select name="primaryTreatmentId" class="chzn-select required chzn-done" data-placeholder="Please select service type" id="selF0G" style="display: none;">
+											<option value=""></option>
+											<optgroup data-id="2" label="Body">
+												<option value="633">24 Carat Gold Body Treatment</option>
+												<option value="265">Acoustic Wave Therapy</option>
+												<option value="2">Acupuncture</option>
+												<option value="275">Akasuri</option>
+												<option value="463">Arasys Toning and Inch Loss Treatment</option>
+												<option value="246">Backcials</option>
+												<option value="316">Bikini Facial</option>
+												<option value="184">Body Exfoliation Treatments</option>
+												<option value="525">Body Treatments</option>
+												<option value="205">Body Treatments - CACI</option>
+												<option value="25">Body Wraps</option>
+												<option value="40">Cellulite Treatments</option>
+											</optgroup>
+											<optgroup data-id="41" label="Counselling &amp; Holistic">
+												<option value="440">Acustaple</option>
+												<option value="343">Addictions Counselling</option>
+												<option value="14">Angel Therapy</option>
+												<option value="491">Anger Management</option>
+												<option value="15">Aromatherapy</option>
+												<option value="18">Ayurvedic</option>
+												<option value="19">Bach Flower Remedies</option>
+												<option value="613">BioMeridian Analysis</option>
+												<option value="563">Bioresonance Therapy</option>
+												<option value="383">BodyTalk</option>
+											</optgroup>
+										</select>
+										<div id="selF0G_chzn" class="chzn-container chzn-container-single" style="width: 534px;">
+											<a class="chzn-single" href="javascript:void(0)" tabindex="-1"><span>24 Carat Gold Body Treatment</span>
+											<div>
+												<b></b>
+											</div></a>
+											<div style="left: -9000px; width: 532px; top: 34px;" class="chzn-drop">
+												<div class="chzn-search">
+													<input type="text" autocomplete="off" style="width: 485px;" placeholder="Look up service type by typing in a name" tabindex="-1">
+												</div>
+												<ul class="chzn-results" style="max-height: 431.9px;">
+													<li class="group-result" id="selF0G_chzn_g_1" style="display: list-item;">
+														Body
+													</li>
+													<li style="" class="active-result group-option result-selected" id="selF0G_chzn_o_2">
+														24 Carat Gold Body Treatment
+													</li>
+													<li style="" class="active-result group-option" id="selF0G_chzn_o_3">
+														Acoustic Wave Therapy
+													</li>
+													<li style="" class="active-result group-option" id="selF0G_chzn_o_4">
+														Acupuncture
+													</li>
+													<li style="" class="active-result group-option" id="selF0G_chzn_o_5">
+														Akasuri
+													</li>
+													<li style="" class="active-result group-option" id="selF0G_chzn_o_6">
+														Arasys Toning and Inch Loss Treatment
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div data-tooltip="&lt;strong&gt;Service name&lt;/strong&gt; - Type in the name of the service. Avoid using pricing or discount rate in the name as we will calculate and show them based on pricing information below." class="b-select-valid txt-input txt-input-big form-element-wrapper" aria-describedby="ui-tooltip-1">
+										<input type="text" value="" maxlength="150" placeholder="Service name" class="offer-name" name="offer-name">
+									</div>
+								</div>
+								<div tabindex="-1" class="offer-content">
+									<div class="warning warning-archived hidden">
+										<div class="icon icons-archive-medium"></div>
+										<span class="title"> This service is archived. It will not be visible to your clients. <a class="offer-activate" href="javascript:;">Move this service back to your menu</a> </span>
+										<span class="info"></span>
+									</div>
+									<div class="warning warning-locked hidden">
+										<div class="icon icons-lock"></div>
+										<span class="title">You can only edit limited information for this menu item.</span>
+										<span class="info"></span>
+									</div>
+									<div class="warning warning-pending hidden">
+										<div class="icon icons-clock"></div>
+										<span class="title">Menu item is waiting for approval.</span>
+										This item is not published on Wahanda.com as a featured offer yet, as it needs to be reviewed by our support team.
+									</div>
+									<div class="warning warning-chain hidden">
+										<div class="icon icons-lock"></div>
+										<span class="title">Menu item is defined at a chain level.</span>
+										You can only edit limited information for this menu item. Contact Wahanda's support team if you need to modify anything else.
+									</div>
+									<div class="warning warning-permissions hidden">
+										<div class="icon icons-lock"></div>
+										<span class="title">You are not allowed to edit this item.</span>
+									</div>
+
+									<div class="skus-pricing group-dependancy">
+										<h2 class="part-title">Price</h2>
+										
+										<table cellspacing="0" cellpadding="0" class="skus-list hidden"></table>
+										<div class="single-sku-container">
+											<table cellspacing="0" cellpadding="0" class="default-form skus-edit">
+												<tbody>
+													<tr class="form-row sku-duration">
+														<td class="label-part"><label>Duration</label></td>
+														<td class="input-part">
+															<select name="duration[view730]">
+																<option value="0">Not set</option>
+																<option value="10">10 min</option>
+																<option value="15">15 min</option>
+																<option value="20">20 min</option>
+																<option value="25">25 min</option>
+																<option value="30">30 min</option>
+																<option value="35">35 min</option>
+																<option value="40">40 min</option>
+																<option value="45">45 min</option>
+																<option value="50">50 min</option>
+																<option value="55">55 min</option>
+																<option selected="selected" value="60">1 h </option>
+																<option value="65">1 h 05 min</option>
+																<option value="70">1 h 10 min</option>
+																<option value="75">1 h 15 min</option>
+																<option value="80">1 h 20 min</option>
+																<option value="85">1 h 25 min</option>
+																<option value="90">1 h 30 min</option>
+																<option value="95">1 h 35 min</option>
+																<option value="100">1 h 40 min</option>
+																<option value="105">1 h 45 min</option>
+																<option value="110">1 h 50 min</option>
+																<option value="115">1 h 55 min</option>
+																<option value="120">2 h </option>
+																<option value="135">2 h 15 min</option>
+																<option value="150">2 h 30 min</option>
+																<option value="165">2 h 45 min</option>
+																<option value="180">3 h </option>
+																<option value="195">3 h 15 min</option>
+																<option value="210">3 h 30 min</option>
+																<option value="225">3 h 45 min</option>
+																<option value="240">4 h </option>
+																<option value="270">4 h 30 min</option>
+																<option value="300">5 h </option>
+																<option value="330">5 h 30 min</option>
+																<option value="360">6 h </option>
+																<option value="390">6 h 30 min</option>
+																<option value="420">7 h </option>
+																<option value="450">7 h 30 min</option>
+																<option value="480">8 h </option>
+																<option value="540">9 h </option>
+																<option value="600">10 h </option>
+																<option value="660">11 h </option>
+																<option value="720">12 h </option>
+															</select>
+														</td>
+													</tr>
+													<tr data-tooltip="&lt;strong&gt;Full and Sale price&lt;/strong&gt; - Full price is the pricelist price of your service. If you are offering a special price on this offer, add it to Sale price." class="form-row" aria-describedby="ui-tooltip-5">
+														<td class="label-part sku-rrp"><label>Full price, £</label></td>
+														<td class="input-part">
+														<div class="txt-input txt-input-mini form-element-wrapper">
+															<input type="text" min="1" class="required number" value="" name="fullPriceAmount[view730]" more-than="#sku-discountPriceAmount-view730">
+														</div><label class="optional">Sale price, £</label>
+														<div class="txt-input txt-input-mini form-element-wrapper">
+															<input type="text" class="number sku-amount" value="" name="discountPriceAmount[view730]" id="sku-discountPriceAmount-view730">
+														</div></td>
+													</tr>
+													<tr class="form-row sku-stock inventory-managed hidden">
+														<td class="label-part"><label>Inventory left</label></td>
+														<td class="input-part">
+														<div class="txt-input txt-input-mini form-element-wrapper">
+															<input type="text" min="0" class="number" value="" name="stockAmount[view730]">
+														</div></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										
+									</div>
+									<div class="listing group-dependancy">
+										<h2 class="part-title">How would you like to sell this service?</h2>
+										<div data-tooltip="&lt;strong&gt;Feature on Wahanda&lt;/strong&gt; - Featuring a service will put it on top on your listing and expose it through all partners&amp;#39; websites. You can feature up to five of your top services." class="choices form-element-wrapper enhanced-listing-only">
+											<label>
+												<input type="checkbox" name="featured" id="service-feature">
+												Feature service (max 5 per venue) </label>
+										</div>
+										<div class="fullfilment">
+											<div class="empty not-purchasable hidden">
+												<p class="intro">
+													<span class="icons-attention-small"></span>
+													Your menu is currently set up to only sell featured services. Fancy selling your non-featured offers on Wahanda? Make your menu purchasable now.
+												</p>
+												<button class="button button-basic make-purchasable" type="button">
+													<div class="button-inner">
+														<div class="button-icon icons-tick4"></div>
+														Make my menu purchasable
+													</div>
+												</button>
+
+											</div>
+
+											<div class="empty standard-listing hidden">
+												<p class="intro">
+													<span class="icons-attention-small"></span>
+													You're not selling on Wahanda.
+												</p>
+												<p class="after-txt">
+													Do you know that you can start selling on Wahanda today? It's a no-brainer - we'll charge you only if we sell.
+												</p>
+												<button class="button button-basic upgrade-to-enhanced" type="button">
+													<div class="button-inner">
+														<div class="button-icon icons-upgrade2"></div>
+														Find out more
+													</div>
+												</button>
+											</div>
+
+											<table cellspacing="0" cellpadding="0" class="fulfillment-edit">
+												<tbody>
+													<tr class="form-row voucher-part">
+														<td class="label-part"><label>Trạng thái</label></td>
+														<td class="input-part">
+														<select id="fulfillment-expiry-type" name="expiryType">
+															<option value="">Hoạt động</option>
+															<option value="after">Ngưng hoạt động</option>
+														</select>
+													</tr>
+													<tr class="form-row">
+														<td class="label-part"><label for="service-type">Sold as</label></td>
+														<td class="input-part">
+														<select id="fulfillment-types" name="fulfillmentTypes">
+															<option value="AE">Appointment or eVoucher</option>
+															<option value="A">Appointment</option>
+															<option value="E">eVoucher</option>
+														</select></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="descriptions group-dependancy">
+										<div class="txts description">
+											<h2 class="part-title">Description</h2>
+											<!-- bb code -->
+										</div>
+									</div>
+								</div>
+								<div class="top-shadow hidden" style="top: 148px; left: 0px; width: 611px;"></div><div class="bottom-shadow" style="top: 528px; left: 0px; width: 611px;"></div>
+							</div>
+							<div class="offer-form-aside pictures ui-sortable">
+								<h2 class="part-title">Menu item images</h2>
+								<ul class="menu-item-pictures">
+									<li class="single-picture empty">
+										<div class="single-picture-wrapper" style="position: relative;">
+											<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
+												<div class="icon icons-plus3"></div>
+												Add image
+											</div>
+										</div>
+										<div class="single-picture-title">
+											<span>Primary image</span>
+										</div>
+									</li>
+
+									<li class="single-picture empty not-editable">
+										<div class="single-picture-wrapper" style="position: relative;">
+											<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
+												<div class="icon icons-plus3"></div>
+												Add image
+											</div>
+										</div>
+										<div class="single-picture-title">
+											<span>Primary image</span>
+										</div>
+									</li>
+
+									<li class="single-picture empty not-editable">
+										<div class="single-picture-wrapper" style="position: relative;">
+											<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
+												<div class="icon icons-plus3"></div>
+												Add image
+											</div>
+										</div>
+										<div class="single-picture-title">
+											<span>Primary image</span>
+										</div>
+									</li>
+
+									<li class="single-picture empty not-editable">
+										<div class="single-picture-wrapper" style="position: relative;">
+											<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
+												<div class="icon icons-plus3"></div>
+												Add image
+											</div>
+										</div>
+										<div class="single-picture-title">
+											<span>Primary image</span>
+										</div>
+									</li>
+
+									<li class="single-picture empty not-editable">
+										<div class="single-picture-wrapper" style="position: relative;">
+											<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
+												<div class="icon icons-plus3"></div>
+												Add image
+											</div>
+										</div>
+										<div class="single-picture-title">
+											<span>Primary image</span>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="dialog-actions">
+							<button class="button action action-default button-primary save-action" type="submit">
+								<div class="button-inner">
+									<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+								</div>
+							</button>
+							<button class="button action action-default button-basic offer-archive" type="button">
+								<div class="button-inner">
+									<div class="button-icon icons-archive"></div>
+									<span class="msg msg-action-default">Move to archive</span>
+									<span class="msg msg-action-doing">Archiving...</span>
+								</div>
+							</button>
+							<a target="_blank" class="button-link listing-link" href="javascript:;">View on Wahanda.com</a>
 							<a class="button-cancel" href="javascript:;" data-dismiss="modal">Cancel</a>
 						</div>
 					</form>

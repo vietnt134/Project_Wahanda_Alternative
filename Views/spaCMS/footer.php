@@ -23,6 +23,9 @@
         });
     </script>
     
+    <script type="text/javascript">
+        var URL = "<?php echo URL ?>";
+    </script>
 
     <?php
         // Include script modul
@@ -33,7 +36,5 @@
         }
     ?>
 
-    <script type="text/javascript">
-        var URL = "<?php echo URL ?>";
-    </script>
+    
 </html>

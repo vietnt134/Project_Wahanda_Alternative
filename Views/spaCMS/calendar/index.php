@@ -224,9 +224,9 @@
 
 <!-- Modal redeemVoucher_modal-->
 <div id="redeemVoucher_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-voucher-redemption" aria-hidden="true">
-	<div class="modal-dialog ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+	<div class="modal-dialog" style="width: 500px;">
 	    <div class="modal-content">
-		    <div style="height: auto; width: 500px;" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-voucher-redemption">
+		    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable">
 		    	<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
 		    		<span class="ui-dialog-title" id="ui-dialog-title-voucher-redemption">eVoucher</span>
 		    		<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
