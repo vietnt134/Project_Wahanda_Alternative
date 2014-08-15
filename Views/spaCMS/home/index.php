@@ -7,6 +7,7 @@
 					This venue needs to be reviewed by Wahanda staff before being published. Give us a day or two and we’ll have it up and running.
 				</p>
 			</div>
+			
 
 			<div class="pic a-go-settings empty">
 				<div class="pic-container"></div>

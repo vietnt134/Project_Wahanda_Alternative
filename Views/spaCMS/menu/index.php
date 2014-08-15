@@ -1395,7 +1395,8 @@
 										</div>
 									</div>
 								</div>
-								<div class="top-shadow hidden" style="top: 148px; left: 0px; width: 611px;"></div><div class="bottom-shadow" style="top: 528px; left: 0px; width: 611px;"></div>
+								<div class="top-shadow"></div>
+								<div class="bottom-shadow"></div>
 							</div>
 							<div class="offer-form-aside pictures ui-sortable">
 								<h2 class="part-title">Menu item images</h2>

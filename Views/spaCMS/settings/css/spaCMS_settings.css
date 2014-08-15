@@ -1,3 +1,8 @@
 #settings-tabs .tab-content-fix {
 	position: static;
 }
+
+#client-notifications .email-settings, #client-notifications .separating-line, #client-notifications .text-message-settings, #fulfillment .email-settings, #fulfillment .separating-line, #fulfillment .text-message-settings {
+	margin-left: 17px !important;
+	margin-top: 17px;
+}

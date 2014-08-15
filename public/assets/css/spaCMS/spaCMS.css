@@ -7727,15 +7727,16 @@ table .status-wrapper .status-note {
      height: 9px;
      left: 0px;
      position: absolute;
-     right: auto;
-     top: 33px;
+     /*right: auto;*/
+     /*top: 33px;*/
      width: 100%;
      z-index: 500;
 }
 
 .bottom-shadow {
      background: url("bottom-shadow-35e91508b502da0e227cd135c54c668a.png") no-repeat scroll center bottom / 100% 9px transparent;
-     bottom: 65px;
+     /*bottom: 65px;*/
+     bottom: 0px;
      height: 9px;
      left: 0px;
      position: absolute;
@@ -8643,7 +8644,7 @@ input[disabled="disabled"], input.disabled, textarea[disabled="disabled"], texta
 
 .dialog-actions {
      border-top: 1px solid #c9cac5;
-     height: 49px;
+     height: 57px;
      margin: 10px -17px 0px;
      padding: 0px 10px;
      position: relative;
@@ -10924,7 +10925,7 @@ body.login-page .signup h2 {
 #filters {
      background: none repeat scroll 0% 0% #ffffff;
      border-bottom: 1px solid #bbbcb5;
-     height: 32px;
+     height: 34px;
 }
 
 .menu-filter, .filter-wrapper {
@@ -12316,7 +12317,7 @@ a.reset {
 .offer-form .offer-type {
      background: none repeat scroll 0% 0% #eaebe4;
      border-bottom: 1px solid #c3c4bd;
-     height: 131px;
+     height: 114px;
      padding: 17px 0px 0px 94px;
      position: relative;
 }
@@ -12363,7 +12364,7 @@ a.reset {
      overflow: auto;
      position: absolute;
      right: 0px;
-     top: 149px;
+     /*top: 149px;*/
 }
 
 .offer-form table {
@@ -16102,12 +16103,12 @@ html body.menu-module #feedbackify .fby-tab {
      overflow: auto;
      position: absolute;
      right: 0px;
-     top: 0px;
+     top: 29px;
 }
 
 .form-actions {
      border-top: 1px solid #c3c4bd;
-     bottom: 0px;
+     bottom: 30px;
      height: 30px;
      left: 0px;
      padding: 17px;
@@ -17061,10 +17062,10 @@ html body.menu-module #feedbackify .fby-tab {
 
 #venue-details .form-venue-details .venue-main-info {
      background: none repeat scroll 0% 0% #eaebe4;
-     height: 125px;
+     height: 150px;
      margin-bottom: 12px;
      padding: 14px 14px 14px 188px;
-     width: 387px;
+     /*width: 387px;*/
 }
 
 #venue-details .form-venue-details .venue-main-info .picture-logo {
@@ -17246,7 +17247,7 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 #notifications-settings #fulfillment .default-form .label-part {
-     min-width: 153px;
+     /*min-width: 153px;*/
 }
 
 #notifications-settings #client-notifications .default-form, #notifications-settings #fulfillment .default-form {
@@ -17356,6 +17357,7 @@ html body.menu-module #feedbackify .fby-tab {
 
 #online-booking #online-booking-settings .default-form {
      width: 508px;
+     margin: 17px;
 }
 
 #online-booking #online-booking-settings .default-form .txt-input {
