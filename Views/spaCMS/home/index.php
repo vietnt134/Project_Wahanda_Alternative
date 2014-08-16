@@ -7,7 +7,6 @@
 					This venue needs to be reviewed by Wahanda staff before being published. Give us a day or two and we’ll have it up and running.
 				</p>
 			</div>
-			
 
 			<div class="pic a-go-settings empty">
 				<div class="pic-container"></div>
@@ -267,7 +266,7 @@
 			<table>
 				<tbody>
 					<tr>
-						<td title="Number of bookings done so far this month" class="tooltips b-bookings">
+						<td id="bookings" title="<strong>Wahanda Bookings</strong> - Number of bookings done so far this month" class="b-bookings">
 						<div class="graph graph-clicks">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 1" class="bar" style="height: 100%"></span><span title="Aug 2014: 1" class="bar" style="height: 100%"></span>
 						</div>
@@ -275,7 +274,7 @@
 							<span class="title">Wahanda bookings</span>
 							<span class="value v-value">1</span>
 						</div></td>
-						<td title="Number of people who visited the venue page on Wahanda this month" class="tooltips b-visits">
+						<td id="venue" title="<strong>Visits to Venue Page</strong> - Number of people who visited the venue page on Wahanda this month" class="tooltips tooltips-top b-visits">
 						<div class="graph graph-visits">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 1" class="bar" style="height: 100%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>
@@ -283,7 +282,7 @@
 							<span class="title">Visits to Venue Page</span>
 							<span class="value v-value">0</span>
 						</div></td>
-						<td title="Number of times customers clicked to see the phone number on the venue page this month" class="tooltips b-phoneViews">
+						<td id="phone" title="<strong>Phone views</strong> - Number of times customers clicked to see the phone number on the venue page this month" class="tooltips tooltips-top b-phoneViews">
 						<div class="graph graph-pviews">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 0" class="bar" style="height: 5%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>
@@ -291,7 +290,7 @@
 							<span class="title">Phone views</span>
 							<span class="value v-value">0</span>
 						</div></td>
-						<td title="Number of sales leads sent from the venue page by Wahanda customers this month" class="tooltips b-enquiries">
+						<td id="sale" title="<strong>Enquiries</strong> - Number of sales leads sent from the venue page by Wahanda customers this month" class="tooltips tooltips-top b-enquiries">
 						<div class="graph graph-enquiries">
 							<span title="Mar 2014: 0" class="bar" style="height: 5%"></span><span title="Apr 2014: 0" class="bar" style="height: 5%"></span><span title="May 2014: 0" class="bar" style="height: 5%"></span><span title="Jun 2014: 0" class="bar" style="height: 5%"></span><span title="Jul 2014: 0" class="bar" style="height: 5%"></span><span title="Aug 2014: 0" class="bar" style="height: 5%"></span>
 						</div>
@@ -307,37 +306,46 @@
 	</div>
 </div>
 
-
 <!-- Modal redeemVoucher_modal-->
 <div id="redeemVoucher_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-voucher-redemption" aria-hidden="true">
 	<div class="modal-dialog" style="width: 500px;">
-	    <div class="modal-content">
-		    <div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable">
-		    	<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
-		    		<span class="ui-dialog-title" id="ui-dialog-title-voucher-redemption">eVoucher</span>
-		    		<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
-		    			<span class="ui-icon ui-icon-closethick">close</span>
-		    		</a>
-		    	</div>
-		    	<div id="voucher-redemption" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
+		<div class="modal-content">
+			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-draggable">
+				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
+					<span class="ui-dialog-title" id="ui-dialog-title-voucher-redemption">eVoucher</span>
+					<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"> <span class="ui-icon ui-icon-closethick">close</span> </a>
+				</div>
+				<div id="voucher-redemption" class="ui-dialog-content ui-widget-content" scrolltop="0" scrollleft="0">
 					<div class="voucher-search">
 						<form novalidate="novalidate">
 							<div class="icon icons-logo-vouchers"></div>
 
 							<div class="reference-container txt-input txt-input-big">
 								<input type="tel" class="required evoucher-code valid" name="voucher-reference">
-								<div class="clear-search"><div class="icons-delete3"></div></div>
+								<div class="clear-search">
+									<div class="icons-delete3"></div>
+								</div>
 							</div>
-							<button class="button action action-default button-primary find-action" type="submit"><div class="button-inner"><span class="msg msg-action-default">Find</span><span class="msg msg-action-doing">Searching...</span></div></button>
+							<button class="button action action-default button-primary find-action" type="submit">
+								<div class="button-inner">
+									<span class="msg msg-action-default">Find</span><span class="msg msg-action-doing">Searching...</span>
+								</div>
+							</button>
 						</form>
 					</div>
 					<div class="voucher-redemption-wrapper">
 						<div class="voucher-note voucher-start" style="position: relative;">
 							<div class="voucher-note-inner vertically-centered" style="position: absolute; height: 101px; top: 50%; margin-top: -50.5px;">
-								<p class="main-title">Please enter eVoucher number</p>
+								<p class="main-title">
+									Please enter eVoucher number
+								</p>
 								<ul class="simple-list">
-									<li>Look for eVoucher number on the booking confirmation email.</li>
-									<li>Redeem eVoucher bookings only. For appointments, you just need to confirm them to get paid.</li>
+									<li>
+										Look for eVoucher number on the booking confirmation email.
+									</li>
+									<li>
+										Redeem eVoucher bookings only. For appointments, you just need to confirm them to get paid.
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -384,20 +392,18 @@
 								Order ref#:
 								<span class="evoucher-order-ref"></span>
 
-								<span class="b-booking-link hidden">
-									<span class="separator">|</span>
-									Booking ID:
-									<a class="evoucher-booking-id" href="javascript:;"></a>
-								</span>
+								<span class="b-booking-link hidden"> <span class="separator">|</span> Booking ID: <a class="evoucher-booking-id" href="javascript:;"></a> </span>
 							</div>
 							<div class="venue-wrapper hidden">
 								<form novalidate="novalidate">
 									<table cellspacing="0" cellpadding="0" class="default-form ">
-										<tbody><tr class="form-row">
-											<td class="label-part"><label for="voucher-redemption-venue-id">Redeem at this venue:</label></td>
-											<td class="input-part evoucher-venue-container"></td>
-										</tr>
-									</tbody></table>
+										<tbody>
+											<tr class="form-row">
+												<td class="label-part"><label for="voucher-redemption-venue-id">Redeem at this venue:</label></td>
+												<td class="input-part evoucher-venue-container"></td>
+											</tr>
+										</tbody>
+									</table>
 								</form>
 							</div>
 							<div class="message-wrapper message-valid hidden">
@@ -409,9 +415,23 @@
 						</div>
 					</div>
 					<div class="dialog-actions">
-						<button class="button action action-default button-primary redeem-another hidden" type="button"><div class="button-inner"><div class="button-icon icons-voucher"></div>Redeem another</div></button>
-						<button class="button action action-default button-primary redeem-action hidden" type="button"><div class="button-inner"><div class="button-icon icons-voucher"></div><span class="msg msg-action-default">Redeem</span><span class="msg msg-action-doing">Working...</span></div></button>
-						<button class="button button-primary a-create-appointment hidden" type="button"><div class="button-inner"><div class="button-icon icons-plus"></div>Book an appointment</div></button>
+						<button class="button action action-default button-primary redeem-another hidden" type="button">
+							<div class="button-inner">
+								<div class="button-icon icons-voucher"></div>
+								Redeem another
+							</div>
+						</button>
+						<button class="button action action-default button-primary redeem-action hidden" type="button">
+							<div class="button-inner">
+								<div class="button-icon icons-voucher"></div><span class="msg msg-action-default">Redeem</span><span class="msg msg-action-doing">Working...</span>
+							</div>
+						</button>
+						<button class="button button-primary a-create-appointment hidden" type="button">
+							<div class="button-inner">
+								<div class="button-icon icons-plus"></div>
+								Book an appointment
+							</div>
+						</button>
 						<a class="button-cancel a-cancel" data-dismiss="modal" href="javascript:;">Cancel</a>
 					</div>
 				</div>
@@ -419,43 +439,22 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-<!-- Tooltip -->
-<div id="ui-tooltip-0" class="ui-tooltip qtip ui-helper-reset ui-tooltip-default  ui-tooltip-pos-bc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="ui-tooltip-0-content" aria-hidden="true" style="width: 236px; z-index: 15001;">
-	<div class="ui-tooltip-tip" style="background-color: transparent ! important; border: 0px none ! important; height: 10px; width: 10px; left: 50%; margin-left: -5px; bottom: -9px;">
-		<canvas style="background-color: transparent ! important; border: 0px none ! important;" height="10" width="10"></canvas>
-	</div>
-	<div class="ui-tooltip-content" id="ui-tooltip-0-content" aria-atomic="true">
-		<strong>Wahanda Bookings</strong> - Number of bookings done so far this month
-	</div>
-</div>
-
-<div id="ui-tooltip-1" class="ui-tooltip qtip ui-helper-reset ui-tooltip-default  ui-tooltip-pos-bc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="ui-tooltip-1-content" aria-hidden="true" style="width: 236px; z-index: 15004;">
-	<div class="ui-tooltip-tip" style="background-color: transparent ! important; border: 0px none ! important; height: 10px; width: 10px; left: 50%; margin-left: -5px; bottom: -9px;">
-		<canvas style="background-color: transparent ! important; border: 0px none ! important;" height="10" width="10"></canvas>
-	</div>
-	<div class="ui-tooltip-content" id="ui-tooltip-1-content" aria-atomic="true">
-		<strong>Visits to Venue Page</strong> - Number of people who visited the venue page on Wahanda this month
-	</div>
-</div>
-
-<div id="ui-tooltip-2" class="ui-tooltip qtip ui-helper-reset ui-tooltip-default  ui-tooltip-pos-bc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="ui-tooltip-2-content" aria-hidden="true" style="width: 236px; z-index: 15003;">
-	<div class="ui-tooltip-tip" style="background-color: transparent ! important; border: 0px none ! important; height: 10px; width: 10px; left: 50%; margin-left: -5px; bottom: -9px;">
-		<canvas style="background-color: transparent ! important; border: 0px none ! important;" height="10" width="10"></canvas>
-	</div>
-	<div class="ui-tooltip-content" id="ui-tooltip-2-content" aria-atomic="true">
-		<strong>Phone views</strong> - Number of times customers clicked to see the phone number on the venue page this month
-	</div>
-</div>
-
-<div id="ui-tooltip-3" class="ui-tooltip qtip ui-helper-reset ui-tooltip-default  ui-tooltip-pos-bc" tracking="false" role="alert" aria-live="polite" aria-atomic="false" aria-describedby="ui-tooltip-3-content" aria-hidden="true" style="width: 236px; z-index: 15002;">
-	<div class="ui-tooltip-tip" style="background-color: transparent ! important; border: 0px none ! important; height: 10px; width: 10px; left: 50%; margin-left: -5px; bottom: -9px;">
-		<canvas style="background-color: transparent ! important; border: 0px none ! important;" height="10" width="10"></canvas>
-	</div>
-	<div class="ui-tooltip-content" id="ui-tooltip-3-content" aria-atomic="true">
-		<strong>Enquiries</strong> - Number of sales leads sent from the venue page by Wahanda customers this month
-	</div>
-</div>
+<!-- le javascript -->
+<script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- transition -->
+<style>
+	.tooltip{
+		font-size: 11.5px;
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$("#bookings, #venue, #phone , #sale").tooltip({
+			placement : 'top',
+			html : true,
+			container : 'body',
+			delay : 0
+		});
+	}); 
+</script>

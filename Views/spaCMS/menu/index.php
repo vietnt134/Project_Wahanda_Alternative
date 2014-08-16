@@ -1,9 +1,8 @@
-
 <div id="menu-holder" class="content-holder has-offers">
 	<div class="section-main2">
 		<div id="filters">
 			<!-- Code....
-			....All active services 
+			....All active services
 			-->
 		</div>
 		<div class="data-content menu-content ui-sortable">
@@ -15,7 +14,7 @@
 						Discounts: Off
 					</div>
 					<div class="button-icon icons-edit"></div>
-				</button>	
+				</button>
 				<button class="button button-basic button-mini add-offer" type="button" data-toggle="modal" data-target="#addServices_modal">
 					<div class="button-inner">
 						<div class="button-icon icons-plus4"></div>
@@ -118,10 +117,11 @@
 			</div>
 		</div>
 		<div class="data-actions b-menu-edit-actions">
-			<div title='Menu groups allow you to arrange your services in the way you prefer our customers to see them. Using generic treatment types like "Hair&amp", "Nails" or "Spa days" works best.' class="tooltips button-wrapper b-action">
+			<div id="menu_group" title='<strong>Add a group</strong> - Menu groups allow you to arrange your services in the way you prefer our customers to see them. Using generic treatment types like "Hair", "Nails" or "Spa days" works best.' class="tooltips tooltips-top button-wrapper b-action">
 				<button class="button button-primary add-group" type="button" data-toggle="modal" data-target="#addGroupName_modal">
 					<div class="button-inner">
-						<div class="button-icon icons-plus"></div> Add a group
+						<div class="button-icon icons-plus"></div>
+						Add a group
 					</div>
 				</button>
 			</div>
@@ -211,9 +211,6 @@
 	</div>
 </div>
 
-
-
-
 <!-- Modal Add group name -->
 <div id="addGroupName_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-802" aria-hidden="true">
 	<div class="modal-dialog" style="width: 700px;">
@@ -221,9 +218,7 @@
 			<div class="ui-dialog ui-widget ui-widget-content ui-corner-all no-title ui-draggable">
 				<div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix">
 					<span class="ui-dialog-title" id="ui-dialog-title-802">Menu group</span>
-					<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button">
-						<span class="ui-icon ui-icon-closethick">close</span>
-					</a>
+					<a href="#" class="ui-dialog-titlebar-close ui-corner-all" role="button"> <span class="ui-icon ui-icon-closethick">close</span> </a>
 				</div>
 				<div class="menu-group-form ui-dialog-content ui-widget-content" id="802" scrolltop="0" scrollleft="0">
 					<form novalidate="novalidate">
@@ -273,13 +268,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
-
-
 
 <!-- Modal Quick menu setup -->
 <div id="servicesList_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1089" aria-hidden="true">
@@ -453,11 +441,6 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-
 
 <!-- Modal Edit group name -->
 <div id="editGroupName_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-685" aria-hidden="true">
@@ -1137,10 +1120,6 @@
 	</div>
 </div>
 
-
-
-
-
 <!-- Modal Add services -->
 <div id="addServices_modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="ui-dialog-title-1" aria-hidden="true">
 	<div class="modal-dialog" style="width: 800px;">
@@ -1217,7 +1196,7 @@
 											</div>
 										</div>
 									</div>
-									<div data-tooltip="&lt;strong&gt;Service name&lt;/strong&gt; - Type in the name of the service. Avoid using pricing or discount rate in the name as we will calculate and show them based on pricing information below." class="b-select-valid txt-input txt-input-big form-element-wrapper" aria-describedby="ui-tooltip-1">
+									<div id="service_name" title="<strong>Service name</strong> - Type in the name of the service. Avoid using pricing or discount rate in the name as we will calculate and show them based on pricing information below." class="tooltips tooltips-bottom b-select-valid txt-input txt-input-big form-element-wrapper" aria-describedby="ui-tooltip-1">
 										<input type="text" value="" maxlength="150" placeholder="Service name" class="offer-name" name="offer-name">
 									</div>
 								</div>
@@ -1249,7 +1228,7 @@
 
 									<div class="skus-pricing group-dependancy">
 										<h2 class="part-title">Price</h2>
-										
+
 										<table cellspacing="0" cellpadding="0" class="skus-list hidden"></table>
 										<div class="single-sku-container">
 											<table cellspacing="0" cellpadding="0" class="default-form skus-edit">
@@ -1257,57 +1236,56 @@
 													<tr class="form-row sku-duration">
 														<td class="label-part"><label>Duration</label></td>
 														<td class="input-part">
-															<select name="duration[view730]">
-																<option value="0">Not set</option>
-																<option value="10">10 min</option>
-																<option value="15">15 min</option>
-																<option value="20">20 min</option>
-																<option value="25">25 min</option>
-																<option value="30">30 min</option>
-																<option value="35">35 min</option>
-																<option value="40">40 min</option>
-																<option value="45">45 min</option>
-																<option value="50">50 min</option>
-																<option value="55">55 min</option>
-																<option selected="selected" value="60">1 h </option>
-																<option value="65">1 h 05 min</option>
-																<option value="70">1 h 10 min</option>
-																<option value="75">1 h 15 min</option>
-																<option value="80">1 h 20 min</option>
-																<option value="85">1 h 25 min</option>
-																<option value="90">1 h 30 min</option>
-																<option value="95">1 h 35 min</option>
-																<option value="100">1 h 40 min</option>
-																<option value="105">1 h 45 min</option>
-																<option value="110">1 h 50 min</option>
-																<option value="115">1 h 55 min</option>
-																<option value="120">2 h </option>
-																<option value="135">2 h 15 min</option>
-																<option value="150">2 h 30 min</option>
-																<option value="165">2 h 45 min</option>
-																<option value="180">3 h </option>
-																<option value="195">3 h 15 min</option>
-																<option value="210">3 h 30 min</option>
-																<option value="225">3 h 45 min</option>
-																<option value="240">4 h </option>
-																<option value="270">4 h 30 min</option>
-																<option value="300">5 h </option>
-																<option value="330">5 h 30 min</option>
-																<option value="360">6 h </option>
-																<option value="390">6 h 30 min</option>
-																<option value="420">7 h </option>
-																<option value="450">7 h 30 min</option>
-																<option value="480">8 h </option>
-																<option value="540">9 h </option>
-																<option value="600">10 h </option>
-																<option value="660">11 h </option>
-																<option value="720">12 h </option>
-															</select>
-														</td>
+														<select name="duration[view730]">
+															<option value="0">Not set</option>
+															<option value="10">10 min</option>
+															<option value="15">15 min</option>
+															<option value="20">20 min</option>
+															<option value="25">25 min</option>
+															<option value="30">30 min</option>
+															<option value="35">35 min</option>
+															<option value="40">40 min</option>
+															<option value="45">45 min</option>
+															<option value="50">50 min</option>
+															<option value="55">55 min</option>
+															<option selected="selected" value="60">1 h </option>
+															<option value="65">1 h 05 min</option>
+															<option value="70">1 h 10 min</option>
+															<option value="75">1 h 15 min</option>
+															<option value="80">1 h 20 min</option>
+															<option value="85">1 h 25 min</option>
+															<option value="90">1 h 30 min</option>
+															<option value="95">1 h 35 min</option>
+															<option value="100">1 h 40 min</option>
+															<option value="105">1 h 45 min</option>
+															<option value="110">1 h 50 min</option>
+															<option value="115">1 h 55 min</option>
+															<option value="120">2 h </option>
+															<option value="135">2 h 15 min</option>
+															<option value="150">2 h 30 min</option>
+															<option value="165">2 h 45 min</option>
+															<option value="180">3 h </option>
+															<option value="195">3 h 15 min</option>
+															<option value="210">3 h 30 min</option>
+															<option value="225">3 h 45 min</option>
+															<option value="240">4 h </option>
+															<option value="270">4 h 30 min</option>
+															<option value="300">5 h </option>
+															<option value="330">5 h 30 min</option>
+															<option value="360">6 h </option>
+															<option value="390">6 h 30 min</option>
+															<option value="420">7 h </option>
+															<option value="450">7 h 30 min</option>
+															<option value="480">8 h </option>
+															<option value="540">9 h </option>
+															<option value="600">10 h </option>
+															<option value="660">11 h </option>
+															<option value="720">12 h </option>
+														</select></td>
 													</tr>
-													<tr data-tooltip="&lt;strong&gt;Full and Sale price&lt;/strong&gt; - Full price is the pricelist price of your service. If you are offering a special price on this offer, add it to Sale price." class="form-row" aria-describedby="ui-tooltip-5">
+													<tr id="price" title="<strong>Full and Sale price</strong> - Full price is the pricelist price of your service. If you are offering a special price on this offer, add it to Sale price." class="form-row" aria-describedby="ui-tooltip-5">
 														<td class="label-part sku-rrp"><label>Full price, £</label></td>
-														<td class="input-part">
+														<td data-tooltips="&lt;strong&gt;Full and Sale price&lt;/strong&gt; - Full price is the pricelist price of your service. If you are offering a special price on this offer, add it to Sale price." class="tooltips tooltips-top input-part">
 														<div class="txt-input txt-input-mini form-element-wrapper">
 															<input type="text" min="1" class="required number" value="" name="fullPriceAmount[view730]" more-than="#sku-discountPriceAmount-view730">
 														</div><label class="optional">Sale price, £</label>
@@ -1325,11 +1303,11 @@
 												</tbody>
 											</table>
 										</div>
-										
+
 									</div>
 									<div class="listing group-dependancy">
 										<h2 class="part-title">How would you like to sell this service?</h2>
-										<div data-tooltip="&lt;strong&gt;Feature on Wahanda&lt;/strong&gt; - Featuring a service will put it on top on your listing and expose it through all partners&amp;#39; websites. You can feature up to five of your top services." class="choices form-element-wrapper enhanced-listing-only">
+										<div id="sell_service" title="<strong>Feature on Wahanda</strong> - Featuring a service will put it on top on your listing and expose it through all partners&amp;#39; websites. You can feature up to five of your top services." class="choices form-element-wrapper enhanced-listing-only">
 											<label>
 												<input type="checkbox" name="featured" id="service-feature">
 												Feature service (max 5 per venue) </label>
@@ -1375,7 +1353,7 @@
 															<option value="after">Ngưng hoạt động</option>
 														</select>
 													</tr>
-													<tr class="form-row">
+													<tr id="sold_as" title="<strong>Sell as</strong> - Service can be fulfilled as: <strong><em>Appointment</em></strong> - customers book in directly by finding available slots in your calendar. It’s much more convenient both for you and your customers. <strong><em>eVoucher</em></strong> - customers receive vouchers that they can redeem in your venue." class="form-row">
 														<td class="label-part"><label for="service-type">Sold as</label></td>
 														<td class="input-part">
 														<select id="fulfillment-types" name="fulfillmentTypes">
@@ -1485,3 +1463,27 @@
 		</div>
 	</div>
 </div>
+<!-- le javascript -->
+<script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<!-- transition -->
+<style>
+	.tooltip{
+		font-size: 11.5px;
+		z-index: 9999;
+	}
+</style>
+<script>
+	$(document).ready(function() {
+		$("#service_name, #price, #sell_service, #sold_as").tooltip({
+			placement : 'right',
+			html : true,
+			container : 'body'
+		});
+		$("#menu_group").tooltip({
+			placement : 'top',
+			html : true,
+			container : 'body'
+		});
+	}); 
+</script>

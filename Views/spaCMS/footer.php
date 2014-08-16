@@ -8,9 +8,6 @@
     <script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
 
     <script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
-
-	<!--<script src="<?php echo URL ?>public/assets/js/spaCMS/spaCMS.js" type="text/javascript"></script>-->
-
    
     <script type="text/javascript">
 	  	// Active menu	
@@ -30,13 +27,12 @@
     </script>
 
     <?php
-        // Include script modul
+        // Include script module
         if(isset($this->script)){
             foreach ($this->script as $script) {
                 echo '<script type="text/javascript" src="'. $script .'" ></script>';
             }
         }
     ?>
-
     
 </html>

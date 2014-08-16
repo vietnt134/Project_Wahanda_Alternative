@@ -20,12 +20,14 @@
         <!-- Chèn link CSS -->
         
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/bootstrap.min.css" type="text/css"  />
+        
+        <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/bootstrap-theme.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/spaCMS.css" type="text/css"  />
 
-        <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/tooltip.css" type="text/css"  />
+        <!-- <link rel="stylesheet" href="<?php echo URL ?>public/assets/css/spaCMS/tooltip.css" type="text/css"  /> -->
 
         <?php
             if(isset($this->style)){

@@ -6194,7 +6194,7 @@ table.wc-time-slots {
 .client-list-count .link:hover {
      color: #111111;
 }
-
+/* remove to display exactly bootstrap tooltip
 .tooltip {
      background-color: #f4f5ed;
      border-radius: 4px;
@@ -6229,7 +6229,7 @@ table.wc-time-slots {
      top: -10px;
      width: 0px;
 }
-
+*/
 .no-touch .client-list .client-list-body tr:hover td {
      background: none repeat scroll 0% 0% #eeefe9;
      border-left: 1px solid #dadbd7;
@@ -7726,7 +7726,7 @@ table .status-wrapper .status-note {
      bottom: auto;
      height: 9px;
      left: 0px;
-     position: absolute;
+     /*position: absolute;*/
      /*right: auto;*/
      /*top: 33px;*/
      width: 100%;
