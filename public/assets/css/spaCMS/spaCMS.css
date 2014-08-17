@@ -5737,7 +5737,7 @@ table.wc-time-slots {
 }
 
 .client-search .search-loader {
-     background: url("/assets/search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll 0px 0px #ffffff;
+     background: url("search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll 0px 0px #ffffff;
      bottom: auto;
      height: 14px;
      left: auto;
@@ -9631,7 +9631,7 @@ body.loading #header {
      padding-left: 20px;
      padding-right: 4px;
      position: relative;
-     width: 224px;
+     /*width: 224px;*/
      z-index: 999;
 }
 
@@ -9654,7 +9654,7 @@ body.loading #header {
 }
 
 .top-search .search-loader {
-     background: url("/assets/search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll 0px 0px #ffffff;
+     background: url("search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll 0px 0px #ffffff;
      bottom: auto;
      height: 14px;
      left: auto;
@@ -13173,7 +13173,7 @@ a.reset {
 }
 
 .image-gallery-dialog .progress {
-     background: url("/assets/search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll left center transparent;
+     background: url("search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll left center transparent;
      display: inline-block;
      height: 14px;
      margin-left: 20px;
@@ -17767,7 +17767,7 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 .edit-image-dialog .progress {
-     background: url("/assets/search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll left center transparent;
+     background: url("search-loader-2686fab5cea4cde6ee1a81f2d9470d35.gif") no-repeat scroll left center transparent;
      display: inline-block;
      height: 14px;
      margin-left: 20px;
