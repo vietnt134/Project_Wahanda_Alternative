@@ -131,15 +131,15 @@
 
     // Save image info
     $sXML = new SimpleXMLElement('uploaded.xml', null, true); // Load the entire xml
-    // Phân vùng user quản lý ảnh
+    // Phân quyền user quản lý ảnh
     $has_user = false;
-    $user_id = 3;
-    // Check user exists
+    $user_id = $_GET['user_id'];
+    // Check user has exists in XML
     foreach ($sXML as $user) {
       if($user['uid'] == $user_id) {
         $image_id = $user->count() + 1;
         $newchild = $user->addChild("cover");
-          $newchild->addAttribute("pid", $image_id);        //Notice am now using the $newchild object not the $sXML object
+          $newchild->addAttribute("pid", $user_id . $image_id); // string Id image = user_id + image_id in user
           $newchild->addChild("title", $title);
           $newchild->addChild("image_name", $file_name);
           $newchild->addChild("image_size", $image_size);
@@ -152,12 +152,12 @@
         break;
       }
     }
-    // Add new user if current user not exits
+    // Add new user if current user not exits in XML
     if(!$has_user) {
       $newchild_user = $sXML->addChild("user");
         $newchild_user->addAttribute("uid", $user_id);  
         $newchild_cover = $newchild_user->addChild("cover");
-        $newchild_cover->addAttribute("pid", 1);        //Notice am now using the $newchild object not the $sXML object
+        $newchild_cover->addAttribute("pid", $user_id . '1');        //Notice am now using the $newchild object not the $sXML object
         $newchild_cover->addChild("title", $title);
         $newchild_cover->addChild("image_name", $file_name);
         $newchild_cover->addChild("image_size", $image_size);
@@ -170,4 +170,4 @@
     // Success Alert!
     $alert = "Upload Success! \nCover title: $title \nSize: $image_size";
   }
-    echo $alert;
+  echo $alert;

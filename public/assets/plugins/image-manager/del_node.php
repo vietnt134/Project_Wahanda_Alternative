@@ -1,11 +1,10 @@
 <?php
 
-	
-	if(isset($_GET['cover_id']))
-	{
+	if(isset($_GET['cover_id']) && isset($_GET['user_id'])) {
+		$user_id = $_GET['user_id'];
 		$cover_id = $_GET['cover_id'];
 		$sXML = new SimpleXMLElement('uploaded.xml', null, true);
-		$node = $sXML->xpath("cover[@pid={$cover_id}]");
+		$node = $sXML->xpath("user[@uid={$user_id}]/cover[@pid={$cover_id}]");
 		
 		// is String, Not control
 		$image_source = ''.$node[0]->image_source;
@@ -23,7 +22,7 @@
 		}
 
 		// lưu thay đổi
-		 $sXML->asXml('uploaded.xml'); 
+		$sXML->asXml('uploaded.xml'); 
 		
 		// Delete image file 
 		if(!$exists_image){

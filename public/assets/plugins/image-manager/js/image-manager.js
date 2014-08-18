@@ -112,6 +112,7 @@ form.addEventListener('submit', function(evt) {
     // fd dung de luu gia tri goi len
     var fd = new FormData($(this)[0]); // both text and file
     fd.append('file', file);
+    fd += '&user_id=' + user_id; // USER_ID
     //fd += '&'+ $(this).serialize();
 
     // xhr dung de goi data bang ajax
@@ -154,9 +155,9 @@ function load_allImage(){
     var url = URL_IMAGE_MANAGER + "all_images.php";
     $.ajax({
         url: url,
+        data: {'user_id':user_id}, // USER_ID
         dataType: "json",
         success: function (data) {
-            console.log(data);
             var modal_body = $('#imageManager_allImage');
             modal_body.text(''); // Làm trống nội dụng trước khi load hình vào để tránh trùng lặp
             for(var i=0; i<data.length; i++){
@@ -184,7 +185,8 @@ function load_allImage(){
 // <!-- Click xoa hinh -->
 $('#imageManager_removeImage').on('click', function(){
     var radio_checked = $("input:radio[name='example']:checked"); // Radio checked
-    $.get(URL_IMAGE_MANAGER + 'del_node.php', {'cover_id':radio_checked.attr('id')}, function(rs){
+    // USER_ID
+    $.get(URL_IMAGE_MANAGER + 'del_node.php', {'user_id':user_id, 'cover_id':radio_checked.attr('id')}, function(rs){
         // $('img.radio-select-img-item').find('.item-checked').css('display','none');
         $('img.item-checked').fadeOut();
         // Clear image description

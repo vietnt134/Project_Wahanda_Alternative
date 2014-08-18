@@ -25,6 +25,7 @@
     <script type="text/javascript">
         var URL = "<?php echo URL ?>";
         var URL_IMAGE_MANAGER = "<?php echo ASSETS . 'plugins/image-manager/'; ?>";
+        var user_id = 3; // USER ID = GET SESSION['user_id']
     </script>
 
     <?php
