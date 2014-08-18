@@ -1,0 +1,1990 @@
+.site-sprite, .site-arrow-big-left, .site-arrow-dropdown, .wahanda-dropdown .ui-icon, .site-arrow-in-circle-left-large, .site-arrow-in-circle-right-large, .site-arrow-less-up-lmn, .site-arrow-less-up, .site-arrow-less-up_hover-lmn, .site-arrow-more-down-bw, .site-arrow-more-down-bw_hover-lmn, .site-arrow-more-down-grey, .site-arrow-more-down-lmn, .site-arrow-more-down-white, .site-arrow-more-down, .site-arrow-more-down_hover-lmn, .site-arrow-more-right-lmn, .site-arrow-more-right-mini-lmn, .site-arrow-more-right-mini, .site-arrow-more-right-mini_hover-lmn, .site-arrow-more-right-tiny, .site-arrow-more-right, .site-arrow-more-right_hover-lmn, .site-arrow-more-right_hover2, .site-arrow-more-up-grey, .site-arrow-more-up-white, .site-arrow-page-left, .site-arrow-page-right, .site-arrow-white-right, .site-attention-lmn, .site-attention-medium-lmn, .site-attention-medium, .site-attention, .site-badge-booking-disabled, .site-badge-booking, .site-badge-discount, .site-badge-evoucher-disabled, .site-badge-evoucher, .site-badge-facebook, .site-badge-gift-disabled, .site-badge-gift, .site-badge-gplus, .site-badge-map, .site-badge-twitter, .site-bullet-nav, .site-business-help, .site-business-how, .site-business-manage, .site-business-notifications, .site-business-online, .site-business-schedule, .site-calendar-arrow-next, .site-calendar-arrow-prev, .site-card-amex, .site-card-maestro, .site-card-mastercard, .site-card-visa, .site-checkout-back, .site-checkout-calendar, .site-checkout-cancel, .site-checkout-client, .site-checkout-delivery, .site-checkout-evoucher, .site-checkout-giftvoucher, .site-checkout-glasses, .site-checkout-login, .site-checkout-map-pin, .site-checkout-paidinfull, .site-checkout-payment, .site-checkout-physicalvoucher, .site-checkout-print, .site-checkout-promo, .site-checkout-tick, .site-checkout-wahanda, .site-close-form, .site-close-small-inverse, .site-comment-tip, .site-date-small, .site-date, .site-delete-small, .site-delete, .site-dialog-deco-bottomleft, .site-dialog-deco-bottomright, .site-dialog-deco-topleft, .site-dialog-deco-topright, .site-distance-small, .site-dropdown-arrow, .site-duration-big, .site-duration-medium, .site-duration, .site-edit, .site-employee-any, .site-featured-lmn, .site-featured, .site-guests-big, .site-guests, .site-guests2-big, .site-guests2, .site-guests3-big, .site-guests3, .site-icon-female, .site-icon-male, .site-image-active, .site-image-present, .site-important, .site-information, .site-link-email, .site-link-email_hover-lmn, .site-link-phone, .site-link-phone_hover-lmn, .site-link-website, .site-link-website_hover-lmn, .site-location-mini, .site-location-small, .site-location, .site-logo-big, .site-logo-mini, .site-logo-small, .site-more-loader, .site-no-results, .site-no-reviews, .site-note-small-bw, .site-note-small, .site-pic-arrow-left-lmn, .site-pic-arrow-left, .site-pic-arrow-right-lmn, .site-pic-arrow-right, .site-question, .site-question_hover-lmn, .site-quote, .site-rombs, .site-search-small, .site-search, .site-secure-payments, .site-step1, .site-step2, .site-step3, .site-user-arrow-down, .site-venue-new, .site-voucher-delivery, .site-voucher-gift, .site-voucher-locations, .site-voucher, .site-zoom {
+	background: url('https://cdneu2.wahanda.net/images/static/site-sb1e49afa58.png') no-repeat;
+}
+
+.site-arrow-big-left {
+	background-position: 0 -3569px;
+	height: 27px;
+	width: 16px;
+}
+
+.site-arrow-dropdown, .wahanda-dropdown .ui-icon {
+	background-position: 0 -4338px;
+	height: 5px;
+	width: 11px;
+}
+.site-arrow-dropdown:hover, .wahanda-dropdown .ui-icon:hover, .site-arrow-dropdown.arrow-dropdown_hover, .wahanda-dropdown .arrow-dropdown_hover.ui-icon, .site-arrow-dropdown.arrow-dropdown-hover, .wahanda-dropdown .arrow-dropdown-hover.ui-icon {
+	background-position: 0 -4331px;
+}
+
+.site-arrow-in-circle-left-large {
+	background-position: 0 -1148px;
+	height: 40px;
+	width: 40px;
+}
+
+.site-arrow-in-circle-right-large {
+	background-position: 0 -1252px;
+	height: 40px;
+	width: 41px;
+}
+
+.site-arrow-less-up-lmn {
+	background-position: 0 -4108px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-less-up {
+	background-position: 0 -4281px;
+	height: 8px;
+	width: 6px;
+}
+.site-arrow-less-up:hover, .site-arrow-less-up.arrow-less-up_hover, .site-arrow-less-up.arrow-less-up-hover {
+	background-position: 0 -4128px;
+}
+
+.site-arrow-less-up_hover-lmn {
+	background-position: 0 -4138px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-down-bw {
+	background-position: 0 -4179px;
+	height: 8px;
+	width: 6px;
+}
+.site-arrow-more-down-bw:hover, .site-arrow-more-down-bw.arrow-more-down-bw_hover, .site-arrow-more-down-bw.arrow-more-down-bw-hover {
+	background-position: 0 -4054px;
+}
+
+.site-arrow-more-down-bw_hover-lmn {
+	background-position: 0 -4014px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-down-grey {
+	background-position: 0 -4024px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-down-lmn {
+	background-position: 0 -4034px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-down-white {
+	background-position: 0 -4238px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-down {
+	background-position: 0 -4169px;
+	height: 8px;
+	width: 6px;
+}
+.site-arrow-more-down:hover, .site-arrow-more-down.arrow-more-down_hover, .site-arrow-more-down.arrow-more-down-hover {
+	background-position: 0 -4064px;
+}
+
+.site-arrow-more-down_hover-lmn {
+	background-position: 0 -4044px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-right-lmn {
+	background-position: 0 -3852px;
+	height: 7px;
+	width: 9px;
+}
+
+.site-arrow-more-right-mini-lmn {
+	background-position: 0 -4148px;
+	height: 5px;
+	width: 9px;
+}
+
+.site-arrow-more-right-mini {
+	background-position: 0 -3870px;
+	height: 5px;
+	width: 9px;
+}
+.site-arrow-more-right-mini:hover, .site-arrow-more-right-mini.arrow-more-right-mini_hover, .site-arrow-more-right-mini.arrow-more-right-mini-hover {
+	background-position: 0 -4162px;
+}
+
+.site-arrow-more-right-mini_hover-lmn {
+	background-position: 0 -4155px;
+	height: 5px;
+	width: 9px;
+}
+
+.site-arrow-more-right-tiny {
+	background-position: 0 -4385px;
+	height: 6px;
+	width: 7px;
+}
+.site-arrow-more-right-tiny:hover, .site-arrow-more-right-tiny.arrow-more-right-tiny_hover, .site-arrow-more-right-tiny.arrow-more-right-tiny-hover {
+	background-position: 0 -4371px;
+}
+
+.site-arrow-more-right {
+	background-position: 0 -3843px;
+	height: 7px;
+	width: 9px;
+}
+.site-arrow-more-right:hover, .site-arrow-more-right.arrow-more-right_hover, .site-arrow-more-right.arrow-more-right-hover {
+	background-position: 0 -3877px;
+}
+
+.site-arrow-more-right_hover-lmn {
+	background-position: 0 -3861px;
+	height: 7px;
+	width: 9px;
+}
+
+.site-arrow-more-right_hover2 {
+	background-position: 0 -4087px;
+	height: 7px;
+	width: 9px;
+}
+
+.site-arrow-more-up-grey {
+	background-position: 0 -4118px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-more-up-white {
+	background-position: 0 -4291px;
+	height: 8px;
+	width: 6px;
+}
+
+.site-arrow-page-left {
+	background-position: 0 -4229px;
+	height: 7px;
+	width: 6px;
+}
+.site-arrow-page-left:hover, .site-arrow-page-left.arrow-page-left_hover, .site-arrow-page-left.arrow-page-left-hover {
+	background-position: 0 -4353px;
+}
+
+.site-arrow-page-right {
+	background-position: 0 -4315px;
+	height: 7px;
+	width: 6px;
+}
+.site-arrow-page-right:hover, .site-arrow-page-right.arrow-page-right_hover, .site-arrow-page-right.arrow-page-right-hover {
+	background-position: 0 -4362px;
+}
+
+.site-arrow-white-right {
+	background-position: 0 -4301px;
+	height: 12px;
+	width: 7px;
+}
+
+.site-attention-lmn {
+	background-position: 0 -3739px;
+	height: 19px;
+	width: 21px;
+}
+
+.site-attention-medium-lmn {
+	background-position: 0 -3403px;
+	height: 27px;
+	width: 30px;
+}
+
+.site-attention-medium {
+	background-position: 0 -2984px;
+	height: 27px;
+	width: 30px;
+}
+
+.site-attention {
+	background-position: 0 -2919px;
+	height: 19px;
+	width: 21px;
+}
+
+.site-badge-booking-disabled {
+	background-position: 0 -971px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-booking {
+	background-position: 0 -1613px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-discount {
+	background-position: 0 -2225px;
+	height: 25px;
+	width: 27px;
+}
+
+.site-badge-evoucher-disabled {
+	background-position: 0 -179px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-evoucher {
+	background-position: 0 -259px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-facebook {
+	background-position: 0 -2574px;
+	height: 45px;
+	width: 45px;
+}
+.site-badge-facebook:hover, .site-badge-facebook.badge-facebook_hover, .site-badge-facebook.badge-facebook-hover {
+	background-position: 0 -1674px;
+}
+
+.site-badge-gift-disabled {
+	background-position: 0 -382px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-gift {
+	background-position: 0 -729px;
+	height: 59px;
+	width: 60px;
+}
+
+.site-badge-gplus {
+	background-position: 0 -1469px;
+	height: 45px;
+	width: 45px;
+}
+.site-badge-gplus:hover, .site-badge-gplus.badge-gplus_hover, .site-badge-gplus.badge-gplus-hover {
+	background-position: 0 -1294px;
+}
+
+.site-badge-map {
+	background-position: 0 -1780px;
+	height: 42px;
+	width: 42px;
+}
+
+.site-badge-twitter {
+	background-position: 0 -1973px;
+	height: 45px;
+	width: 45px;
+}
+.site-badge-twitter:hover, .site-badge-twitter.badge-twitter_hover, .site-badge-twitter.badge-twitter-hover {
+	background-position: 0 -1422px;
+}
+
+.site-bullet-nav {
+	background-position: 0 -4399px;
+	height: 5px;
+	width: 5px;
+}
+
+.site-business-help {
+	background-position: 0 -3147px;
+	height: 20px;
+	width: 14px;
+}
+
+.site-business-how {
+	background-position: 0 -2686px;
+	height: 22px;
+	width: 22px;
+}
+
+.site-business-manage {
+	background-position: 0 -2962px;
+	height: 20px;
+	width: 20px;
+}
+
+.site-business-notifications {
+	background-position: 0 -2897px;
+	height: 20px;
+	width: 20px;
+}
+
+.site-business-online {
+	background-position: 0 -2940px;
+	height: 20px;
+	width: 17px;
+}
+
+.site-business-schedule {
+	background-position: 0 -3334px;
+	height: 20px;
+	width: 20px;
+}
+
+.site-calendar-arrow-next {
+	background-position: 0 -3947px;
+	height: 12px;
+	width: 7px;
+}
+.site-calendar-arrow-next:hover, .site-calendar-arrow-next.calendar-arrow-next_hover, .site-calendar-arrow-next.calendar-arrow-next-hover {
+	background-position: 0 -4189px;
+}
+
+.site-calendar-arrow-prev {
+	background-position: 0 -3975px;
+	height: 12px;
+	width: 7px;
+}
+.site-calendar-arrow-prev:hover, .site-calendar-arrow-prev.calendar-arrow-prev_hover, .site-calendar-arrow-prev.calendar-arrow-prev-hover {
+	background-position: 0 -4215px;
+}
+
+.site-card-amex {
+	background-position: 0 -2870px;
+	height: 25px;
+	width: 43px;
+}
+
+.site-card-maestro {
+	background-position: 0 -1586px;
+	height: 25px;
+	width: 43px;
+}
+
+.site-card-mastercard {
+	background-position: 0 -1721px;
+	height: 25px;
+	width: 43px;
+}
+
+.site-card-visa {
+	background-position: 0 -1946px;
+	height: 25px;
+	width: 43px;
+}
+
+.site-checkout-back {
+	background-position: 0 -2542px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-calendar {
+	background-position: 0 -1824px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-cancel {
+	background-position: 0 -2446px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-client {
+	background-position: 0 -2414px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-delivery {
+	background-position: 0 -2350px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-evoucher {
+	background-position: 0 -2020px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-giftvoucher {
+	background-position: 0 -1888px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-glasses {
+	background-position: 0 -2252px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-login {
+	background-position: 0 -2637px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-map-pin {
+	background-position: 0 -2076px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-paidinfull {
+	background-position: 0 -3087px;
+	height: 16px;
+	width: 78px;
+}
+
+.site-checkout-payment {
+	background-position: 0 -2510px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-physicalvoucher {
+	background-position: 0 -1748px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-print {
+	background-position: 0 -2174px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-promo {
+	background-position: 0 -2382px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-tick {
+	background-position: 0 -2478px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-checkout-wahanda {
+	background-position: 0 -1856px;
+	height: 30px;
+	width: 30px;
+}
+
+.site-close-form {
+	background-position: 0 -3794px;
+	height: 32px;
+	width: 32px;
+}
+.site-close-form:hover, .site-close-form.close-form_hover, .site-close-form.close-form-hover {
+	background-position: 0 -3760px;
+}
+
+.site-close-small-inverse {
+	background-position: 0 -3989px;
+	height: 11px;
+	width: 10px;
+}
+
+.site-comment-tip {
+	background-position: 0 -4324px;
+	height: 5px;
+	width: 9px;
+}
+
+.site-date-small {
+	background-position: 0 -3886px;
+	height: 14px;
+	width: 14px;
+}
+
+.site-date {
+	background-position: 0 -3262px;
+	height: 20px;
+	width: 19px;
+}
+
+.site-delete-small {
+	background-position: 0 -4096px;
+	height: 10px;
+	width: 10px;
+}
+.site-delete-small:hover, .site-delete-small.delete-small_hover, .site-delete-small.delete-small-hover {
+	background-position: 0 -4002px;
+}
+
+.site-delete {
+	background-position: 0 -3961px;
+	height: 12px;
+	width: 12px;
+}
+
+.site-dialog-deco-bottomleft {
+	background-position: 0 -4423px;
+	height: 15px;
+	width: 15px;
+}
+
+.site-dialog-deco-bottomright {
+	background-position: 0 -4406px;
+	height: 15px;
+	width: 15px;
+}
+
+.site-dialog-deco-topleft {
+	background-position: 0 -4440px;
+	height: 15px;
+	width: 15px;
+}
+
+.site-dialog-deco-topright {
+	background-position: 0 -4457px;
+	height: 15px;
+	width: 15px;
+}
+
+.site-distance-small {
+	background-position: 0 -3707px;
+	height: 14px;
+	width: 10px;
+}
+
+.site-dropdown-arrow {
+	background-position: 0 -4379px;
+	height: 4px;
+	width: 9px;
+}
+.site-dropdown-arrow:hover, .site-dropdown-arrow.dropdown-arrow_hover, .site-dropdown-arrow.dropdown-arrow-hover {
+	background-position: 0 -4393px;
+}
+
+.site-duration-big {
+	background-position: 0 -2052px;
+	height: 22px;
+	width: 23px;
+}
+
+.site-duration-medium {
+	background-position: 0 -2669px;
+	height: 15px;
+	width: 16px;
+}
+
+.site-duration {
+	background-position: 0 -3356px;
+	height: 11px;
+	width: 11px;
+}
+
+.site-edit {
+	background-position: 0 -3935px;
+	height: 10px;
+	width: 10px;
+}
+.site-edit:hover, .site-edit.edit_hover, .site-edit.edit-hover {
+	background-position: 0 -4203px;
+}
+
+.site-employee-any {
+	background-position: 0 -1516px;
+	height: 68px;
+	width: 68px;
+}
+
+.site-featured-lmn {
+	background-position: 0 -648px;
+	height: 79px;
+	width: 79px;
+}
+
+.site-featured {
+	background-position: 0 -505px;
+	height: 79px;
+	width: 79px;
+}
+
+.site-guests-big {
+	background-position: 0 -2206px;
+	height: 17px;
+	width: 14px;
+}
+
+.site-guests {
+	background-position: 0 -3199px;
+	height: 12px;
+	width: 10px;
+}
+
+.site-guests2-big {
+	background-position: 0 -1403px;
+	height: 17px;
+	width: 27px;
+}
+
+.site-guests2 {
+	background-position: 0 -3133px;
+	height: 12px;
+	width: 18px;
+}
+
+.site-guests3-big {
+	background-position: 0 -952px;
+	height: 17px;
+	width: 41px;
+}
+
+.site-guests3 {
+	background-position: 0 -3073px;
+	height: 12px;
+	width: 28px;
+}
+
+.site-icon-female {
+	background-position: 0 -3723px;
+	height: 14px;
+	width: 9px;
+}
+
+.site-icon-male {
+	background-position: 0 -3614px;
+	height: 13px;
+	width: 13px;
+}
+
+.site-image-active {
+	background-position: 0 -1920px;
+	height: 24px;
+	width: 24px;
+}
+
+.site-image-present {
+	background-position: 0 -3369px;
+	height: 14px;
+	width: 14px;
+}
+
+.site-important {
+	background-position: 0 -790px;
+	height: 79px;
+	width: 79px;
+}
+
+.site-information {
+	background-position: 0 -3450px;
+	height: 16px;
+	width: 16px;
+}
+
+.site-link-email {
+	background-position: 0 -3232px;
+	height: 13px;
+	width: 19px;
+}
+.site-link-email:hover, .site-link-email.link-email_hover, .site-link-email.link-email-hover {
+	background-position: 0 -3284px;
+}
+
+.site-link-email_hover-lmn {
+	background-position: 0 -3247px;
+	height: 13px;
+	width: 19px;
+}
+
+.site-link-phone {
+	background-position: 0 -3432px;
+	height: 16px;
+	width: 17px;
+}
+.site-link-phone:hover, .site-link-phone.link-phone_hover, .site-link-phone.link-phone-hover {
+	background-position: 0 -3385px;
+}
+
+.site-link-phone_hover-lmn {
+	background-position: 0 -3468px;
+	height: 16px;
+	width: 17px;
+}
+
+.site-link-website {
+	background-position: 0 -3629px;
+	height: 18px;
+	width: 12px;
+}
+.site-link-website:hover, .site-link-website.link-website_hover, .site-link-website.link-website-hover {
+	background-position: 0 -3687px;
+}
+
+.site-link-website_hover-lmn {
+	background-position: 0 -3649px;
+	height: 18px;
+	width: 12px;
+}
+
+.site-location-mini {
+	background-position: 0 -4074px;
+	height: 11px;
+	width: 7px;
+}
+
+.site-location-small {
+	background-position: 0 -3551px;
+	height: 16px;
+	width: 12px;
+}
+
+.site-location {
+	background-position: 0 -3531px;
+	height: 18px;
+	width: 14px;
+}
+
+.site-logo-big {
+	background-position: 0 -132px;
+	height: 45px;
+	width: 174px;
+}
+
+.site-logo-mini {
+	background-position: 0 -240px;
+	height: 17px;
+	width: 67px;
+}
+
+.site-logo-small {
+	background-position: 0 -95px;
+	height: 35px;
+	width: 133px;
+}
+
+.site-more-loader {
+	background-position: 0 -2621px;
+	height: 14px;
+	width: 14px;
+}
+
+.site-no-results {
+	background-position: 0 -28px;
+	height: 65px;
+	width: 246px;
+}
+
+.site-no-reviews {
+	background-position: 0 -1094px;
+	height: 52px;
+	width: 52px;
+}
+
+.site-note-small-bw {
+	background-position: 0 -3501px;
+	height: 13px;
+	width: 13px;
+}
+
+.site-note-small {
+	background-position: 0 -3669px;
+	height: 16px;
+	width: 16px;
+}
+
+.site-pic-arrow-left-lmn {
+	background-position: 0 -2837px;
+	height: 31px;
+	width: 31px;
+}
+.site-pic-arrow-left-lmn:hover, .site-pic-arrow-left-lmn.pic-arrow-left-lmn_hover, .site-pic-arrow-left-lmn.pic-arrow-left-lmn-hover {
+	background-position: 0 -2141px;
+}
+
+.site-pic-arrow-left {
+	background-position: 0 -2804px;
+	height: 31px;
+	width: 31px;
+}
+.site-pic-arrow-left:hover, .site-pic-arrow-left.pic-arrow-left_hover, .site-pic-arrow-left.pic-arrow-left-hover {
+	background-position: 0 -2284px;
+}
+
+.site-pic-arrow-right-lmn {
+	background-position: 0 -2771px;
+	height: 31px;
+	width: 31px;
+}
+.site-pic-arrow-right-lmn:hover, .site-pic-arrow-right-lmn.pic-arrow-right-lmn_hover, .site-pic-arrow-right-lmn.pic-arrow-right-lmn-hover {
+	background-position: 0 -2108px;
+}
+
+.site-pic-arrow-right {
+	background-position: 0 -2738px;
+	height: 31px;
+	width: 31px;
+}
+.site-pic-arrow-right:hover, .site-pic-arrow-right.pic-arrow-right_hover, .site-pic-arrow-right.pic-arrow-right-hover {
+	background-position: 0 -2317px;
+}
+
+.site-question {
+	background-position: 0 -3516px;
+	height: 13px;
+	width: 13px;
+}
+.site-question:hover, .site-question.question_hover, .site-question.question-hover {
+	background-position: 0 -3486px;
+}
+
+.site-question_hover-lmn {
+	background-position: 0 -3319px;
+	height: 13px;
+	width: 13px;
+}
+
+.site-quote {
+	background-position: 0 -3828px;
+	height: 13px;
+	width: 16px;
+}
+
+.site-rombs {
+	background-position: 0 -4345px;
+	height: 6px;
+	width: 23px;
+}
+
+.site-search-small {
+	background-position: 0 -3598px;
+	height: 14px;
+	width: 14px;
+}
+
+.site-search {
+	background-position: 0 -3299px;
+	height: 18px;
+	width: 18px;
+}
+
+.site-secure-payments {
+	background-position: 0 0;
+	height: 26px;
+	width: 151px;
+}
+
+.site-step1 {
+	background-position: 0 -3169px;
+	height: 28px;
+	width: 29px;
+}
+
+.site-step2 {
+	background-position: 0 -3013px;
+	height: 28px;
+	width: 29px;
+}
+
+.site-step3 {
+	background-position: 0 -3043px;
+	height: 28px;
+	width: 29px;
+}
+
+.site-user-arrow-down {
+	background-position: 0 -3902px;
+	height: 31px;
+	width: 31px;
+}
+.site-user-arrow-down:hover, .site-user-arrow-down.user-arrow-down_hover, .site-user-arrow-down.user-arrow-down-hover {
+	background-position: 0 -4248px;
+}
+
+.site-venue-new {
+	background-position: 0 -871px;
+	height: 79px;
+	width: 79px;
+}
+
+.site-voucher-delivery {
+	background-position: 0 -1341px;
+	height: 60px;
+	width: 60px;
+}
+.site-voucher-delivery:hover, .site-voucher-delivery.voucher-delivery_hover, .site-voucher-delivery.voucher-delivery-hover {
+	background-position: 0 -586px;
+}
+
+.site-voucher-gift {
+	background-position: 0 -1032px;
+	height: 60px;
+	width: 60px;
+}
+.site-voucher-gift:hover, .site-voucher-gift.voucher-gift_hover, .site-voucher-gift.voucher-gift-hover {
+	background-position: 0 -320px;
+}
+
+.site-voucher-locations {
+	background-position: 0 -1190px;
+	height: 60px;
+	width: 60px;
+}
+.site-voucher-locations:hover, .site-voucher-locations.voucher-locations_hover, .site-voucher-locations.voucher-locations-hover {
+	background-position: 0 -443px;
+}
+
+.site-voucher {
+	background-position: 0 -2710px;
+	height: 26px;
+	width: 26px;
+}
+.site-voucher:hover, .site-voucher.voucher_hover, .site-voucher.voucher-hover {
+	background-position: 0 -3105px;
+}
+
+.site-zoom {
+	background-position: 0 -3213px;
+	height: 17px;
+	width: 16px;
+}
+
+.site-sprite, .site-arrow-big-left, .site-arrow-dropdown, .wahanda-dropdown .ui-icon, .site-arrow-in-circle-left-large, .site-arrow-in-circle-right-large, .site-arrow-less-up-lmn, .site-arrow-less-up, .site-arrow-less-up_hover-lmn, .site-arrow-more-down-bw, .site-arrow-more-down-bw_hover-lmn, .site-arrow-more-down-grey, .site-arrow-more-down-lmn, .site-arrow-more-down-white, .site-arrow-more-down, .site-arrow-more-down_hover-lmn, .site-arrow-more-right-lmn, .site-arrow-more-right-mini-lmn, .site-arrow-more-right-mini, .site-arrow-more-right-mini_hover-lmn, .site-arrow-more-right-tiny, .site-arrow-more-right, .site-arrow-more-right_hover-lmn, .site-arrow-more-right_hover2, .site-arrow-more-up-grey, .site-arrow-more-up-white, .site-arrow-page-left, .site-arrow-page-right, .site-arrow-white-right, .site-attention-lmn, .site-attention-medium-lmn, .site-attention-medium, .site-attention, .site-badge-booking-disabled, .site-badge-booking, .site-badge-discount, .site-badge-evoucher-disabled, .site-badge-evoucher, .site-badge-facebook, .site-badge-gift-disabled, .site-badge-gift, .site-badge-gplus, .site-badge-map, .site-badge-twitter, .site-bullet-nav, .site-business-help, .site-business-how, .site-business-manage, .site-business-notifications, .site-business-online, .site-business-schedule, .site-calendar-arrow-next, .site-calendar-arrow-prev, .site-card-amex, .site-card-maestro, .site-card-mastercard, .site-card-visa, .site-checkout-back, .site-checkout-calendar, .site-checkout-cancel, .site-checkout-client, .site-checkout-delivery, .site-checkout-evoucher, .site-checkout-giftvoucher, .site-checkout-glasses, .site-checkout-login, .site-checkout-map-pin, .site-checkout-paidinfull, .site-checkout-payment, .site-checkout-physicalvoucher, .site-checkout-print, .site-checkout-promo, .site-checkout-tick, .site-checkout-wahanda, .site-close-form, .site-close-small-inverse, .site-comment-tip, .site-date-small, .site-date, .site-delete-small, .site-delete, .site-dialog-deco-bottomleft, .site-dialog-deco-bottomright, .site-dialog-deco-topleft, .site-dialog-deco-topright, .site-distance-small, .site-dropdown-arrow, .site-duration-big, .site-duration-medium, .site-duration, .site-edit, .site-employee-any, .site-featured-lmn, .site-featured, .site-guests-big, .site-guests, .site-guests2-big, .site-guests2, .site-guests3-big, .site-guests3, .site-icon-female, .site-icon-male, .site-image-active, .site-image-present, .site-important, .site-information, .site-link-email, .site-link-email_hover-lmn, .site-link-phone, .site-link-phone_hover-lmn, .site-link-website, .site-link-website_hover-lmn, .site-location-mini, .site-location-small, .site-location, .site-logo-big, .site-logo-mini, .site-logo-small, .site-more-loader, .site-no-results, .site-no-reviews, .site-note-small-bw, .site-note-small, .site-pic-arrow-left-lmn, .site-pic-arrow-left, .site-pic-arrow-right-lmn, .site-pic-arrow-right, .site-question, .site-question_hover-lmn, .site-quote, .site-rombs, .site-search-small, .site-search, .site-secure-payments, .site-step1, .site-step2, .site-step3, .site-user-arrow-down, .site-venue-new, .site-voucher-delivery, .site-voucher-gift, .site-voucher-locations, .site-voucher, .site-zoom {
+	display: inline-block;
+	text-indent: -9999px;
+}
+
+body.business {
+	background: #eeecea;
+	margin-bottom: 3.625em;
+}
+body.business .content {
+	max-width: none;
+	padding-left: 0;
+	padding-right: 0;
+}
+body.business #header {
+	height: auto;
+}
+body.business #header .signup-button {
+	position: absolute;
+	top: 2.81818em;
+	right: 2.72727em;
+}
+body.business .logo {
+	margin-bottom: 32px;
+}
+body.business #nav {
+	width: 50%;
+	margin: -21px auto 0;
+}
+body.business #nav .nav-bullet {
+	width: 50%;
+}
+body.business .page-content-overlay, body.business .overlay {
+	top: 5.8125em;
+}
+body.business #footer {
+	height: 3.625em;
+}
+body.business #footer .wrapper {
+	height: 3.625em;
+}
+body.business #footer .nav-group, body.business #footer .logo-small {
+	display: none;
+}
+body.business #footer .copy {
+	padding-top: 0;
+}
+body.business #footer .footer-shadow {
+	display: none;
+}
+
+body.business.hub .page-content-overlay, body.business.hub .overlay {
+	top: 7.625em;
+}
+
+.tagline {
+	padding: 0 0 2.5em;
+	text-align: center;
+}
+.tagline .title {
+	display: block;
+	font-size: 2.1875em;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+	padding-bottom: 0.25714em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #4a4a49;
+	text-shadow: 0 1px 1px #fff;
+}
+.tagline .sub-text {
+	display: block;
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-size: 1em;
+	line-height: 1em;
+	text-shadow: 0 1px 1px #fff;
+}
+
+.content-box {
+	max-width: 66.875em;
+	margin: 0 auto;
+}
+.content-box .box-wrapper {
+	background: white;
+	background-size: 100% 16px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+	padding: 2.1875em;
+	position: relative;
+}
+.content-box.basic {
+	width: 37.5em;
+	text-align: center;
+	font-size: 1.125em;
+	line-height: 1.33333em;
+}
+.content-box.basic p {
+	margin-bottom: 0.83333em;
+}
+.content-box.basic .button {
+	margin-top: 0.66667em;
+}
+.content-box.basic .box-wrapper {
+	padding: 2.8125em 4.6875em;
+}
+
+.signup-form {
+	min-height: 33.75em;
+}
+.signup-form .form-row, .signup-form .action-row {
+	float: left;
+}
+.signup-form .form-row {
+	margin-bottom: 1.875em;
+	padding-right: 1.75em;
+	padding-bottom: 0;
+	position: relative;
+}
+.signup-form .action-row {
+	text-align: right;
+	padding-right: 1.75em;
+}
+.signup-form .button {
+	display: inline-block;
+	font-size: 0.875em;
+	height: 2.57143em;
+	line-height: 2.57143em;
+	padding: 0 1em;
+}
+.signup-form label {
+	float: left;
+	font-size: 0.75em;
+	line-height: 3em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.signup-form label.long-label {
+	line-height: inherit;
+}
+.signup-form input {
+	float: left;
+	border: 1px solid #d6d5d4;
+	background: white;
+	font-family: BrandonGrotesque-Regular, Arial, Helvetica, sans-serif;
+	font-size: 1.125em;
+	color: #4a4a49;
+	-webkit-font-smoothing: antialiased;
+	height: 2em;
+	line-height: 2em;
+	margin: 0;
+	padding: 0 0.55556em;
+	box-shadow: 0 0 0 0;
+}
+.signup-form input:focus {
+	outline: none;
+}
+.signup-form textarea {
+	float: left;
+	border: 1px solid #d6d5d4;
+	background: white;
+	font-family: BrandonGrotesque-Regular, Arial, Helvetica, sans-serif;
+	font-size: 1.125em;
+	color: #4a4a49;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0.05556em 0.55556em;
+	box-shadow: 0 0 0 0;
+	height: 6.11111em;
+}
+.signup-form textarea:focus {
+	outline: none;
+}
+.signup-form .form-row.on input, .signup-form .form-row.on textarea {
+	border: 2px solid #fbd24a;
+	padding: 0 0.5em;
+}
+.signup-form .form-row.error input, .signup-form .form-row.error textarea {
+	border-left: 2px solid #cc3333;
+	padding-left: 0.5em;
+}
+.signup-form .form-row.error.on .error-message {
+	display: block;
+}
+.signup-form .input-note {
+	float: right;
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-size: 0.8125em;
+	line-height: 1em;
+	padding-top: 0.30769em;
+	margin-bottom: -0.15385em;
+}
+.signup-form .input-note .postal-ref, .signup-form .input-note .country-name {
+	display: inline-block;
+	font-family: BrandonGrotesque-Regular, Arial, Helvetica, sans-serif;
+	font-size: 1.23077em;
+	font-style: normal;
+	padding-top: 0.1875em;
+	color: #4a4a49;
+}
+.signup-form .post-code .country {
+	float: right;
+}
+.signup-form .venue-type, .signup-form .booking-management-type, .signup-form .signing-reason-type {
+	float: left;
+}
+.signup-form .business-title, .signup-form .known-email {
+	float: left;
+	font-size: 1em;
+	line-height: 1.25em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #333333;
+}
+.signup-form .known-email {
+	font-size: 1.125em;
+	line-height: 1.11111em;
+	letter-spacing: normal;
+	text-transform: none;
+}
+.signup-form .txt-only {
+	margin-bottom: 1.5625em;
+}
+.signup-form .txt-only label {
+	line-height: 1em;
+	padding-top: 0.41667em;
+}
+.signup-form .inline-inputs {
+	float: left;
+	margin: -0.5625em 0 -0.25em;
+}
+.signup-form .inline-inputs label {
+	text-transform: none;
+	font-weight: normal;
+	font-size: 1.125em;
+	line-height: 2em;
+	padding: 0 0 0 1.33333em;
+	letter-spacing: normal;
+	white-space: nowrap;
+}
+.signup-form .text-holder {
+	float: left;
+	font-size: 1.125em;
+	height: 2em;
+	line-height: 1.83333em;
+	font-weight: bold;
+	color: #333333;
+}
+.signup-form .log-out {
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-size: 0.88889em;
+	font-weight: normal;
+	cursor: pointer;
+	padding-left: 0.3125em;
+}
+.signup-form .log-out:hover {
+	color: black;
+}
+.signup-form .legal {
+	float: left;
+	width: 43%;
+	margin-left: 35%;
+	text-align: left;
+}
+.signup-form .legal .link {
+	font-weight: bold;
+	color: #333333;
+	cursor: pointer;
+}
+.signup-form .legal .link:hover {
+	color: black;
+}
+
+.wahanda-dropdown select {
+	display: none;
+}
+.wahanda-dropdown .ui-icon {
+	position: absolute;
+	top: 1.22222em;
+	right: 0.61111em;
+	overflow: hidden;
+}
+.wahanda-dropdown .wrapper a {
+	position: relative;
+	display: block;
+	border: 1px solid #d6d5d4;
+	background: white;
+	font-size: 1.125em;
+	width: 100% !important;
+	height: 2em;
+	line-height: 2em;
+	padding: 0 0.55556em;
+	color: #4a4a49;
+	cursor: pointer;
+	box-shadow: 0 0 0 0;
+}
+.wahanda-dropdown .wrapper.error a {
+	border-left: 2px solid #cc3333;
+	padding-left: 0.5em;
+}
+.wahanda-dropdown .ui-selectmenu-status {
+	display: block;
+	padding: 0 15px 0 0;
+	line-height: 1.88889em;
+	color: #4a4a49;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.wahanda-dropdown.on .wrapper a {
+	border: 2px solid #fbd24a;
+	line-height: 1.88889em;
+	padding-left: 0.5em;
+}
+.wahanda-dropdown.on .wrapper.error .error-message {
+	display: block;
+}
+.wahanda-dropdown.on .wrapper.error a {
+	border-left: 2px solid #cc3333;
+}
+.wahanda-dropdown.on .ui-selectmenu-status {
+	line-height: 1.83333em;
+}
+.wahanda-dropdown.on .ui-icon {
+	top: 1.16667em;
+	right: 0.55556em;
+}
+
+.marketing-copy {
+	position: absolute;
+	top: 2.1875em;
+	right: 0;
+	bottom: 2.1875em;
+	width: 40%;
+	background: url('https://cdneu2.wahanda.net/images/static/signup-border.png') left top repeat-y;
+	padding: 0 1.9375em;
+}
+.marketing-copy p, .marketing-copy h2 {
+	font-size: 1em;
+	line-height: 1em;
+	margin-bottom: 1.25em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+.marketing-copy ol {
+	margin-bottom: 1.875em;
+}
+.marketing-copy ol li {
+	margin-bottom: 0.8125em;
+	padding-left: 2em;
+	line-height: 1.1875em;
+	color: #646463;
+	background-position: 0 0.5em;
+	background-repeat: no-repeat;
+}
+.marketing-copy ol li:nth-child(1) {
+	background-image: url('https://cdneu2.wahanda.net/images/static/1.png');
+}
+.marketing-copy ol li:nth-child(2) {
+	background-image: url('https://cdneu.wahanda.net/images/static/2.png');
+}
+.marketing-copy ol li:nth-child(3) {
+	background-image: url('https://cdneu2.wahanda.net/images/static/3.png');
+}
+.marketing-copy ol li:nth-child(4) {
+	background-image: url('https://cdneu.wahanda.net/images/static/4.png');
+}
+.marketing-copy ol li:nth-child(5) {
+	background-image: url('https://cdneu2.wahanda.net/images/static/5.png');
+}
+.marketing-copy .badge {
+	position: absolute;
+	top: -2.1875em;
+	right: 0;
+}
+.marketing-copy strong {
+	color: #333333;
+}
+
+#business-signup-form .form-row, #business-signup-form .action-row {
+	width: 60%;
+}
+#business-signup-form label {
+	width: 29%;
+}
+#business-signup-form input, #business-signup-form .input-note {
+	width: 71%;
+}
+#business-signup-form .post-code input {
+	width: 30%;
+}
+#business-signup-form .post-code .country {
+	width: 38%;
+}
+
+#business-register-form .form-row, #business-register-form .action-row, #business-login-form .form-row, #business-login-form .action-row, #business-venue-details-form .form-row, #business-venue-details-form .action-row {
+	width: 60%;
+}
+#business-register-form label, #business-login-form label, #business-venue-details-form label {
+	width: 35%;
+}
+#business-register-form input, #business-register-form textarea, #business-register-form .venue-type, #business-register-form .booking-management-type, #business-register-form .signing-reason-type, #business-register-form .input-note, #business-register-form .business-title, #business-register-form .inline-inputs, #business-register-form .text-holder, #business-login-form input, #business-login-form textarea, #business-login-form .venue-type, #business-login-form .booking-management-type, #business-login-form .signing-reason-type, #business-login-form .input-note, #business-login-form .business-title, #business-login-form .inline-inputs, #business-login-form .text-holder, #business-venue-details-form input, #business-venue-details-form textarea, #business-venue-details-form .venue-type, #business-venue-details-form .booking-management-type, #business-venue-details-form .signing-reason-type, #business-venue-details-form .input-note, #business-venue-details-form .business-title, #business-venue-details-form .inline-inputs, #business-venue-details-form .text-holder {
+	width: 65%;
+}
+#business-register-form .inline-inputs label, #business-login-form .inline-inputs label, #business-venue-details-form .inline-inputs label {
+	width: auto;
+}
+#business-register-form .newsletter, #business-login-form .newsletter, #business-venue-details-form .newsletter {
+	float: left;
+	width: 50%;
+	text-align: left;
+}
+#business-register-form .newsletter input, #business-login-form .newsletter input, #business-venue-details-form .newsletter input {
+	display: none;
+}
+#business-register-form .newsletter label, #business-login-form .newsletter label, #business-venue-details-form .newsletter label {
+	float: left;
+	width: 100%;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: normal;
+	font-size: 1em;
+	line-height: 1.125em;
+	padding: 0 0 0 1.625em;
+	background-position: 0 0.125em;
+	background-repeat: no-repeat;
+	background-image: url('https://cdneu2.wahanda.net/images/static/checkbox.png');
+}
+#business-register-form .newsletter label.checked, #business-login-form .newsletter label.checked, #business-venue-details-form .newsletter label.checked {
+	background-image: url('https://cdneu2.wahanda.net/images/static/checkbox-on.png');
+}
+
+#business-signup-form .marketing-copy p {
+	font-weight: bold;
+}
+
+#business-register-form, #business-login-form {
+	min-height: 31.25em;
+}
+
+.transition-page {
+	min-height: 25em;
+}
+
+#business-venue-details-form {
+	min-height: 48.125em;
+}
+#business-venue-details-form .marketing-copy {
+	padding: 0 2.1875em;
+}
+#business-venue-details-form .marketing-copy h2 {
+	line-height: 1.25em;
+	margin-bottom: 1.08333em;
+	font-weight: bold;
+}
+#business-venue-details-form .marketing-copy p {
+	text-transform: none;
+	letter-spacing: normal;
+	line-height: 1.25em;
+	color: #646463;
+	margin-bottom: 0.8125em;
+}
+
+.error-message {
+	display: none;
+	position: absolute;
+	top: 3px;
+	left: 97%;
+	background: url('https://cdneu.wahanda.net/images/static/error-tooltip-tip-left.png') left center no-repeat;
+	padding-left: 3px;
+	z-index: 100;
+}
+.error-message span {
+	display: block;
+	background: #cc3333;
+	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.55);
+	color: white;
+	line-height: 1.2em;
+	padding: 0.33333em 0.53333em;
+	white-space: nowrap;
+}
+
+.fullheight-wrapper {
+	position: absolute;
+	top: 5.8125em;
+	left: 0;
+	right: 0;
+	bottom: 3.625em;
+	min-width: 58.4375em;
+}
+.fullheight-wrapper .vcenter-parent {
+	margin: 0 auto;
+	display: table;
+	height: 100%;
+	max-width: 72.5em;
+	min-width: 52.8125em;
+	padding: 3.4375em 2.8125em 2.8125em;
+}
+.fullheight-wrapper .vcenter {
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+	vertical-align: middle;
+}
+
+body.open-login .fullheight-wrapper {
+	top: 16.0625em;
+}
+
+.section-title {
+	font-size: 1.75em;
+	line-height: 1.21429em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+
+.hero-image {
+	margin-top: -1.875em;
+	height: 26.875em;
+	width: 100%;
+	position: relative;
+	display: table;
+	text-align: center;
+}
+.hero-image .hero-copy {
+	margin: 0 auto;
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+	color: white;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.7);
+	position: relative;
+}
+.hero-image .title {
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: normal;
+}
+.hero-image .subtitle {
+	font-family: "Times New Roman", Georgia, serif;
+	font-weight: normal;
+	font-style: italic;
+}
+.hero-image.hero-home {
+	background: #f5e6e5 url('https://cdneu2.wahanda.net/images/static/business-hero-home.jpg') center top no-repeat;
+}
+.hero-image.hero-home .hero-copy {
+	vertical-align: bottom;
+	padding-bottom: 2.8125em;
+	background: url('https://cdneu.wahanda.net/images/static/sh-business-home.png') center bottom no-repeat;
+}
+.hero-image.hero-home .title {
+	font-size: 2.5em;
+	line-height: 1em;
+}
+.hero-image.hero-home .subtitle {
+	font-size: 1.375em;
+	line-height: 1.18182em;
+	max-width: 27.27273em;
+	margin: 0.59091em auto 1.09091em;
+}
+.hero-image.hero-home .button {
+	font-size: 1em;
+	height: 2.25em;
+	line-height: 2.3125em;
+	padding: 0 1em;
+}
+.hero-image.hero-software {
+	background: #e0dbd5 url('https://cdneu2.wahanda.net/images/static/business-hero-software.jpg') center top no-repeat;
+}
+.hero-image.hero-software .hero-copy {
+	vertical-align: bottom;
+	padding-bottom: 2.8125em;
+	background: url('https://cdneu2.wahanda.net/images/static/sh-business-soft.png') center bottom no-repeat;
+}
+.hero-image.hero-software .title {
+	font-size: 2.75em;
+	line-height: 1em;
+}
+.hero-image.hero-software .subtitle {
+	font-size: 1.375em;
+	line-height: 1.18182em;
+	max-width: 22.72727em;
+	margin: 0.54545em auto 1.09091em;
+}
+.hero-image.hero-software .button {
+	font-size: 1em;
+	height: 2.25em;
+	line-height: 2.3125em;
+	padding: 0 1em;
+}
+.hero-image.hero-other {
+	margin-top: 0;
+	height: 26.25em;
+	background: #c7c3bd url('https://cdneu.wahanda.net/images/static/business-hero-whenever.jpg') center top no-repeat;
+}
+.hero-image.hero-other .hero-copy {
+	background: url('https://cdneu2.wahanda.net/images/static/sh-business-other.png') center center no-repeat;
+}
+.hero-image.hero-other .title {
+	font-size: 1.75em;
+	line-height: 1em;
+}
+.hero-image.hero-other .subtitle {
+	font-size: 1em;
+	line-height: 1.25em;
+	max-width: 39.375em;
+	margin: 0.63636em auto 0;
+}
+
+.main-features, .other-features, .all-features, .getting-started, .testimonials, .pricing {
+	background: url('https://cdneu2.wahanda.net/images/static/bg-footer.jpg') 0 0;
+	text-align: center;
+	position: relative;
+	text-shadow: 0 1px 0 #fff;
+}
+.main-features .content-wrapper, .other-features .content-wrapper, .all-features .content-wrapper, .getting-started .content-wrapper, .testimonials .content-wrapper, .pricing .content-wrapper {
+	max-width: 72.5em;
+	margin: 0 auto;
+	background: url('https://cdneu.wahanda.net/images/static/features-highlight.png') center top no-repeat;
+}
+
+.all-features, .testimonials, .getting-started.last-content {
+	border-top: 1px solid #d7d5d3;
+}
+
+.main-features .content-wrapper, .testimonials .content-wrapper {
+	padding: 2.8125em 0.9375em 0.9375em;
+}
+
+.other-features .content-wrapper {
+	padding: 0.9375em;
+}
+
+.all-features, .pricing {
+	background: none;
+}
+.all-features .content-wrapper, .pricing .content-wrapper {
+	padding: 0 2.8125em;
+	background: none;
+}
+
+.getting-started .content-wrapper {
+	padding: 2.8125em;
+}
+
+.main-copy {
+	margin-top: -0.3125em;
+	padding-bottom: 0.625em;
+	text-shadow: 0 1px 0 #f7f5f1;
+}
+.main-copy .subtitle {
+	font-size: 1em;
+	line-height: 1.25em;
+	max-width: 44.375em;
+	margin: 0.75em auto 0;
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-weight: normal;
+}
+
+.content-boxes {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 30px;
+}
+.content-boxes td {
+	width: 33.33333%;
+	background: white;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+	padding: 1.625em 2.0625em 0.9375em;
+	line-height: 1.3125em;
+	color: #646463;
+}
+.content-boxes td strong {
+	color: #4a4a49;
+}
+.content-boxes ul {
+	margin: -0.125em 0 0.75em;
+}
+.content-boxes ul li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	line-height: 1.4375em;
+	font-weight: bold;
+	color: #4a4a49;
+}
+.content-boxes .box-icon {
+	display: block;
+	margin: 0 auto 1.375em;
+}
+.content-boxes .box-title {
+	font-size: 1.125em;
+	line-height: 1.33333em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-align: center;
+	color: #4a4a49;
+	margin: 0 auto 0.66667em;
+}
+.content-boxes p {
+	margin-bottom: 0.8125em;
+}
+.content-boxes .button {
+	width: 90%;
+	margin-bottom: 0.54545em;
+}
+
+.its-free {
+	font-size: 0.75em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #4a4a49;
+}
+.its-free .txt-deco {
+	padding: 0 0.4375em;
+	color: #646463;
+}
+
+.call-us {
+	margin-bottom: 0.8125em;
+}
+.call-us .title {
+	display: block;
+	font-size: 0.625em;
+	letter-spacing: 0.1em;
+	margin-bottom: 0.3em;
+	text-transform: uppercase;
+	color: #646463;
+}
+.call-us .phone {
+	display: block;
+	font-size: 1.5em;
+	letter-spacing: 0.1em;
+	padding-bottom: 0.33333em;
+	color: #e7be35;
+}
+
+.feature-list {
+	color: #646463;
+}
+.feature-list li {
+	background: url('https://cdneu.wahanda.net/images/static/feature-separator.png') center bottom no-repeat;
+	padding-bottom: 0.375em;
+}
+.feature-list li:last-child {
+	background: none;
+	padding-bottom: 0;
+}
+.feature-list li .pic-wrapper {
+	width: 50%;
+	height: 15em;
+}
+.feature-list li .pics {
+	width: 100% !important;
+	height: 15em;
+	border: 10px solid #fff;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
+	overflow: hidden;
+}
+.feature-list li .pics .controls {
+	display: none;
+	width: 100%;
+	position: absolute;
+	top: 95px;
+}
+.feature-list li .pics .controls .prev, .feature-list li .pics .controls .next {
+	width: 33px;
+	height: 33px;
+	cursor: pointer;
+}
+.feature-list li .pics .controls .prev {
+	position: absolute;
+	left: 5px;
+	background: url('https://cdneu.wahanda.net/images/static/button-left.png') 0 0 no-repeat;
+}
+.feature-list li .pics .controls .next {
+	position: absolute;
+	right: 5px;
+	background: url('https://cdneu2.wahanda.net/images/static/button-right.png') 0 0 no-repeat;
+}
+.feature-list li .pics .image-indicators {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+.feature-list li .pics .image-indicators .image {
+	display: inline-block;
+	width: 5px;
+	height: 6px;
+	background: url('https://cdneu2.wahanda.net/images/static/indicator.png') 0 0 no-repeat;
+}
+.feature-list li .pics .image-indicators .image.on {
+	background-image: url('https://cdneu2.wahanda.net/images/static/indicator-on.png');
+}
+.feature-list .in-wrapper {
+	background: url('https://cdneu.wahanda.net/images/static/feature-bg.png') center top no-repeat;
+	padding: 2.9375em 0 3em;
+}
+.feature-list li.left .pic-wrapper {
+	float: left;
+	padding-right: 1.4375em;
+}
+.feature-list li.left .description {
+	float: right;
+	padding-left: 1.27778em;
+}
+.feature-list li.right .pic-wrapper {
+	float: right;
+	padding-left: 1.4375em;
+}
+.feature-list li.right .description {
+	float: left;
+	padding-right: 1.27778em;
+}
+.feature-list .pics {
+	width: 50%;
+}
+.feature-list .description {
+	width: 50%;
+	font-size: 1.125em;
+	line-height: 1.22222em;
+	text-align: left;
+}
+.feature-list .description p {
+	margin-top: 0.77778em;
+}
+.feature-list .description a {
+	font-weight: bold;
+	color: #4a4a49;
+}
+.feature-list .description a:hover {
+	color: black;
+}
+.feature-list .title {
+	font-size: 1.55556em;
+	line-height: 1.21429em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	font-weight: normal;
+	color: #4a4a49;
+}
+
+.getting-started {
+	background: none;
+}
+.getting-started.highlighted {
+	background: url('https://cdneu2.wahanda.net/images/static/bg-footer.jpg') 0 0;
+}
+.getting-started.highlighted .content-wrapper {
+	background: url('https://cdneu.wahanda.net/images/static/features-highlight.png') center top no-repeat;
+}
+.getting-started .section-title {
+	padding-bottom: 1.21429em;
+}
+.getting-started ol {
+	margin: 0 auto 2.5em;
+	width: 45em;
+	background: url('https://cdneu.wahanda.net/images/static/getting-started-steps.png') center top no-repeat;
+	line-height: 1.3125em;
+	padding-top: 4.0625em;
+}
+.getting-started ol li {
+	float: left;
+	width: 34%;
+	padding: 0 0.9375em;
+	color: #646463;
+}
+.getting-started ol li:first-child, .getting-started ol li:last-child {
+	width: 33%;
+	padding: 0 1.625em;
+}
+.getting-started .action {
+	margin-bottom: 1.9375em;
+	background: url('https://cdneu.wahanda.net/images/static/big-button-shadow.png') center bottom no-repeat;
+}
+.getting-started .button {
+	font-size: 1.5em;
+	height: 2.54167em;
+	line-height: 2.58333em;
+	padding: 0 1.79167em;
+	border-color: #caac4c;
+}
+.getting-started .button:hover {
+	border-color: #000;
+}
+
+.more {
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-size: 1em;
+	line-height: 1em;
+	padding-right: 0.6875em;
+	background: url('https://cdneu2.wahanda.net/images/static/arrow-more.png') 100% 0.5em no-repeat;
+}
+.more:hover {
+	background-image: url('https://cdneu.wahanda.net/images/static/arrow-more-hover.png');
+}
+
+.last-content {
+	margin-bottom: -1.875em;
+}
+
+.testimonials {
+	background: none;
+}
+.testimonials .section-title {
+	margin-top: -0.17857em;
+	padding-bottom: 0.35714em;
+}
+.testimonials .content-boxes td {
+	width: 25%;
+	padding: 1.625em 1.875em 0.9375em;
+}
+.testimonials .author {
+	display: block;
+	font-family: "Times New Roman", Georgia, serif;
+	font-style: italic;
+	color: #646463;
+	font-size: 0.88889em;
+	line-height: 1em;
+	padding-bottom: 0.3125em;
+	font-weight: normal;
+	text-transform: none;
+	letter-spacing: normal;
+}
+.testimonials .box-icon.site-quote {
+	margin-bottom: 1.25em;
+}
+.testimonials .call-us .phone {
+	font-size: 1.25em;
+	padding-bottom: 0.4em;
+}
+
+.pricing .section-title {
+	margin-top: 0.32143em;
+	padding-bottom: 1.32143em;
+}
+.pricing table {
+	width: 100%;
+	margin-bottom: 2.8125em;
+}
+.pricing table th, .pricing table td {
+	border-bottom: 1px solid #e8e8e8;
+	border-right: 1px solid #e8e8e8;
+	padding: 0.9375em;
+	text-align: center;
+}
+.pricing table th {
+	border-right: 1px solid #fff;
+	padding-top: 0;
+	font-size: 1.125em;
+	letter-spacing: 0.1em;
+	line-height: 1em;
+	text-transform: uppercase;
+	font-weight: bold;
+	vertical-align: bottom;
+}
+.pricing table tr th:last-child, .pricing table tr td:last-child {
+	border-right: 0;
+}
+.pricing table .feature {
+	width: 42%;
+	text-align: left;
+}
+.pricing table .plan {
+	width: 29%;
+	font-size: 1.125em;
+}
+.pricing table .plan strong {
+	font-size: 1.11111em;
+}
+.pricing table .plan-title .txt-deco {
+	display: inline-block;
+	vertical-align: top;
+	font-size: 0.77778em;
+	padding: 0 0.5em;
+	font-weight: normal;
+	color: #646463;
+}
+.pricing table .plan-price {
+	font-size: 1.66667em;
+	line-height: 1em;
+	padding-top: 0.23333em;
+	font-weight: normal;
+	color: #e7be35;
+}
+.pricing table .plan-price span {
+	font-size: 0.6em;
+	line-height: 1.66667em;
+}
+.pricing table .premium .plan-title {
+	padding-bottom: 0.1875em;
+}
+.pricing table .premium .plan-price {
+	padding-top: 0;
+	font-size: 1.72222em;
+	line-height: 1em;
+}
+.pricing .action {
+	margin-bottom: 1.9375em;
+}
+.pricing .button {
+	font-size: 1.5em;
+	height: 2.54167em;
+	line-height: 2.58333em;
+	padding: 0 1.79167em;
+	border-color: #caac4c;
+}
+.pricing .button:hover {
+	border-bottom: 1px solid #000;
+}
+.pricing a {
+	font-weight: bold;
+}
+
+#faqs-popup {
+	width: 600px;
+	height: 400px;
+}
+#faqs-popup .popup-content {
+	height: 100%;
+}
+#faqs-popup .popup-content .text {
+	height: 100%;
+	overflow-y: auto;
+}
