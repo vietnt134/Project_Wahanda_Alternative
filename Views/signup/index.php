@@ -61,7 +61,7 @@
 			<div class="wrapper">
 				<div id="user-nav">
 					<div class="button other-button a-login">
-						<span class="button-inside">Close</span>
+						<span class="button-inside">Log in</span>
 					</div>
 					<div class="user-info hide page-content-overlay-persist">
 						<div class="pic">
