@@ -1,4 +1,7 @@
 <?php
+
+if(isset($_POST['user_id'])){
+
   //define a maxim size for the uploaded images
   define("MAX_SIZE", "100");
   // define the width and height for the thumbnail
@@ -133,7 +136,7 @@
     $sXML = new SimpleXMLElement('uploaded.xml', null, true); // Load the entire xml
     // Phân quyền user quản lý ảnh
     $has_user = false;
-    $user_id = $_GET['user_id'];
+    $user_id = $_POST['user_id'];
     // Check user has exists in XML
     foreach ($sXML as $user) {
       if($user['uid'] == $user_id) {
@@ -171,3 +174,7 @@
     $alert = "Upload Success! \nCover title: $title \nSize: $image_size";
   }
   echo $alert;
+
+} else {
+  echo 'Warning [903]: Not permission!';
+}

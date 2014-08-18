@@ -54,7 +54,7 @@
 		}
 		// Delete success
 	} else {
-		// Choice image before delete
+		echo 'Warning [903]: Not permission!';
 	}
 	
 	
