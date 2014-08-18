@@ -65,12 +65,6 @@
 														<i class="fa fa-pencil"></i>
 													</a>
 												</div>
-
-												<img class="logo-image" src="https://connect.wahanda.com/api/v2.0.0/media/venue/285925/gallery/image/257441?width=156&amp;height=121">
-												<div class="edit">
-													<a class="set-logo" href="javascript:;">Set logo</a>
-
-												</div>
 											</div>
 											<table cellspacing="0" cellpadding="0" class="default-form">
 												<tbody>
