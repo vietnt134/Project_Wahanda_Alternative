@@ -6,3 +6,8 @@
 	margin-left: 17px !important;
 	margin-top: 17px;
 }
+
+img.logo-image, div.picture-logo {
+	width: 165px;
+	height: 92px;
+}

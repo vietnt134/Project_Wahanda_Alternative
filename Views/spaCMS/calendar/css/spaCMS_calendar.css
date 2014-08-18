@@ -18,7 +18,16 @@
 }
 
 #calendar {
-	max-width: 900px;
-	margin: 40px auto;
+	/*max-width: 900px;*/
+	margin: 10px auto;
 	padding: 0 10px;
+}
+
+td.fc-axis {
+	width: 53px !important;
+}
+
+#calendar-holder .form-content {
+	top: 35px !important;
+	bottom: 0px !important;
 }

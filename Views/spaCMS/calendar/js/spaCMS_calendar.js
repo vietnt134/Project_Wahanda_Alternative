@@ -4,8 +4,9 @@ $(document).ready(function() {
 		header: {
 			left: 'prev,next today',
 			center: 'title',
-			right: 'month,agendaWeek,agendaDay'
+			right: 'month,agendaWeek,agendaDay',
 		},
+		hiddenDays: [], // [2, 4] hide Tuesdays and Thursdays
 		defaultDate: '2014-08-12',
 		editable: true,
 		eventLimit: true, // allow "more" link when too many events

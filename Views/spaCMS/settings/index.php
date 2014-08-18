@@ -58,8 +58,13 @@
 									<div class="form-venue-details">
 										<div class="venue-main-info">
 											<div class="picture-logo">
-												<img class="logo-image" src="https://connect.wahanda.com/api/v2.0.0/media/venue/285925/gallery/image/257441?width=156&amp;height=121">
-												<div class="edit"><a class="set-logo" href="javascript:;">Set logo</a></div>
+												<img class="logo-image" src="">
+												<input type="hidden" name="user_logo">
+												<div class="edit">
+													<a class="set-logo" href="javascript:;" id="imageManager_openModal" data-toggle="modal" data-target="#imageManager_modal" title="Sửa logo">
+														<i class="fa fa-pencil"></i>
+													</a>
+												</div>
 											</div>
 											<table cellspacing="0" cellpadding="0" class="default-form">
 												<tbody><tr data-tooltip="&lt;strong&gt;Venue name&lt;/strong&gt; - Enter your venue name here - make sure it's all spelt correctly." class="form-row" aria-describedby="ui-tooltip-0">
@@ -92,12 +97,6 @@
 										<table cellspacing="0" cellpadding="0" class="default-form">
 											<tbody><tr class="form-header-row">
 												<td colspan="2">Where is your venue located?</td>
-											</tr>
-											<tr data-tooltip="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row text-location-link" aria-describedby="ui-tooltip-2">
-												<td class="label-part"></td>
-												<td class="input-part">
-													<a class="show-text-location" href="javascript:;">Do you operate inside a hotel, clinic etc?</a>
-												</td>
 											</tr>
 											<tr data-tooltip="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row hidden text-location">
 												<td class="label-part">
@@ -1456,4 +1455,69 @@
 	</div>
 </div>
 
-		
+
+<!-- Image Manager Modal -->
+<div class="modal fade" id="imageManager_modal" tabindex="-1" role="dialog" aria-labelledby="imageManager_modalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="imageManager_modalLabel">Upload image</h4>
+      </div>
+      <div class="modal-body">
+        <div id="imageManager_descriptionImage">
+            <div id="imageManager_descriptionImage-content">
+                <strong>Image title:</strong> </br>
+                <span class="cover_title"></span>
+                <div>
+                    <h6>Image name: </h6><h6 class="cover_image_name"> </h6>
+                    <h6>Image size: </h6><h6 class="cover_image_size"> </h6>
+                    <h6>Thumbnail: </h6><h6 class="cover_thumbnail_name"> </h6>
+                </div>
+            </div>
+            <button type="button" id="imageManager_removeImage" class="btn btn-sm btn-danger pull-left" disabled="disabled"><i class="fa fa-trash-o"></i> Remove</button>
+        </div>
+        <div id="imageManager_allImage">
+            <!-- All image show here --> 
+                
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="modal-footer" style="margin-top: 0px;">
+        <div class="col-md-9" style="border-right: 1px solid #CCC; margin-bottom: 10px;">
+            <form id="imageManager_uploadForm" method="post" action="upload.php" enctype="multipart/form-data">
+                
+                <div id="upload_imagePreview" class="pull-left" >
+                    <img src="" style="width: 127px; height: 70px;"/>
+                </div>
+                <div class="pull-left" align="left" style="margin-left: 10px; width: 120px;">
+                    <span class="btn btn-sm btn-success fileinput-button" style="margin-bottom: 11px;">
+                        <i class="fa fa-plus"></i>
+                        <span>Add file ...</span>
+                        <input type="file" name="file" id="imageManger_inputFile" >
+                    </span>
+                    </br>
+                    <button type="submit" class="btn btn-sm btn-primary" value="Upload" id="imageManager_startUpload" >
+                        <i class="fa fa-upload"></i>
+                        <span>Start upload</span>
+                    </button>
+                </div>
+                <div class="pull-left" style="width: 315px">
+                    <input id="cover_title" name="cover_title" type="text" class="form-control" pattern=".{3,}" required title="3 characters minimum" placeHolder="Nhập tiêu đề cho cover" >
+                    </br>
+                    <div class="progress progress-striped active" style="margin-bottom: 0px;">
+                      <div class="progress-bar"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+                        <span class="sr-only">45% Complete</span>
+                      </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" id="imageManager_saveChange" class="btn btn-sm btn-primary" >Save changes</button>
+            <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!--// END Image Manager Modal -->

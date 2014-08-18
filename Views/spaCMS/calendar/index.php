@@ -34,7 +34,7 @@
 		</div>
 
 
-		<div>
+		<div class="form-content">
 			<div id='script-warning'>
 				<code>php/get-events.php</code> must be running.
 			</div>

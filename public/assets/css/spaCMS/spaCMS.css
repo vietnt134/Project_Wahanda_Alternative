@@ -17062,7 +17062,7 @@ html body.menu-module #feedbackify .fby-tab {
 
 #venue-details .form-venue-details .venue-main-info {
      background: none repeat scroll 0% 0% #eaebe4;
-     height: 150px;
+     height: 120px;
      margin-bottom: 12px;
      padding: 14px 14px 14px 188px;
      /*width: 387px;*/
@@ -17072,11 +17072,11 @@ html body.menu-module #feedbackify .fby-tab {
      background: none repeat scroll 0% 0% #ffffff;
      border: 2px solid #74756f;
      float: left;
-     height: 121px;
+     /*height: 121px;*/
      margin-left: -174px;
      overflow: hidden;
      position: relative;
-     width: 156px;
+     /*width: 156px;*/
 }
 
 #venue-details .form-venue-details .venue-main-info .picture-logo .edit {
