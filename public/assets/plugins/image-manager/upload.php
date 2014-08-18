@@ -133,7 +133,7 @@
     $sXML = new SimpleXMLElement('uploaded.xml', null, true); // Load the entire xml
     // Phân vùng user quản lý ảnh
     $has_user = false;
-    $user_id = 2;
+    $user_id = 3;
     // Check user exists
     foreach ($sXML as $user) {
       if($user['uid'] == $user_id) {

@@ -11,3 +11,9 @@ img.logo-image, div.picture-logo {
 	width: 165px;
 	height: 92px;
 }
+
+/*le viet*/
+.tooltip{
+	font-size: 11.5px;
+	z-index: 9999;
+}

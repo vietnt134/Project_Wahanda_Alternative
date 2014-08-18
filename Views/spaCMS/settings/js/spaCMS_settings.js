@@ -9,3 +9,11 @@
         // Hide Modal
         $("#imageManager_modal").modal('hide'); 
     });
+
+
+    // le viet
+    $("#venue_name, #venue_type, #venue_location_1, #venue_location_2, #venue_address, #loc_map, #phone, #email, #website, #face, #google, #description").tooltip({
+        placement : 'right',
+        html : true,
+        container : 'body'
+    });

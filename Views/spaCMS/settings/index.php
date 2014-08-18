@@ -1513,23 +1513,3 @@
   </div>
 </div><!--// END Image Manager Modal -->
 
-<!-- le javascript -->
-<script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
-<!-- transition -->
-<style>
-	.tooltip{
-		font-size: 11.5px;
-		z-index: 9999;
-	}
-</style>
-<script>
-	$(document).ready(function() {
-		$("#venue_name, #venue_type, #venue_location_1, #venue_location_2, #venue_address, #loc_map, #phone, #email, #website, #face, #google, #description").tooltip({
-			placement : 'right',
-			html : true,
-			container : 'body'
-		});
-	}); 
-</script>
-

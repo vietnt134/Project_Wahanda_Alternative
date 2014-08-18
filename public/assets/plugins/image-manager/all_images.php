@@ -7,7 +7,7 @@
 
 	// 
 	// $user_id = $_GET['user_id'];
-	$user_id = 2;
+	$user_id = 3;
 	foreach ($covers as $user) {
 		if($user['uid'] == $user_id){
 			foreach ($user as $key => $cover) {
