@@ -1088,7 +1088,7 @@ body.business.hub .page-content-overlay, body.business.hub .overlay {
 .signup-form label.long-label {
 	line-height: inherit;
 }
-.signup-form input {
+.signup-form input,select {
 	float: left;
 	border: 1px solid #d6d5d4;
 	background: white;
@@ -1354,7 +1354,7 @@ body.business.hub .page-content-overlay, body.business.hub .overlay {
 #business-register-form label, #business-login-form label, #business-venue-details-form label {
 	width: 35%;
 }
-#business-register-form input, #business-register-form textarea, #business-register-form .venue-type, #business-register-form .booking-management-type, #business-register-form .signing-reason-type, #business-register-form .input-note, #business-register-form .business-title, #business-register-form .inline-inputs, #business-register-form .text-holder, #business-login-form input, #business-login-form textarea, #business-login-form .venue-type, #business-login-form .booking-management-type, #business-login-form .signing-reason-type, #business-login-form .input-note, #business-login-form .business-title, #business-login-form .inline-inputs, #business-login-form .text-holder, #business-venue-details-form input, #business-venue-details-form textarea, #business-venue-details-form .venue-type, #business-venue-details-form .booking-management-type, #business-venue-details-form .signing-reason-type, #business-venue-details-form .input-note, #business-venue-details-form .business-title, #business-venue-details-form .inline-inputs, #business-venue-details-form .text-holder {
+#business-register-form input, #business-register-form textarea, #business-register-form .venue-type, #business-register-form .booking-management-type, #business-register-form .signing-reason-type, #business-register-form .input-note, #business-register-form .business-title, #business-register-form .inline-inputs, #business-register-form .text-holder, #business-login-form input, #business-login-form textarea, #business-login-form .venue-type, #business-login-form .booking-management-type, #business-login-form .signing-reason-type, #business-login-form .input-note, #business-login-form .business-title, #business-login-form .inline-inputs, #business-login-form .text-holder, #business-venue-details-form input, #business-venue-details-form textarea, #business-venue-details-form .venue-type, #business-venue-details-form .booking-management-type, #business-venue-details-form .signing-reason-type, #business-venue-details-form .input-note, #business-venue-details-form .business-title, #business-venue-details-form .inline-inputs, #business-venue-details-form .text-holder, .signup-form select {
 	width: 65%;
 }
 #business-register-form .inline-inputs label, #business-login-form .inline-inputs label, #business-venue-details-form .inline-inputs label {

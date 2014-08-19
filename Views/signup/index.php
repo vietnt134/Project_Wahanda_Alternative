@@ -107,7 +107,7 @@
 			<div class="header-shadow"></div>
 		</div>
 		<div id="site-container" class="content" style="top: 257px;">
-			<form id="business-signup-form" class="signup-form" method="POST" href="#" novalidate="novalidate">
+			<form id="business-signup-form" class="signup-form" method="POST" action="<?php echo URL; ?>venuedetail">
 				<div class="">
 					<div class="vcenter-parent">
 						<div class="vcenter">
@@ -128,7 +128,7 @@
 									<div class="form-row post-code">
 										<label for="postal-ref">Post code</label>
 										<input id="postal-ref" name="postal-ref" type="text" value=""/>
-										<select name="country-id">
+										<select id="country_id" name="country_id">
 											<option value="234" selected="">United Kingdom</option>
 											<option value="235">United States</option>
 											<option value="87">France</option>
@@ -204,7 +204,7 @@
 			<div class="footer-shadow"></div>
 		</div>
 	</body>
-	<!-- Le JavaScript-->
+	<!-- Le JavaScript -->
 	<script src="<?php echo ASSETS ?>plugins/image-manager/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 	<script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<?php
@@ -214,4 +214,11 @@
 		}
 	}
 	?>
+	<!-- Le Transiton -->
+	<style>
+		#country_id{
+			width: 38%;
+			margin-left: 3%;
+		}
+	</style>
 </html>

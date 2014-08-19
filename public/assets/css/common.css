@@ -95,7 +95,7 @@ table {
 
 @font-face {
 	font-family: 'ITCAvantGardePro-XLt';
-	src: url('https://cdneu.wahanda.net/fonts/static/2AD7A6_0_0.eot');
+	src: url('font/2AD7A6_0_0.eot');
 	src: url('https://cdneu2.wahanda.net/fonts/static/2AD7A6_0_0.eot?#iefix') format("embedded-opentype"), url('https://cdneu.wahanda.net/fonts/static/2AD7A6_0_0.woff') format("woff"), url('https://cdneu.wahanda.net/fonts/static/2AD7A6_0_0.ttf') format("truetype");
 }
 
@@ -2160,7 +2160,7 @@ body.homepage #footer {
 	right: 0;
 	height: 14.125em;
 	min-width: 58.4375em;
-	background: url('https://cdneu2.wahanda.net/images/static/bg-footer.jpg') left top repeat-x;
+	background: url('img/bg-footer.jpg') left top repeat-x;
 	text-shadow: 0 1px 0 #f7f5f1;
 }
 #footer .wrapper {
@@ -2170,7 +2170,7 @@ body.homepage #footer {
 	min-width: 58.4375em;
 	position: relative;
 	padding: 1.3125em 1.875em 0;
-	background: url('https://cdneu.wahanda.net/images/static/footer-highlight.png') center top no-repeat;
+	background: url('img/footer-highlight.png') center top no-repeat;
 }
 #footer .logo-small {
 	position: absolute;

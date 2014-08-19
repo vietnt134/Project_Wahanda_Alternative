@@ -10,6 +10,7 @@ class venuedetail extends Controller {
 	
 	public function index()
 	{
+		$this -> view -> script = array(URL . 'Views/venuedetail/js/default.js');
 		$this->view->render('venuedetail/index',TRUE);
 	}
 
