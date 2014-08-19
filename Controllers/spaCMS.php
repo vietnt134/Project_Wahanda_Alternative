@@ -38,8 +38,8 @@
 			// Auth::handleLogin();
 
 			$this->view->style = array(
-				URL . 'Views/spaCMS/calendar/css/spaCMS_calendar.css',
-				ASSETS . 'plugins/fullcalendar-2.1.0-beta2/fullcalendar.css'
+				ASSETS . 'plugins/fullcalendar-2.1.0-beta2/fullcalendar.css',
+				URL . 'Views/spaCMS/calendar/css/spaCMS_calendar.css'
 				// URL . 'public/assets/plugins/fullcalendar-2.1.0-beta2/fullcalendar.print.css'
 			);
 

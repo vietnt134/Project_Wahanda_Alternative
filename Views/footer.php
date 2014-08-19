@@ -1,20 +1,59 @@
-
-			<hr class="alert-info" />
-			<br />
-		</div>
-	</body>
-	<footer class="navbar navbar-inverse navbar-fixed-bottom bs-docs-nav">
-		<div class="container">
-			<p class="collapse navbar-collapse" style="color: white;">
-				&copy; 2013 - <?php echo date('Y');?>
-				by DVL Grp. All rights reserved. Designed and coded by members of DVL <strong><a href="<?php echo URL; ?>admincp">VIET_NT</a></strong> and <strong><a href="<?php echo URL; ?>admincp">LOI LOI</a></strong>
-			</p>
-
-		</div>
-	</footer>
-
-
-
-
 	
+        
+        <footer id="footer">
+            <div id="footer-info">
+                <div id="footer-1">
+
+                </div>
+
+                <div id="footer-2">
+
+                </div>
+
+                <div id="footer-3">
+
+                </div>
+
+                <div id="footer-4">
+
+                </div>
+            </div>
+            
+            <div id="footer-socical">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+    <!-- Chèn link JavaScript-->
+    <script src="<?php echo ASSETS ?>js/jquery.min.js" type="text/javascript"></script>
+
+    <script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+   
+    <script type="text/javascript">
+	  	// Active menu	
+        $(function() {
+            var pgurl = window.location.href.substr( window.location.href.lastIndexOf("/") + 1 );
+            $("#nav1 li a").each(function(){
+                var href = $(this).attr("href");
+                var ctr = href.substr( href.lastIndexOf("/") + 1 ) ;
+                if(ctr == pgurl || ctr == '' ) 
+                    $(this).parent().addClass("on");
+            });
+        });
+    </script>
+    
+    <script type="text/javascript">
+        var URL = "<?php echo URL ?>";
+    </script>
+
+    <?php
+        // Include script module
+        if(isset($this->script)){
+            foreach ($this->script as $script) {
+                echo '<script type="text/javascript" src="'. $script .'" ></script>';
+            }
+        }
+    ?>
 </html>

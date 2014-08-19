@@ -1,84 +1,103 @@
-<!DOCTYPE >
-<html>
-	<head>
-		<meta charset="UTF-8" />
-		<meta content="True" name="HandheldFriendly">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-		<meta name="viewport" content="width=device-width">
-		<title>Bay Online</title>
-		<link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css" />
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
 
-		<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/bootstrap.css" />
-		<!-- <link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/bootstrap-theme.css" /> -->
-		<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/docs.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/css/fontawesome/css/font-awesome.css" />
-		<link rel="stylesheet" type="text/css" href="<?php echo URL; ?>public/datepicker/css/bootstrap-datetimepicker.min.css" />
-		
-		<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.js"></script>
-		<script type="text/javascript" src="<?php echo URL; ?>public/js/custom.js"></script>
-		<script type="text/javascript" src="<?php echo URL; ?>public/js/bootstrap.js"></script>
-		<script type="text/javascript" src="<?php echo URL; ?>public/js/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="<?php echo URL; ?>public/js/messages_vi.js"></script>
-		<?php
-		if(isset($this->js))
-		{
-			foreach ($this->js as $js) {
-				echo '<script type="text/javascript" src="'.URL.$js.'"></script>';
-			}	
-		}
-		?>
-		<script>
-			$(document).ready(function() {
-				$("#management").validate({
-					errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
-					rules : {
-						rePassword : {
-							equalTo : "#password" // So sánh trường repassword với trường có id là password
-						},
-					}
-				});
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-			});
-		</script>
-	</head>
-	<body>
-		<?php
-		Session::init();
-		function echoActiveClassIfRequestMatches($requestUri) {
-			$current_file_name = basename($_SERVER['REQUEST_URI']);
+        <title>WA Home page</title>
+        <meta name="description" content="" />
+        <meta name="author" content="TrongLoi" />
 
-			if ($current_file_name == $requestUri)
-				echo 'class="active"';
-		}
-		?>
-		<div class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="navigation">
-			<div class="container" >
-				<div class="navbar-header">
-					<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="nav navbar-brand" href="<?php echo URL; ?>index"><span class="glyphicon glyphicon-plane"></span> Bay Online</a>
-				</div>
-				<nav class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li <?php echoActiveClassIfRequestMatches('yeucau')?>>
-							<a href="<?php echo URL; ?>yeucau">Yêu Cầu Săn Vé</a>
-						</li>
-						<li <?php echoActiveClassIfRequestMatches('thanhtoan')?>>
-							<a href="<?php echo URL; ?>thanhtoan">Thanh Toán</a>
-						</li>
-						<li <?php echoActiveClassIfRequestMatches('lienhe')?>>
-							<a href="<?php echo URL; ?>lienhe">Liên Hệ</a>
-						</li>
-						<li <?php echoActiveClassIfRequestMatches('gioithieu')?>>
-							<a href="<?php echo URL; ?>gioithieu">Giới Thiệu</a>
-						</li>
-						
-					</ul>
-				</nav>
-			</div>
-		</div>
-		<div class="container bs-docs-container">
-			
+        <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+
+        <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+        <link rel="shortcut icon" href="" />
+        <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
+
+        <!-- Chèn link CSS -->
+        
+        <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/bootstrap/css/bootstrap.min.css" type="text/css"  />
+
+        <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />
+
+        <link rel="stylesheet" href="<?php echo ASSETS ?>css/home-page/home-page.css" type="text/css"  />
+
+
+        <?php
+            if(isset($this->style)){
+                foreach ($this->style as $style) {
+                    echo '<link rel="stylesheet" type="text/css" href="'. $style .'" />';
+                }
+            }
+        ?>
+    </head>
+
+    <body id="home-page">
+        <header id="header">
+            <div id="top-header" class="row">
+                <div id="top-header-left" class="col-md-3">
+                    <button class="btn btn-sm create-location-btn" type="button"><i class="fa fa-plus"></i> Tạo địa điểm</button>
+                </div>
+                <div id="top-header-center" class="col-md-6">
+                    <div class="logo">
+                        <h1 class="logo-text">COMPANY NAME</h1>
+                        <img class="logo-image" src=""/>
+                    </div>
+                </div>
+                <div id="top-header-right" class="col-md-3">
+                    <div>
+                        <button class="btn btn-sm login-btn pull-left" type="button">Đăng nhập</button>
+                        <button class="btn btn-sm login-face-btn pull-right" type="button">Login Face</button>
+                        <div class="clear-fix"></div>
+                        <input type="text" class="search-global" placeHolder="Gõ nội dung cần tìm">
+                    </div>
+                </div>
+            </div><!-- END TOP HEADER -->
+            
+            <nav id="navigation" class="navbar" role="navigation">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <!-- <a class="navbar-brand" href="#">Brand</a> -->
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">FACE</a></li>
+                            <li><a href="#">BODY</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">TÓC <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">MÓNG</a></li>
+                            <li><a href="#">MASSAGE</a></li>
+                            <li><a href="#">FITNESS</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="cart-shop"><a href="#">Giỏ hàng</a></li>
+                            <li class="languages"><a href="#">VI</a></a></li>
+                            <li class="languages"><a href="#">EN</a></a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav><!-- END NAVIGATION -->
+
+        </header>

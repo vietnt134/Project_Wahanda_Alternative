@@ -112,7 +112,7 @@ form.addEventListener('submit', function(evt) {
     // fd dung de luu gia tri goi len
     var fd = new FormData($(this)[0]); // both text and file
     fd.append('file', file);
-    fd += '&user_id=' + user_id; // USER_ID
+    fd.append('user_id', user_id); // USER_ID
     //fd += '&'+ $(this).serialize();
 
     // xhr dung de goi data bang ajax
