@@ -107,7 +107,7 @@
 			<div class="header-shadow"></div>
 		</div>
 		<div id="site-container" class="content" style="top: 257px;">
-			<form id="business-signup-form" class="signup-form" method="POST" action="<?php echo URL; ?>venuedetail">
+			<form id="business-signup-form" class="signup-form" method="POST" action="<?php echo URL; ?>business/venuedetail">
 				<div class="">
 					<div class="vcenter-parent">
 						<div class="vcenter">
