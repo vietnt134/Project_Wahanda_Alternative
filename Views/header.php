@@ -59,7 +59,7 @@
                 </div>
                 <div id="top-header-center" class="col-md-6">
                     <div class="logo">
-                        <h1 class="logo-text">COMPANY NAME</h1>
+                        <h1 class="logo-text text-center">COMPANY NAME</h1>
                         <img class="logo-image" src=""/>
                     </div>
                 </div>
