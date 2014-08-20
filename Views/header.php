@@ -36,8 +36,8 @@
     </head>
 
     <body id="home-page">
-        <header id="header">
-            <div id="top-header" class="row">
+        <header id="header" class="container">
+            <div id="top-header">
                 <div id="top-header-left" class="col-md-3">
                     <button class="btn btn-sm create-location-btn" type="button"><i class="fa fa-plus"></i> Tạo địa điểm</button>
                 </div>
@@ -48,15 +48,13 @@
                     </div>
                 </div>
                 <div id="top-header-right" class="col-md-3">
-                    <div>
-                        <button class="btn btn-sm login-btn pull-left" type="button">Đăng nhập</button>
-                        <button class="btn btn-sm login-face-btn pull-right" type="button">Login Face</button>
-                        <div class="clear-fix"></div>
-                        <input type="text" class="search-global" placeHolder="Gõ nội dung cần tìm">
+                    <div class="clearfix">
+                        <button class="form-control btn col-md-6 login-btn" type="button">Đăng nhập</button>
+                        <button class="form-control btn col-md-6 login-face-btn" type="button">Login Face</button>
                     </div>
+                    <input type="text" class="form-control search-global" placeHolder="Gõ nội dung cần tìm">
                 </div>
             </div><!-- END TOP HEADER -->
-            
             <nav id="navigation" class="navbar" role="navigation">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->

@@ -1,6 +1,6 @@
 
 
-<div id="slide" class="row">
+<div id="slide" class="container">
 
 </div>
 
@@ -8,10 +8,10 @@
 
 
 
-<div id="content-wrap">
+<div id="content-wrap" class="container">
 	<div id="container">
-		<div id="search" class="row">
-			<h4 class="col-md-12">BẠN CẦN TÌM</h4>
+		<div id="cleafix">
+			<h4>BẠN CẦN TÌM</h4>
 			<div class="item col-md-6">
 				<input type="text" class="form-control" placeHolder="Loại hình dịch vụ...">
 			</div>
@@ -23,7 +23,7 @@
 			</div>
 		</div>
 
-		<div id="service-list" class="row">
+		<div id="service-list">
 			<p class="title">
 				<span class="fa-stack">
 				  	<i class="fa fa-circle fa-stack-2x"></i>
@@ -31,7 +31,7 @@
 				</span> 
 				<strong>DỊCH VỤ NỔI BẬT </strong>
 			</p>
-			<div class="row">
+			<div>
 			 	<div class="col-sm-6 col-md-4">
 				    <div class="item">
 				      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
@@ -42,7 +42,7 @@
 				      		<span class="count-rating pull-right">345 lượt bình chọn</span>
 				      	</div>
 				      	<div class="image" class="clearfix">
-							<img src="" />
+							<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 				      	</div>
 				      	<div class="clearfix">
 				      		<span class="price pull-left">1.500.000 VND</span>
@@ -108,6 +108,45 @@
 				    </div>
 			  	</div>
 			</div>
-		</div>
+		</div> <!-- END DỊCH VỤ NỔI BẬT -->
+
+		<div class="clearfix"></div>
+		<div class="kengang"></div>
+
+		<div id="service-new">
+			<p class="title">
+				<span class="fa-stack">
+				  	<i class="fa fa-circle fa-stack-2x"></i>
+				  	<i class="fa fa-stack-1x fa-inverse">NEW</i>
+				</span> 
+				<strong>DỊCH VỤ MỚI NHẤT CHO BẠN</strong>
+			</p>
+			<div>
+			 	<div class="col-sm-6 col-md-3">
+				    <div class="item">
+				    	<div class="image" class="clearfix">
+							<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
+				      	</div>
+				      	<div class="clearfix">
+				      		<span class="rating pull-left">
+				      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+				      		</span>
+				      		<span class="price">1.500.000 VND</span>
+				      		<span class="sale-percent pull-right">
+				      			<i class="fa fa-arrow-down"></i> GIẢM 15%
+				      		</span>
+				      	</div>
+				      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
+				      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
+				      	<div class="clearfix">
+				      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
+				      		<button class="btn btn-xs btn-primary pull-right"> BOOK NOW </button>
+				      	</div>
+				    </div>
+			  	</div>
+			</div>
+		</div> <!-- END DỊCH VỤ MỚI NHÂT -->
+
+
 	</div>
 </div>
