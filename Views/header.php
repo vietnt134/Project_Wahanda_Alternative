@@ -18,7 +18,23 @@
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
         <!-- Chèn link CSS -->
-        
+        <style type="text/css">
+            @font-face {
+                font-family: 'OpenSans';
+                src: url("https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans+Condensed:300,300italic,700");
+                /*src: url("<?php echo ASSETS ?>fonts/OpenSans/OpenSans.woff");*/
+               /* src: url("<?php echo ASSETS ?>fonts/OpenSans/OpenSans-Regular-webfont.eot?#iefix") format('embedded-opentype'),
+                     url("<?php echo ASSETS ?>fonts/OpenSans/OpenSans-Regular-webfont.woff") format('woff'),
+                     url("<?php echo ASSETS ?>fonts/OpenSans/OpenSans-Regular-webfont.ttf") format('truetype'),
+                     url("<?php echo ASSETS ?>fonts/OpenSans/OpenSans-Regular-webfont.svg#open_sansregular") format('svg');
+                font-weight: normal;
+                font-style: normal;*/
+            }
+            * {
+                font-family: "OpenSans";
+            }
+        </style>
+
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/bootstrap/css/bootstrap.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />
@@ -35,7 +51,7 @@
         ?>
     </head>
 
-    <body id="home-page">
+    <body id="home-page" class="container">
         <header id="header" class="container">
             <div id="top-header">
                 <div id="top-header-left" class="col-md-3">

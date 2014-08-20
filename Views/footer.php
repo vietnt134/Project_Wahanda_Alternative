@@ -1,6 +1,6 @@
 	
         
-        <footer id="footer">
+        <footer id="footer" class="container">
             <div id="footer-info">
                 <div id="footer-1">
 

@@ -1,3 +1,5 @@
+
+
 .container {
 
 }
@@ -72,14 +74,14 @@
 	margin-bottom: 20px;
 }
 
-#container #search {
+#search {
 	background-color: #FFCC3C;
 	padding: 10px 15px;
 	margin-bottom: 20px;
 }
 
-#container #search .item {
-	margin-bottom: 5px;
+#search .item {
+	margin-bottom: 10px;
 }
 
 #service-list .item {
@@ -97,11 +99,6 @@
 #service-list .name {
 	font-size: 15px;
 	font-weight: bold;
-}
-
-#service-list .image {
-	margin-top: 5px;
-	margin-bottom: 5px;
 }
 
 #service-list .service-similar {
@@ -125,26 +122,28 @@
 }
 
 .kengang {
-	width: 95%;
-	margin: 10px auto;
+	width: 100%;
+	margin: 15px auto;
 	border: 1px solid #CCC;
+	clear: both;
+}
+
+#service-new .service-new-item {
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 #service-new .item {
 	background-color: #e9e9e9;
 	border: 2px solid #CCC;
-	padding: 12px;
+	padding: 8px;
 	margin-bottom: 10px;
 }
 
 #service-new .name {
 	font-size: 15px;
 	font-weight: bold;
-}
-
-#service-new .image {
-	margin-top: 5px;
-	margin-bottom: 5px;
+	padding-top: 10px;
 }
 
 #service-new .service-similar {
@@ -153,8 +152,33 @@
 	color: #CCC;
 	
 }
-#service-new .image {
-	margin: 5px auto;
+
+#service-new .item .image {
+	margin: 0 auto;
+	margin-bottom: 5px;
+}
+
+#service-new .item .rating, #service-new .item .price, #service-new .item .sale-percent {
+	padding-left: 2px !important;
+	padding-right: 2px !important;
+}
+
+#service-new .item .rating{
+	font-size: 13px;
+}
+
+#service-new .item .rating .count-rating{
+	font-size: 11px;
+	border-left: 1px solid #CCC;
+}
+
+#service-new .item .price {
+	text-align: center;
+}
+
+#service-new .item .sale-percent {
+	font-size: 12px !important;
+	text-align: right;
 }
 
 #service-new .service-similar:hover {
