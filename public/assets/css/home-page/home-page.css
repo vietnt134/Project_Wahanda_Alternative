@@ -3,21 +3,43 @@
 .container {
 
 }
+
+.col-padding-5px {
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.remove-padding {
+	padding: 0;
+}
+
+.remove-padding-left {
+	padding-left: 0px;
+}
+
+.remove-padding-right {
+	padding-right: 0px;
+}
+
+.separate {
+	width: 97%;
+	margin: 15px auto;
+	border: 1px solid #CCC;
+	clear: both;
+}
+
 #home-page {
-	/*max-width: 1020px;
-	min-width: 360px;
-	margin: 0 auto;
-	padding-left: 10px;
-	padding-right: 10px;*/
+	/*padding: 0px;*/
 }
 
 #top-header {
 	margin-top: 30px;
-	min-height: 120px;
+	margin-bottom: 10px;
 }
 
-#top-header-left .create-location-btn {
-	/*margin-left: 20px;*/
+#top-header-left {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
 #top-header-center .logo {
@@ -29,38 +51,39 @@
 	font-size: 40px;
 }
 
-#top-header-right .login-btn{
-	margin-bottom: 10px;
+#top-header-right {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
-#top-header-right {
+#top-header-right .login-btn, #top-header-right .login-face-btn{
 	margin-bottom: 10px;
 }
 
 #top-header-right .search-global {
-	margin-top: 10px;
-	width: 100%;
+	
 }
 
-.navbar-default{
-	background-color: 0 !important;
-	border-color: 0 !important;
+#navigation {
+	margin-bottom: 20px;
 }
 
 #navigation .navbar-nav > li {
-	margin-right: 20px;
-	margin-left: 20px;
+	padding-right: 40px;
+	/*padding-left: 20px;*/
+}
+
+#navigation .navbar-nav > li.first {
+	/*margin-left: 0px;*/
 }
 
 #navigation .navbar-nav > li a {
-	padding-top: 10px !important;
-	padding-bottom: 10px !important;
 	color: #000000;
 }
 
 #navigation .navbar-nav > li.languages {
-	margin-right: 5px;
-	margin-left: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
 }
 
 #navigation .navbar-nav > li.active a {
@@ -78,6 +101,7 @@
 	background-color: #FFCC3C;
 	padding: 10px 15px;
 	margin-bottom: 20px;
+	border-radius: 8px;
 }
 
 #search .item {
@@ -91,29 +115,39 @@
 	margin-bottom: 10px;
 }
 
-#service-list .title, #service-new .title {
+#service-list .item:hover, #service-new .item:hover {
+	cursor: pointer;
+	background-color: #fcfcfc;
+	box-shadow: 0px 0px 10px #888888;
+}
+
+#service-list .title, #service-new .title, #location-new .title {
 	color: #FFCC00;
 	margin-bottom: 10px;
 }
 
 #service-list .name {
-	font-size: 15px;
+	font-size: 16px;
 	font-weight: bold;
+}
+
+#service-list .image {
+	margin-bottom: 10px;
+}
+
+#service-list .image img {
+	margin: 0 auto;
+}
+
+#service-list .svl-01 {
+	margin-bottom: 10px;
 }
 
 #service-list .service-similar {
 	font-style: italic;
-	font-size: 12px;
+	padding-top: 7px;
+	font-size: 11px;
 	color: #CCC;
-	
-}
-#service-list .image {
-	margin: 5px auto;
-}
-
-#service-list .image img, #service-list .image {
-	/*width: 295px;
-	height: 150px;*/
 }
 
 #service-list .service-similar:hover {
@@ -121,12 +155,6 @@
 	color: red;
 }
 
-.kengang {
-	width: 100%;
-	margin: 15px auto;
-	border: 1px solid #CCC;
-	clear: both;
-}
 
 #service-new .service-new-item {
 	padding-left: 5px;
@@ -136,7 +164,7 @@
 #service-new .item {
 	background-color: #e9e9e9;
 	border: 2px solid #CCC;
-	padding: 8px;
+	padding: 12px;
 	margin-bottom: 10px;
 }
 
@@ -148,14 +176,18 @@
 
 #service-new .service-similar {
 	font-style: italic;
-	font-size: 12px;
+	padding-top: 7px;
+	font-size: 10px;
 	color: #CCC;
 	
 }
 
-#service-new .item .image {
+#service-new .image {
+	margin-bottom: 10px;
+}
+
+#service-new .image img {
 	margin: 0 auto;
-	margin-bottom: 5px;
 }
 
 #service-new .item .rating, #service-new .item .price, #service-new .item .sale-percent {
@@ -169,7 +201,6 @@
 
 #service-new .item .rating .count-rating{
 	font-size: 11px;
-	border-left: 1px solid #CCC;
 }
 
 #service-new .item .price {
@@ -184,4 +215,34 @@
 #service-new .service-similar:hover {
 	text-decoration: none;
 	color: red;
+}
+
+#location-new .image {
+	width: 100%;
+	height: 100%;
+}
+
+#location-new .info .info-content {
+	background-color: rgba(192, 192, 192, 0.8) ;
+	padding: 10px;
+}
+
+#location-new .info {
+	position: absolute;
+	bottom: 0px;
+	padding: 7px;
+	width: 100%;
+}
+#location-new .info .name {
+	font-weight: bold;
+	font-size: 20px;
+	color: #ffffff;
+}
+
+#location-new .info .description {
+	font-size: 13px;
+}
+
+#location-new .info a.readmore {
+	color: #ffffff;
 }
