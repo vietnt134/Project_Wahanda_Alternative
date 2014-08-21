@@ -106,7 +106,7 @@
 			</div>
 			<div class="header-shadow"></div>
 		</div>
-		<div id="site-container" class="content" style="top: 257px;">
+		<div id="site-container" class="content" style="top: 257px;" id="signup_form">
 			<form id="business-signup-form" class="signup-form" method="POST" action="<?php echo URL; ?>business/venuedetail">
 				<div class="">
 					<div class="vcenter-parent">
@@ -119,7 +119,7 @@
 								<div class="box-wrapper clearfix">
 									<div class="form-row">
 										<label for="venue-name">Business name</label>
-										<input id="venue-name" name="venue-name" type="text" value="" data-validation-req="Please enter your business name">
+										<input id="venue-name" name="venue-name" type="text" value="">
 										<div class="error-message">
 											<span>Please enter your business name</span>
 										</div>
@@ -207,18 +207,36 @@
 	<!-- Le JavaScript -->
 	<script src="<?php echo ASSETS ?>plugins/image-manager/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 	<script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
 	<?php
 	if (isset($this -> script)) {
 		foreach ($this->script as $script) {
 			echo '<script type="text/javascript" src="' . $script . '" ></script>';
 		}
 	}
+	
 	?>
+	<script>
+		$(document).ready(function() {
+			$("#business-signup-form").validate({
+				errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
+				rules : {
+					rePassword : {
+						equalTo : "#password" // So sánh trường repassword với trường có id là password
+					},
+				}
+			});
+		});
+	</script>
 	<!-- Le Transiton -->
 	<style>
 		#country_id{
 			width: 38%;
 			margin-left: 3%;
+		}
+		.error{
+			color : #D2322D;
 		}
 	</style>
 </html>

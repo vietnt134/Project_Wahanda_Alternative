@@ -1,8 +1,8 @@
 	
         
         <footer id="footer" class="container">
-            <div id="footer-info" class="clearfix">
-                <div id="footer-1" class="col">
+            <div id="footer-info">
+                <div id="footer-1">
 
                 </div>
 

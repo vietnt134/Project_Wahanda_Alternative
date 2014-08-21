@@ -10,7 +10,7 @@
 			<br />
 		</div>
 		<div class="col-sm-offset-2 col-sm-8 well" style="border: none;">
-			<form class="form-horizontal" method="" id="register_form">
+			<form class="form-horizontal" method="post" id="register_form">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="form-group">
@@ -18,7 +18,7 @@
 								EMAIL
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="email" id="email_address" name="email_address">
+								<input class="form-control email required" type="email" id="email_address" name="email_address">
 							</div>
 						</div>
 						<div class="form-group">
@@ -26,7 +26,7 @@
 								HỌ
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="text" id="first_name" name="first_name">
+								<input class="form-control required" type="text" id="first_name" name="first_name">
 							</div>
 						</div>
 						<div class="form-group">
@@ -34,7 +34,7 @@
 								TÊN
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="text" id="last_name" name="last_name">
+								<input class="form-control required" type="text" id="last_name" name="last_name">
 							</div>
 						</div>
 						<div class="form-group">
@@ -42,7 +42,7 @@
 								TÊN ĐĂNG NHẬP <i title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="text" id="profile" name="profile">
+								<input class="form-control required" type="text" id="profile" name="profile">
 							</div>
 						</div>
 						<div class="form-group">
@@ -63,7 +63,7 @@
 								MẬT KHẨU <i title="Ít nhất là 6 ký tự" class="fa fa-question-circle text-muted" id="pass_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="password" id="password" name="password">
+								<input class="form-control required" minlength="6" type="password" id="password" name="password">
 							</div>
 						</div>
 						<div class="form-group">
@@ -71,7 +71,7 @@
 								POST CODE <i title="Cho chúng tôi biết bạn đang ở đâu và chúng tôi sẽ giúp bạn tìm những địa điểm tuyệt vời gần đó." class="fa fa-question-circle text-muted" id="postcode_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control" type="text" id="postcode" name="postcode">
+								<input class="form-control required" type="text" id="postcode" name="postcode">
 							</div>
 						</div>
 						<div class="form-group">
@@ -108,7 +108,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<button class="btn btn-warning pull-right">
+								<button type="submit" class="btn btn-warning pull-right">
 									<span style="color: #000000">
 										<strong>
 											GIA NHẬP WAHANDA
@@ -124,8 +124,10 @@
 	</div>
 </div>
 <!-- le javascript -->
-<script src="<?php echo URL ?>public/assets/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo URL ?>public/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="<?php echo ASSETS; ?>/js/jquery.min.js" type="text/javascript"></script>
+<script src="<?php echo ASSETS; ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
 <!-- Le Transition -->
 <style>
 	* {
@@ -141,7 +143,23 @@
 		color: #000000;
 	}
 	.tooltip{
-		font-size: 11.5px;
+		font-size: 13px;
+	}
+	input.error{
+		position: relative;
+		border-left: 2px solid #cc3333;
+	}
+	span.error{
+		position:absolute;
+		background-color: #D2322D;
+		left: 70%;
+		bottom: 105%;
+		color: #fff;
+		padding: 1%;
+		border: solid;
+		border-color: #f5f5f5 transparent;
+		border-width: 0px 0px 12px 12px;
+		content: "";
 	}
 </style>
 <script>
@@ -152,5 +170,13 @@
 			container : 'body',
 			delay : 0
 		});
-	}); 
+	});
+	$("#register_form").validate({
+		errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
+		rules : {
+			rePassword : {
+				equalTo : "#password" // So sánh trường repassword với trường có id là password
+			},
+		}
+	});
 </script>
