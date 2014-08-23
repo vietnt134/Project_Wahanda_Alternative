@@ -47,8 +47,9 @@
 	max-width: 430px;
 }
 
-#top-header-center .logo .logo-text {
+.logo-text {
 	font-size: 40px;
+	color: #A1A1A1;
 }
 
 #top-header-right {
@@ -95,6 +96,11 @@
 	padding-right:10px;
 }
 
+#navigation .navbar-nav > li div.dropdown-menu ul a {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
 #navigation .navbar-nav > li div.dropdown-menu ul li.group-name span {
 	color: #FFCC00;
 	font-weight: bold;
@@ -126,9 +132,9 @@
 }
 
 #slide {
-	background-color: #FDBD0E;
-	min-height: 200px;
-	border: 1px solid #CCC;
+	background: url('/Project_Wahanda_Alternative/public/assets/img/Trang-chu-slide.png') no-repeat center;
+	min-height: 236px;
+	/*border: 1px solid #CCC;*/
 	margin-bottom: 20px;
 }
 
@@ -301,7 +307,7 @@
 }
 
 #footer-info {
-	background-color: #CCC;
+	background: url('/Project_Wahanda_Alternative/public/assets/img/Trang-chu-footer.png') top left;
 	padding-top: 10px;
 	padding-bottom: 10px;
 }

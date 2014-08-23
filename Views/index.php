@@ -39,7 +39,7 @@
 			  	<i class="fa fa-circle fa-stack-2x"></i>
 			  	<i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i>
 			</span> 
-			<strong>DỊCH VỤ NỔI BẬT </strong>
+			<strong style="font-size: 20px;">DỊCH VỤ NỔI BẬT </strong>
 		</div>
 
 		<div class="col-sm-6 col-md-4">
@@ -128,7 +128,7 @@
 			  	<i class="fa fa-circle fa-stack-2x"></i>
 			  	<i class="fa fa-stack-1x fa-inverse">NEW</i>
 			</span> 
-			<strong>DỊCH VỤ MỚI NHẤT CHO BẠN</strong>
+			<strong style="font-size: 20px;">DỊCH VỤ MỚI NHẤT CHO BẠN</strong>
 		</div>
 
 		<div class="col-sm-6 col-md-3 col-padding-5px">
@@ -137,9 +137,9 @@
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
 		      	<div class="col-md-4 remove-padding">
-		      		<div class="rating">
+		      		<span class="rating">
 		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-		      		</div>
+		      		</span>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -164,9 +164,9 @@
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
 		      	<div class="col-md-4 remove-padding">
-		      		<div class="rating">
+		      		<span class="rating">
 		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-		      		</div>
+		      		</span>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -191,9 +191,9 @@
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
 		      	<div class="col-md-4 remove-padding">
-		      		<div class="rating">
+		      		<span class="rating">
 		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-		      		</div>
+		      		</span>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -218,9 +218,36 @@
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
 		      	<div class="col-md-4 remove-padding">
-		      		<div class="rating">
+		      		<span class="rating">
 		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
-		      		</div>
+		      		</span>
+	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
+		      	</div>
+		      	<div class="price col-md-5">
+		      		<span>111.500.000 VND</span>
+		      	</div>
+		      	<div class="sale-percent col-md-3">
+		      		<span>GIẢM 15%</span>
+		      	</div>
+		      	<div class="clearfix"></div>
+		      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
+		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
+		      	<div class="clearfix">
+		      		<button class="btn btn-xs btn-brown pull-right"> BOOK NOW </button>
+		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
+		      	</div>
+		    </div>
+		</div>
+
+		<div class="col-sm-6 col-md-3 col-padding-5px">
+		    <div class="item">
+		    	<div class="image" class="clearfix">
+					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
+		      	</div>
+		      	<div class="col-md-4 remove-padding">
+		      		<span class="rating">
+		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      		</span>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -246,7 +273,7 @@
 			<span class="fa-stack">
 			  	<i class="fa fa-map-marker fa-stack-2x"></i>
 			</span> 
-			<strong>ĐỊA ĐIỂM MỚI NHẤT CHO BẠN</strong>
+			<strong style="font-size: 20px;">ĐỊA ĐIỂM MỚI NHẤT CHO BẠN</strong>
 		</div>
 
 		<div class="col-sm-6 col-md-3 remove-padding">

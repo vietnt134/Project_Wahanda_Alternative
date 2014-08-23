@@ -12,7 +12,7 @@
                     </div>
 
                     <div id="footer-2" class="col-md-6">
-                        <h2> COMPANY NAME <h1>
+                        <h2 class="logo-text"> COMPANY NAME <h1>
                     </div>
 
                     <div id="footer-3" class="col-md-2">
