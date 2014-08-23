@@ -1,28 +1,87 @@
 	
         
-        <footer id="footer" class="container">
+        <footer id="footer">
             <div id="footer-info">
-                <div id="footer-1">
+                <div class="container">
+                    <div id="footer-1" class="col-md-2">
+                        <h4><b>THÔNG TIN</b></h4>
+                        <p>Liên hệ</p>
+                        <p>Về chúng tôi</p>
+                        <p>Góc báo chí</p>
+                        <p>Tuyển dụng</p>
+                    </div>
 
-                </div>
+                    <div id="footer-2" class="col-md-6">
+                        <h2> COMPANY NAME <h1>
+                    </div>
 
-                <div id="footer-2">
+                    <div id="footer-3" class="col-md-2">
+                        <h4><b>THÔNG TIN</b></h4>
+                        <p>Liên hệ</p>
+                        <p>Về chúng tôi</p>
+                        <p>Góc báo chí</p>
+                        <p>Tải ứng dụng</p>
+                    </div>
 
-                </div>
-
-                <div id="footer-3">
-
-                </div>
-
-                <div id="footer-4">
-
+                    <div id="footer-4" class="col-md-2">
+                        <h4><b>THÔNG TIN</b></h4>
+                        <p>Liên hệ</p>
+                        <p>Về chúng tôi</p>
+                        <p>Góc báo chí</p>
+                    </div>
                 </div>
             </div>
             
-            <div id="footer-socical">
-                <ul>
-                    <li></li>
-                </ul>
+            <div id="footer-social">
+                <div class="container" align="center">
+                    <ul class="list-inline">
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tumblr fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-tencent-weibo fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-google-plus fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                        <li>
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span> 
+                        </li>
+                    </ul>
+
+                    <p>2014 Design by Sunstory</p>
+                </div>
+                
             </div>
         </footer>
     </body>

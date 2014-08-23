@@ -6,20 +6,29 @@
 
 
 
-
-
 <div id="content-wrap">
 	<div class="container">
 		<div id="search" class="clearfix">
 			<h4>BẠN CẦN TÌM</h4>
-			<div class="item col-md-6">
-				<input type="text" class="form-control" placeHolder="Loại hình dịch vụ...">
+			<div class="item col-md-7">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-search"></i></span>
+					<input type="text" class="form-control" placeHolder="Loại hình dịch vụ...">
+				</div>
 			</div>
-			<div class="item col-md-4">
-				<select class="form-control"></select>
+			<div class="item col-md-3">
+				<div class="input-group">
+					<span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+					<select class="form-control">
+						<option value="" disabled selected>Tại...</option>
+						<option value="" >Hà Nội</option>
+						<option value="" >Tp Hồ Chí Minh</option>
+					</select>
+				</div>
+				
 			</div>
 			<div class="item col-md-2">
-				<button type="button" class="btn btn-default form-control">TÌM KIẾM</button>
+				<button type="button" class="btn btn-default btn-block">TÌM KIẾM</button>
 			</div>
 		</div>
 	</div>
@@ -53,7 +62,7 @@
 		      	</div>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right book-now-btn"> BOOK NOW </button>
+		      		<button class="btn btn-sm btn-orange pull-right book-now-btn"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -79,7 +88,7 @@
 		      	</div>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right book-now-btn"> BOOK NOW </button>
+		      		<button class="btn btn-sm btn-orange pull-right book-now-btn"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -105,7 +114,7 @@
 		      	</div>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right book-now-btn"> BOOK NOW </button>
+		      		<button class="btn btn-sm btn-orange pull-right book-now-btn"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -122,13 +131,15 @@
 			<strong>DỊCH VỤ MỚI NHẤT CHO BẠN</strong>
 		</div>
 
-	 	<div class="col-sm-6 col-md-3 col-padding-5px">
+		<div class="col-sm-6 col-md-3 col-padding-5px">
 		    <div class="item">
 		    	<div class="image" class="clearfix">
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
-		      	<div class="rating col-md-4">
-		      		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      	<div class="col-md-4 remove-padding">
+		      		<div class="rating">
+		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      		</div>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -141,7 +152,7 @@
 		      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right"> BOOK NOW </button>
+		      		<button class="btn btn-xs btn-brown pull-right"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -152,8 +163,10 @@
 		    	<div class="image" class="clearfix">
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
-		      	<div class="rating col-md-4">
-		      		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      	<div class="col-md-4 remove-padding">
+		      		<div class="rating">
+		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      		</div>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -166,7 +179,7 @@
 		      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right"> BOOK NOW </button>
+		      		<button class="btn btn-xs btn-brown pull-right"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -177,8 +190,10 @@
 		    	<div class="image" class="clearfix">
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
-		      	<div class="rating col-md-4">
-		      		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      	<div class="col-md-4 remove-padding">
+		      		<div class="rating">
+		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      		</div>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -191,7 +206,7 @@
 		      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right"> BOOK NOW </button>
+		      		<button class="btn btn-xs btn-brown pull-right"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -202,8 +217,10 @@
 		    	<div class="image" class="clearfix">
 					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
 		      	</div>
-		      	<div class="rating col-md-4">
-		      		<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      	<div class="col-md-4 remove-padding">
+		      		<div class="rating">
+		      			<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i>
+		      		</div>
 	      			<small class="count-rating pull-right">345 lượt đánh giá</small>
 		      	</div>
 		      	<div class="price col-md-5">
@@ -216,7 +233,7 @@
 		      	<p align="center" class="name">CẮT TÓC HÀN QUỐC MỚI</p>
 		      	<p class="description"> Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........</p>
 		      	<div class="clearfix">
-		      		<button class="btn btn-xs btn-primary pull-right"> BOOK NOW </button>
+		      		<button class="btn btn-xs btn-brown pull-right"> BOOK NOW </button>
 		      		<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
 		      	</div>
 		    </div>
@@ -234,7 +251,6 @@
 
 		<div class="col-sm-6 col-md-3 remove-padding">
 			<img class="image img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" >
-				
 				<div class="info">
 					<div class="info-content clearfix">
 						<div class="name">SPA SEN</div>
@@ -244,6 +260,7 @@
 				</div>
 			</img>
 		</div>
+
 	</div>
 	
 </div>

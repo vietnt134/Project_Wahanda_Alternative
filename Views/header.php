@@ -87,29 +87,47 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-left">
-                                <li class="first active"><a href="#">FACE</a></li>
-                                <li><a href="#">BODY</a></li>
+                                <li class="first "><a href="#">&#149; FACE</a></li>
+                                <li><a href="#">&#149; BODY</a></li>
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">TÓC <span class="caret"></span></a>
-                                    <ul class="dropdown-menu" role="menu">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                        <li class="divider"></li>
-                                        <li><a href="#">One more separated link</a></li>
-                                    </ul>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">&#149; TÓC <span class="caret"></span></a>
+                                    <div class="dropdown-menu clearfix dropdown-menu-background" role="menu">
+                                        <span class="caret"></span>
+                                        <ul class="list-unstyled pull-left">
+                                            <li class="group-name"><i class="fa fa-user"></i> <span>GOI</span></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+
+                                            <li class="group-name"><i class="fa fa-user"></i> <span>SAY</span></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                        <ul class="list-unstyled pull-left" tyle="padding-left: 10px; padding-right:10px">
+                                            <li><a href="#">Action</a></li>
+                                            <li><a href="#">Another action</a></li>
+                                            <li><a href="#">Something else here</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">Separated link</a></li>
+                                            <li class="divider"></li>
+                                            <li><a href="#">One more separated link</a></li>
+                                        </ul>
+                                    </div>
+                                    
                                 </li>
-                                <li><a href="#">MÓNG</a></li>
-                                <li><a href="#">MASSAGE</a></li>
-                                <li><a href="#">FITNESS</a></li>
+                                <li><a href="#">&#149; MÓNG</a></li>
+                                <li><a href="#">&#149; MASSAGE</a></li>
+                                <li><a href="#">&#149; FITNESS</a></li>
                             </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="cart-shop"><a href="#">Giỏ hàng</a></li>
-                                <li class="languages"><a href="#">VI</a></a></li>
-                                <li class="languages"><a href="#">EN</a></a></li>
-                            </ul>
+
+                            <form class="navbar-form navbar-right">
+                                <button type="submit" class="btn btn-sm btn-default cart-shop">
+                                    <i class="fa fa-shopping-cart"></i> GIỎ HÀNG
+                                </button>
+                                <button type="submit" class="btn btn-sm btn-default languages">VI</button>
+                                <button type="submit" class="btn btn-sm btn-default languages">EN</button>
+                            </form>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
