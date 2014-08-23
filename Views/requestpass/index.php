@@ -48,7 +48,7 @@
 	}
 	input.error{
 		position: relative;
-		border-left: 3px solid #cc3333;
+		border-left: 2px solid #cc3333;
 	}
 	span.error{
 		position:absolute;
