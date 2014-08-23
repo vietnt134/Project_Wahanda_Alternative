@@ -224,6 +224,8 @@
 	<!-- Le JavaScript-->
 	<script src="<?php echo ASSETS ?>plugins/image-manager/js/jquery-1.8.3.min.js" type="text/javascript"></script>
 	<script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
 	<?php
 	if (isset($this -> script)) {
 		foreach ($this->script as $script) {

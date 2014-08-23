@@ -13,6 +13,16 @@
 		<link type="text/css" rel="stylesheet" href="<?php echo URL; ?>public/assets/css/jquery-ui.css" media="all">
 		<link type="text/css" rel="stylesheet" href="<?php echo URL; ?>public/assets/css/common.css">
 		<link type="text/css" rel="stylesheet" href="<?php echo URL; ?>public/assets/css/business.css">
+		<style type="text/css">
+            @font-face {
+                font-family: 'OpenSans';
+                src: url("https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans+Condensed:300,300italic,700");
+            }
+
+            * {
+                font-family: "OpenSans";
+            }
+        </style>
 	</head>
 	<body class="business open-login">
 		<div class="overlay"></div>
@@ -119,15 +129,12 @@
 								<div class="box-wrapper clearfix">
 									<div class="form-row">
 										<label for="venue-name">Business name</label>
-										<input id="venue-name" name="venue-name" type="text" value="">
-										<div class="error-message">
-											<span>Please enter your business name</span>
-										</div>
+										<input class="required" id="venue-name" name="venue-name" type="text" value="">
 										<span class="input-note name-info">Name that you advertise to your customers</span>
 									</div>
 									<div class="form-row post-code">
 										<label for="postal-ref">Post code</label>
-										<input id="postal-ref" name="postal-ref" type="text" value=""/>
+										<input class="required" id="postal-ref" name="postal-ref" type="text" value=""/>
 										<select id="country_id" name="country_id">
 											<option value="234" selected="">United Kingdom</option>
 											<option value="235">United States</option>
@@ -139,11 +146,11 @@
 									</div>
 									<div class="form-row">
 										<label for="contact-name">Your name</label>
-										<input id="contact-name" name="contact-name" type="text" value="" data-validation-req="Please enter your name" data-previous-value="">
+										<input class="required" id="contact-name" name="contact-name" type="text" value="" data-validation-req="Please enter your name" data-previous-value="">
 									</div>
 									<div class="form-row">
 										<label for="contact-email">Your email</label>
-										<input id="contact-email" name="contact-email" type="email" value="" data-validation-req="Please enter your email address" data-validation-email="Please enter a valid email address" data-previous-value="">
+										<input class="required email" id="contact-email" name="contact-email" type="email" value="" data-validation-req="Please enter your email address" data-validation-email="Please enter a valid email address" data-previous-value="">
 										<div class="text-holder">
 											<span class="logged-in-email hide"></span>
 											<span class="log-out hide">Not you?</span>
@@ -215,28 +222,32 @@
 			echo '<script type="text/javascript" src="' . $script . '" ></script>';
 		}
 	}
-	
 	?>
-	<script>
-		$(document).ready(function() {
-			$("#business-signup-form").validate({
-				errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
-				rules : {
-					rePassword : {
-						equalTo : "#password" // So sánh trường repassword với trường có id là password
-					},
-				}
-			});
-		});
-	</script>
 	<!-- Le Transiton -->
 	<style>
-		#country_id{
+		#country_id {
 			width: 38%;
 			margin-left: 3%;
 		}
-		.error{
-			color : #D2322D;
+		.error {
+			color: #D2322D;
+		}
+		input.error {
+			position: relative;
+			border-left: 2px solid #cc3333;
+		}
+		span.error {
+			position: absolute;
+			background-color: #D2322D;
+			left: 70%;
+			bottom: 115%;
+			color: #fff;
+			padding: 1%;
+			border: solid;
+			border-color: #ffffff transparent;
+			border-width: 0px 0px 12px 12px;
+			content: "";
+			box-shadow: -3px -3px 3px #9A9797;
 		}
 	</style>
 </html>

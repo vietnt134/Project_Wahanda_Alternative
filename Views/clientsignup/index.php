@@ -48,11 +48,11 @@
 						<div class="form-group">
 							<div class="col-sm-12">
 								<div class="checkbox-inline">
-									<p>
+									<label>
 										<input type="checkbox" name="sex" id="sex" value="1" checked="checked"/>
 										Nhận thư thông báo của chúng tôi với các tin tức và độc quyền
 										phương pháp điều trị và luôn bên bạn
-									</p>
+									</label>
 								</div>
 							</div>
 						</div>
@@ -80,16 +80,16 @@
 							</p>
 							<div class="col-sm-12">
 								<div class="radio-inline">
-									<p>
+									<label>
 										<input type="radio" name="sex" id="sex" value="1" checked="checked"/>
 										Nữ
-									</p>
+									</label>
 								</div>
 								<div class="radio-inline">
-									<p>
+									<label>
 										<input type="radio" name="sex" id="sex" value="0" />
 										Nam
-									</p>
+									</label>
 								</div>
 							</div>
 						</div>
@@ -97,13 +97,13 @@
 							<p class="col-sm-6"></p>
 							<br />
 							<div class="col-sm-12">
-								<p>
+								<label>
 									<i> Bằng việc gửi form này, bạn đồng ý với 
 										<a href="https://www.wahanda.com/info/terms-of-use/" target="_blank">
 											<strong> Điều khoản và Điều kiện </strong>
 										</a> của chúng tôi 
 									</i>
-								</p>
+								</label>
 							</div>
 						</div>
 						<div class="form-group">
@@ -123,11 +123,6 @@
 		</div>
 	</div>
 </div>
-<!-- le javascript -->
-<script src="<?php echo ASSETS; ?>/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo ASSETS; ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
 <!-- Le Transition -->
 <style>
 	* {
@@ -136,7 +131,8 @@
 	#register_form{
 		border: none !important;
 	}
-	#register_form p {
+	#register_form p,label {
+		font-weight: normal;
 		color: #5B5C56;
 	}
 	#register_form .fa-question-circle:hover{
@@ -163,26 +159,3 @@
 		box-shadow: -3px -3px 3px #9A9797;
 	}
 </style>
-<script>
-	$("#user_des, #pass_des, #postcode_des").tooltip({// Định dạng các id hiện tooltip
-		placement : 'right',
-		html : true,
-		container : 'body',
-		delay : 0
-	});
-	$("#register_form").validate({
-		errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
-		rules : {
-			rePassword : {
-				equalTo : "#password" // So sánh trường repassword với trường có id là password
-			},
-		}
-	});
-	$('#register_form').on('focus','input.error',function(){
-		$('span.error').hide();
-		$(this).siblings().fadeIn(120);
-	});
-	$('#register_form').on('focusout','input.error',function(){
-		$('span.error').fadeOut(120);
-	});
-</script>
