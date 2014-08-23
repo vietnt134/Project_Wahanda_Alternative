@@ -36,7 +36,7 @@
 </div>
 <!-- Le Transition -->
 <style>
-	* {
+	#password_request_form *, .well {
 		border-radius: 0px !important;
 	}
 	#password_request_form{
@@ -48,12 +48,12 @@
 	}
 	input.error{
 		position: relative;
-		border-left: 2px solid #cc3333;
+		border-left: 3px solid #cc3333;
 	}
 	span.error{
 		position:absolute;
 		background-color: #D2322D;
-		left: 70%;
+		left: 65%;
 		bottom: 115%;
 		color: #fff;
 		padding: 1%;
