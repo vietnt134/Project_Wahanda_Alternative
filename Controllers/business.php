@@ -10,12 +10,12 @@ class business extends Controller {
 
 	public function signup() {
 		$this -> view -> script = array(URL . 'Views/business/signup/js/default.js');
-		$this -> view -> render('business/signup/index', TRUE);
+		$this -> view -> render('business/signup/index');
 	}
 	public function venuedetail()
 	{
 		$this -> view -> script = array(URL . 'Views/business/venuedetail/js/default.js');
-		$this->view->render('business/venuedetail/index',TRUE);
+		$this->view->render('business/venuedetail/index');
 	}
 	
 

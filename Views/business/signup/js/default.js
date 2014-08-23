@@ -12,7 +12,7 @@ $(document).ready(function() {
 		$('#header-login').slideUp();
 		$('.button-inside').text('Log in');
 	});
-	$("#business-signup-form").validate({
+	$("#business_signup_form").validate({
 		errorElement : "span", // Định dạng cho thẻ HTML hiện thông báo lỗi
 		rules : {
 			rePassword : {
@@ -20,11 +20,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-	$('#business-signup-form').on('focus', 'input.error', function() {
+	$('#business_signup_form').on('focus', 'input.error', function() {
 		$('span.error').hide();
 		$(this).siblings().fadeIn(120);
 	});
-	$('#business-signup-form').on('focusout', 'input.error', function() {
+	$('#business_signup_form').on('focusout', 'input.error', function() {
 		$('span.error').fadeOut(120);
 	});
 });

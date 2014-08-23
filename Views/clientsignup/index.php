@@ -125,13 +125,13 @@
 </div>
 <!-- Le Transition -->
 <style>
-	* {
+	#register_form *, .well {
 		border-radius: 0px !important;	
 	}
 	#register_form{
 		border: none !important;
 	}
-	#register_form p,label {
+	#register_form p,#register_form label {
 		font-weight: normal;
 		color: #5B5C56;
 	}

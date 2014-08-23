@@ -38,5 +38,15 @@ class View {
 			require 'Views/spaCMS/footer.php';
 		}
 	}
+	
+	public function render_business($name, $noInclude = false) {
+		if ($noInclude == TRUE) {
+			require 'Views/business/' . $name . '.php';
+		} else {
+			require 'Views/spaCMS/header.php';
+			require 'Views/business/' . $name . '.php';
+			require 'Views/spaCMS/footer.php';
+		}
+	}
 
 }
