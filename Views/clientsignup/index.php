@@ -10,31 +10,31 @@
 			<br />
 		</div>
 		<div class="col-sm-offset-2 col-sm-8 well" style="border: none;">
-			<form class="form-horizontal" method="post" id="register_form">
+			<form class="form-horizontal" action="<?php echo URL; ?>clientsignup/signup" method="post" id="register_form">
 				<div class="row">
 					<div class="col-sm-6">
 						<div class="form-group">
-							<p class="col-sm-6">
+							<p id="email_check" class="col-sm-12">
 								EMAIL
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control email required" type="email" id="email_address" name="email_address">
+								<input class="form-control email required" type="email" id="client_email" name="client_email">
 							</div>
 						</div>
 						<div class="form-group">
 							<p class="col-sm-6">
-								HỌ
+								HỌ & TÊN
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" type="text" id="first_name" name="first_name">
+								<input class="form-control required" type="text" id="client_name" name="client_name">
 							</div>
 						</div>
 						<div class="form-group">
 							<p class="col-sm-6">
-								TÊN
+								ĐIỆN THOẠI
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" type="text" id="last_name" name="last_name">
+								<input class="form-control required number" minlength="9" type="text" id="client_phone" name="client_phone">
 							</div>
 						</div>
 						<div class="form-group">
@@ -42,7 +42,7 @@
 								TÊN ĐĂNG NHẬP <i title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" type="text" id="profile" name="profile">
+								<input class="form-control required" type="text" id="client_username" name="client_username">
 							</div>
 						</div>
 						<div class="form-group">
@@ -63,7 +63,7 @@
 								MẬT KHẨU <i title="Ít nhất là 6 ký tự" class="fa fa-question-circle text-muted" id="pass_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" minlength="6" type="password" id="password" name="password">
+								<input class="form-control required" minlength="6" type="password" id="client_pass" name="client_pass">
 							</div>
 						</div>
 						<div class="form-group">
@@ -71,7 +71,7 @@
 								POST CODE <i title="Cho chúng tôi biết bạn đang ở đâu và chúng tôi sẽ giúp bạn tìm những địa điểm tuyệt vời gần đó." class="fa fa-question-circle text-muted" id="postcode_des"></i>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" type="text" id="postcode" name="postcode">
+								<input class="form-control required" type="text" id="client_postcode" name="client_postcode">
 							</div>
 						</div>
 						<div class="form-group">
@@ -81,13 +81,13 @@
 							<div class="col-sm-12">
 								<div class="radio-inline">
 									<label>
-										<input type="radio" name="sex" id="sex" value="1" checked="checked"/>
+										<input type="radio" name="client_sex" id="client_sex" value="1" checked="checked"/>
 										Nữ
 									</label>
 								</div>
 								<div class="radio-inline">
 									<label>
-										<input type="radio" name="sex" id="sex" value="0" />
+										<input type="radio" name="client_sex" id="client_sex" value="0" />
 										Nam
 									</label>
 								</div>
@@ -108,7 +108,7 @@
 						</div>
 						<div class="form-group">
 							<div class="col-sm-12">
-								<button type="submit" class="btn btn-warning pull-right">
+								<button id="submit_reg" type="submit" class="btn btn-warning pull-right">
 									<span style="color: #000000">
 										<strong>
 											GIA NHẬP WAHANDA

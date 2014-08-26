@@ -4,7 +4,7 @@
 // Config database
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'db_');
+define('DB_NAME', 'dbwahanda');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
