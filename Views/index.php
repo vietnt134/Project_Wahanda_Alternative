@@ -1,7 +1,7 @@
 
 
-<div id="slide" class="clearfix">
-
+<div id="header-2" class="clearfix">
+	<div id="slide"></div>
 </div>
 
 

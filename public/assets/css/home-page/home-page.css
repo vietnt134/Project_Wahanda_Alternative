@@ -24,8 +24,23 @@
 .separate {
 	width: 80%;
 	margin: 15px auto;
-	border: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
 	clear: both;
+}
+
+.text-orange {
+	color: #FFCC00;
+}
+
+.text-white {
+	color: #F8F2F2;
+}
+
+.divider {
+	border-bottom: 1px solid #E7E7E7;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #home-page {
@@ -131,11 +146,15 @@
 	font-weight: bold;
 }
 
-#slide {
-	background: url('/Project_Wahanda_Alternative/public/assets/img/Trang-chu-slide.png') no-repeat center;
+#header-2 {
 	min-height: 236px;
 	/*border: 1px solid #CCC;*/
 	margin-bottom: 20px;
+}
+
+#slide {
+	background: url('/Project_Wahanda_Alternative/public/assets/img/Trang-chu-slide.png') no-repeat center;
+	min-height: inherit;
 }
 
 #search {
@@ -313,7 +332,7 @@
 }
 
 
-#footer-social {
+#footer-last {
 	background-color: #FDBD0E;
 	box-shadow: 0px -1px 15px #9F9F9F;
 	padding-top: 20px;
@@ -420,4 +439,17 @@ fieldset[disabled] .btn-brown.active {
 .btn-brown.badge {
   color: #FDBD0E;
   background-color: #1A1A1A;
+}
+
+.pagination-sm>li>a, .pagination-sm>li>span {
+	margin-right: 13px;
+	border-radius: 0;
+}
+
+.pagination-sm>li:first-child>a, .pagination-sm>li:first-child>span, .pagination-sm>li:last-child>a, .pagination-sm>li:last-child>span {
+	border-radius: 0;
+}
+
+.pagination {
+	border-radius: 0;
 }

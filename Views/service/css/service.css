@@ -1,0 +1,74 @@
+
+#tabs {
+	/*border: 1px solid #CCC;*/
+	font-weight: 700;
+	font-size: 16px;
+	color: #635D5D;
+	text-align: center;
+	background-color: #F2F2F2;
+	margin-bottom: 20px;
+}
+
+#tabs .tab-intro, #tabs .tab-service, #tabs .tab-rating {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border: 1px solid #CCC;
+}
+
+#tabs .tab-intro:hover, #tabs .tab-service:hover, #tabs .tab-rating:hover {
+	cursor: pointer;
+	color: #F2F2F2;
+	background-color: #FDBD0E;
+}
+
+#tab-introduce {
+	margin-bottom: 20px;
+}
+
+#tab-services {
+	margin-bottom: 20px;
+}
+
+#tab-services .one-service {
+	border: 1px solid #CCC;
+	padding: 10px;
+}
+
+#tab-services .one-service .title {
+	font-weight: 700;
+}
+
+#tab-ratings .rating-point, #tab-ratings .rating-service {
+	background-color: #F0F0F0;
+	margin-bottom: 10px;
+}
+
+#tab-ratings .rating .fa-star {
+	padding-right: 8px;
+}
+
+#tab-ratings .rating{
+	font-size: 15px;
+	color: #FFCC00;
+}
+
+#tab-ratings .rating-service {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	font-size: 18px;
+	text-align: center;
+}
+
+#tab-ratings .rating-info {
+	border: 1px solid #CCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#tab-ratings .rating-info .rating {
+	font-size: 12px;
+}
+
+.tab-ratings-1, .tab-ratings-2 {
+	margin-bottom: 10px;
+}

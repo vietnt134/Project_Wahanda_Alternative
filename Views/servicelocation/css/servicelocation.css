@@ -1,0 +1,152 @@
+
+#result-total {
+	background-color: #FDBD0E;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 4px;
+	margin-bottom: 10px;
+}
+
+#result-list .item {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #F2F2F2;
+	margin-bottom: 10px;
+}
+
+#result-list .name {
+	font-weight: 700;
+	color: #635D5D;
+	font-size: 18px;
+}
+
+#result-list .fa-star {
+	padding-right: 8px;
+}
+
+#result-list .address {
+	font-style: italic;
+	font-size: 13px;
+	color: #A3A2A2;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#result-list .rating {
+	font-size: 15px;
+	color: #FFCC00;
+}
+
+#result-list .description {
+	padding-bottom: 5px;
+}
+
+#result-list .services {
+	text-align: center;
+	padding-bottom: 5px;
+}
+
+#result-list .price {
+	background-color: #FFF;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	box-shadow: 0 0 4px #CCC;
+}
+
+#result-list .price .price-info-1, #result-list .price .price-info-2, #result-list .price .price-info-3{
+	padding-top: 4px;
+}
+
+#result-list div.image {
+	margin-bottom: 10px;
+}
+
+#result-list div.image .new-item{
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+#result-list div.image, #result-list div.image img{
+	width: 270px;
+	height: 205px;
+}
+
+#side-bar {
+	border: 2px solid #CCC;
+	margin-bottom: 10px;
+}
+
+#side-bar .title {
+	font-weight: 700;
+	text-align: center;
+	font-size: 17px;
+	color: #635D5D;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+#side-bar .filter-name {
+	font-weight: 700;
+	color: #A09E9E;
+}
+
+#side-bar .filter-1, #side-bar .filter-2, #side-bar .filter-3, #side-bar .filter-4, #side-bar .filter-5, #side-bar .filter-6  {
+	padding-bottom: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+#side-bar label{
+	font-weight: 300;
+}
+
+#side-bar .badge {
+	margin-top: 5px;
+	border-radius: 0;
+	color: #000;
+	background-color: #CCC;
+}
+
+.sidebar-image {
+	max-width: 400px;
+	max-height: 650px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+
+.sidebar-image img {
+
+}
+
+
+#public {
+	background-color: #FDBD0E;
+}
+
+#public .title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 20px;
+	padding-top: 10px;
+	color: #F2F2F2;
+}
+
+#public .public-item-1, #public .public-item-2, #public .public-item-3 {
+	margin-bottom: 20px;
+}
+
+#public .image {
+	border: 2px solid #F2F2F2;
+	margin-bottom: 5px;
+}
+
+#public .read-more {
+	color: #F2F2F2;
+	font-weight: 700;
+}
+
+
+
+

@@ -32,7 +32,7 @@
                 </div>
             </div>
             
-            <div id="footer-social">
+            <div id="footer-last">
                 <div class="container" align="center">
                     <ul class="list-inline">
                         <li>

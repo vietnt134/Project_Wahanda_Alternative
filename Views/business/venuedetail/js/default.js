@@ -15,11 +15,4 @@ $(document).ready(function() {
 			},
 		}
 	});
-	$('#venue_signup_form').on('focus', 'input.error', function() {
-		$('span.error').hide();
-		$(this).siblings().fadeIn(120);
-	});
-	$('#venue_signup_form').on('focusout', 'input.error', function() {
-		$('span.error').fadeOut(120);
-	});
 });
