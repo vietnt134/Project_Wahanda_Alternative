@@ -21,9 +21,22 @@ class clientsignup_model extends Model {
 		}
 	}
 	
-	public function hasEmail($client_email){
-		$select = $this -> db ->select("SELECT COUNT(*) as count FROM client WHERE client_email='".$client_email."'");
+	public function checkExistEmail($client){
+		$select = $this -> db ->select("SELECT COUNT(*) as count FROM client WHERE client_email='".$client."'");
 		echo json_encode($select);
+	}
+	public function checkExistUsername($client){
+		$select = $this -> db ->select("SELECT COUNT(*) as count FROM client WHERE client_username='".$client."'");
+		echo json_encode($select);
+	}
+	public function verify($verify){
+		$data['client_is_active'] = 1;
+		$update = $this -> db ->update('client', $data, "client_verify='".$verify."'");
+		if ($update != 0) {
+			header("Location:" . URL . "homepage");
+		} else {
+			header("Location:" . URL . "clientsignup");
+		}
 	}
 
 }

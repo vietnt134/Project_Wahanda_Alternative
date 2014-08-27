@@ -38,11 +38,11 @@
 							</div>
 						</div>
 						<div class="form-group">
-							<p class="col-sm-6">
-								TÊN ĐĂNG NHẬP <i title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></i>
+							<p id="username_check" class="col-sm-12">
+								TÊN ĐĂNG NHẬP <b title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></b>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" type="text" id="client_username" name="client_username">
+								<input autocomplete="off" class="form-control required" type="text" id="client_username" name="client_username">
 							</div>
 						</div>
 						<div class="form-group">
@@ -60,15 +60,15 @@
 					<div class="col-sm-6">
 						<div class="form-group">
 							<p class="col-sm-6">
-								MẬT KHẨU <i title="Ít nhất là 6 ký tự" class="fa fa-question-circle text-muted" id="pass_des"></i>
+								MẬT KHẨU <b title="Ít nhất là 6 ký tự" class="fa fa-question-circle text-muted" id="pass_des"></b>
 							</p>
 							<div class="col-sm-12">
-								<input class="form-control required" minlength="6" type="password" id="client_pass" name="client_pass">
+								<input autocomplete="off" class="form-control required" minlength="6" type="password" id="client_pass" name="client_pass">
 							</div>
 						</div>
 						<div class="form-group">
 							<p class="col-sm-6">
-								POST CODE <i title="Cho chúng tôi biết bạn đang ở đâu và chúng tôi sẽ giúp bạn tìm những địa điểm tuyệt vời gần đó." class="fa fa-question-circle text-muted" id="postcode_des"></i>
+								POST CODE <b title="Cho chúng tôi biết bạn đang ở đâu và chúng tôi sẽ giúp bạn tìm những địa điểm tuyệt vời gần đó." class="fa fa-question-circle text-muted" id="postcode_des"></b>
 							</p>
 							<div class="col-sm-12">
 								<input class="form-control required" type="text" id="client_postcode" name="client_postcode">
@@ -125,7 +125,7 @@
 </div>
 <!-- Le Transition -->
 <style>
-	#register_form *, .well {
+	#register_form *, .well, .tooltip-inner {
 		border-radius: 0px !important;	
 	}
 	#register_form{

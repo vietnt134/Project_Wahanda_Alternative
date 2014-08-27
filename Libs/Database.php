@@ -72,8 +72,8 @@ class Database extends PDO {
 		foreach ($data as $key => $value) {
 			$sth->bindValue(":$key", $value);
 		}
-		
-		return $sth->execute();
+		$sth->execute();
+		return $sth->rowCount();
 	}
 
 	/**
