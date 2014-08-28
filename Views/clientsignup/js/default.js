@@ -62,7 +62,10 @@ $(document).ready(function() {
 				$('#email_check').children('i').remove();
 			}
 		} else {
+			$('#email_check').children('i').remove();
 			$('#email_check').children('span').remove();
+			$('#email_check').append('<span class="text-danger"><small><i> Email đã tồn tại hoặc không hợp lệ!!</small></i></span>');
+			$("#submit_reg").bind('click', eventhandler);
 		}
 	});
 	$('#client_username').focusout(function() {

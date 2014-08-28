@@ -28,6 +28,14 @@
 							<div class="col-sm-12">
 								<input class="form-control required" type="text" id="client_name" name="client_name">
 							</div>
+						</div>	
+						<div class="form-group">
+							<p id="username_check" class="col-sm-12">
+								TÊN ĐĂNG NHẬP <b title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></b>
+							</p>
+							<div class="col-sm-12">
+								<input autocomplete="off" class="form-control required" type="text" id="client_username" name="client_username">
+							</div>
 						</div>
 						<div class="form-group">
 							<p class="col-sm-6">
@@ -35,14 +43,6 @@
 							</p>
 							<div class="col-sm-12">
 								<input class="form-control required number" minlength="9" type="text" id="client_phone" name="client_phone">
-							</div>
-						</div>
-						<div class="form-group">
-							<p id="username_check" class="col-sm-12">
-								TÊN ĐĂNG NHẬP <b title='Bạn sẽ được biết đến trên cộng đồng Wahanda qua tên đăng nhập, ít nhất 5 ký tự, số hoặc "-".' class="fa fa-question-circle text-muted" id="user_des"></b>
-							</p>
-							<div class="col-sm-12">
-								<input autocomplete="off" class="form-control required" type="text" id="client_username" name="client_username">
 							</div>
 						</div>
 						<div class="form-group">

@@ -2,7 +2,7 @@
 	<div class="row well">
 		<div class="col-sm-offset-1 col-sm-8" id="content">
 			<h4 class="page-header"><strong>Yêu cầu mật khẩu</strong></h4>
-			<form class="form-horizontal" id="password_request_form" name="password_request_form" method="post">
+			<form class="form-horizontal" id="password_request_form" name="password_request_form" action="<?php echo URL; ?>requestpass/sendRequestPassword" method="post">
 				<div class="form-group">
 					<p class="col-sm-12">
 						Quên mật khẩu? Đừng lo lắng, chúng tôi sẽ giúp bạn đăng nhập trong nháy mắt - 
@@ -11,7 +11,7 @@
 					</p>
 				</div>
 				<div class="form-group">
-					<p class="col-sm-12">E-mail của bạn</p>
+					<p class="col-sm-12" id="email_check">E-mail của bạn</p>
 					<div class="col-sm-6">
 						<input class="form-control required email" type="text" name="email_address" id="email_address">
 					</div>
@@ -19,7 +19,7 @@
 				</div>
 				<div class="form-group">
 					<div class="col-sm-12">
-						<button class="btn btn-danger pull-right" type="submit">
+						<button class="btn btn-danger pull-right" id="re_submit" type="submit">
 							<span>Gửi yêu cầu đổi mật khẩu</span>
 						</button>
 					</div>
