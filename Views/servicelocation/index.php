@@ -50,16 +50,16 @@
 					</div>
 					<div class="col-md-12 clearfix">
 						<div class="price clearfix">
-							<div class="col-md-5 text-orange price-info-1">
+							<div class="col-sm-5 text-orange price-info-1">
 								<strong>Móng gắn đá kim tuyến Hàn Quốc</strong>
 							</div>
-							<div class="col-md-3 price-info-2">
+							<div class="col-sm-3 price-info-2">
 								<i class="fa fa-circle text-orange"></i> 30 phút - 1 giờ
 							</div>
-							<div class="col-md-2 price-info-3">
+							<div class="col-sm-2 price-info-3">
 								<i class="fa fa-circle text-orange"></i> Giảm 20%
 							</div>
-							<div class="col-md-2 price-info-4" >
+							<div class="col-sm-2 price-info-4" >
 								<button type="button" class="btn btn-sm btn-orange pull-right">
 									<i class="fa fa-circle text-white"></i> 250.000 đ
 								</button>

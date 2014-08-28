@@ -34,8 +34,25 @@
 	padding: 10px;
 }
 
+#tab-services .one-service .item .item-info-1 {
+	color: #FC0;
+	font-weight: 700;
+}
+
+#tab-services .one-service .item .item-info-1, #tab-services .one-service .item .item-info-2, #tab-services .one-service .item .item-info-3 {
+	padding-top: 5px;
+}
+
 #tab-services .one-service .title {
 	font-weight: 700;
+}
+
+#tab-banner {
+	margin-bottom: 10px;
+}
+
+#tab-ratings {
+	margin-bottom: 10px;
 }
 
 #tab-ratings .rating-point, #tab-ratings .rating-service {
@@ -69,6 +86,31 @@
 	font-size: 12px;
 }
 
-.tab-ratings-1, .tab-ratings-2 {
+#tab-ratings .tab-ratings-1, #tab-ratings .tab-ratings-2 {
 	margin-bottom: 10px;
+}
+
+#tab-ratings .rating-point .rating-point-2 {
+	padding-top: 10px;
+}
+
+#tab-ratings .rating-point .rating-point-1 {
+	font-size: 53px;
+}
+
+#tab-ratings .rating-comment .avatar img {
+	width: 60px;
+	max-height: 60px;
+}
+
+#side-bar {
+	border: 1px solid #CCC;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#side-bar .map .zoom-tool {
+	position: absolute;
+	top: 10px;
+	left: 10px;
 }

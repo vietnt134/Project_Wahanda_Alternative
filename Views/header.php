@@ -58,12 +58,14 @@
                     </div>
                 </div>
                 <div id="top-header-right" class="col-md-3">
-                    <div class="col-sm-5 remove-padding">
+                    <div class="clearfix">
+                        <div class="col-sm-5 remove-padding">
                         <button class="btn btn-block login-btn" type="button">Đăng nhập</button>
-                    </div>
-                    <div class="col-sm-2"></div>
-                    <div class="col-sm-5 remove-padding">
-                        <button class="btn btn-block login-face-btn" type="button">Login Face</button>
+                        </div>
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-5 remove-padding">
+                            <button class="btn btn-block login-face-btn" type="button">Login Face</button>
+                        </div>
                     </div>
                     <div class="col-md-12 remove-padding clearfix">
                         <input type="text" class="form-control search-global" placeHolder="Gõ nội dung cần tìm">
