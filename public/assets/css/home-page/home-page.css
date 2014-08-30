@@ -33,7 +33,15 @@
 }
 
 .text-white {
-	color: #F8F2F2;
+	color: #FAFAFA;
+}
+
+.text-brown {
+	color: #7A7A7A;
+}
+
+.text-brown-black {
+	color: #635D5D;
 }
 
 .divider {
@@ -147,9 +155,9 @@
 }
 
 #header-2 {
-	min-height: 236px;
-	/*border: 1px solid #CCC;*/
-	margin-bottom: 20px;
+	/*min-height: 236px;
+	border: 1px solid #CCC;
+	margin-bottom: 20px;*/
 }
 
 #slide {
@@ -347,6 +355,9 @@
 	font-weight: bold;
 }
 
+.btn {
+	border-radius: 0;
+}
 
 .btn-border-radius-none {
 	border-radius: 0px;
@@ -359,7 +370,7 @@
 .btn-orange{
   color: #1A1A1A;
   background-color: #FDBD0E;
-  border-color: #FF9603;
+  /*border-color: #FF9603;*/
 }
 .btn-orange:hover,
 .btn-orange:focus,
@@ -367,8 +378,9 @@
 .btn-orange.active,
 .open .dropdown-toggle.btn-orange{
   color: #1A1A1A;
-  background-color: #FF9603;
-  border-color: #FF9603;
+  background-color: #FFA322;
+  /*border-color: #FFA322;*/
+  /*border-bottom: 1px solid #e1bd42;*/
 }
 .btn-orange:active,
 .btn-orange.active,
@@ -390,10 +402,54 @@ fieldset[disabled] .btn-orange:active,
 .btn-orange.disabled.active,
 .btn-orange[disabled].active,
 fieldset[disabled] .btn-orange.active {
-  background-color: #FFCC00;
+  background-color: #FFDB4A;
   border-color: #FFCC00;
 }
 .btn-orange.badge {
+  color: #FFCC00;
+  background-color: #1A1A1A;
+}
+
+
+.btn-orange-black{
+  color: #4a4a49;
+  background-color: #FDBD0E;
+  /*border-color: #FF9603;*/
+  border-bottom: 1px solid #e1bd42;
+}
+.btn-orange-black:hover,
+.btn-orange-black:focus,
+.btn-orange-black:active,
+.btn-orange-black.active,
+.open .dropdown-toggle.btn-orange-black{
+  color: #fff;
+  background-color: #373538;
+  border-bottom: 1px solid #e1bd42;
+}
+.btn-orange-black:active,
+.btn-orange-black.active,
+.open .dropdown-toggle.btn-orange-black{
+  background-image: none;
+}
+.btn-orange-black.disabled,
+.btn-orange-black[disabled],
+fieldset[disabled] .btn-orange-black,
+.btn-orange-black.disabled:hover,
+.btn-orange-black[disabled]:hover,
+fieldset[disabled] .btn-orange-black:hover,
+.btn-orange-black.disabled:focus,
+.btn-orange-black[disabled]:focus,
+fieldset[disabled] .btn-orange-black:focus,
+.btn-orange-black.disabled:active,
+.btn-orange-black[disabled]:active,
+fieldset[disabled] .btn-orange-black:active,
+.btn-orange-black.disabled.active,
+.btn-orange-black[disabled].active,
+fieldset[disabled] .btn-orange-black.active {
+  background-color: #FFDB4A;
+  border-color: #FFCC00;
+}
+.btn-orange-black.badge {
   color: #FFCC00;
   background-color: #1A1A1A;
 }

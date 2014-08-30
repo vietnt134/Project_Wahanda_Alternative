@@ -1,38 +1,52 @@
+
+#header-2 {
+	min-height: 336px;
+}
+
 #intro_bussiness_1 {
 	background-color: #EBEBEB;
 }
 
-#intro_bussiness_1 .item {
+#intro_bussiness_1 .intro_question {
+	margin-bottom: 20px;
+}
+
+#intro_bussiness_1 .intro_question .item {
 	background-color: #fff;
 	/*padding-top: 20px;*/
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 20px;
 	margin-bottom: 30px;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.27);
 }
 
-#intro_bussiness_1 .item span.fa-stack {
+#intro_bussiness_1 .intro_question .item span.fa-stack {
 	top: -27px;
 	width: 3em;
 	height: 3em;
 	line-height: 3em;
 }
 
-#intro_bussiness_1 .item span.fa-stack i.fa-circle {
+#intro_bussiness_1 .intro_question .item span.fa-stack i.fa-circle {
 	font-size: 3em;
 }
 
-#intro_bussiness_1 .item span.fa-stack b.fa-stack-1x {
+#intro_bussiness_1 .intro_question .item span.fa-stack b.fa-stack-1x {
 	font-size: 2em;
 }
 
-#intro_bussiness_1 .item .title {
+#intro_bussiness_1 .intro_question .item .title {
 	font-size: 16px;
 	font-weight: 700;
 }
 
-#intro_bussiness_1 .item .description {
+#intro_bussiness_1 .intro_question .item .description {
 	color: #616161;
+}
+
+#intro_bussiness_1 .intro_question .item .link {
+	color: #CE0404;
 }
 
 
@@ -40,12 +54,90 @@
 	padding-bottom: 40px;
 }
 
-#intro_bussiness_2 .title {
+#intro_bussiness_2 .intro-2-title {
+	font-size: 30px;
 	margin-top: 60px;
-	margin-bottom: 60px;
 }
 
+#intro_bussiness_2 .intro-2-divider {
+	width: 200px;
+	border-top: 1px solid #CCC;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#intro_bussiness_2 .intro-2-image {
+	padding-top: 35px;
+}
+
+#intro_bussiness_2 .intro-2-image img {
+	
+}
+
+#intro_bussiness_2 .intro-2-booking-btn {
+	color: #FFF;
+}
 
 #intro_bussiness_3 {
 	background-color: #EBEBEB;
 }
+
+#intro_bussiness_3 .intro-3-title {
+	font-size: 30px;
+	margin-top: 30px;
+}
+
+
+#intro_bussiness_3 .intro-3-action-btn {
+	margin-bottom: 40px;
+}
+
+#intro_bussiness_3 .intro-3-register-wrap {
+	margin-bottom: 10px;
+}
+
+#intro_bussiness_3 .intro-3-register-btn {
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 19px;
+	font-weight: 700;
+}
+
+#intro_bussiness_3 a.intro-3-link:hover {
+	text-decoration: none;
+}
+
+#intro_bussiness_3 ol.intro-4-steps {
+	text-align: center;
+	font-size: 16px;
+	margin: 0 auto 2.5em;
+	width: 45em;
+	background: url('https://cdneu.wahanda.net/images/static/getting-started-steps.png') center top no-repeat;
+	line-height: 1.3125em;
+	padding-top: 4.0625em;
+}
+
+#intro_bussiness_3 ol.intro-4-steps li {
+	float: left;
+	width: 34%;
+	padding: 0 0.9375em;
+	color: #646463;
+}
+
+#intro_bussiness_3 ol.intro-4-steps li:first-child {
+	width: 33%;
+	padding: 0 1.625em;
+}
+
+#intro_bussiness_3 ol.intro-4-steps li:last-child {
+	width: 33%;
+	padding: 0 1.625em;
+}
+
+#intro_bussiness_4 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+

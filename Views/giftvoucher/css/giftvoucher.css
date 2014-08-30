@@ -1,34 +1,97 @@
 
 
-.panel-orange {
-  border-color: #FAC147;
-  box-shadow: 1px 2px 3px #C9C6C6;
+
+#header-2 {
+  min-height: 236px;
+  background-color: #CCC;
 }
-.panel-orange > .panel-heading {
-  color: #333;
-  background-color: #FDBD0E;
-  border-color: #FAC147;
+
+.gift-action-btn {
+  margin-top: 170px;
+}
+
+.gift-action-btn .buy-giftvc-btn {
+    margin-right: 15px;
+    color: #fff;
+}
+
+.gift-action-btn .readmore-giftvc-btn, .gift-action-btn .buy-giftvc-btn {
   font-weight: 700;
-  font-size: 18px;
+  box-shadow: 2px 2px 4px #949494;
 }
-.panel-orange > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #FAC147;
+
+#gift-voucher-1 {
+  padding-left: 120px;
+  padding-right: 120px;
+  margin-bottom: 20px;
 }
-.panel-orange > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #FAC147;
+
+#gift-voucher-1 .attr-voucher {
+  padding-top: 20px;
+}
+
+#gift-voucher-1 .attr-voucher .attr-voucher-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#gift-voucher-1 .attr-voucher .description {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#gift-voucher-1 .choice-voucher .choice-voucher-wrap {
+  background-color: #FDBD0E; 
+  box-shadow: 0 0 10px #CCC; 
+  border-radius: 8px; 
+  padding-bottom: 10px;
+}
+
+#gift-voucher-1 .choice-voucher .choice-voucher-wrap ul {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#gift-voucher-1 .choice-voucher .choice-voucher-wrap ul li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+#gift-voucher-1 .choice-voucher .choice-voucher-wrap ul li .voucher-card-btn {
+  font-weight: 700;
+}
+
+#gift-voucher-1 .choice-voucher .choice-voucher-wrap ul li .voucher-card-btn:hover {
+  background-color: #fff;
+  color: #EBB11C;
 }
 
 
-#content-wrap {
-	margin-bottom: 20px;
+#gift-voucher-2 {
+  background-color: #E4E4E4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
-.contact-image {
-	padding: 5px;
-	border: 1px solid #CCC;
-	box-shadow: 0 0 5px #D5D5D5;
+#gift-voucher-2 .title, #gift-voucher-3 .title {
+  font-size: 21px;
+  font-weight: 700;
+  color: #7A7A7A;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-.contact-title-1 {
-	font-size: 22px;
+#gift-voucher-2 ul li {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+#gift-voucher-2 ul li img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+#gift-voucher-3 .list-aq {
+  font-size: 16px;
+  padding-bottom: 20px;
 }
