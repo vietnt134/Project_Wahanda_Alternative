@@ -1,5 +1,18 @@
-
-
+<div class="container">
+	<?php
+		Session::init();
+		if(isset($_SESSION['checkSignup'])){
+			if(Session::get('checkSignup') == TRUE){
+				echo '<div class="alert alert-block alert-success">';
+				echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
+				echo '<h4>Chúng mừng bạn!</h4>';
+				echo 'Bạn đã đang ký tài khoản thành công vui lòng kiểm tra email để <strong>kích hoạt tài khoản!</strong>';
+				echo '</div>';
+				unset($_SESSION['checkSignup']);
+			}
+		}
+	?>
+</div>
 <div id="header-2" class="clearfix">
 	<div id="slide"></div>
 </div>

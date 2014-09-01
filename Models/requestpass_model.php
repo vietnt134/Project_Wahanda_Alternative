@@ -10,11 +10,14 @@ class requestpass_model extends Model {
 	}
 
 	public function sendRequestPassword($data) {
+		Session::init();
 		$update = $this -> db -> prepare("UPDATE client set client_pass = '" . $data['new_pass'] . "' WHERE client_email='" . $data['client_email'] . "'");
 		$update -> execute();
 		if ($update -> rowCount() == 0) {
-			header("Location:" . URL . "homepage");
+			Session::set('checkReq', FALSE);
+			header("Location:" . URL . "requestpass");
 		} else {
+			Session::set('checkReq', TRUE);
 			header("Location:" . URL . "requestpass");
 		}
 	}

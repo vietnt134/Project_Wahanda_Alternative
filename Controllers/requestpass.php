@@ -58,6 +58,7 @@ class requestpass extends Controller {
 				if (!$mail -> Send()) {
 					echo "Mailer Error: " . $mail -> ErrorInfo;
 				} else {
+					$data['new_pass'] = Hash::create('md5', $data['new_pass'], HASH_PASSWORD_KEY);
 					$this -> model -> sendRequestPassword($data);
 				}
 			}

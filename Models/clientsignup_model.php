@@ -13,10 +13,13 @@ class clientsignup_model extends Model {
 		// echo '<pre/>';
 		// print_r($data);
 		// exit;
+		Session::init();
 		$insert = $this -> db -> insert('client', $data);
 		if ($insert) {
+			Session::set('checkSignup', TRUE);
 			header("Location:" . URL . "homepage");
 		} else {
+			Session::set('checkSignup', FALSE);
 			header("Location:" . URL . "clientsignup");
 		}
 	}

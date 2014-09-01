@@ -2,12 +2,31 @@
 	<div class="row">
 		<div class="col-sm-offset-2 col-sm-8">
 			<div class="row section-title text-center">
-				<h2>- CREATE A COMPANY PROFILE -</h2>
-				<span><i class="text-muted">Tell us a bit about yourself and we’ll set up your profile so
-					you can post reviews, ask the Wahanda community questions,
-					and book even faster next time.</i> </span>
+				<h2>- TẠO TÀI KHOẢN WAHANDA -</h2>
+				<span>
+					<i class="text-muted">
+						Hãy cho chúng tôi biết một chút về bản thân và chúng tôi sẽ thiết lập hồ sơ 
+						cá nhân của bạn, để bạn có thể gửi các ý kiến​​, hỏi những câu hỏi trên cộng đồng Wahanda, 
+						và đặt chỗ thậm chí còn nhanh hơn trong lần tiếp theo.
+					</i> 
+				</span>
 			</div>
 			<br />
+		</div>
+		<div class="col-sm-offset-2 col-sm-8">
+		<?php
+			Session::init();
+			if(isset($_SESSION['checkSignup'])){
+				if(Session::get('checkSignup') == FALSE){
+					echo '<div class="alert alert-block alert-warning">';
+					echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
+					echo '<h4>Cảnh báo!</h4>';
+					echo 'Không thể tạo tài khoản, vùi lòng thử lại!';
+					echo '</div>';
+					unset($_SESSION['checkSignup']);
+				}
+			}
+		?>
 		</div>
 		<div class="col-sm-offset-2 col-sm-8 well" style="border: none;">
 			<form class="form-horizontal" action="<?php echo URL; ?>clientsignup/signup" method="post" id="register_form">

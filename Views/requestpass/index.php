@@ -1,4 +1,26 @@
 <div id="site_container" class="container">
+	<div class="row">
+		<?php
+			Session::init();
+			if(isset($_SESSION['checkReq'])){
+				if(Session::get('checkReq') == FALSE){
+					echo '<div class="alert alert-block alert-warning">';
+					echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
+					echo '<h4>Cảnh báo!</h4>';
+					echo 'Không thể gửi yêu cầu, vùi lòng thử lại!';
+					echo '</div>';
+					unset($_SESSION['checkReq']);
+				}else{
+					echo '<div class="alert alert-block alert-success">';
+					echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
+					echo '<h4>Chúc mừng bạn!</h4>';
+					echo 'Gửi yêu cầu thành công, vui lòng kiểm tra email của bạn!';
+					echo '</div>';
+					unset($_SESSION['checkReq']);
+				}
+			}
+		?>
+	</div>
 	<div class="row well">
 		<div class="col-sm-offset-1 col-sm-8" id="content">
 			<h4 class="page-header"><strong>Yêu cầu mật khẩu</strong></h4>

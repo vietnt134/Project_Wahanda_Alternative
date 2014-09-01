@@ -38,6 +38,8 @@ class clientsignup extends Controller {
 		//Kiểm tra dữ liệu đăng ký
 		if ($data['client_pass'] == "" || $data['client_phone'] == "" || $data['client_username'] == "" || $data['client_email'] == "") {
 			if (is_numeric($data['client_phone']) == false || strlen($data['client_phone']) < 9 || strlen($data['client_pass']) < 6) {
+				Session::init();
+				Session::set('checkSignup', FALSE);
 				header("Location:" . URL . "clientsignup");
 			}
 		}
