@@ -60,7 +60,7 @@
                 <div id="top-header-right" class="col-md-3">
                     <div class="clearfix">
                         <div class="col-sm-5 remove-padding">
-                        <button class="btn btn-block login-btn" type="button">Đăng nhập</button>
+                        <button class="btn btn-block login-btn" data-toggle="modal" data-target="#login_modal" type="button">Đăng nhập</button>
                         </div>
                         <div class="col-sm-2"></div>
                         <div class="col-sm-5 remove-padding">

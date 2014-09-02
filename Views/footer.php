@@ -1,4 +1,38 @@
-	
+		
+		<!-- Modal Login -->
+        <div id="login_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-max-height="440">
+    	  <div class="modal-dialog">
+		    <div class="modal-content" style="background-color: #FDBD0E;border-radius: 6px">
+		      <div class="modal-header" >
+		        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+		        <h3 class="modal-title" id="myModalLabel">ĐĂNG NHẬP</h3>
+		      </div>
+		      <div class="modal-body">
+		        <form class="form-horizontal">
+		        	<div class="form-group">
+		        		<label class="control-label col-sm-2">Email</label>
+		        		<div class="col-sm-8">
+		        			<input autocomplete="off" class="form-control" type="text" id="email_login" name="email_login" placeholder="Nhập email...VD:abc@example.com" />
+		        		</div>
+		        	</div>	
+		        	<div class="form-group">
+		        		<label class="control-label col-sm-2">Mật Khẩu</label>
+		        		<div class="col-sm-8">
+		        			<input autocomplete="off" class="form-control" type="password" id="pass_login" name="pass_login" placeholder="Nhập mật khẩu..." />
+		        			<a href="#">Quên mật khẩu?</a>
+		        		</div>
+		        	</div>
+		        </form>
+		      </div>
+		      <div class="modal-footer" id="footer_login">
+		      	<i class="fa fa-refresh fa-spin"></i>
+		        <button type="button" class="btn btn-warning" data-dismiss="modal">Hủy</button>
+		        <button type="button" id="login_btn" onclick="login()" class="btn btn-default">Đăng Nhập</button>
+		      </div>
+		    </div>
+		  </div>
+        </div>
+        <!-- End Modal -->
         
         <footer id="footer">
             <div id="footer-info">
@@ -90,6 +124,7 @@
     <script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
    	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/custom.js"></script>
     <script type="text/javascript">
 	  	// Active menu	
         $(function() {
