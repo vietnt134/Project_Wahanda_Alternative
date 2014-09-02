@@ -1,4 +1,4 @@
-		
+
 		<!-- Modal Login -->
         <div id="login_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-max-height="440">
     	  <div class="modal-dialog">
@@ -19,15 +19,17 @@
 		        		<label class="control-label col-sm-2">Mật Khẩu</label>
 		        		<div class="col-sm-8">
 		        			<input autocomplete="off" class="form-control" type="password" id="pass_login" name="pass_login" placeholder="Nhập mật khẩu..." />
-		        			<a href="#">Quên mật khẩu?</a>
+		        			<p>
+		        				<a href="<?php echo URL . 'requestpass'; ?>">Quên mật khẩu?</a> Hay chưa có tài khoản, hãy 
+		        				<a href="<?php echo URL . 'clientsignup'; ?>">Đăng ký!</a>
+		        			</p>
 		        		</div>
 		        	</div>
 		        </form>
 		      </div>
 		      <div class="modal-footer" id="footer_login">
-		      	<i class="fa fa-refresh fa-spin"></i>
 		        <button type="button" class="btn btn-warning" data-dismiss="modal">Hủy</button>
-		        <button type="button" id="login_btn" onclick="login()" class="btn btn-default">Đăng Nhập</button>
+		        <button type="button" id="check_login_btn" onclick="login()" class="btn btn-default">Đăng Nhập</button>
 		      </div>
 		    </div>
 		  </div>

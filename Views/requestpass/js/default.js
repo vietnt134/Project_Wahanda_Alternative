@@ -23,7 +23,7 @@ $(document).ready(function() {
 		var check = e_mail.test(client_email);
 		if (check == true) {
 			if ($('#email_address').val() !== '') {
-
+				$('#email_check').children('span').remove();
 				$('#email_check').append(' <i class="fa fa-refresh fa-spin"></i>');
 				$.ajax({
 					url : URL + 'requestpass/checkEmailExistPassRequest',
@@ -35,12 +35,10 @@ $(document).ready(function() {
 					success : function(response) {
 						if (response[0].count != 0) {
 							$('#email_check').children('i').remove();
-							$('#email_check').children('span').remove();
 							$('#email_check').append('<span class="text-success"><small><i> Email hợp lệ!</small></i></span>');
 							$("#re_submit").unbind('click', eventhandler);
 						} else {
 							$('#email_check').children('i').remove();
-							$('#email_check').children('span').remove();
 							$('#email_check').append('<span class="text-danger"><small><i> Email yêu cầu không tồn tại! Hãy đăng ký!</small></i></span>');
 							$("#re_submit").bind('click', eventhandler);
 						}

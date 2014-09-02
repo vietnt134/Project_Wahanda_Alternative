@@ -32,7 +32,7 @@ $(document).ready(function() {
 		var check = e_mail.test(client_email);
 		if (check == true) {
 			if ($('#client_email').val() !== '') {
-
+				$('#email_check').children('span').remove();
 				$('#email_check').append(' <i class="fa fa-refresh fa-spin"></i>');
 				$.ajax({
 					url : URL + 'clientsignup/checkExist',
@@ -44,12 +44,10 @@ $(document).ready(function() {
 					success : function(response) {
 						if (response[0].count == 0) {
 							$('#email_check').children('i').remove();
-							$('#email_check').children('span').remove();
 							$('#email_check').append('<span class="text-success"><small><i> Email chưa được sử dụng!</small></i></span>');
 							$("#submit_reg").unbind('click', eventhandler);
 						} else {
 							$('#email_check').children('i').remove();
-							$('#email_check').children('span').remove();
 							$('#email_check').append('<span class="text-danger"><small><i> Email đã tồn tại!</small></i></span>');
 							$("#submit_reg").bind('click', eventhandler);
 						}
@@ -71,7 +69,7 @@ $(document).ready(function() {
 	$('#client_username').focusout(function() {
 		var client_username = ($(this).val());
 		if ($('#client_username').val() !== '') {
-
+			$('#username_check').children('span').remove();
 			$('#username_check').append(' <i class="fa fa-refresh fa-spin"></i>');
 			$.ajax({
 				url : URL + 'clientsignup/checkExist',
@@ -82,13 +80,11 @@ $(document).ready(function() {
 				},
 				success : function(response) {
 					if (response[0].count == 0) {
-						$('#username_check').children('i').remove();
-						$('#username_check').children('span').remove();
+						$('#username_check').children('i').remove();						
 						$('#username_check').append('<span class="text-success"><small><i> Tên đăng nhập chưa được sử dụng!</small></i></span>');
 						$("#submit_reg").unbind('click', eventhandler);
 					} else {
 						$('#username_check').children('i').remove();
-						$('#username_check').children('span').remove();
 						$('#username_check').append('<span class="text-danger"><small><i> Tên đăng nhập đã tồn tại!</small></i></span>');
 						$("#submit_reg").bind('click', eventhandler);
 					}
