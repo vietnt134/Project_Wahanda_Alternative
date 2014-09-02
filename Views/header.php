@@ -58,7 +58,7 @@
                     </div>
                 </div>         
                 <div id="top-header-right" class="col-md-3">
-                    <div class="clearfix">
+                    <div class="clearfix" id="login_group">
                     	<?php
 		                Session::init(); 
 		                if(empty($_SESSION['client_id'])){ 
@@ -73,13 +73,13 @@
                         <?php }else{ ?>
                         	<div class="col-sm-12 remove-padding" style="margin-bottom: 10px;">
 								<div class="dropdown"> 
-                        			<a id="dropdown_profile" data-toggle="dropdown" class="btn btn-warning btn-block dropdown-toggle" href="#"> 
+                        			<a id="dropdown_profile" data-toggle="dropdown" class="btn btn-warning btn-block dropdown-toggle" style="border-radius: 4px;"> 
                         				Xin chào bạn: <i class="fa fa-user"></i> <?php echo $_SESSION['client_username']; ?> <span class="caret"></span>
                         			</a>
                         			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdown_profile">
-									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-wrench"></i> Setting</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo URL . 'clientsetting'; ?>"><i class="fa fa-wrench"></i> Setting</a></li>
 									    <li role="presentation" class="divider"></li>
-									    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo URL.'clientlogin/logout'; ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="logout()" style="cursor: pointer;"><i class="fa fa-power-off"></i> Log Out</a></li>
 									</ul>
 								</div>                  		                        			
                         	</div>

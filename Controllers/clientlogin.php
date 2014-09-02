@@ -13,6 +13,12 @@ class clientlogin extends Controller {
 		$data['pass_login'] = $_POST['pass'];
 		$this -> model -> clientLogin($data);
 	}
+	
+	function clientLogout(){
+		Session::init();
+		Session::destroy();
+		echo "logout";
+	}
 }
 
 ?>

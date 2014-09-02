@@ -124,9 +124,9 @@
     <!-- Chèn link JavaScript-->
     <script src="<?php echo ASSETS ?>js/jquery.min.js" type="text/javascript"></script>
     <script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-   	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/messages_vi.js"></script>
-	<script type="text/javascript" src="<?php echo ASSETS; ?>/js/custom.js"></script>
+   	<script type="text/javascript" src="<?php echo ASSETS; ?>js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>js/messages_vi.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>js/custom.js"></script>
     <script type="text/javascript">
 	  	// Active menu	
         $(function() {
@@ -142,6 +142,9 @@
     
     <script type="text/javascript">
         var URL = "<?php echo URL ?>";
+        var USERNAME = "<?php if(isset($_SESSION['client_username']))
+							      echo $_SESSION['client_username']; 
+						?>";
     </script>
 
     <?php
