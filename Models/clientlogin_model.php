@@ -9,7 +9,7 @@ class clientlogin_model extends Model {
 	}
 	
 	function clientLogin($data){
-		$sql = "SELECT client_id FROM client WHERE client_email = :client_email AND client_pass = :client_pass";
+		$sql = "SELECT client_id,client_username FROM client WHERE client_email = :client_email AND client_pass = :client_pass";
 
 		$client = array(
 				':client_email' 		=> $data['email_login'],
@@ -19,6 +19,7 @@ class clientlogin_model extends Model {
 		if(isset($result[0]['client_id'])){
 			Session::init();
 			Session::set('client_id', $result[0]['client_id']);
+			Session::set('client_username', $result[0]['client_username']);
 		}
 		echo json_encode($result);
 	}

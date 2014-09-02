@@ -7,7 +7,7 @@
 					echo '<div class="alert alert-block alert-warning">';
 					echo '<button type="button" class="close" data-dismiss="alert">&times;</button>';
 					echo '<h4>Cảnh báo!</h4>';
-					echo 'Không thể gửi yêu cầu, vùi lòng thử lại!';
+					echo 'Không thể gửi yêu cầu, vui lòng thử lại!';
 					echo '</div>';
 					unset($_SESSION['checkReq']);
 				}else{

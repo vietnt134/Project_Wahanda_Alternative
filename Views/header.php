@@ -56,21 +56,39 @@
                         <h1 class="logo-text text-center">COMPANY NAME</h1>
                         <img class="logo-image" src=""/>
                     </div>
-                </div>
+                </div>         
                 <div id="top-header-right" class="col-md-3">
                     <div class="clearfix">
-                        <div class="col-sm-5 remove-padding">
-                        <button id="login_btn" class="btn btn-block login-btn" data-toggle="modal" data-target="#login_modal" type="button">Đăng nhập</button>
-                        </div>
-                        <div class="col-sm-2"></div>
-                        <div class="col-sm-5 remove-padding">
-                            <button class="btn btn-block login-face-btn" type="button">Login Face</button>
-                        </div>
+                    	<?php
+		                Session::init(); 
+		                if(empty($_SESSION['client_id'])){ 
+		                ?>
+	                        <div class="col-sm-5 remove-padding">
+	                        	<button id="login_btn" class="btn btn-block login-btn" data-toggle="modal" data-target="#login_modal" type="button">Đăng nhập</button>
+	                        </div>
+	                        <div class="col-sm-2"></div>
+	                        <div class="col-sm-5 remove-padding">
+	                            <button class="btn btn-block login-face-btn" type="button">Login Face</button>
+	                        </div>
+                        <?php }else{ ?>
+                        	<div class="col-sm-12 remove-padding" style="margin-bottom: 10px;">
+								<div class="dropdown"> 
+                        			<a id="dropdown_profile" data-toggle="dropdown" class="btn btn-warning btn-block dropdown-toggle" href="#"> 
+                        				Xin chào bạn: <i class="fa fa-user"></i> <?php echo $_SESSION['client_username']; ?> <span class="caret"></span>
+                        			</a>
+                        			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdown_profile">
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="fa fa-wrench"></i> Setting</a></li>
+									    <li role="presentation" class="divider"></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo URL.'clientlogin/logout'; ?>"><i class="fa fa-power-off"></i> Log Out</a></li>
+									</ul>
+								</div>                  		                        			
+                        	</div>
+                    	<?php } ?>
                     </div>
                     <div class="col-md-12 remove-padding clearfix">
                         <input type="text" class="form-control search-global" placeHolder="Gõ nội dung cần tìm">
                     </div>
-                </div>
+                </div>                
             </div><!-- END TOP HEADER -->
             <div id="navigation" class="clearfix">
                 <nav class="navbar navbar-default" role="navigation">

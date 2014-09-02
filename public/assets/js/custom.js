@@ -35,6 +35,7 @@ function login() {
 				} else if (login_flg == 1) {
 					$('#footer_login').children('i').remove();
 					$('#login_modal').modal('hide');
+					window.location = URL;
 				}
 			}
 		});
