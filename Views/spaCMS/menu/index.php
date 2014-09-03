@@ -481,40 +481,20 @@
 								<label for="jit-checkbox">Discount last minute appointments</label>
 								<div class="settings hidden" style="margin: 10px 0">
 									<select id="jit-discount-select" name="jitPricingDiscount-percentage">
-										<option value="5">5%</option>
-										<option value="10">10%</option>
-										<option value="15">15%</option>
-										<option value="20">20%</option>
-										<option value="25">25%</option>
-										<option value="30">30%</option>
-										<option value="35">35%</option>
-										<option value="40">40%</option>
-										<option value="45">45%</option>
-										<option value="50">50%</option>
-										<option value="55">55%</option>
-										<option value="60">60%</option>
-										<option value="65">65%</option>
-										<option value="70">70%</option>
-										<option value="75">75%</option>
-										<option value="80">80%</option>
-										<option value="85">85%</option>
-										<option value="90">90%</option>
-										<option value="95">95%</option>
+										<?php
+											for ($i=1; $i < 20; $i++) { 
+												$value = $i*5;
+												echo '<option value="'.$value.'">'.$value.'%</option>';
+											}
+										?>
 									</select>
 									when booked
 									<select id="jit-hours" name="jitPricingDiscount-hours">
-										<option value="1">1 business hour</option>
-										<option value="2">2 business hours</option>
-										<option value="3">3 business hours</option>
-										<option value="4">4 business hours</option>
-										<option value="5">5 business hours</option>
-										<option value="6">6 business hours</option>
-										<option value="7">7 business hours</option>
-										<option value="8">8 business hours</option>
-										<option value="9">9 business hours</option>
-										<option value="10">10 business hours</option>
-										<option value="11">11 business hours</option>
-										<option value="12">12 business hours</option>
+										<?php
+											for ($i=1; $i <= 12; $i++) { 
+												echo '<option value="'.$i.'">'.$i.' business hour</option>';
+											}
+										?>
 									</select>
 									before appointment starts.
 									<div class="lead-time-note note">
@@ -553,175 +533,84 @@
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="morning discount-cell closed" rowspan="3">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 													<span class="venue-closed-note">Venue closed</span>
 												</div></td>
@@ -736,175 +625,84 @@
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell ">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="afternoon discount-cell hidden">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 											</tr>
@@ -918,175 +716,84 @@
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option selected="selected" value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell ">
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option selected="selected" value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell ">
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option selected="selected" value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell ">
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option selected="selected" value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell ">
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option selected="selected" value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell ">
 												<div>
 													<select>
 														<option value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option selected="selected" value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 												<td class="evening discount-cell hidden">
 												<div>
 													<select>
 														<option selected="selected" value="0">Full price</option>
-														<option value="5">5%</option>
-														<option value="10">10%</option>
-														<option value="15">15%</option>
-														<option value="20">20%</option>
-														<option value="25">25%</option>
-														<option value="30">30%</option>
-														<option value="35">35%</option>
-														<option value="40">40%</option>
-														<option value="45">45%</option>
-														<option value="50">50%</option>
-														<option value="55">55%</option>
-														<option value="60">60%</option>
-														<option value="65">65%</option>
-														<option value="70">70%</option>
-														<option value="75">75%</option>
-														<option value="80">80%</option>
-														<option value="85">85%</option>
-														<option value="90">90%</option>
-														<option value="95">95%</option>
+														<?php
+															for ($i=1; $i < 20; $i++) { 
+																$value = $i*5;
+																echo '<option value="'.$value.'">'.$value.'%</option>';
+															}
+														?>
 													</select>
 												</div></td>
 
@@ -1094,7 +801,7 @@
 										</tbody>
 									</table>
 									<div class="note">
-										To change when afternoon and evening starts, go to <a target="_blank" href="/settings#online-booking">Settings &gt; Online booking</a>
+										To change when afternoon and evening starts, go to <a target="_blank" href="/Project_Wahanda_Alternative/spaCMS/settings#online-booking">Settings &gt; Online booking</a>
 									</div>
 								</div>
 							</li>

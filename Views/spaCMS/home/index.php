@@ -137,9 +137,9 @@
 												<rect x="94" y="58" width="310" height="185"/>
 											</clipPath>
 										</defs>
-										<rect x="0" y="0" width="497" height="300" stroke="none" stroke-width="0" fill="#ffffff" style="outline: 1px solid rgb(185, 74, 72);"/>
+										<rect x="0" y="0" width="497" height="300" stroke="none" stroke-width="0" fill="#ffffff"/>
 										<g>
-											<rect x="94" y="58" width="310" height="185" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff" style="outline: 1px solid rgb(185, 74, 72);"/>
+											<rect x="94" y="58" width="310" height="185" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"/>
 											<g clip-path="url(https://connect.wahanda.com/home#_ABSTRACT_RENDERER_ID_0)">
 												<g>
 													<rect x="94" y="242" width="310" height="1" stroke="none" stroke-width="0" fill="#cccccc"/>
@@ -173,7 +173,7 @@
 													</text>
 												</g>
 												<g>
-													<text text-anchor="end" x="82" y="246.7" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444" style="outline: 1px solid rgb(185, 74, 72);">
+													<text text-anchor="end" x="82" y="246.7" font-family="Arial" font-size="12" stroke="none" stroke-width="0" fill="#444444">
 														0
 													</text>
 												</g>

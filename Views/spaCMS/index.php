@@ -37,31 +37,31 @@
 		<div id="login-page">
 			<div class="wrapper1">
 			    <div class="wrapper2">
-			        <div data-web-developer-element-ancestors-outline="true" style="outline: 1px solid rgb(185, 74, 72);" class="wrapper3">
+			        <div class="wrapper3">
 			            <h1>Wahanda Connect</h1>
-			            <form novalidate="novalidate" class="login-form">
+			            <form action="<?php echo URL . '/spaCMS/login' ?>" novalidate="novalidate" class="login-form" method="POST">
 				            <label class="unauthorised-error-message error-message hidden">
 			        			Sorry, we were unable to log you in. Please check your username and password are correct.
 			        		</label>
 				            <div class="no-venues-error-message error-message hidden">
 			        			Sorry, there are no venues associated with this account.
 			        		</div>
-		                	<input name="user" class="required v-email-or-profilename valid" placeholder="Email" type="email">
-			                <input name="password" class="required" placeholder="Password" type="password">
+		                	<input name="user_email" class="required v-email-or-profilename valid" placeholder="Email" type="email">
+			                <input name="user_password" class="required" placeholder="Password" type="password">
 			
 			                <label class="remember">
 			                    <input name="remember" type="checkbox">
 			                    <span class="text">Keep me logged in</span>
 			                </label>
-			                <a class="forgot" href="https://www.wahanda.com/request-password/">Forgot your password?</a> 
+			                <!-- <a class="forgot" href="https://www.wahanda.com/request-password/">Forgot your password?</a>  -->
 			
 			                <button class="button">Log in</button>
 			            </form>
 			
-			            <div class="signup">
+			            <!-- <div class="signup">
 			                <h2>Don't have business profile?</h2>
 			                <a href="https://www.wahanda.com/business/signup/" class="button">Register</a>
-			            </div>
+			            </div> -->
 			        </div>
 			    </div>
 			</div>

@@ -12,12 +12,20 @@
 		function index() {
 			$this->view->render_spaCMS('index', true);
 		}
+
+		function login() {
+			$user_email 	= $_POST['user_email'];
+			$user_password 	= $_POST['user_password'];
+
+			
+		}
+
 		
 		function home() {
 			// Auth::handleLogin();
 			
 			$this->view->script = array(
-				URL . 'Views/spaCMS/home/js/default.js'
+				URL . 'Views/spaCMS/home/js/spaCMS_home.js'
 			);
 
 			$this->view->render_spaCMS('home/index');
@@ -27,7 +35,7 @@
 			// Auth::handleLogin();
 
 			$this->view->script = array(
-				URL . 'Views/spaCMS/menu/js/default.js'
+				URL . 'Views/spaCMS/menu/js/spaCMS_menu.js'
 			);
 
 			$this->view->render_spaCMS('menu/index');
@@ -59,7 +67,7 @@
 			);
 
 			$this->view->script = array(
-				URL . 'Views/spaCMS/reports/js/default.js'
+				URL . 'Views/spaCMS/reports/js/spaCMS_reports.js'
 			);
 
 			$this->view->render_spaCMS('reports/index');

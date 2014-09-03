@@ -7441,7 +7441,7 @@ table.wc-time-slots {
      text-align: left;
 }
 
-@font-face {
+/*@font-face {
     font-family: 'OpenSans';
     src: url('OpenSans-Regular-webfont.eot');
     src: url('OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
@@ -7472,7 +7472,7 @@ table.wc-time-slots {
   font-family: "DINWebPro";
   font-style: italic;
   src: local("☺"), url("DINWebPro-Ita-f9faf5013c638297f34cd6baa477110c.woff") format("woff");
-}
+}*/
 
 html, body {
      height: 100%;
