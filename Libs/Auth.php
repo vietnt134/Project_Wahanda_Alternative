@@ -5,7 +5,7 @@
 class Auth
 {
     
-    public static function handleLogin()
+    public static function handleSpaCMSLogin()
     {
         @session_start();
         $isSpaCMS = $_SESSION['spaCMS'];

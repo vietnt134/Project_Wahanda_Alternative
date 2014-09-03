@@ -111,17 +111,19 @@
             </ul>
             <div class="ddown-menu" id="user">
                 <div class="user-wrapper">
-                    <a class="current" href="javascript:;">
-                    <div class="person-pic-small"><img width="32" height="32" src="https://connect.wahanda.com/api/v2.0.0/media/venue/285925/employee/26156/image?width=32&amp;height=32">
+                    <a class="current" href="javascript:;" data-toggle="dropdown">
+                    <div class="person-pic-small">
                     </div> <div class="icons-arrow-bottom"></div>
-                    <div class="name" style="position: absolute; height: 15px; top: 50%; margin-top: -7.5px;">
+                    <div class="name">
                         <div>
-                            Nhat Bui Vo Minh
+                            <?php
+                                echo Session::get('user_email');
+                            ?>
                         </div>
                     </div> </a>
-                    <ul class="ddown hidden">
-                        <li id="logout">
-                            <a href="#logout"> <div class="icons-logout"></div> Logout </a>
+                    <ul id="logout" class="ddown" role="menu" style="display:none;">
+                        <li>
+                            <a href="<?php echo URL . 'spaCMS/logout' ?>"> <div class="icons-logout"></div> Logout </a>
                         </li>
                     </ul>
                 </div>

@@ -6694,7 +6694,7 @@ table.wc-time-slots {
 }
 
 #home-holder.content-holder {
-     background: url("/assets/bg-sidebar-e4e2c18f92387874f9a4fa06e8c3def4.gif") repeat-y scroll 0px 0px #ffffff;
+     background: url("bg-sidebar-e4e2c18f92387874f9a4fa06e8c3def4.gif") repeat-y scroll 0px 0px #ffffff;
      bottom: 0px;
      box-sizing: border-box;
      min-width: 980px;
@@ -10453,7 +10453,7 @@ body.login-page .footer .terms:hover {
 }
 
 body.login-page .footer .logo {
-     background: url("/assets/wahanda-logo-login-d5d1cb2050380bf6d85415e43c19cd6c.png") no-repeat scroll left 40% transparent;
+     background: url("wahanda-logo-login-d5d1cb2050380bf6d85415e43c19cd6c.png") no-repeat scroll left 40% transparent;
      display: inline-block;
      height: 44px;
      vertical-align: middle;
@@ -14683,7 +14683,7 @@ html body.menu-module #feedbackify .fby-tab {
      position: absolute;
      right: 0px;
      top: 0px;
-     width: 190px;
+     /*width: 280px;*/
 }
 
 #user .user-wrapper {
@@ -14703,7 +14703,8 @@ html body.menu-module #feedbackify .fby-tab {
 }
 
 #user .name {
-     width: 124px;
+     padding-right: 45px;
+     padding-top: 14px;
 }
 
 #user .icons-masquerade {

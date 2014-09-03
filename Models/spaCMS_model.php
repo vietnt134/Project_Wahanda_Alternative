@@ -6,12 +6,13 @@ class Spacms_Model extends Model {
 	}
 
 	function login(){
-
-		$sql = "SELECT user_id FROM user WHERE user_email = :user_email AND user_password = :user_password";
+		$user_email 	= $_POST['user_email'];
+		$user_password 	= $_POST['user_password'];
+		$sql = "SELECT user_email FROM user WHERE user_email = :user_email AND user_password = :user_password";
 
 		$user = array(
-				':user_email' 		=> $_POST['user_email'],
-				':user_password' 	=> Hash::create('md5', $_POST['user_password'], HASH_PASSWORD_KEY)
+				':user_email' 		=> $user_email,
+				':user_password' 	=> Hash::create('md5', $user_password, HASH_PASSWORD_KEY)
 			);
 
 		$sth = $this->db->prepare($sql);
@@ -20,11 +21,11 @@ class Spacms_Model extends Model {
 
 		if($count > 0){
 			Session::init();
-			Session::set('Admin', true);
-			Session::set('loggedIn', 'Day la logged');
-			header('location:'.URL.'admincp/dashboard');
+			Session::set('spaCMS', true);
+			Session::set('user_email', $user_email);
+			header('location:'.URL.'spaCMS/home');
 		} else {
-			header('location:'.URL.'admincp');
+			header('location:'.URL.'spaCMS');
 			return false;
 		}
 
@@ -33,7 +34,7 @@ class Spacms_Model extends Model {
 	function logout() {
 		Session::init();
 		Session::destroy();
-		header('location:'.URL.'admincp');
+		header('location:'.URL.'spaCMS');
 		exit;
 	}
 

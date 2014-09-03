@@ -10,19 +10,24 @@
 		}
 		
 		function index() {
-			$this->view->render_spaCMS('index', true);
+			Session::init();
+			if(Session::get('spaCMS')) {
+				header('location:' . URL . 'spaCMS/home');
+			} else {
+				$this->view->render_spaCMS('index', true);
+			}
 		}
 
 		function login() {
-			$user_email 	= $_POST['user_email'];
-			$user_password 	= $_POST['user_password'];
-
-			
+			$this->model->login();
 		}
 
+		function logout() {
+			$this->model->logout();
+		}
 		
 		function home() {
-			// Auth::handleLogin();
+			Auth::handleSpaCMSLogin();
 			
 			$this->view->script = array(
 				URL . 'Views/spaCMS/home/js/spaCMS_home.js'
@@ -32,7 +37,7 @@
 		}
 
 		function menu() {
-			// Auth::handleLogin();
+			Auth::handleSpaCMSLogin();
 
 			$this->view->script = array(
 				URL . 'Views/spaCMS/menu/js/spaCMS_menu.js'
@@ -43,7 +48,7 @@
 		
 
 		function calendar() {
-			// Auth::handleLogin();
+			Auth::handleSpaCMSLogin();
 
 			$this->view->style = array(
 				ASSETS . 'plugins/fullcalendar-2.1.0-beta2/fullcalendar.css',
@@ -61,7 +66,7 @@
 		}	
 
 		function reports() {
-			// Auth::handleLogin();
+			Auth::handleSpaCMSLogin();
 			$this->view->style = array(
 				URL . 'Views/spaCMS/reports/css/spaCMS_reports.css'
 			);
@@ -74,7 +79,7 @@
 		}	
 
 		function settings() {
-			// Auth::handleLogin();
+			Auth::handleSpaCMSLogin();
 			$this->view->style = array(
 				ASSETS . 'plugins/image-manager/css/image-manager.min.css',
 				URL . 'Views/spaCMS/settings/css/spaCMS_settings.css'

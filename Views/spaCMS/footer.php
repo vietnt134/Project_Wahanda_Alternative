@@ -36,4 +36,13 @@
             }
         }
     ?>
+
+    <script>
+        // Dropdown logout
+        $(function(){
+            $('#user').click(function() {
+                $('#logout').fadeToggle('fast');
+            });
+        });
+    </script>
 </html>
