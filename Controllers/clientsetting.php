@@ -13,6 +13,11 @@ class clientsetting extends Controller {
 		$this -> view -> script = array(URL . 'Views/clientsetting/js/default.js');
 		$this -> view -> render('clientsetting/index');
 	}
+	
+	function loadUserDetail(){
+		Auth::handleClientLogin();
+		$this -> model -> loadUserDetail();
+	}
 }
 
 ?>

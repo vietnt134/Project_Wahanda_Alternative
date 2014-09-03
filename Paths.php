@@ -3,7 +3,7 @@
 define('VERSION', '1.0');
 
 // Project name folder
-define('PJ_NAME', 'Project_Wahanda_Alternative');
+define('PJ_NAME', 'project_wahanda_alternative');
 
 // DIRECTORY SEPARATOR Linux and Windows
 define('DS', DIRECTORY_SEPARATOR);

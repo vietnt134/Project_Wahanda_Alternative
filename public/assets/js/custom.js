@@ -1,4 +1,6 @@
 $(document).on('click','#login_btn',function(){
+	//alert(window.location.href);
+	//alert(URL);
 	$('#email_login').val('');
 	$('#pass_login').val('');
 	$('#footer_login').children('i').remove();
@@ -43,9 +45,9 @@ function login() {
                         				'Xin chào bạn: <i class="fa fa-user"></i> '+ user_name +' <span class="caret"></span>'+
                         			'</a>'+
                         			'<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdown_profile">'+
-									    '<li role="presentation"><a role="menuitem" tabindex="-1" href="'+URL+'clientsetting"><i class="fa fa-wrench"></i> Setting</a></li>'+
+									    '<li role="presentation"><a role="menuitem" tabindex="-1" href="'+URL+'clientsetting"><i class="fa fa-wrench"></i> Quản lý tài khoản</a></li>'+
 									    '<li role="presentation" class="divider"></li>'+
-									    '<li role="presentation"><a role="menuitem" tabindex="-1" onclick="javascript:logout()" style="cursor: pointer;"><i class="fa fa-power-off"></i> Log Out</a></li>'+
+									    '<li role="presentation"><a role="menuitem" tabindex="-1" onclick="javascript:logout()" style="cursor: pointer;"><i class="fa fa-power-off"></i> Thoát</a></li>'+
 									'</ul>'+
 								'</div>'+                  		                        			
                         	'</div>');

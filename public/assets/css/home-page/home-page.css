@@ -509,3 +509,10 @@ fieldset[disabled] .btn-brown.active {
 .pagination {
 	border-radius: 0;
 }
+.well{
+	border-radius: 0px;
+}
+
+input, select, textarea{
+	border-radius: 0px !important;
+}

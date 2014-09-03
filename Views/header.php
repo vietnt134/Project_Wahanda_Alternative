@@ -77,9 +77,9 @@
                         				Xin chào bạn: <i class="fa fa-user"></i> <?php echo $_SESSION['client_username']; ?> <span class="caret"></span>
                         			</a>
                         			<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdown_profile">
-									    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo URL . 'clientsetting'; ?>"><i class="fa fa-wrench"></i> Setting</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" href="<?php echo URL . 'clientsetting'; ?>"><i class="fa fa-wrench"></i> Quản lý tài khoản</a></li>
 									    <li role="presentation" class="divider"></li>
-									    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="logout()" style="cursor: pointer;"><i class="fa fa-power-off"></i> Log Out</a></li>
+									    <li role="presentation"><a role="menuitem" tabindex="-1" onclick="logout()" style="cursor: pointer;"><i class="fa fa-power-off"></i> Thoát</a></li>
 									</ul>
 								</div>                  		                        			
                         	</div>
