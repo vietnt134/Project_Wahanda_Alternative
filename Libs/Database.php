@@ -73,7 +73,7 @@ class Database extends PDO {
 			$sth->bindValue(":$key", $value);
 		}
 		
-		return $sth->execute();;
+		return $sth->execute();
 	}
 
 	/**

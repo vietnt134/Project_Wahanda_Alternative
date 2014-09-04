@@ -25,7 +25,7 @@
     <script type="text/javascript">
         var URL = "<?php echo URL ?>";
         var URL_IMAGE_MANAGER = "<?php echo ASSETS . 'plugins/image-manager/'; ?>";
-        var user_id = 3; // USER ID = GET SESSION['user_id']
+        var user_id = <?php echo Session::get('user_id')?>; // USER ID = GET SESSION['user_id']
     </script>
 
     <?php
@@ -38,6 +38,7 @@
     ?>
 
     <script>
+        UserDetail.init();
         // Dropdown logout
         $(function(){
             $('#user').click(function() {

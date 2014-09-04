@@ -33,7 +33,21 @@
 				URL . 'Views/spaCMS/home/js/spaCMS_home.js'
 			);
 
-			$this->view->render_spaCMS('home/index');
+			if($xhr == 'xhrGet'){
+				$this->model->getList_datVe();
+			}
+			elseif($xhr == 'xhrInsert'){
+				$this->model->insert_datVe();
+			}
+			elseif($xhr == 'xhrUpdate'){
+				$this->model->update_datVe();
+			}
+			elseif($xhr == 'xhrDelete'){
+				$this->model->delete_datVe();
+			}
+			else {
+				$this->view->render_spaCMS('home/index');
+			}
 		}
 
 		function menu() {
@@ -78,18 +92,31 @@
 			$this->view->render_spaCMS('reports/index');
 		}	
 
-		function settings() {
+		function settings( $xhr = false ) {
 			Auth::handleSpaCMSLogin();
-			$this->view->style = array(
-				ASSETS . 'plugins/image-manager/css/image-manager.min.css',
-				URL . 'Views/spaCMS/settings/css/spaCMS_settings.css'
-			);
 
-			$this->view->script = array(
-				ASSETS . 'plugins/image-manager/js/image-manager.min.js',
-				URL . 'Views/spaCMS/settings/js/spaCMS_settings.js'
-			);
+			switch ($xhr) {
+				case 'xhrGet':
+					$this->model->insert_();
+					break;
+				
+				case 'xhrUpdate_user_detail':
+					$this->model->update_user_detail();
+					break;	
 
-			$this->view->render_spaCMS('settings/index');
+				default:
+					$this->view->style = array(
+						ASSETS . 'plugins/image-manager/css/image-manager.min.css',
+						URL . 'Views/spaCMS/settings/css/spaCMS_settings.css'
+					);
+
+					$this->view->script = array(
+						ASSETS . 'plugins/image-manager/js/image-manager.min.js',
+						URL . 'Views/spaCMS/settings/js/spaCMS_settings.js'
+					);
+
+					$this->view->render_spaCMS('settings/index');
+					break;
+			}
 		}		
 	}

@@ -203,6 +203,7 @@ $('#imageManager_removeImage').on('click', function(){
     
 });
 
+// Đặt 2 function dưới đây ở nơi chứa HTML của image_manager modal
 $('#imageManager_openModal').click(function(){
     // Clear description of image
     $('.cover_title, .cover_image_name, .cover_image_size, .cover_thumbnail_name').html('');

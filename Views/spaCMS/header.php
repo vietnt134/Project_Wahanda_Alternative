@@ -117,7 +117,9 @@
                     <div class="name">
                         <div>
                             <?php
-                                echo Session::get('user_email');
+                                if(Session::get('spaCMS')){
+                                    echo Session::get('user_email');
+                                }
                             ?>
                         </div>
                     </div> </a>

@@ -52,12 +52,11 @@
 
 					<div class="tab-content tab-content-fix">
 						<div id="venue-details" class="tab-pane active">
-							<form action="" novalidate="novalidate">
+							<form id="user_detail_form" action="<?php echo URL . 'spaCMS/settings/xhrUpdate_user_detail'?>" novalidate="novalidate">
 								<div class="form-content">
 									<div class="form-venue-details">
 										<div class="venue-main-info">
 											<div class="picture-logo">
-
 												<img class="logo-image" src="">
 												<input type="hidden" name="user_logo">
 												<div class="edit">
@@ -71,16 +70,16 @@
 													<tr id="venue_name" title="&lt;strong&gt;Venue name&lt;/strong&gt; - Enter your venue name here - make sure it's all spelt correctly." class="form-row" aria-describedby="ui-tooltip-0">
 														<td colspan="2">
 														<div class="txt-input txt-input-big">
-															<input type="text" id="" name="venue-details-name" class="required">
+															<input type="text" id="" name="user_full_name" class="required">
 														</div>
 														<div class="part-of hidden">
 															part of <span class="chain-name"></span>
 														</div></td>
 													</tr>
 													<tr id="venue_type" title="&lt;strong&gt;Primary venue type&lt;/strong&gt; - Set the venue type here. If you can't find the exact type, choose the one that's closest to what you do." class="form-row" aria-describedby="ui-tooltip-1">
-														<td class="label-part"><label for="venue-details-venueTypeId">Primary type</label></td>
+														<td class="label-part"><label for="user_business_id">Primary type</label></td>
 														<td class="input-part">
-														<select id="venue-details-venueTypeId" name="venue-details-venueTypeId" class="">
+														<select id="user_business_id" name="user_business_id" class="">
 															<option value="28">Airport Spa</option>
 															<option value="43">Barbershop</option>
 															<option value="46">Beauty Institute</option>
@@ -97,33 +96,6 @@
 											</table>
 										</div>
 										<table cellspacing="0" cellpadding="0" class="default-form">
-
-											<tbody><tr class="form-header-row">
-												<td colspan="2">Where is your venue located?</td>
-											</tr>
-											<tr data-tooltip="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row hidden text-location">
-												<td class="label-part">
-													<label for="venue-details-hotelName" class="optional">Located at</label>
-												</td>
-												<td class="input-part">
-													<div class="txt-input"><input type="text" id="venue-details-hotelName" name="venue-details-hotelName" class=""></div>
-												</td>
-											</tr>
-											<tr data-tooltip="&lt;strong&gt;Venue address&lt;/strong&gt; - You can include short instructions in the address such as &amp;#34;entrance on New Bond Street&amp;#34;" class="form-row" aria-describedby="ui-tooltip-4">
-												<td class="label-part">
-													<label for="venue-details-address">Address</label>
-												</td>
-												<td class="input-part">
-													<textarea max-text-lines="4" id="venue-details-address" name="venue-details-address" cols="5" rows="4" class="full required"></textarea>
-												</td>
-											</tr>
-											<tr class="form-row state-row hidden">
-												<td class="label-part">
-													<label for="venue-details-addressStateCode" class="optional">State</label>
-												</td>
-												<td class="input-part">
-													<select id="venue-details-addressStateCode" name="venue-details-addressStateCode" class=""><option value="">Not set</option>
-
 											<tbody>
 												<tr class="form-header-row">
 													<td colspan="2">Where is your venue located?</td>
@@ -132,7 +104,7 @@
 													<td class="label-part"></td>
 													<td class="input-part"><a class="show-text-location" href="javascript:;">Do you operate inside a hotel, clinic etc?</a></td>
 												</tr>
-												<tr id="venue_location_2" title="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row hidden text-location">
+												<tr id="venue_location_2" title="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row text-location">
 													<td class="label-part"><label for="venue-details-hotelName" class="optional">Located at</label></td>
 													<td class="input-part">
 													<div class="txt-input">
@@ -140,30 +112,16 @@
 													</div></td>
 												</tr>
 												<tr id="venue_address" title="&lt;strong&gt;Venue address&lt;/strong&gt; - You can include short instructions in the address such as &amp;#34;entrance on New Bond Street&amp;#34;" class="form-row" aria-describedby="ui-tooltip-4">
-													<td class="label-part"><label for="venue-details-address">Address</label></td>
-													<td class="input-part">													<textarea max-text-lines="4" id="venue-details-address" name="venue-details-address" cols="5" rows="4" class="full required"></textarea></td>
-												</tr>
-												<tr class="form-row state-row hidden">
-													<td class="label-part"><label for="venue-details-addressStateCode" class="optional">State</label></td>
+													<td class="label-part"><label for="user_address">Address</label></td>
 													<td class="input-part">
-													<select id="venue-details-addressStateCode" name="venue-details-addressStateCode" class="">
-														<option value="">Not set</option>
-
-
-														<option value="VA">Virginia</option>
-														<option value="WA">Washington</option>
-														<option value="DC">Washington DC</option>
-														<option value="WV">West Virginia</option>
-														<option value="WI">Wisconsin</option>
-														<option value="WY">Wyoming</option>
-													</select></td>
+														<textarea max-text-lines="4" id="user_address" name="user_address" cols="5" rows="4" class="full required"></textarea>
+													</td>
 												</tr>
 												<tr class="form-row">
 													<td class="label-part"><label for="venue-details-addressCountryCode">Country</label></td>
 													<td class="input-part">
-													<select id="venue-details-addressCountryCode" name="venue-details-addressCountryCode" class="required">
+													<select id="user_country_id" name="user_country_id" class="required">
 														<option value="">Not set</option>
-
 														<option value="VN">Vietnam</option>
 														<option value="VG">Virgin Islands (British)</option>
 														<option value="VI">Virgin Islands (U.S.)</option>
@@ -195,55 +153,58 @@
 													<td colspan="2">How can customers reach you?</td>
 												</tr>
 												<tr id="phone" title="&lt;strong&gt;Phone number&lt;/strong&gt; - Enter your reception phone number. This should be the number that your clients can call for any enquiries." class="form-row">
-													<td class="label-part"><label for="venue-details-phone">Phone number</label></td>
+													<td class="label-part"><label for="user_phone">Phone number</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="venue-details-phone" name="venue-details-phone" class="required" phone-by-country-field="#venue-details-addressCountryCode">
+														<input type="text" id="user_phone" name="user_phone" class="required" phone-by-country-field="#venue-details-addressCountryCode">
 													</div></td>
 												</tr>
 												<tr id="email" title="&lt;strong&gt;Email&lt;/strong&gt; - Enter the email address that customers can use to enquire about your services." class="form-row">
-													<td class="label-part"><label for="venue-details-emailAddress" class="optional">Email</label></td>
+													<td class="label-part"><label for="user_email" class="optional">Email</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="venue-details-emailAddress" name="venue-details-emailAddress" class="email">
+														<input type="text" id="user_email" name="user_email" class="email">
 													</div></td>
 												</tr>
 												<tr id="website" title="&lt;strong&gt;Website&lt;/strong&gt; - Enter the link to your venue's website." class="form-row">
-													<td class="label-part"><label for="venue-details-primaryVenueUri" class="optional">Website</label></td>
+													<td class="label-part"><label for="user_website" class="optional">Website</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="venue-details-primaryVenueUri" name="venue-details-primaryVenueUri" class="">
+														<input type="text" id="user_website" name="user_website" class="">
 													</div></td>
 												</tr>
 												<tr id="face" title="&lt;strong&gt;Facebook&lt;/strong&gt; - Enter the link to your venue's Facebook." class="form-row">
-													<td class="label-part"><label for="venue-details-facebook" class="optional">Facebook</label></td>
+													<td class="label-part"><label for="user_facebook" class="optional">Facebook</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="venue-details-facebook" name="venue-details-facebook" class="">
+														<input type="text" id="user_facebook" name="user_facebook" class="">
 													</div></td>
 												</tr>
 												<tr id="google" title="&lt;strong&gt;Google+&lt;/strong&gt; - Enter the link to your venue's Google+." class="form-row">
-													<td class="label-part"><label for="venue-details-googleplus" class="optional">Google+</label></td>
+													<td class="label-part"><label for="user_googleplus" class="optional">Google+</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="venue-details-googleplus" name="venue-details-googleplus" class="">
+														<input type="text" id="user_googleplus" name="user_googleplus" class="">
 													</div></td>
 												</tr>
 												<tr class="form-separator-row">
 													<td colspan="2"><span></span></td>
 												</tr>
 												<tr id="description" title="&lt;strong&gt;Venue description&lt;/strong&gt; - Enter a few sentences about your venue - those with good descriptions always receive more bookings." class="form-header-row">
-													<td colspan="2">Description</td>
+													<td colspan="2"><label for="user_description">Description</label></td>
 												</tr>
 												<tr data-tooltip="&lt;strong&gt;Venue description&lt;/strong&gt; - Enter a few sentences about your venue - those with good descriptions always receive more bookings." class="form-row">
-													<td class="description-part" colspan="2"></td>
+													<td colspan="2" class="input-part">
+														<textarea max-text-lines="4" id="user_description" name="user_description" cols="5" rows="4" class="full required"></textarea>
+													</td>
 												</tr>
+												
 											</tbody>
 										</table>
 									</div>
 									<div class="form-venue-pictures ui-sortable">
 										<div class="part-title">
-											Venue photos
+											Venue slide photos
 										</div>
 										<ul class="menu-item-pictures">
 											<li class="single-picture">
@@ -257,7 +218,7 @@
 											</li>
 
 											<li class="single-picture empty">
-												<div class="single-picture-wrapper" style="position: relative;">
+												<div id="imageManager_openModal" class="single-picture-wrapper" style="position: relative;" data-toggle="modal" data-target="#imageManager_modal">
 													<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
 														<div class="icon icons-plus3"></div>
 														Add image
@@ -266,6 +227,14 @@
 												<div class="single-picture-title">
 													<span>Primary image</span>
 												</div>
+												<script type="text/javascript">
+													// $(document).ready(function(){
+													// 	$('#imageManager_openModal').click(function(){
+													// 	    // Dùng chung 1 modal để chọn hình ở nhiều nơi
+													// 	    $('#imageManager_saveChange').attr('venue_slide','1');
+													// 	});
+													// });
+												</script>
 											</li>
 										</ul>
 									</div>
@@ -276,10 +245,12 @@
 								<div class="form-actions">
 									<button class="button action action-default button-primary save-action" type="submit">
 										<div class="button-inner">
-											<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+											<div class="button-icon icons-tick done"></div>
+											<div class="button-icon fa fa-spin fa-refresh loading hidden"></div>
+											<span class="msg msg-action-default">Save</span>
 										</div>
 									</button>
-									<a target="_blank" class="button-link preview-link" href="http://www.wahanda.com/place/sunspa-resort/overview/">Preview on Wahanda</a>
+									<!-- <a target="_blank" class="button-link preview-link" href="http://www.wahanda.com/place/sunspa-resort/overview/">Preview on Wahanda</a> -->
 								</div>
 							</form>
 						</div><!-- END VENUA DETAILS -->
