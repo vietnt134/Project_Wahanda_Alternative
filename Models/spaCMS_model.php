@@ -42,31 +42,51 @@ class Spacms_Model extends Model {
 
 
 	///////////////////////////// SETTING //////////////////////////
+	function get_type_business() {
+		$query = "SELECT * FROM type_business";
+		$result = $this->db->select($query);
+		echo json_encode($result);
+	}
+
+	function get_country() {
+		$query = "SELECT * FROM country";	
+		$result = $this->db->select($query);
+		echo json_encode($result);
+	}
+
+	function get_user_detail() {
+		$user_id = Session::get('user_id');
+		$query = "SELECT * FROM user WHERE user_id = $user_id";
+		$result = $this->db->select($query);
+		echo json_encode($result);
+	}
+
 	function update_user_detail() {
 		$user_id = Session::get('user_id');
 		$data = array(
 				'user_full_name'	=> $_GET['user_full_name'],
 				'user_logo'			=> $_GET['user_logo'],
-				'user_business_id'	=> $_GET['user_business_id'],
+				'user_type_business_id'	=> $_GET['user_type_business_id'],
 				'user_address'		=> $_GET['user_address'],
 				'user_phone'		=> $_GET['user_phone'],
 				// 'user_post_code'	=> $_GET['user_post_code'],
 				'user_country_id'	=> $_GET['user_country_id'],
-				'user_description'	=> $_GET['user_description']
-				// 'user_website'		=> $_GET['user_website'],
-				// 'user_facebook'		=> $_GET['user_facebook'],
-				// 'user_googleplus'	=> $_GET['user_googleplus']
+				'user_description'	=> $_GET['user_description'],
+				'user_website'		=> $_GET['user_website'],
+				'user_facebook'		=> $_GET['user_facebook'],
+				'user_googleplus'	=> $_GET['user_googleplus']
 			);
 		
-		$sth = $this->db->update('user', $data, "user_id = '$user_id'");
-		if($sth->affected_rows() >= 0){
-			return json_encode(array(
+		$sth = $this->db->update('user', $data, "user_id = $user_id");
+
+		if($sth->rowCount > 0){
+			echo json_encode(array(
 				'success' 	=> true,
 				'messages' 	=> null,
 				'data' 		=> array()
 			));
 		} else {
-			return json_encode(array(
+			echo json_encode(array(
 				'success' 	=> false,
 				'messages' 	=> null,
 				'data' 		=> array()

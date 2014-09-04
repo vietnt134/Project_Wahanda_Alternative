@@ -57,7 +57,7 @@
 									<div class="form-venue-details">
 										<div class="venue-main-info">
 											<div class="picture-logo">
-												<img class="logo-image" src="">
+												<img id="user_logo_thubnail" class="logo-image" src="">
 												<input type="hidden" name="user_logo">
 												<div class="edit">
 													<a class="set-logo" href="javascript:;" id="imageManager_openModal" data-toggle="modal" data-target="#imageManager_modal" title="Sửa logo">
@@ -79,17 +79,8 @@
 													<tr id="venue_type" title="&lt;strong&gt;Primary venue type&lt;/strong&gt; - Set the venue type here. If you can't find the exact type, choose the one that's closest to what you do." class="form-row" aria-describedby="ui-tooltip-1">
 														<td class="label-part"><label for="user_business_id">Primary type</label></td>
 														<td class="input-part">
-														<select id="user_business_id" name="user_business_id" class="">
-															<option value="28">Airport Spa</option>
-															<option value="43">Barbershop</option>
-															<option value="46">Beauty Institute</option>
-															<option value="45">Beauty School</option>
-															<option value="16">Bootcamp</option>
-															<option value="47">Brow Bar</option>
-															<option value="4">Casino Spa</option>
-															<option value="20">Chiropody Clinic</option>
-															<option value="49">Chiropractic Clinic</option>
-
+														<select id="user_type_business_id" name="user_type_business_id" class="">
+															
 														</select></td>
 													</tr>
 												</tbody>
@@ -122,14 +113,6 @@
 													<td class="input-part">
 													<select id="user_country_id" name="user_country_id" class="required">
 														<option value="">Not set</option>
-														<option value="VN">Vietnam</option>
-														<option value="VG">Virgin Islands (British)</option>
-														<option value="VI">Virgin Islands (U.S.)</option>
-														<option value="WF">Wallis And Futuna Islands</option>
-														<option value="EH">Western Sahara</option>
-														<option value="YE">Yemen</option>
-														<option value="ZM">Zambia</option>
-														<option value="ZW">Zimbabwe</option>
 													</select></td>
 												</tr>
 												<tr id="loc_map" title="&lt;strong&gt;Location on the map&lt;/strong&gt; - Click on the map to enlarge it and drag the pointer to the exact location of your venue." class="form-row">
@@ -163,7 +146,7 @@
 													<td class="label-part"><label for="user_email" class="optional">Email</label></td>
 													<td class="input-part">
 													<div class="txt-input">
-														<input type="text" id="user_email" name="user_email" class="email">
+														<input type="text" id="user_email" name="user_email" class="email" disabled>
 													</div></td>
 												</tr>
 												<tr id="website" title="&lt;strong&gt;Website&lt;/strong&gt; - Enter the link to your venue's website." class="form-row">
@@ -246,7 +229,7 @@
 									<button class="button action action-default button-primary save-action" type="submit">
 										<div class="button-inner">
 											<div class="button-icon icons-tick done"></div>
-											<div class="button-icon fa fa-spin fa-refresh loading hidden"></div>
+											<div class="button-icon fa fa-spin fa-refresh loading" style="display: none;"></div>
 											<span class="msg msg-action-default">Save</span>
 										</div>
 									</button>

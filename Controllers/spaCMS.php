@@ -96,12 +96,20 @@
 			Auth::handleSpaCMSLogin();
 
 			switch ($xhr) {
-				case 'xhrGet':
-					$this->model->insert_();
+				case 'xhrGet_country':
+					$this->model->get_country();
+					break;
+
+				case 'xhrGet_user_detail':
+					$this->model->get_user_detail();
 					break;
 				
 				case 'xhrUpdate_user_detail':
 					$this->model->update_user_detail();
+					break;	
+
+				case 'xhrGet_type_business':
+					$this->model->get_type_business();
 					break;	
 
 				default:
