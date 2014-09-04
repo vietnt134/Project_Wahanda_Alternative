@@ -9,8 +9,13 @@ class clientsignup extends Controller {
 	}
 
 	public function index() {
-		$this -> view -> script = array(URL . 'Views/clientsignup/js/default.js');
-		$this -> view -> render('clientsignup/index');
+		Session::init();
+		if (empty($_SESSION['client_id'])) {
+			$this -> view -> script = array(URL . 'Views/clientsignup/js/default.js');
+			$this -> view -> render('clientsignup/index');
+		} else {
+			header('Location:' . URL);
+		}
 	}
 
 	public function signup() {
@@ -24,15 +29,15 @@ class clientsignup extends Controller {
 		$data['client_sex'] = $_POST['client_sex'];
 		$data['client_creditpoint'] = 0;
 		$data['client_giftpoint'] = 0;
-		$data['client_verify'] = md5(uniqid(rand(),TRUE));
+		$data['client_verify'] = md5(uniqid(rand(), TRUE));
 		$data['client_is_active'] = 0;
 		//Kiểm tra chuỗi token
-		for($i=0;;$i++){
+		for ($i = 0; ; $i++) {
 			$check_verify_code = $this -> model -> checkExistToken($data['client_verify']);
-			if($check_verify_code == 0){
+			if ($check_verify_code == 0) {
 				break;
-			}else{
-				$data['client_verify'] = md5(uniqid(rand(),TRUE));
+			} else {
+				$data['client_verify'] = md5(uniqid(rand(), TRUE));
 			}
 		}
 		//Kiểm tra dữ liệu đăng ký
@@ -47,7 +52,7 @@ class clientsignup extends Controller {
 		$body = '<h1>Chào mừng đến với WAHANDA</h1>';
 		$body .= '<p>Xin chào bạn: <strong>' . $data['client_name'] . '</strong></p>';
 		$body .= '<p>Để có thể sử dụng tài khoản click vào link dưới để active : </p>  
-				  <a href="http:'.URL.'clientsignup/VrcFl/'.$data['client_verify'].'" >'.$data['client_verify'].'</a>';
+				  <a href="http:' . URL . 'clientsignup/VrcFl/' . $data['client_verify'] . '" >' . $data['client_verify'] . '</a>';
 		$body .= '<p>Mật khẩu đăng nhập WAHANDA của bạn là: <strong>' . $_POST['client_pass'] . '</strong></p>';
 		$body .= '<p>Chúc một ngày mới tốt lành</p>';
 		$body .= '<div align="right"><small><i><b>Ban quản trị Wahanda</b></i></small></div>';
@@ -94,7 +99,7 @@ class clientsignup extends Controller {
 	}
 
 	public function VrcFl($verify = "") {
-		if($verify != ""){
+		if ($verify != "") {
 			$this -> model -> verify($verify);
 		}
 	}

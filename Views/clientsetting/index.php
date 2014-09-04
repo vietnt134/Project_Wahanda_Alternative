@@ -50,27 +50,27 @@
 				<div class="col-md-12">
 					<form class="form-horizontal">
 						<div class="form-group">
-							<span class="control-label col-md-4">Password cũ : </span>
+							<span class="control-label col-md-4">Mật khẩu cũ : </span>
 							<div class="col-md-5">
 								<input type="password" class="form-control" name="client_old_pass" id="client_old_pass" placeholder="Nhập mật khẩu cũ..."/>
 							</div>
 						</div>
 						<div class="form-group">
-							<span class="control-label col-md-4">Password mới (1) : </span>
+							<span class="control-label col-md-4">Mật khẩu mới (1) : </span>
 							<div class="col-md-5">
 								<input type="password" class="form-control" name="client_pass_1" id="client_pass_1" placeholder="Nhập mật khẩu mới..."/>
 							</div>
 						</div>
 						<div class="form-group">
-							<span class="control-label col-md-4">Password mới (2) : </span>
+							<span class="control-label col-md-4">Mật khẩu mới (2) : </span>
 							<div class="col-md-5">
 								<input type="password" class="form-control" name="client_pass_2" id="client_pass_2" placeholder="Nhập lại mật khẩu mới..."/>
 							</div>
 						</div>
 						<div class="form-group">
 							<span class="control-label col-md-4"></span>
-							<div class="col-md-6">
-								<a class="btn btn-warning">Đổi mật khẩu</a>
+							<div class="col-md-6" id="change_pass_btn">
+								<a class="btn btn-warning" onclick="changePass()">Đổi mật khẩu</a>
 							</div>
 						</div>
 					</form>

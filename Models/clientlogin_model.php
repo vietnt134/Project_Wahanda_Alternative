@@ -9,7 +9,7 @@ class clientlogin_model extends Model {
 	}
 	
 	function clientLogin($data){
-		$sql = "SELECT client_id,client_username FROM client WHERE client_email = :client_email AND client_pass = :client_pass";
+		$sql = "SELECT client_id,client_username FROM client WHERE client_email = :client_email AND client_pass = :client_pass AND client_is_active = 1";
 
 		$client = array(
 				':client_email' 		=> $data['email_login'],

@@ -51,6 +51,11 @@ function login() {
 									'</ul>'+
 								'</div>'+                  		                        			
                         	'</div>');
+                    var http_path = window.location.href.replace('http:','');
+			        var https_path = window.location.href.replace('https:','');	       
+			        if(http_path != URL && https_path != URL){
+			        	window.location = URL;
+			        }
 				}
 			}
 		});
