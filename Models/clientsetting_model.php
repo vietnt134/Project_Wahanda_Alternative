@@ -19,13 +19,18 @@ class clientsetting_model extends Model {
 	}
 
 	function changePass($data) {
-		$update = $this -> db -> prepare("UPDATE client SET client_pass ='".$data['client_pass']."' WHERE client_id=".$data['client_id']);
+		$update = $this -> db -> prepare("UPDATE client SET client_pass ='" . $data['client_pass'] . "' WHERE client_id=" . $data['client_id']);
 		$update -> execute();
 		if ($update -> rowCount() > 0) {
 			echo 200;
 		} else {
 			echo 2;
 		}
+	}
+
+	function editUserDetail($data) {
+		Session::init();
+		echo $update = $this -> db -> update('client', $data, 'client_id=' . $_SESSION['client_id']);
 	}
 
 }

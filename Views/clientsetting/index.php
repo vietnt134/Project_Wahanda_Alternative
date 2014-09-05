@@ -8,8 +8,11 @@
 			</div>
 			<br />
 			<div class="row">
-				<div class="col-md-offset-3 col-md-3"><p class=""><strong>HỌ TÊN :</strong></p></div>
-				<div class="col-md-6"><p class="text-warning" id="client_name"></p></div>
+				<div class="col-md-offset-3 col-md-3"><p class="control-label"><strong>HỌ TÊN :</strong></p></div>
+				<div class="col-md-3">
+					<input title="<strong>Lưu ý: Không được để trống!</strong>" class="form-control" id="client_name" type="text" readonly=""/>		
+				</div>
+				<div class="col-md-3" id="client_name_edit"><i title="Sửa họ tên" id="client_name_edit_btn" class="fa fa-pencil text-warning"></i></div>
 			</div>
 			<br />
 			<div class="row">
@@ -19,7 +22,10 @@
 			<br />
 			<div class="row">
 				<div class="col-md-offset-3 col-md-3"><p class=""><strong>ĐIỆN THOẠI :</strong></p></div>
-				<div class="col-md-6"><p class="text-warning" id="client_phone"></p></div>
+				<div class="col-md-3">
+					<input title="<strong>Lưu ý: Không được để trống, <br/>là số và ít nhất 9 ký tự!</strong>" class="form-control" id="client_phone" type="text" readonly=""/>		
+				</div>
+				<div class="col-md-3"><i title="Sửa số điện thoại" id="client_phone_edit_btn" class="fa fa-pencil text-warning"></i></div>
 			</div>
 			<br />
 			<div class="row">
@@ -81,7 +87,17 @@
 	</div>
 </div>
 <style>
-	p{
+	p, input{
 		font-size: 16px;
+	}
+	i.fa-pencil, i.fa-save{
+		cursor: pointer;
+	}
+	i.fa-pencil:hover, i.fa-save:hover{
+		font-size: 18px;
+		color: #000000;
+	}
+	input#client_name, input#client_phone{
+		margin-top: -8px;
 	}
 </style>

@@ -43,6 +43,31 @@ class clientsetting extends Controller {
 		$data['client_pass'] = Hash::create('md5', $_POST['client_pass_2'], HASH_PASSWORD_KEY);
 		$this -> model -> changePass($data);
 	}
+	function editUserDetail(){
+		if(isset($_POST['client_name'])){
+			if($_POST['client_name'] == ''){
+				echo 0;
+				exit;
+			}
+			$data['client_name'] = $_POST['client_name'];
+			$this -> model -> editUserDetail($data);
+		}else if(isset($_POST['client_phone'])){
+			if($_POST['client_phone'] == ''){
+				echo 0;
+				exit;
+			}
+			if(is_numeric($_POST['client_phone']) == false){
+				echo -1;
+				exit;
+			}
+			if(strlen($_POST['client_phone'])<9){
+				echo -2;
+				exit;
+			}
+			$data['client_phone'] = $_POST['client_phone'];
+			$this -> model -> editUserDetail($data);
+		}	
+	}
 }
 
 ?>
