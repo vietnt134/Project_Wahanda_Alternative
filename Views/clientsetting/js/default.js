@@ -18,6 +18,7 @@ $(document).ready(function() {
 	loadUserDetail();
 });
 function loadUserDetail() {
+	$('#gear').addClass('fa-spin');
 	$.ajax({
 		url : URL + 'clientsetting/loadUserDetail',
 		type : 'post',
@@ -31,6 +32,11 @@ function loadUserDetail() {
 			} else if ($('p#client_sex').text() == 1) {
 				$('p#client_sex').html('<i class="fa fa-female"></i>');
 			}
+		},
+		complete : function(){
+			// setTimeout(function(){
+				$('#gear').removeClass('fa-spin');
+			//},1000);			
 		}
 	});
 }
@@ -38,7 +44,7 @@ function loadUserDetail() {
 function changePass() {
 	var check_change_pass;
 	$('#change_pass_btn').children('span').remove();
-	$('#change_pass_btn').append('<i class="fa fa-refresh"></i>');
+	$('#change_pass_btn').append('<i class="fa fa-refresh fa-spin"></i>');
 	$.ajax({
 		url : URL + 'clientsetting/changePass',
 		type : 'post',
@@ -69,7 +75,11 @@ function changePass() {
 				$('#change_pass_btn').append('<span class="text-success"><small><i> Đổi mật khẩu thành công!</small></i></span>');
 				setTimeout(function(){
 					$('#client_change_pass').slideUp();
-			    }, 800);
+					$('#change_pass_btn').children('span').remove();
+					$('#client_old_pass').val('');
+					$('#client_pass_1').val('');
+					$('#client_pass_2').val('');
+			    }, 400);
 			}
 		},
 		complete : function(){

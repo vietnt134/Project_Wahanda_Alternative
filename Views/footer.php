@@ -1,6 +1,6 @@
 
 		<!-- Modal Login -->
-        <div id="login_modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-max-height="440">
+        <div id="login_modal" onkeydown="enterEvent(event)" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-max-height="440">
     	  <div class="modal-dialog">
 		    <div class="modal-content" style="background-color: #FDBD0E;border-radius: 6px">
 		      <div class="modal-header" >

@@ -6,6 +6,15 @@ $(document).on('click','#login_btn',function(){
 	$('#footer_login').children('i').remove();
 	$('#footer_login').children('span').remove();
 });
+$('#login_modal').on('shown.bs.modal', function () {
+    $('#email_login').focus();
+});
+function enterEvent(event){
+	var keycode = (event.keyCode ? event.keyCode : event.which);
+	if(keycode == '13'){
+		login();
+	}
+}
 function login() {
 	var email_login = $('#email_login').val();
 	var pass_login = $('#pass_login').val();

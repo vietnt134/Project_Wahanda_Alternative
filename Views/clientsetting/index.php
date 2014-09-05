@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-offset-1 col-md-10 well">
-			<h2 class="page-header text-center text-warning"><i class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;QUẢN LÝ TÀI KHOẢN</i></h2>
+			<h2 class="page-header text-center text-warning"><i id="gear" class="fa fa-gear"></i>&nbsp;&nbsp;&nbsp;QUẢN LÝ TÀI KHOẢN</i></h2>
 			<div class="row">
 				<div class="col-md-offset-3 col-md-3"><p class=""><strong>EMAIL :</strong></p></div>
 				<div class="col-md-6"><p class="text-warning" id="client_email"></p></div>
