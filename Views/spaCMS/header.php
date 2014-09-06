@@ -52,9 +52,9 @@
                 <div class="current">
                     <div class="icons-arrow-bottom"></div>
                     <div class="name" style="position: absolute; height: 15px; top: 50%; margin-top: -7.5px;">
-                        <div>
-                            Sunspa Resort
-                        </div>
+                        <?php 
+                            echo Session::get('user_business_name');
+                        ?>
                     </div>
                 </div>
                 <ul class="hidden"></ul>
@@ -117,9 +117,7 @@
                     <div class="name">
                         <div>
                             <?php
-                                if(Session::get('spaCMS')){
-                                    echo Session::get('user_email');
-                                }
+                                echo Session::get('user_email');
                             ?>
                         </div>
                     </div> </a>

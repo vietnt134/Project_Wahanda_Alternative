@@ -7747,14 +7747,14 @@ table .status-wrapper .status-note {
 }
 
 .simple-list li {
-     background: url("/assets/bullet-a3f1adeccc1b78e01f87bcdef61c1b31.png") no-repeat scroll 0px 3px transparent;
+     background: url("bullet-a3f1adeccc1b78e01f87bcdef61c1b31.png") no-repeat scroll 0px 3px transparent;
      line-height: 17px;
      padding: 0px 0px 4px 13px;
      position: relative;
 }
 
 .basic-list li {
-     background: url("/assets/bullet-tick-4879baddd52afe3c5074320fa19ea7b4.png") no-repeat scroll 0px 3px transparent;
+     background: url("bullet-tick-4879baddd52afe3c5074320fa19ea7b4.png") no-repeat scroll 0px 3px transparent;
      line-height: 17px;
      padding: 0px 0px 4px 20px;
      position: relative;

@@ -100,6 +100,10 @@
 					$this->model->get_country();
 					break;
 
+				case 'xhrGet_type_business':
+					$this->model->get_type_business();
+					break;
+
 				case 'xhrGet_user_detail':
 					$this->model->get_user_detail();
 					break;
@@ -108,9 +112,29 @@
 					$this->model->update_user_detail();
 					break;	
 
-				case 'xhrGet_type_business':
-					$this->model->get_type_business();
-					break;	
+				case 'xhrGet_user_open_hour':
+					$this->model->get_user_open_hour();
+					break;
+
+				case 'xhrUpdate_user_open_hour':
+					$this->model->update_user_open_hour();
+					break;
+
+				case 'xhrGet_user_company':
+					$this->model->get_user_company();
+					break;
+
+				case 'xhrUpdate_user_company':
+					$this->model->update_user_company();
+					break;
+
+				case 'xhrGet_user_bank_acc':
+					$this->model->get_user_bank_acc();
+					break;
+
+				case 'xhrUpdate_user_bank_acc':
+					$this->model->update_user_bank_acc();
+					break;
 
 				default:
 					$this->view->style = array(

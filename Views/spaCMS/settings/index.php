@@ -57,7 +57,7 @@
 									<div class="form-venue-details">
 										<div class="venue-main-info">
 											<div class="picture-logo">
-												<img id="user_logo_thubnail" class="logo-image" src="">
+												<img id="user_logo_thumbnail" class="logo-image" src="">
 												<input type="hidden" name="user_logo">
 												<div class="edit">
 													<a class="set-logo" href="javascript:;" id="imageManager_openModal" data-toggle="modal" data-target="#imageManager_modal" title="Sửa logo">
@@ -70,18 +70,16 @@
 													<tr id="venue_name" title="&lt;strong&gt;Venue name&lt;/strong&gt; - Enter your venue name here - make sure it's all spelt correctly." class="form-row" aria-describedby="ui-tooltip-0">
 														<td colspan="2">
 														<div class="txt-input txt-input-big">
-															<input type="text" id="" name="user_full_name" class="required">
+															<input type="text" id="" name="user_business_name" class="required">
 														</div>
 														<div class="part-of hidden">
 															part of <span class="chain-name"></span>
 														</div></td>
 													</tr>
 													<tr id="venue_type" title="&lt;strong&gt;Primary venue type&lt;/strong&gt; - Set the venue type here. If you can't find the exact type, choose the one that's closest to what you do." class="form-row" aria-describedby="ui-tooltip-1">
-														<td class="label-part"><label for="user_business_id">Primary type</label></td>
+														<td class="label-part"><label for="user_business_id">Dịch vụ chính</label></td>
 														<td class="input-part">
-														<select id="user_type_business_id" name="user_type_business_id" class="">
-															
-														</select></td>
+														<select id="user_type_business_id" name="user_type_business_id" class=""></select></td>
 													</tr>
 												</tbody>
 											</table>
@@ -89,34 +87,23 @@
 										<table cellspacing="0" cellpadding="0" class="default-form">
 											<tbody>
 												<tr class="form-header-row">
-													<td colspan="2">Where is your venue located?</td>
-												</tr>
-												<tr id="venue_location_1" title="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row text-location-link" aria-describedby="ui-tooltip-2">
-													<td class="label-part"></td>
-													<td class="input-part"><a class="show-text-location" href="javascript:;">Do you operate inside a hotel, clinic etc?</a></td>
-												</tr>
-												<tr id="venue_location_2" title="&lt;strong&gt;Venue location&lt;/strong&gt; - If your venue operates within a hotel, health centre or other venue, specify it here. It will then be shown as e.g. &amp;#34;Paola&amp;#39;s Therapy at Fitzrovia Health Centre&amp;#34;" class="form-row text-location">
-													<td class="label-part"><label for="venue-details-hotelName" class="optional">Located at</label></td>
-													<td class="input-part">
-													<div class="txt-input">
-														<input type="text" id="venue-details-hotelName" name="venue-details-hotelName" class="">
-													</div></td>
+													<td colspan="2">Địa điểm của bạn ở đâu?</td>
 												</tr>
 												<tr id="venue_address" title="&lt;strong&gt;Venue address&lt;/strong&gt; - You can include short instructions in the address such as &amp;#34;entrance on New Bond Street&amp;#34;" class="form-row" aria-describedby="ui-tooltip-4">
-													<td class="label-part"><label for="user_address">Address</label></td>
+													<td class="label-part"><label for="user_address">Địa chỉ</label></td>
 													<td class="input-part">
 														<textarea max-text-lines="4" id="user_address" name="user_address" cols="5" rows="4" class="full required"></textarea>
 													</td>
 												</tr>
 												<tr class="form-row">
-													<td class="label-part"><label for="venue-details-addressCountryCode">Country</label></td>
+													<td class="label-part"><label for="venue-details-addressCountryCode">Quốc gia</label></td>
 													<td class="input-part">
 													<select id="user_country_id" name="user_country_id" class="required">
-														<option value="">Not set</option>
+														<option value="">Chưa chọn</option>
 													</select></td>
 												</tr>
 												<tr id="loc_map" title="&lt;strong&gt;Location on the map&lt;/strong&gt; - Click on the map to enlarge it and drag the pointer to the exact location of your venue." class="form-row">
-													<td class="label-part"><label for="">Location on the map</label></td>
+													<td class="label-part"><label for="">Vị trí trên bản đồ</label></td>
 													<td class="input-part">
 													<input type="hidden" id="venue-details-latitude" name="venue-details-latitude" class="" value="54.54516881">
 													<input type="hidden" id="venue-details-gmapLatitude" name="venue-details-gmapLatitude" class="" value="54.54457136">
@@ -133,10 +120,10 @@
 													<td colspan="2"><span></span></td>
 												</tr>
 												<tr class="form-header-row">
-													<td colspan="2">How can customers reach you?</td>
+													<td colspan="2">Thông tin liên hệ</td>
 												</tr>
 												<tr id="phone" title="&lt;strong&gt;Phone number&lt;/strong&gt; - Enter your reception phone number. This should be the number that your clients can call for any enquiries." class="form-row">
-													<td class="label-part"><label for="user_phone">Phone number</label></td>
+													<td class="label-part"><label for="user_phone">Số điện thoại</label></td>
 													<td class="input-part">
 													<div class="txt-input">
 														<input type="text" id="user_phone" name="user_phone" class="required" phone-by-country-field="#venue-details-addressCountryCode">
@@ -157,14 +144,14 @@
 													</div></td>
 												</tr>
 												<tr id="face" title="&lt;strong&gt;Facebook&lt;/strong&gt; - Enter the link to your venue's Facebook." class="form-row">
-													<td class="label-part"><label for="user_facebook" class="optional">Facebook</label></td>
+													<td class="label-part"><label for="user_facebook" class="optional">Trang Facebook</label></td>
 													<td class="input-part">
 													<div class="txt-input">
 														<input type="text" id="user_facebook" name="user_facebook" class="">
 													</div></td>
 												</tr>
 												<tr id="google" title="&lt;strong&gt;Google+&lt;/strong&gt; - Enter the link to your venue's Google+." class="form-row">
-													<td class="label-part"><label for="user_googleplus" class="optional">Google+</label></td>
+													<td class="label-part"><label for="user_googleplus" class="optional">Trang Google+</label></td>
 													<td class="input-part">
 													<div class="txt-input">
 														<input type="text" id="user_googleplus" name="user_googleplus" class="">
@@ -174,7 +161,7 @@
 													<td colspan="2"><span></span></td>
 												</tr>
 												<tr id="description" title="&lt;strong&gt;Venue description&lt;/strong&gt; - Enter a few sentences about your venue - those with good descriptions always receive more bookings." class="form-header-row">
-													<td colspan="2"><label for="user_description">Description</label></td>
+													<td colspan="2"><label for="user_description">Mô tả về địa điểm/dịch vụ của bạn</label></td>
 												</tr>
 												<tr data-tooltip="&lt;strong&gt;Venue description&lt;/strong&gt; - Enter a few sentences about your venue - those with good descriptions always receive more bookings." class="form-row">
 													<td colspan="2" class="input-part">
@@ -187,7 +174,7 @@
 									</div>
 									<div class="form-venue-pictures ui-sortable">
 										<div class="part-title">
-											Venue slide photos
+											Ảnh địa điểm
 										</div>
 										<ul class="menu-item-pictures">
 											<li class="single-picture">
@@ -204,7 +191,7 @@
 												<div id="imageManager_openModal" class="single-picture-wrapper" style="position: relative;" data-toggle="modal" data-target="#imageManager_modal">
 													<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
 														<div class="icon icons-plus3"></div>
-														Add image
+														Thêm ảnh
 													</div>
 												</div>
 												<div class="single-picture-title">
@@ -239,6 +226,7 @@
 						</div><!-- END VENUA DETAILS -->
 
 						<div id="opening-hours" class="tab-pane ">
+							<form id="user_open_hour_form" method="GET">
 							<div class="form-content">
 								<ul class="form-list">
 									<li data-tooltip="&lt;strong&gt;Business hours&lt;/strong&gt; - Define what days and times your venue is open. This will show up in your Wahanda.com listing and will be used for appointment bookings." class="special" aria-describedby="ui-tooltip-172">
@@ -246,433 +234,6 @@
 											Business hours
 										</div>
 										<ul class="week">
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="MONDAY">
-													<label for="MONDAY">Monday</label>
-													<select name="time-from[MONDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[MONDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="TUESDAY">
-													<label for="TUESDAY">Tuesday</label>
-													<select name="time-from[TUESDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[TUESDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="WEDNESDAY">
-													<label for="WEDNESDAY">Wednesday</label>
-													<select name="time-from[WEDNESDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[WEDNESDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="THURSDAY">
-													<label for="THURSDAY">Thursday</label>
-													<select name="time-from[THURSDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[THURSDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="FRIDAY">
-													<label for="FRIDAY">Friday</label>
-													<select name="time-from[FRIDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[FRIDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="on">
-												<div>
-													<input type="checkbox" checked="checked" id="SATURDAY">
-													<label for="SATURDAY">Saturday</label>
-													<select name="time-from[SATURDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option selected="selected" value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select name="time-to[SATURDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option selected="selected" value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
-											<li class="off">
-												<div>
-													<input type="checkbox" id="SUNDAY">
-													<label for="SUNDAY">Sunday</label>
-													<select disabled="disabled" name="time-from[SUNDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option selected="selected" value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-													-
-													<select disabled="disabled" name="time-to[SUNDAY]">
-														<option value="00:00">00:00</option>
-														<option value="01:00">01:00</option>
-														<option value="02:00">02:00</option>
-														<option value="03:00">03:00</option>
-														<option value="04:00">04:00</option>
-														<option value="05:00">05:00</option>
-														<option value="06:00">06:00</option>
-														<option value="07:00">07:00</option>
-														<option value="08:00">08:00</option>
-														<option value="09:00">09:00</option>
-														<option value="10:00">10:00</option>
-														<option value="11:00">11:00</option>
-														<option value="12:00">12:00</option>
-														<option value="13:00">13:00</option>
-														<option value="14:00">14:00</option>
-														<option value="15:00">15:00</option>
-														<option value="16:00">16:00</option>
-														<option value="17:00">17:00</option>
-														<option value="18:00">18:00</option>
-														<option value="19:00">19:00</option>
-														<option selected="selected" value="20:00">20:00</option>
-														<option value="21:00">21:00</option>
-														<option value="22:00">22:00</option>
-														<option value="23:00">23:00</option>
-														<option value="24:00">24:00</option>
-													</select>
-												</div>
-											</li>
 										</ul>
 									</li>
 									<li data-tooltip="&lt;strong&gt;Time zone&lt;/strong&gt; - Set the timezone that your venue is operating in." aria-describedby="ui-tooltip-173">
@@ -687,10 +248,13 @@
 							<div class="form-actions">
 								<button class="button action action-default button-primary save-action" type="submit">
 									<div class="button-inner">
-										<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+										<div class="button-icon icons-tick done"></div>
+										<div class="button-icon fa fa-spin fa-refresh loading" style="display: none;"></div>
+										<span class="msg msg-action-default">Save</span>
 									</div>
 								</button>
 							</div>
+							</form>
 						</div><!-- END OPEN HOUR -->
 
 						<div id="policies" class="tab-pane">
@@ -1002,82 +566,77 @@
 
 					<div class="tab-content tab-content-fix">
 						<div id="billing-details" class="tab-pane active">
+							<form id="user_company_form" method="GET" action="#">
 							<div class="form-content">
 								<table cellspacing="0" cellpadding="0" class="default-form">
 									<tbody>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-name">Company title</label></td>
+											<td class="label-part"><label for="user_company_name">Tên công ty</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-name" name="supplier-settings-name" class="required">
+												<input type="text" id="user_company_name" name="user_company_name" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-companyNumber" class="optional">Company number</label></td>
+											<td class="label-part"><label for="user_company_delegate" class="optional">Người đại diện</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-companyNumber" name="supplier-settings-companyNumber" class="alphanumeric">
+												<input type="text" id="user_company_delegate" name="user_company_delegate" class="alphanumeric">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-vatNumber" class="optional">VAT number</label></td>
+											<td class="label-part"><label for="user_company_tax_code" class="optional">Mã số thuế</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-vatNumber" name="supplier-settings-vatNumber" class="alphanumeric">
+												<input type="text" id="user_company_tax_code" name="user_company_tax_code" class="alphanumeric">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-address">Address</label></td>
-											<td class="input-part">											<textarea max-text-lines="4" id="supplier-settings-address" name="supplier-settings-address" rows="4" class="full required"></textarea></td>
+											<td class="label-part"><label for="user_company_address">Địa chỉ</label></td>
+											<td class="input-part">
+												<textarea max-text-lines="4" id="user_company_address" name="user_company_address" rows="4" class="full required"></textarea>
+											</td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-addressCountryCode">Country</label></td>
+											<td class="label-part"><label for="user_company_country_id">Quốc gia</label></td>
 											<td class="input-part">
-											<select id="supplier-settings-addressCountryCode" name="supplier-settings-addressCountryCode" class="required">
-												<option value="">Not set</option>
-
-												<option value="VN">Vietnam</option>
-												<option value="VG">Virgin Islands (British)</option>
-												<option value="VI">Virgin Islands (U.S.)</option>
-												<option value="WF">Wallis And Futuna Islands</option>
-												<option value="EH">Western Sahara</option>
-												<option value="YE">Yemen</option>
-												<option value="ZM">Zambia</option>
-												<option value="ZW">Zimbabwe</option>
-											</select></td>
+												<select id="user_company_country_id" name="user_company_country_id" class="required">
+													<option value="">Not set</option>
+												</select>
+											</td>
 										</tr>
 										<tr class="form-separator-row">
 											<td colspan="2"><span></span></td>
 										</tr>
 										<tr class="form-header-row">
-											<td colspan="2">Contact person</td>
+											<td colspan="2">Thông tin người liên hệ</td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-name-cn">Contact name</label></td>
+											<td class="label-part"><label for="user_contact_name">Tên người liên hệ</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-contact-name-cn" name="supplier-settings-contact-name-cn" class="required">
+												<input type="text" id="user_contact_name" name="user_contact_name" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-email-cn">Email</label></td>
+											<td class="label-part"><label for="user_contact_email">Email</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-email-cn" name="supplier-settings-email-cn" class="email required">
+												<input type="text" id="user_contact_email" name="user_contact_email" class="email required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-phone-cn">Phone</label></td>
+											<td class="label-part"><label for="user_contact_phone">Số điện thoại</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-phone-cn" name="supplier-settings-phone-cn" phone-by-country-field="#supplier-settings-addressCountryCode" class="required">
+												<input type="text" id="user_contact_phone" name="user_contact_phone" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="supplier-settings-position-cn">Chức vụ</label></td>
+											<td class="label-part"><label for="user_contact_role">Chức vụ</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="supplier-settings-position-cn" name="supplier-settings-position-cn" phone-by-country-field="#supplier-settings-addressCountryCode" class="required">
+												<input type="text" id="user_contact_role" name="user_contact_role" class="required">
 											</div></td>
 										</tr>
 									</tbody>
@@ -1088,36 +647,27 @@
 							<div class="form-actions">
 								<button class="button action action-default button-primary save-action" type="submit">
 									<div class="button-inner">
-										<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+										<div class="button-icon icons-tick done"></div>
+										<div class="button-icon fa fa-spin fa-refresh loading" style="display:none"></div>
+										<span class="msg msg-action-default">Save</span>
 									</div>
 								</button>
 							</div>
+							</form>
 						</div><!-- END BILLING DETAILS -->
 
 						<div id="bank-details" class="tab-pane">
+							<form id="user_bank_acc_form" method="POST" action="#">
 							<div class="form-content">
 								<div class="content-note">
 									<div class="icons-info"></div>
 									<p class="main-txt">
-										Our finance team makes regular payments for appointment and voucher sales through Wahanda. Based on your agreed payment terms:
+										Bộ phận kế toán sẽ thực hiện việc chuyển khoản, thanh toán cho những vé đặt và voucher được bán thông qua W.A. Điều khoản thanh toán:
 									</p>
-									<div class="b-payment-term b-payment-poo" style="display: none;">
-										<ul class="simple-list">
-											<li>
-												eVouchers will be paid <strong>30 days</strong> after sale.
-											</li>
-											<li>
-												All dated services will be automatically paid <strong>30 days</strong> after the appointment/check in.
-											</li>
-										</ul>
-										<p>
-											To discuss moving to a more prompt payment cycle, please contact <a href="mailto:supply.support@wahanda.com">supply.support@wahanda.com</a>
-										</p>
-									</div>
 									<div class="b-payment-term b-payment-por">
 										<ul class="simple-list">
 											<li>
-												eVouchers will be paid <strong>15 days</strong> after they have been redeemed by you in Connect.
+												eVouchers sẽ được thanh toán trong vòng <strong>15 ngày</strong> sau khi được xác thực trên hệ thống booking của W.A
 											</li>
 											<li>
 												All dated services will be automatically paid <strong>15 days</strong> after the date of the appointment/check in.
@@ -1128,36 +678,38 @@
 								<table cellspacing="0" cellpadding="0" class="default-form">
 									<tbody>
 										<tr class="form-row">
-											<td class="label-part"><label for="bank-details-accountName">Account holder name</label></td>
+											<td class="label-part"><label for="user_bank_acc_owner">Tên chủ sở hữu</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="bank-details-accountName" name="bank-details-accountName" class="required">
+												<input type="text" id="user_bank_acc_owner" name="user_bank_acc_owner" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="bank-details-accountNumber">Account number</label></td>
+											<td class="label-part"><label for="user_bank_acc">Số tài khoản</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="bank-details-accountNumber" name="bank-details-accountNumber" class="required account-no">
+												<input type="text" id="user_bank_acc" name="user_bank_acc" class="required account-no">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="bank-details-bankCode">Bank sort code</label></td>
+											<td class="label-part"><label for="user_bank_branch">Chi nhánh</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="bank-details-bankCode" name="bank-details-bankCode" class="required">
+												<input type="text" id="user_bank_branch" name="user_bank_branch" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="bank-details-bankName">Bank name</label></td>
+											<td class="label-part"><label for="user_bank_name">Tên ngân hàng</label></td>
 											<td class="input-part">
 											<div class="txt-input">
-												<input type="text" id="bank-details-bankName" name="bank-details-bankName" class="required">
+												<input type="text" id="user_bank_name" name="user_bank_name" class="required">
 											</div></td>
 										</tr>
 										<tr class="form-row">
-											<td class="label-part"><label for="bank-details-bankAddress">Bank address</label></td>
-											<td class="input-part">											<textarea max-text-lines="4" id="bank-details-bankAddress" name="bank-details-bankAddress" rows="4" class="full required"></textarea></td>
+											<td class="label-part"><label for="user_bank_address">Địa chỉ chi nhánh</label></td>
+											<td class="input-part">											
+												<textarea max-text-lines="4" id="user_bank_address" name="user_bank_address" rows="4" class="full required"></textarea>
+											</td>
 										</tr>
 									</tbody>
 								</table>
@@ -1166,10 +718,13 @@
 							<div class="form-actions">
 								<button class="button action action-default button-primary save-action" type="submit">
 									<div class="button-inner">
-										<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+										<div class="button-icon icons-tick done"></div>
+										<div class="button-icon fa fa-spin fa-refresh loading" style="display:none"></div>
+										<span class="msg msg-action-default">Save</span>
 									</div>
 								</button>
 							</div>
+							</form>
 						</div><!-- END BANK DETAILS -->
 					</div>
 				</div>
@@ -1267,7 +822,7 @@
 								<div class="content-note">
 									<div class="icon icons-info"></div>
 									<p class="second-txt">
-										When we receive a lead or a sale from a customer, we send an email to you. Here you can specify what address we should send those emails to.
+										aWhen we receive a lead or a sale from a customer, we send an email to you. Here you can specify what address we should send those emails to.
 									</p>
 								</div>
 
@@ -1354,24 +909,25 @@
 								<div class="content-note">
 									<div class="icon icons-info"></div>
 									<p class="main-txt">
-										Here you can set how your clients can book in through Wahanda website and Online booking widget.
+										Bạn có thể thiết lập cách khách hàng của bạn đặt dịch vụ thông qua website W.A
 									</p>
+									</br>
 								</div>
 								<table cellspacing="0" cellpadding="0" class="default-form">
 									<tbody>
 										<tr data-tooltip="&lt;strong&gt;Lead time&lt;/strong&gt; - Set how soon the first time slot is available for online bookings. Bigger values prevent last minute bookings." class="form-row">
-											<td class="label-part"><label for="booking-settings-onlineBookingMinHours">Booking lead time for appointments</label></td>
+											<td class="label-part"><label for="booking-settings-onlineBookingMinHours">Thời gian tối thiểu trước dịch vụ</label></td>
 											<td class="input-part">
 											<select id="booking-settings-onlineBookingMinHours" name="booking-settings-onlineBookingMinHours" class="required">
 												<option value="0">No closeout</option><option value="1">1 hour</option><option value="2">2 hours</option><option value="3">3 hours</option><option value="4">4 hours</option><option value="5">5 hours</option><option value="6">6 hours</option><option value="7">7 hours</option><option value="8">8 hours</option><option value="24">1 day</option><option value="48">2 days</option><option value="72">3 days</option><option value="120">5 days</option><option value="168">1 week</option><option value="336">2 weeks</option><option value="504">3 weeks</option><option value="672">4 weeks</option>
 											</select></td>
 										</tr>
 										<tr data-tooltip="&lt;strong&gt;Online booking limit&lt;/strong&gt; - Set how far in future your clients can book online." class="form-row">
-											<td class="label-part"><label for="policies-onlineBookingMaxDays">Online booking limit</label></td>
+											<td class="label-part"><label for="policies-onlineBookingMaxDays">Giới hạn thời gian booking tối đa</label></td>
 											<td class="input-part">
 											<div class="txt-input txt-input-mini">
 												<input type="text" max="365" min="1" id="policies-onlineBookingMaxDays" name="onlineBookingMaxDays" class="required digits">
-											</div><span class="help-txt">days in advance</span></td>
+											</div><span class="help-txt">ngày trong tương lai</span></td>
 										</tr>
 
 									</tbody>

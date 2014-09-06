@@ -38,8 +38,6 @@
     ?>
 
     <script>
-        UserDetail.init();
-        
         // Dropdown logout
         $(function(){
             $('#user').click(function() {
