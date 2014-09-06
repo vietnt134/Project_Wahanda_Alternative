@@ -44,6 +44,7 @@ class clientsetting extends Controller {
 		$this -> model -> changePass($data);
 	}
 	function editUserDetail(){
+		Auth::handleClientLogin();
 		if(isset($_POST['client_name'])){
 			if($_POST['client_name'] == ''){
 				echo 0;
