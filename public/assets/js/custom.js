@@ -55,7 +55,7 @@ function loadServiceList() {
 				html += '</div>';
 			});
 			if(response[0] == null){
-				$('#top_service').append('<div id="error_loading" style="color : #FFCC00;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
+				$('#top_service').append('<div id="error_loading" style="color : #A1A1A1;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
 				setTimeout(function(){
 					$('#error_loading').fadeIn();
 				},600);			
