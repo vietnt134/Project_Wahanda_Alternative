@@ -406,7 +406,16 @@
 	color: #FFCC00;
 	background-color: #1A1A1A;
 }
-
+.btn-black {
+	color: #000000;
+	background-color: #FDBD0E;
+	border-color: #FDBD0E;
+}
+.btn-black:hover, .btn-black:focus, .btn-black:active {
+	color: #FFFFFF;
+	background-color: #000000;
+	border-color: #000000;
+}
 .btn-brown {
 	color: #1A1A1A;
 	background-color: #CCCCCC;
@@ -451,6 +460,48 @@ input, select, textarea {
 #service_nav .navbar-nav > li a:hover {
 	background-color: #FDBD0E;
 	color: #FFFFFF;
-	text-decoration: none;
-	border: none;
+}
+#service_nav {
+	border-radius: 0px;
+}
+.progress_bar {
+	display: block;
+	height: 0.625em;
+	background-color: #FDBD0E;
+	margin-top: 6px;
+}
+#date_booking span {
+	margin-right: 8px;
+	padding: 5px;
+}
+#days_booking span {
+	margin-right: 9.5px;
+	padding: 5px;
+}
+#days_booking span:hover, #days_booking span:focus {
+	cursor: pointer;
+	background: none repeat scroll 0% 0% #CCCCCA;
+	border-radius: 50%;
+	color: #FFFFFF;
+	border-width: 5px;
+	padding: 5px;
+}
+#days_booking span.active {
+	cursor: pointer;
+	background: none repeat scroll 0% 0% #000000;
+	border-radius: 50%;
+	color: #FFFFFF;
+	border-width: 5px;
+	padding: 5px;
+}
+.span-separate {
+	position: absolute;
+	background: #ADADAD;
+	height: 88%;
+	width: 1px;
+	top: 3px;
+	box-shadow: .5px 0 .1px #FFFFFF;
+}
+.service_properties{
+	font-size: 17px;
 }
