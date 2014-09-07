@@ -145,6 +145,7 @@
         var USERNAME = "<?php if(isset($_SESSION['client_username']))
 							      echo $_SESSION['client_username']; 
 						?>";
+		var USER_SERVICE_ID;
     </script>
 
     <?php

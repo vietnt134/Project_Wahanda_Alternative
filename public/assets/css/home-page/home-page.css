@@ -502,6 +502,12 @@ input, select, textarea {
 	top: 3px;
 	box-shadow: .5px 0 .1px #FFFFFF;
 }
-.service_properties{
+.service_properties {
 	font-size: 17px;
+}
+p.description, p.name {
+	height: 20px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

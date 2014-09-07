@@ -17,6 +17,7 @@ class Bootstrap {
 		if (empty($url[0])) {
 			require 'Controllers/index.php';
 			$controller = new index();
+			$controller->loadModel('index');
 			$controller->index();
 			return false;
 		}

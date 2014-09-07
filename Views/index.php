@@ -51,89 +51,35 @@
 			<span class="fa-stack"> <i class="fa fa-circle fa-stack-2x"></i> <i class="fa fa-thumbs-o-up fa-stack-1x fa-inverse"></i> </span>
 			<strong style="font-size: 20px;">DỊCH VỤ NỔI BẬT </strong>
 		</div>
-
-		<div class="col-sm-6 col-md-4">
-			<div class="item">
-				<p align="center" class="name">
-					CẮT TÓC HÀN QUỐC MỚI
-				</p>
-				<div class="clearfix svl-01">
-					<span class="rating pull-left"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> </span>
-					<span class="count-rating pull-right">345 lượt bình chọn</span>
+		<div id="top_service">
+			<div id="waiting_for_top_service" class="text-center"><i style="color: #FDBD0E" class="fa fa-3x fa-refresh fa-spin text-center"></i></div>
+			<!-- <div class="col-sm-6 col-md-4">
+				<div class="item">
+					<p align="center" class="name" data-toggle="modal" data-target="#service_detail">
+						CẮT TÓC HÀN QUỐC MỚI
+					</p>
+					<div class="clearfix svl-01">
+						<span class="rating pull-left"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> </span>
+						<span class="count-rating pull-right">345 lượt bình chọn</span>
+					</div>
+					<div class="image" class="clearfix"  data-toggle="modal" data-target="#service_detail">
+						<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
+					</div>
+					<div class="clearfix">
+						<span class="price pull-left">1.500.000 VND</span>
+						<span class="sale-percent pull-right"> <i class="fa fa-arrow-down"></i> GIẢM 15% </span>
+					</div>
+					<p class="description">
+						Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........
+					</p>
+					<div class="clearfix">
+						<button data-toggle="modal" data-target="#service_detail" class="btn btn-sm btn-orange pull-right book-now-btn">
+							BOOK NOW
+						</button>
+						<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
+					</div>
 				</div>
-				<div class="image" class="clearfix">
-					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
-				</div>
-				<div class="clearfix">
-					<span class="price pull-left">1.500.000 VND</span>
-					<span class="sale-percent pull-right"> <i class="fa fa-arrow-down"></i> GIẢM 15% </span>
-				</div>
-				<p class="description">
-					Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........
-				</p>
-				<div class="clearfix">
-					<button data-toggle="modal" data-target="#service_detail" class="btn btn-sm btn-orange pull-right book-now-btn">
-						BOOK NOW
-					</button>
-					<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-6 col-md-4">
-			<div class="item">
-				<p align="center" class="name">
-					CẮT TÓC HÀN QUỐC MỚI
-				</p>
-				<div class="clearfix svl-01">
-					<span class="rating pull-left"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> </span>
-					<span class="count-rating pull-right">345 lượt bình chọn</span>
-				</div>
-				<div class="image" class="clearfix">
-					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
-				</div>
-				<div class="clearfix">
-					<span class="price pull-left">1.500.000 VND</span>
-					<span class="sale-percent pull-right"> <i class="fa fa-arrow-down"></i> GIẢM 15% </span>
-				</div>
-				<p class="description">
-					Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........
-				</p>
-				<div class="clearfix">
-					<button data-toggle="modal" data-target="#service_detail" class="btn btn-sm btn-orange pull-right book-now-btn">
-						BOOK NOW
-					</button>
-					<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-sm-6 col-md-4">
-			<div class="item">
-				<p align="center" class="name">
-					CẮT TÓC HÀN QUỐC MỚI
-				</p>
-				<div class="clearfix svl-01">
-					<span class="rating pull-left"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> </span>
-					<span class="count-rating pull-right">345 lượt bình chọn</span>
-				</div>
-				<div class="image" class="clearfix">
-					<img class="img-responsive" alt="Responsive image" src="<?php echo ASSETS; ?>img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />
-				</div>
-				<div class="clearfix">
-					<span class="price pull-left">1.500.000 VND</span>
-					<span class="sale-percent pull-right"> <i class="fa fa-arrow-down"></i> GIẢM 15% </span>
-				</div>
-				<p class="description">
-					Ngọc Anh Hair Salon với đội ngũ chuyên nghiệp........
-				</p>
-				<div class="clearfix">
-					<button data-toggle="modal" data-target="#service_detail" class="btn btn-sm btn-orange pull-right book-now-btn">
-						BOOK NOW
-					</button>
-					<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>
-				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- END DỊCH VỤ NỔI BẬT -->
