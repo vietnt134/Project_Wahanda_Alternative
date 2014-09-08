@@ -275,20 +275,26 @@
 	<div id="service_detail" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-max-height="640">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content" >
-				<div class="modal-body">
+				<div style="display: none;" class="modal-body" id="error_service_detail_modal_body">
 					<button type="button" class="close" data-dismiss="modal">
 						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
 					</button>
-					<br />
-					<br />
+					<div style="color : #A1A1A1;" class="text-center">
+						<h4>Dịch vụ không tồn tại hoặc có gián đoạn kết nối, thử kết nối lại!</h4>
+					</div>
+				</div>
+				<div class="modal-body" id="service_detail_modal_body">
+					<!-- <button type="button" class="close" data-dismiss="modal">
+						<span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+					</button> -->
 					<div class="row">
 						<div class="well" style="background-color: #000000">
 							<div class="row" style="font-size: 16px;">
 								<div class="col-md-4" style="color: #FFCC00;">
-									<strong>UỐN MI CONG VOLUM</strong>
+									<strong style="text-transform: uppercase;" id="user_service_name">UỐN MI CONG VOLUM</strong>
 								</div>
 								<div class="col-md-4" style="color: #FFFFFF;">
-									<strong>Sun Spa Resort</strong>
+									<strong class="user_business_name">Sun Spa Resort</strong>
 								</div>
 								<div class="col-md-4">
 									<span style="color: #FFCC00;"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </span>
@@ -330,7 +336,7 @@
 												</span>
 											</div>
 											<div class="col-md-6">
-												<span class="service_properties">420.000 VNĐ</span>
+												<span id="user_service_sale_price" class="service_properties">420.000</span><span> VNĐ</span>
 											</div>
 										</div>
 										<hr />
@@ -341,7 +347,7 @@
 												</span>
 											</div>
 											<div class="col-md-6">
-												<span class="service_properties">30 phút</span>
+												<span id="user_service_duration" class="service_properties">30</span><span> phút</span>
 											</div>
 										</div>
 										<hr />
@@ -597,17 +603,17 @@
 										</div>
 										<div class="row">
 											<div class="col-md-12">
-												<h5 class="text-center"><b>SUNSPA RESORT</b></h5>
-												<p class="text-center">Đ.2, P.Bình An, Q.2, TP.HCM | SĐT:0903676222 | Email:vietnt134@gmail.com</p>
+												<h5 class="text-center"><b style="text-transform: uppercase;" class="user_business_name">SUNSPA RESORT</b></h5>
+												<p class="text-center"><span id="user_address">Đ.2, P.Bình An, Q.2, TP.HCM</span> | SĐT:<span id="user_contact_phone">0903676222</span> | Email:<span id="user_contact_email">vietnt134@gmail.com</span></p>
 											</div>
 										</div>
 										<hr />
 										<div class="row">
 											<div class="col-md-12">
-												<p>SUNSPA RESORT được thành lập năm 2007 
+												<p><span id="user_description">SUNSPA RESORT được thành lập năm 2007 
 												với các dịch vụ dành cho phái nữ, qua nhiều năm kinh nghiệm 
 												chúng tôi đã nhận được sự tín nhiệm từ khách hàng 
-												và ngày một nâng cao trình độ phục vụ</p>
+												và ngày một nâng cao trình độ phục vụ</span></p>
 												<p class="text-right"><a href="">Xem thêm >>></a></p>
 											</div>
 										</div>

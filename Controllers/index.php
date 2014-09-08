@@ -16,4 +16,9 @@ class Index extends Controller {
 	function loadServiceList(){
 		$this -> model -> loadServiceList();
 	}
+	
+	function loadServiceDetail(){
+		$user_service_id = $_POST['user_service_id'];
+		$this -> model -> loadServiceDetail($user_service_id);
+	}
 }
