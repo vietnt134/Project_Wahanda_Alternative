@@ -1,6 +1,6 @@
 	
         
-        <footer style="margin-bottom: 50px;">
+        <footer>
         	
         </footer>
     </body>

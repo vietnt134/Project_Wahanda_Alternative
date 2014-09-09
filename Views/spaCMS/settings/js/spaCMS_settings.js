@@ -5,17 +5,35 @@ $("#venue_name, #venue_type, #venue_location_1, #venue_location_2, #venue_addres
     container : 'body'
 });
 
-// <!-- Save Change -->
-$('#imageManager_saveChange').on('click', function(evt){
-    evt.preventDefault();
-    // Define selected image 
-    var radio_checked = $("input:radio[name='example']:checked"); // Radio checked
-    //
-    $('.logo-image').attr('src', radio_checked.attr('data-image'));
-    $('input[name=user_logo]').val(radio_checked.val());
-    // Hide Modal
-    $("#imageManager_modal").modal('hide'); 
-});
+var ImageManager = function () {
+    return {
+        init: function() {
+            $('#iM_user_logo').click(function(){
+                $('#imageManager_saveChange').attr('cover_id','user_logo');
+            });
+
+            $('#iM_user_slide').click(function(){
+                $('#imageManager_saveChange').attr('cover_id','user_slide');
+            });
+
+            // <!-- Save Change -->
+            $('#imageManager_saveChange').on('click', function(evt){
+                evt.preventDefault();
+                // Define position insert to image
+                var cover_id = $(this).attr('cover_id');
+                // Define selected image 
+                var radio_checked = $("input:radio[name='iM-radio']:checked"); // Radio checked
+                //
+                $('#' + cover_id + '_thumbnail').attr('src', radio_checked.attr('data-image'));
+                $('input[name=' + cover_id + ']').val(radio_checked.val());
+
+                // Hide Modal
+                $("#imageManager_modal").modal('hide'); 
+            });
+
+        }
+    }
+}();
 
 var GetMoreInfo = function () {
     var xhrGet_type_business = function() {
@@ -91,8 +109,36 @@ var UserDetail = function (){
             done.hide();
             var url = URL + 'spaCMS/settings/xhrUpdate_user_detail';
 
-            $.get(url, data, function(result) {
-                console.log(result);
+            $.post(url, data, function(result) {
+                loading.fadeOut();
+                done.fadeIn();
+            }, 'json');
+            return false;
+        });
+    }
+
+    var xhrGet_user_is_use_voucher = function () {
+        var url = URL + 'spaCMS/settings/xhrGet_user_is_use_voucher';
+        $.get(url, function(data){
+            if(data){
+                $('input[name=user_is_use_voucher]').attr('checked', true);
+            } else {
+                $('input[name=user_is_use_voucher]').attr('checked', false);
+            }
+            
+        }, 'json');
+    }
+
+    var xhrUpdate_user_is_use_voucher = function () {
+        $('#user_is_use_voucher_form').on('submit', function(){
+            var data = $(this).serialize();
+            var loading = $(this).find('.loading');
+            var done = $(this).find('.done');
+            loading.fadeIn();
+            done.hide();
+            console.log(data);
+            var url = URL + 'spaCMS/settings/xhrUpdate_user_is_use_voucher';
+            $.post(url, data, function(result) {
                 loading.fadeOut();
                 done.fadeIn();
             }, 'json');
@@ -104,6 +150,8 @@ var UserDetail = function (){
         init: function(){
             xhrGet_user_detail();
             xhrUpdate_user_detail();
+            xhrGet_user_is_use_voucher();
+            xhrUpdate_user_is_use_voucher();
         }
     }
 }();
@@ -306,3 +354,6 @@ GetMoreInfo.init();
 UserDetail.init();
 UserOpenHour.init();
 UserFinance.init();
+
+
+ImageManager.init();

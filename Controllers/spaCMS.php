@@ -120,6 +120,14 @@
 					$this->model->update_user_open_hour();
 					break;
 
+				case 'xhrGet_user_is_use_voucher':
+					$this->model->get_user_is_use_voucher();
+					break;
+
+				case 'xhrUpdate_user_is_use_voucher':
+					$this->model->update_user_is_use_voucher();
+					break;
+
 				case 'xhrGet_user_company':
 					$this->model->get_user_company();
 					break;

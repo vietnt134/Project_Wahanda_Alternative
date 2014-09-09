@@ -60,7 +60,7 @@
 												<img id="user_logo_thumbnail" class="logo-image" src="">
 												<input type="hidden" name="user_logo">
 												<div class="edit">
-													<a class="set-logo" href="javascript:;" id="imageManager_openModal" data-toggle="modal" data-target="#imageManager_modal" title="Sửa logo">
+													<a id="iM_user_logo" class="set-logo imageManager_openModal" href="javascript:;" data-toggle="modal" data-target="#imageManager_modal" title="Sửa logo">
 														<i class="fa fa-pencil"></i>
 													</a>
 												</div>
@@ -105,11 +105,11 @@
 												<tr id="loc_map" title="&lt;strong&gt;Location on the map&lt;/strong&gt; - Click on the map to enlarge it and drag the pointer to the exact location of your venue." class="form-row">
 													<td class="label-part"><label for="">Vị trí trên bản đồ</label></td>
 													<td class="input-part">
-													<input type="hidden" id="venue-details-latitude" name="venue-details-latitude" class="" value="54.54516881">
-													<input type="hidden" id="venue-details-gmapLatitude" name="venue-details-gmapLatitude" class="" value="54.54457136">
-													<input type="hidden" id="venue-details-longitude" name="venue-details-longitude" class="" value="-1.27919913">
-													<input type="hidden" id="venue-details-gmapLongitude" name="venue-details-gmapLongitude" class="" value="-1.27979995">
-													<input type="hidden" id="venue-details-gmapScale" name="venue-details-gmapScale" class="" value="15">
+													<input disabled type="hidden" id="user_latitude" name="user_latitude" class="" value="54.54516881">
+													<input disabled type="hidden" id="user_gmapLatitude" name="user_gmapLatitude" class="" value="54.54457136">
+													<input disabled type="hidden" id="user_longitude" name="user_longitude" class="" value="-1.27919913">
+													<input disabled type="hidden" id="user_gmapLongitude" name="user_gmapLongitude" class="" value="-1.27979995">
+													<input disabled type="hidden" id="user_gmapScale" name="user_gmapScale" class="" value="15">
 													<div class="location-map-wrapper"><img alt="" src="https://maps.googleapis.com/maps/api/staticmap?sensor=false&amp;zoom=15&amp;size=397x98&amp;maptype=roadmap&amp;markers=icon%3Ahttps%3A%2F%2Fconnect.wahanda.com%2Fassets%2Fmap-marker.png%7C54.54516881%2C-1.27919913">
 														<div class="edit">
 															<a class="edit-location" href="javascript:;">Edit</a>
@@ -179,7 +179,8 @@
 										<ul class="menu-item-pictures">
 											<li class="single-picture">
 												<div class="single-picture-wrapper">
-													<img data-id="257441" src="https://connect.wahanda.com/api/v2.0.0/media/venue/285925/gallery/image/257441?width=100&amp;height=70">
+													<img id="user_slide_thumbnail" src="">
+													<input type="hidden" name="user_sile">
 												</div>
 												<div class="single-picture-title">
 													<span>Primary image</span>
@@ -188,7 +189,7 @@
 											</li>
 
 											<li class="single-picture empty">
-												<div id="imageManager_openModal" class="single-picture-wrapper" style="position: relative;" data-toggle="modal" data-target="#imageManager_modal">
+												<div id="iM_user_slide" class="single-picture-wrapper imageManager_openModal" style="position: relative;" data-toggle="modal" data-target="#imageManager_modal">
 													<div class="add-picture vertically-centered" style="position: absolute; height: 34px; top: 50%; margin-top: -17px;">
 														<div class="icon icons-plus3"></div>
 														Thêm ảnh
@@ -197,14 +198,6 @@
 												<div class="single-picture-title">
 													<span>Primary image</span>
 												</div>
-												<script type="text/javascript">
-													// $(document).ready(function(){
-													// 	$('#imageManager_openModal').click(function(){
-													// 	    // Dùng chung 1 modal để chọn hình ở nhiều nơi
-													// 	    $('#imageManager_saveChange').attr('venue_slide','1');
-													// 	});
-													// });
-												</script>
 											</li>
 										</ul>
 									</div>
@@ -239,7 +232,7 @@
 									<li data-tooltip="&lt;strong&gt;Time zone&lt;/strong&gt; - Set the timezone that your venue is operating in." aria-describedby="ui-tooltip-173">
 										<label class="label-column" for="time-zone">Time zone</label>
 										<select id="time-zone">
-											<option selected="selected" value="21">British Time</option>
+											<option selected="selected" value="21">Vietnam Time</option>
 										</select>
 									</li>
 								</ul>
@@ -503,6 +496,7 @@
 						</div><!-- END POLICIES -->
 
 						<div id="venue-vouchers" class="tab-pane">
+							<form id="user_is_use_voucher_form" action="#" method="GET">
 							<div class="data-content" style="top: 32px;">
 								<div class="content-note">
 									<div class="icon icons-info"></div>
@@ -514,10 +508,10 @@
 									</p>
 								</div>
 								<div class="enabler">
-									<input type="checkbox" value="true" name="venue-vouchers-acceptsWahandaVoucher" id="venue-vouchers-acceptsWahandaVoucher">
-									<label for="venue-vouchers-acceptsWahandaVoucher"> Accept Wahanda Gift Vouchers </label>
+									<input type="checkbox" value="true" name="user_is_use_voucher" id="user_is_use_voucher">
+									<label for="user_is_use_voucher"> Accept Wahanda Gift Vouchers </label>
 								</div>
-								<div class="info smaller b-info-text hidden">
+								<div class="info smaller b-info-text">
 									<p>
 										When a customer uses a voucher in your venue, simply write your venue name and the date on the back of the voucher and write Void on the front. Return to us by post, keeping a note of the serial number, and you’ll receive payment 15 days after we receive your voucher, minus 15% plus VAT commission from the voucher value.
 									</p>
@@ -540,10 +534,13 @@
 							<div class="form-actions">
 								<button class="button action action-default button-primary save-action" type="submit">
 									<div class="button-inner">
-										<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+										<div class="button-icon icons-tick done"></div>
+										<div class="button-icon fa fa-spin fa-refresh loading" style="display:none"></div>
+										<span class="msg msg-action-default">Save</span>
 									</div>
 								</button>
 							</div>
+							</form>
 						</div><!-- END VENUE VOUCHERS -->
 
 					</div>
@@ -750,68 +747,58 @@
 								<div class="content-note">
 									<div class="icon icons-info"></div>
 									<p class="second-txt">
-										When we receive a lead or a sale from a customer, we send an email to you. Here you can specify what address we should send those emails to.
+										We will send out automated notifications to your customers reminding them about their appointments. For more information, visit <a href="http://www.wahanda.com/info/connect-faq/#do-you-send-notifications-and-reminders-to-our-clients" target="_blank">Connect FAQ</a>.
 									</p>
 								</div>
-
-								<div class="email-settings">
-									<div class="part-title">
-										Email settings
+								<div class="text-message-settings">
+									<div class="part-title">Text message settings</div>
+									<div class="content-note b-premium" style="margin-left: 0px;">
+										<div class="icon icons-info"></div>
+										<p class="second-txt">
+											Text reminders to clients are available for premium venues only.<br>
+											<a class="a-upgrade-dialog" href="#">Read more...</a>
+										</p>
 									</div>
-									<table cellspacing="0" cellpadding="0" class="default-form">
-										<tbody>
-											<tr class="form-row for-appointments">
-												<td class="label-part"><label for="notifications-settings-address">Your email address</label></td>
-												<td class="input-part">
-												<div class="txt-input">
-													<input type="text" id="notifications-settings-address" name="notifications-settings-address" class="required email">
-												</div></td>
-											</tr>
-											<tr class="form-row">
-												<td class="label-part"><label for="notifications-settings-method">Email format</label></td>
-												<td class="input-part">
-												<select id="notifications-settings-method" name="notifications-settings-method" class="full">
-													<option value="EMH">HTML</option>
-													<option value="EMT">Plain text</option>
-												</select></td>
-											</tr>
-										</tbody>
-									</table>
+									<div class="send-text-reminder b-for-premium hidden">
+										<input type="checkbox" value="true" name="client-notifications-sendSmsReminders" id="client-notifications-sendSmsReminders">
+										<label for="client-notifications-sendSmsReminders">Send text message reminder</label>
+
+										<div class="txt-input txt-input-mini"><input type="text" min="1" class="digits required" name="client-notifications-smsReminderHours" id="client-notifications-smsReminderHours"></div>
+										<label for="client-notifications-smsReminderHours">hour(s) before appointment</label>
+									</div>
+									<div class="send-messages-from b-for-premium hidden">
+										<label for="client-notifications-smsFromNumber">Send messages from this number:</label>
+										<div class="txt-input"><input type="text" class="mobile-phone-by-country" name="client-notifications-smsFromNumber" id="client-notifications-smsFromNumber"></div>
+									</div>
 								</div>
 								<div class="separating-line"></div>
-								<div class="text-message-settings">
-									<div class="part-title">
-										Text message settings
+								<div class="email-settings">
+									<div class="part-title">Email settings</div>
+									<div class="send-confirmations">
+										<input type="checkbox" value="true" name="client-notifications-sendEmailNotifications" id="client-notifications-sendEmailNotifications">
+										<label for="client-notifications-sendEmailNotifications">Gởi email xác nhận đến khách hàng về việc được xác nhận, đổi lịch hoặc hủy đặt cuộc hẹn dịch vụ</label>
 									</div>
-									<div class="send-sms">
-										<input type="checkbox" value="true" name="client-notifications-sendSMS" id="client-notifications-sendSMS">
-										<label for="client-notifications-sendSMS">Send text (SMS) new order confirmations for Wahanda bookings</label>
+									<div class="send-reminder">
+										<input type="checkbox" value="true" name="client-notifications-sendEmailReminders" id="client-notifications-sendEmailReminders">
+										<label for="client-notifications-sendEmailReminders">Gửi email thông báo trước</label>
+
+										<div class="txt-input txt-input-mini"><input type="text" min="1" class="digits required" name="client-notifications-emailReminderHours" id="client-notifications-emailReminderHours"></div>
+										<label for="client-notifications-emailReminderHours">giờ(s) theo lịch hẹn</label>
 									</div>
-									<table cellspacing="0" cellpadding="0" class="default-form hidden">
-										<tbody>
-											<tr class="form-row for-appointments">
-												<td class="label-part"><label for="appointmentBookingNotificationSms">Phone number to send appointment confirmations to</label></td>
-												<td class="input-part">
-												<div class="txt-input">
-													<input type="text" id="appointmentBookingNotificationSms" name="appointmentBookingNotificationSms" class="mobile-phone-by-country required disabled" disabled="">
-												</div></td>
-											</tr>
-											<tr class="form-row">
-												<td class="label-part"><label for="datedBookingNotificationSms">Phone number to send overnight/dated confirmations to</label></td>
-												<td class="input-part">
-												<div class="txt-input">
-													<input type="text" id="datedBookingNotificationSms" name="datedBookingNotificationSms" class="mobile-phone-by-country required disabled" disabled="">
-												</div></td>
-											</tr>
-										</tbody>
-									</table>
+									<div class="input-row">
+										<input type="checkbox" value="true" name="client-notifications-directReviewRequestEnabled" id="client-notifications-directReviewRequestEnabled">
+										<label for="client-notifications-directReviewRequestEnabled">Gửi email khuyến khích khách hàng đăng bài dịch vụ</label>
+										<p class="small-note">Chúng tôi sẽ gửi mail đề nghị khách hàng đăng đánh giá dịch vụ của bạn trên W.A. Bạn có thể bỏ chọn để không thực hiện thao tác này.</p>
+									</div>
 								</div>
 							</div>
 
 							<div class="form-actions">
 								<button class="button action action-default button-primary save-action" type="submit">
 									<div class="button-inner">
-										<div class="button-icon icons-tick"></div><span class="msg msg-action-default">Save</span><span class="msg msg-action-doing">Saving...</span>
+										<div class="button-icon icons-tick done"></div>
+										<div class="button-icon fa fa-spin fa-refresh loading" style="display:none"></div>
+										<span class="msg msg-action-default">Save</span>
 									</div>
 								</button>
 							</div>

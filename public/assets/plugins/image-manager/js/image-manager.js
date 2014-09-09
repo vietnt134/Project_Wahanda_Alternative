@@ -161,7 +161,7 @@ function load_allImage(){
             var modal_body = $('#imageManager_allImage');
             modal_body.text(''); // Làm trống nội dụng trước khi load hình vào để tránh trùng lặp
             for(var i=0; i<data.length; i++){
-                modal_body.prepend('<input id="'+ data[i].pid[0] +'" type="radio" name="example" value="'+ URL_IMAGE_MANAGER + data[i].image_source[0] +'" class="radioImageSelect" data-image="'+ URL_IMAGE_MANAGER + data[i].thumbnail_source[0] +'" data-title="'+ data[i].title[0] +'" data-image_name="'+ data[i].image_name[0] +'" data-image_size="'+ data[i].image_size[0] +'" data-thumbnail_name="'+ data[i].thumbnail_name[0] +'" />');
+                modal_body.prepend('<input id="'+ data[i].pid[0] +'" type="radio" name="iM-radio" value="'+ URL_IMAGE_MANAGER + data[i].image_source[0] +'" class="radioImageSelect" data-image="'+ URL_IMAGE_MANAGER + data[i].thumbnail_source[0] +'" data-title="'+ data[i].title[0] +'" data-image_name="'+ data[i].image_name[0] +'" data-image_size="'+ data[i].image_size[0] +'" data-thumbnail_name="'+ data[i].thumbnail_name[0] +'" />');
             }
             $('input.radioImageSelect').radioImageSelect();
 
@@ -184,7 +184,7 @@ function load_allImage(){
 
 // <!-- Click xoa hinh -->
 $('#imageManager_removeImage').on('click', function(){
-    var radio_checked = $("input:radio[name='example']:checked"); // Radio checked
+    var radio_checked = $("input:radio[name='iM-radio']:checked"); // Radio checked
     // USER_ID
     $.get(URL_IMAGE_MANAGER + 'del_node.php', {'user_id':user_id, 'cover_id':radio_checked.attr('id')}, function(rs){
         // $('img.radio-select-img-item').find('.item-checked').css('display','none');
@@ -204,7 +204,7 @@ $('#imageManager_removeImage').on('click', function(){
 });
 
 // Đặt 2 function dưới đây ở nơi chứa HTML của image_manager modal
-$('#imageManager_openModal').click(function(){
+$('.imageManager_openModal').click(function(){
     // Clear description of image
     $('.cover_title, .cover_image_name, .cover_image_size, .cover_thumbnail_name').html('');
     // Disable remove button
@@ -226,7 +226,7 @@ $('#imageManager_openModal').click(function(){
 //     // // Dùng chung 1 modal để chọn hình ở nhiều nơi
 //     var cover_id = $(this).attr('cover_id');
 //     //
-//     var radio_checked = $("input:radio[name='example']:checked"); // Radio checked
+//     var radio_checked = $("input:radio[name='iM-radio']:checked"); // Radio checked
 //     $('img#' + cover_id + '.imagePreview').attr('src', radio_checked.val()); // set attribute src to imagePreview 
 //     $('img#' + cover_id + '.imagePreview').attr('title', radio_checked.attr('data-title')); // set attribute title to imagePreview 
 //     $("#cover_title").val(radio_checked.attr('data-title'));

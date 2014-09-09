@@ -64,20 +64,13 @@ class Spacms_Model extends Model {
 
 	function update_user_detail() {
 		$user_id = Session::get('user_id');
-		$data = array(
-				'user_business_name'	=> $_GET['user_business_name'],
-				'user_logo'				=> $_GET['user_logo'],
-				'user_type_business_id'	=> $_GET['user_type_business_id'],
-				'user_address'		=> $_GET['user_address'],
-				'user_phone'		=> $_GET['user_phone'],
-				'user_country_id'	=> $_GET['user_country_id'],
-				'user_description'	=> $_GET['user_description'],
-				'user_website'		=> $_GET['user_website'],
-				'user_facebook'		=> $_GET['user_facebook'],
-				'user_googleplus'	=> $_GET['user_googleplus']
-				// 'user_silde'		=> $_GET['user_silde']
-			);
-		
+		$data = array();
+		foreach ($_POST as $key => $value) {
+			if($key == "url") {
+				continue;
+			}
+			$data["$key"] = $value;
+		}
 		$sth = $this->db->update('user', $data, "user_id = $user_id");
 
 		if($sth){
@@ -119,23 +112,51 @@ class Spacms_Model extends Model {
 
 		$sth = $this->db->update('user', $data, "user_id = $user_id");
 
-		// if($sth){
-		// 	echo json_encode(array(
-		// 		'success' 	=> true,
-		// 		'messages' 	=> null,
-		// 		'data' 		=> array()
-		// 	));
-		// } else {
-		// 	echo json_encode(array(
-		// 		'success' 	=> false,
-		// 		'messages' 	=> null,
-		// 		'data' 		=> array()
-		// 	));
-		// }
+		if($sth){
+			echo json_encode(array(
+				'success' 	=> true,
+				'messages' 	=> null,
+				'data' 		=> array()
+			));
+		} else {
+			echo json_encode(array(
+				'success' 	=> false,
+				'messages' 	=> null,
+				'data' 		=> array()
+			));
+		}
 		
 	}
 
+	function get_user_is_use_voucher() {
+		$user_id = Session::get('user_id');
+		$query = "SELECT user_is_use_voucher FROM user WHERE user_id = $user_id";
+		$result = $this->db->select($query);
+		echo $result[0]['user_is_use_voucher'];
+	}
 
+	function update_user_is_use_voucher() {
+		$user_id = Session::get('user_id');
+		$data = array('user_is_use_voucher'=>false);
+		if(isset($_POST['user_is_use_voucher'])) {
+			$data['user_is_use_voucher'] = $_POST['user_is_use_voucher'];
+		}
+		$sth = $this->db->update('user', $data, "user_id = $user_id");
+
+		if($sth){
+			echo json_encode(array(
+				'success' 	=> true,
+				'messages' 	=> null,
+				'data' 		=> array()
+			));
+		} else {
+			echo json_encode(array(
+				'success' 	=> false,
+				'messages' 	=> null,
+				'data' 		=> array()
+			));
+		}
+	}
 
 	function get_user_company() {
 		$user_id = Session::get('user_id');
