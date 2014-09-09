@@ -1,5 +1,19 @@
 $(document).ready(function() {
 	loadServiceList();
+	$('#user_description_see_more').on('click', function(){
+		$('#user_description').css({
+			'white-space':'normal',
+			'overflow':'auto'
+		});
+		$(this).hide();
+	});
+	$('#service_detail').on('hide.bs.modal', function(){
+		$('#user_description').css({
+			'white-space':'nowrap',
+			'overflow':'hidden',
+		});
+		$('#user_description_see_more').show();
+	});
 });
 $(document).on('click', '#login_btn', function() {
 	//alert(window.location.href);
@@ -96,10 +110,37 @@ function loadServiceDetail(user_service_id) {
 			if (response[0] != null) {
 				$('#service_detail_modal_body').show();
 				$('#error_service_detail_modal_body').hide();
+				//console.log(response);
+				var user_open_hour_1 = '';
+				var user_open_hour_2 = '';
+				var separate_count = 0;
 				$.each(response[0], function(key, value) {
 					$('#'+key).val(value);
 					$('#'+key+', .'+key).text(value);
+					if(key == 'user_open_hour'){
+						json_user_open_hour = jQuery.parseJSON(value);
+						//console.log(json_user_open_hour);
+						$.each(json_user_open_hour, function(day, hour){
+							separate_count++;
+							if(separate_count>3){
+								if(hour[0] == 1){
+									user_open_hour_2 += '<p><i>' + day + ' : từ ' + hour[1] + ' h - ' + hour[2] + ' h</i></p>';
+								}else if(hour[0] == 0){
+									user_open_hour_2 += '<p><i>' + day + ' : Nghỉ</i></p>';
+								}
+							}else{
+								if(hour[0] == 1){
+									user_open_hour_1 += '<p><i>' + day + ' : từ ' + hour[1] + ' h - ' + hour[2] + ' h</i></p>';
+								}else if(hour[0] == 0){
+									user_open_hour_1 += '<p><i>' + day + ' : Nghỉ</i></p>';
+								}
+							}
+						});
+					}
 				});
+				//response[0].user_open_hour;
+				$('#user_open_hour_1').html(user_open_hour_1);
+				$('#user_open_hour_2').html(user_open_hour_2);
 			} else {
 				$('#error_service_detail_modal_body').show();
 				$('#service_detail_modal_body').hide();

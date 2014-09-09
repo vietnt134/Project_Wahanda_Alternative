@@ -510,3 +510,8 @@ p.description, p.name {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
+p#user_description{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

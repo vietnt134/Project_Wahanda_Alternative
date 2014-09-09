@@ -610,19 +610,23 @@
 										<hr />
 										<div class="row">
 											<div class="col-md-12">
-												<p><span id="user_description">SUNSPA RESORT được thành lập năm 2007 
+												<p id="user_description">SUNSPA RESORT được thành lập năm 2007 
 												với các dịch vụ dành cho phái nữ, qua nhiều năm kinh nghiệm 
 												chúng tôi đã nhận được sự tín nhiệm từ khách hàng 
-												và ngày một nâng cao trình độ phục vụ</span></p>
-												<p class="text-right"><a href="">Xem thêm >>></a></p>
+												và ngày một nâng cao trình độ phục vụ</p>
+												<p class="text-right"><a id="user_description_see_more" style="cursor: pointer;">Xem thêm >>></a></p>
 											</div>
 										</div>
 										<hr />
 										<div class="row">
-											<div class="col-md-3">
+											<div class="col-md-4">
 												<p><b>GIỜ MỞ CỬA</b></p>
 											</div>
-											<div class="col-md-9">
+											<div class="col-md-4" id="user_open_hour_1">
+												<p>Thứ 2 - Thứ 6 ........ 07am - 20pm</p>
+												<p>Thứ 7 - Chủ nhật ... 07am - 20pm</p>
+											</div>
+											<div class="col-md-4" id="user_open_hour_2">
 												<p>Thứ 2 - Thứ 6 ........ 07am - 20pm</p>
 												<p>Thứ 7 - Chủ nhật ... 07am - 20pm</p>
 											</div>
