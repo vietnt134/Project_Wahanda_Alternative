@@ -652,7 +652,7 @@
 											<p class="text-center">&nbsp;&nbsp;&nbsp;AUGUST 2014&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
 										</div>
 									</div>
-									<div class="row" id="date_booking">
+									<div class="row" id="days_booking">
 										<div class="col-md-12 text-center">
 											<span>T2</span>
 											<span>T3</span>
@@ -663,7 +663,7 @@
 											<span>CN</span>
 										</div>
 									</div>
-									<div class="row" id="days_booking" style="margin-top: 6px;">
+									<div class="row" id="date_booking" style="margin-top: 6px;">
 										<div class="col-md-12 text-center">
 											<span class="active">12</span>
 											<span>13</span>

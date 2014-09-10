@@ -1,16 +1,16 @@
 $(document).ready(function() {
 	loadServiceList();
-	$('#user_description_see_more').on('click', function(){
+	$('#user_description_see_more').on('click', function() {
 		$('#user_description').css({
-			'white-space':'normal',
-			'overflow':'auto'
+			'white-space' : 'normal',
+			'overflow' : 'auto'
 		});
 		$(this).hide();
 	});
-	$('#service_detail').on('hide.bs.modal', function(){
+	$('#service_detail').on('hide.bs.modal', function() {
 		$('#user_description').css({
-			'white-space':'nowrap',
-			'overflow':'hidden',
+			'white-space' : 'nowrap',
+			'overflow' : 'hidden',
 		});
 		$('#user_description_see_more').show();
 	});
@@ -55,7 +55,7 @@ function loadServiceList() {
 				html += '<span class="price pull-left">' + value.user_service_sale_price + ' VNĐ</span>';
 				html += '<span class="sale-percent pull-right"> <i class="fa fa-arrow-down"></i>' + ' GIẢM ' + Math.floor((value.user_service_full_price - value.user_service_sale_price) / value.user_service_full_price * 100) + '%</span>';
 				html += '</div>';
-				html += '<p class="description">' + value.user_service_description;
+				html += '<p title="' + value.user_service_description + '" class="description">' + value.user_service_description;
 				html += '</p>';
 				html += '<div class="clearfix">';
 				html += '<button class="btn btn-sm btn-orange pull-right book-now-btn">';
@@ -114,24 +114,165 @@ function loadServiceDetail(user_service_id) {
 				var user_open_hour_1 = '';
 				var user_open_hour_2 = '';
 				var separate_count = 0;
+				var day = '';
+				var date = '';
+				var month_year = '';
+				var day_of_week = parseInt(response[0].day_of_week);
+				var day_of_month = parseInt(response[0].day_of_month);
+				var total_day_current_month = parseInt(response[0].total_day_current_month);
+				switch(day_of_week) {
+				case 1:
+					user_service_day_of_week = 'CN';
+					day += '<span>' + user_service_day_of_week + '</span>';
+					for ( i = (response[0].day_of_month + 1); i < response[0].total_day_current_month; i++) {
+						if (response[0].day_of_week == '7') {
+							response[0].day_of_week = '1';
+							day += '<span>CN</span>';
+						} else {
+							response[0].day_of_week++;
+							switch(response[0].day_of_week) {
+							case 2:
+								day += '<span>T2</span>';
+								break;
+							case 3:
+								day += '<span>T3</span>';
+								break;
+							case 4:
+								day += '<span>T4</span>';
+								break;
+							case 5:
+								day += '<span>T5</span>';
+								break;
+							case 6:
+								day += '<span>T6</span>';
+								break;
+							case 7:
+								day += '<span>T7</span>';
+								break;
+							};
+						}
+					}
+					break;
+				case 2:
+					user_service_day_of_week = 'T2';
+					break;
+				case 3:
+					user_service_day_of_week = 'T3';
+					break;
+				case 4:
+					var current_week = 1;
+					for ( i = day_of_month; i <= total_day_current_month; i++) {
+						if (day_of_week == 8) {
+							day_of_week = 1;
+						}
+						if (current_week > 7) {
+							if (day_of_week == 1) {
+								day += '<span style="display:none">CN</span>';
+							} else if (day_of_week == 2) {
+								day += '<span style="display:none">T2</span>';
+							} else if (day_of_week == 3) {
+								day += '<span style="display:none">T3</span>';
+							} else if (day_of_week == 4) {
+								day += '<span style="display:none">T4</span>';
+							} else if (day_of_week == 5) {
+								day += '<span style="display:none">T5</span>';
+							} else if (day_of_week == 6) {
+								day += '<span style="display:none">T6</span>';
+							} else if (day_of_week == 7) {
+								day += '<span style="display:none">T7</span>';
+							}
+						} else {
+							if (day_of_week == 1) {
+								day += '<span>CN</span>';
+							} else if (day_of_week == 2) {
+								day += '<span>T2</span>';
+							} else if (day_of_week == 3) {
+								day += '<span>T3</span>';
+							} else if (day_of_week == 4) {
+								day += '<span>T4</span>';
+							} else if (day_of_week == 5) {
+								day += '<span>T5</span>';
+							} else if (day_of_week == 6) {
+								day += '<span>T6</span>';
+							} else if (day_of_week == 7) {
+								day += '<span>T7</span>';
+							}
+						}
+
+						day_of_week++;
+						current_week++;
+					}
+					break;
+				case 5:
+					var current_week = 1;
+					for ( i = day_of_month; i <= total_day_current_month; i++) {
+						if (day_of_week == 8) {
+							day_of_week = 1;
+						}
+						if (current_week > 7) {
+							if (day_of_week == 1) {
+								day += '<span style="display:none">CN</span>';
+							} else if (day_of_week == 2) {
+								day += '<span style="display:none">T2</span>';
+							} else if (day_of_week == 3) {
+								day += '<span style="display:none">T3</span>';
+							} else if (day_of_week == 4) {
+								day += '<span style="display:none">T4</span>';
+							} else if (day_of_week == 5) {
+								day += '<span style="display:none">T5</span>';
+							} else if (day_of_week == 6) {
+								day += '<span style="display:none">T6</span>';
+							} else if (day_of_week == 7) {
+								day += '<span style="display:none">T7</span>';
+							}
+						} else {
+							if (day_of_week == 1) {
+								day += '<span>CN</span>';
+							} else if (day_of_week == 2) {
+								day += '<span>T2</span>';
+							} else if (day_of_week == 3) {
+								day += '<span>T3</span>';
+							} else if (day_of_week == 4) {
+								day += '<span>T4</span>';
+							} else if (day_of_week == 5) {
+								day += '<span>T5</span>';
+							} else if (day_of_week == 6) {
+								day += '<span>T6</span>';
+							} else if (day_of_week == 7) {
+								day += '<span>T7</span>';
+							}
+						}
+
+						day_of_week++;
+						current_week++;
+					}
+					break;
+				case 6:
+					user_service_day_of_week = 'T6';
+					break;
+				case 7:
+					user_service_day_of_week = 'T7';
+					break;
+				};
+				$('#days_booking').children().html(day);
 				$.each(response[0], function(key, value) {
-					$('#'+key).val(value);
-					$('#'+key+', .'+key).text(value);
-					if(key == 'user_open_hour'){
+					$('#' + key).val(value);
+					$('#' + key + ', .' + key).text(value);
+					if (key == 'user_open_hour') {
 						json_user_open_hour = jQuery.parseJSON(value);
 						//console.log(json_user_open_hour);
-						$.each(json_user_open_hour, function(day, hour){
+						$.each(json_user_open_hour, function(day, hour) {
 							separate_count++;
-							if(separate_count>3){
-								if(hour[0] == 1){
+							if (separate_count > 3) {
+								if (hour[0] == 1) {
 									user_open_hour_2 += '<p><i>' + day + ' : từ ' + hour[1] + ' h - ' + hour[2] + ' h</i></p>';
-								}else if(hour[0] == 0){
+								} else if (hour[0] == 0) {
 									user_open_hour_2 += '<p><i>' + day + ' : Nghỉ</i></p>';
 								}
-							}else{
-								if(hour[0] == 1){
+							} else {
+								if (hour[0] == 1) {
 									user_open_hour_1 += '<p><i>' + day + ' : từ ' + hour[1] + ' h - ' + hour[2] + ' h</i></p>';
-								}else if(hour[0] == 0){
+								} else if (hour[0] == 0) {
 									user_open_hour_1 += '<p><i>' + day + ' : Nghỉ</i></p>';
 								}
 							}
