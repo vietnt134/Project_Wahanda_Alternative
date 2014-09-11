@@ -17,7 +17,7 @@ var ImageManager = function () {
             });
 
             // <!-- Save Change -->
-            $('#imageManager_saveChange').on('click', function(evt){
+            $('#imageManager_saveChange').on('click', function(evt) {
                 evt.preventDefault();
                 // Define position insert to image
                 var cover_id = $(this).attr('cover_id');

@@ -79,17 +79,39 @@
 			$this->view->render_spaCMS('calendar/index');
 		}	
 
-		function reports() {
+		function reports($xhr = false) {
 			Auth::handleSpaCMSLogin();
-			$this->view->style = array(
-				URL . 'Views/spaCMS/reports/css/spaCMS_reports.css'
-			);
 
-			$this->view->script = array(
-				URL . 'Views/spaCMS/reports/js/spaCMS_reports.js'
-			);
+			switch ($xhr) {
+				case 'xhrGet_list_booking':
+					$this->model->get_list_booking();
+					break;
 
-			$this->view->render_spaCMS('reports/index');
+				default:
+					$this->view->style = array(
+						URL . 'Views/spaCMS/reports/css/spaCMS_reports.css',
+						ASSETS . 'plugins/select2/select2.css',
+						ASSETS . 'plugins/select2/select2-metronic.css',
+						ASSETS . 'plugins/data-tables/DT_bootstrap.css',
+						ASSETS . 'plugins/bootstrap-datepicker/css/datepicker.css'
+					);
+
+					$this->view->script = array(
+						ASSETS . 'plugins/select2/select2.min.js',
+						ASSETS . 'plugins/data-tables/jquery.dataTables.js',
+						ASSETS . 'plugins/data-tables/DT_bootstrap.js',
+						ASSETS . 'plugins/bootstrap-datepicker/js/bootstrap-datepicker.js',
+						ASSETS . 'js/core/app.js',
+						ASSETS . 'js/core/datatable.js',
+						ASSETS . 'js/spaCMS/table-ajax.js',
+						URL . 'Views/spaCMS/reports/js/spaCMS_reports.js'
+					);
+
+					$this->view->render_spaCMS('reports/index');
+					break;
+			}
+
+					
 		}	
 
 		function settings( $xhr = false ) {
@@ -151,7 +173,7 @@
 					);
 
 					$this->view->script = array(
-						ASSETS . 'plugins/image-manager/js/image-manager.min.js',
+						ASSETS . 'plugins/image-manager/js/image-manager.js',
 						URL . 'Views/spaCMS/settings/js/spaCMS_settings.js'
 					);
 

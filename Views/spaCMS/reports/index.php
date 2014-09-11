@@ -116,117 +116,111 @@
                         </div>
                     </div>
                     <div class="home-data">
-                        <div class="data-head">
-                            <table cellspacing="0" cellpadding="0" class="">
+                        <div class="portlet-body">
+                            <div class="table-container">
+                                <div class="table-actions-wrapper">
+                                    <span>
+                                    </span>
+                                    <select class="table-group-action-input form-control input-inline input-small input-sm">
+                                        <option value="">Select...</option>
+                                        <option value="Cancel">Cancel</option>
+                                        <option value="Cancel">Hold</option>
+                                        <option value="Cancel">On Hold</option>
+                                        <option value="Close">Close</option>
+                                    </select>
+                                    <button class="btn btn-sm yellow table-group-action-submit"><i class="fa fa-check"></i> Submit</button>
+                                </div>
+                                <table class="table table-striped table-bordered table-hover" id="datatable_ajax">
+                                <thead>
+                                <tr role="row" class="heading">
+                                    <th width="5%">
+                                        <input type="checkbox" class="group-checkable">
+                                    </th>
+                                    <th width="5%">
+                                         Record&nbsp;#
+                                    </th>
+                                    <th width="15%">
+                                         Date
+                                    </th>
+                                    <th width="15%">
+                                         Customer
+                                    </th>
+                                    <th width="10%">
+                                         Ship&nbsp;To
+                                    </th>
+                                    <th width="10%">
+                                         Price
+                                    </th>
+                                    <th width="10%">
+                                         Amount
+                                    </th>
+                                    <th width="10%">
+                                         Status
+                                    </th>
+                                    <th width="10%">
+                                         Actions
+                                    </th>
+                                </tr>
+                                <tr role="row" class="filter">
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-filter input-sm" name="order_id">
+                                    </td>
+                                    <td>
+                                        <div class="input-group date date-picker margin-bottom-5" data-date-format="dd/mm/yyyy">
+                                            <input type="text" class="form-control form-filter input-sm" readonly name="order_date_from" placeholder="From">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+                                            </span>
+                                        </div>
+                                        <div class="input-group date date-picker" data-date-format="dd/mm/yyyy">
+                                            <input type="text" class="form-control form-filter input-sm" readonly name="order_date_to" placeholder="To">
+                                            <span class="input-group-btn">
+                                                <button class="btn btn-sm default" type="button"><i class="fa fa-calendar"></i></button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-filter input-sm" name="order_customer_name">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="form-control form-filter input-sm" name="order_ship_to">
+                                    </td>
+                                    <td>
+                                        <div class="margin-bottom-5">
+                                            <input type="text" class="form-control form-filter input-sm" name="order_price_from" placeholder="From"/>
+                                        </div>
+                                        <input type="text" class="form-control form-filter input-sm" name="order_price_to" placeholder="To"/>
+                                    </td>
+                                    <td>
+                                        <div class="margin-bottom-5">
+                                            <input type="text" class="form-control form-filter input-sm margin-bottom-5 clearfix" name="order_quantity_from" placeholder="From"/>
+                                        </div>
+                                        <input type="text" class="form-control form-filter input-sm" name="order_quantity_to" placeholder="To"/>
+                                    </td>
+                                    <td>
+                                        <select name="order_status" class="form-control form-filter input-sm">
+                                            <option value="">Select...</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="closed">Closed</option>
+                                            <option value="hold">On Hold</option>
+                                            <option value="fraud">Fraud</option>
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <div class="margin-bottom-5">
+                                            <button class="btn btn-sm yellow filter-submit margin-bottom"><i class="fa fa-search"></i> Search</button>
+                                        </div>
+                                        <button class="btn btn-sm red filter-cancel"><i class="fa fa-times"></i> Reset</button>
+                                    </td>
+                                </tr>
+                                </thead>
                                 <tbody>
-                                    <tr>
-                                        <td class="icon-column"></td>
-                                        <td class="column2">
-                                            Booking ID<br>
-                                            Order ref#
-                                        </td>
-                                        <td class="column3">
-                                            Order date
-                                        </td>
-                                        <td class="column4">
-                                            Customer
-                                        </td>
-                                        <td class="column5">
-                                            Service
-                                        </td>
-                                        <td class="column6">
-                                            Value
-                                        </td>
-                                        <td class="column7">
-                                            Status
-                                        </td>
-                                        <td class="tick"></td>
-                                    </tr>
                                 </tbody>
-                            </table>
+                                </table>
+                            </div>
                         </div>
-                        <div class="data-body">
-                            <table class="table table-hover" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                    <tr data-type="appointment" data-id="529483">
-                                        <td class="icon-column">
-                                            <div title="Appointment" class="icon icons-appointment"></div>
-                                        </td>
-                                        <td class="column2">
-
-                                        </td>
-                                        <td class="column3">
-                                            11/08/2014 09:18
-                                        </td>
-                                        <td class="column4">
-                                            0903676222
-                                        </td>
-                                        <td class="column5">
-                                            abcxyz
-                                        </td>
-                                        <td class="column6">
-                                            £40
-                                        </td>
-                                        <td class="column7">
-                                            <span class="status status-checkedout">Complete</span>
-                                        </td>
-                                    </tr>
-
-                                    <tr data-type="appointment" data-id="521260">
-                                        <td class="icon-column">
-                                            <div title="Appointment" class="icon icons-appointment"></div>
-                                        </td>
-                                        <td class="column2">
-
-                                        </td>
-                                        <td class="column3">
-                                            07/08/2014 10:26
-                                        </td>
-                                        <td class="column4">
-                                            Khách hàng 1
-                                        </td>
-                                        <td class="column5">
-                                            Body Wraps
-                                        </td>
-                                        <td class="column6">
-
-                                        </td>
-                                        <td class="column7">
-                                            <span class="status status-confirmed">Confirmed</span>
-                                        </td>
-                                    </tr>
-
-                                    <tr data-type="appointment" data-id="488880">
-                                        <td class="icon-column">
-                                            <div title="Appointment" class="icon icons-appointment"></div>
-                                        </td>
-                                        <td class="column2">
-
-                                        </td>
-                                        <td class="column3">
-                                            25/07/2014 06:11
-                                        </td>
-                                        <td class="column4">
-                                            first customer
-                                        </td>
-                                        <td class="column5">
-                                            Body Wraps
-                                        </td>
-                                        <td class="column6">
-
-                                        </td>
-                                        <td class="column7">
-                                            <span class="status status-confirmed">Confirmed</span>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="no-data">
-                            The list is empty.
-                        </div>
-                        <div class="top-shadow hidden" style="top: 37px; left: 0px; width: 1090px;"></div>
-                        <div class="bottom-shadow hidden" style="top: 528px; left: 0px; width: 1090px;"></div>
                     </div>
                 </div>
             </div>

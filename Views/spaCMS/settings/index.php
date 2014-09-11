@@ -180,7 +180,7 @@
 											<li class="single-picture">
 												<div class="single-picture-wrapper">
 													<img id="user_slide_thumbnail" src="">
-													<input type="hidden" name="user_sile">
+													<input type="hidden" name="user_slide">
 												</div>
 												<div class="single-picture-title">
 													<span>Primary image</span>
