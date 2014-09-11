@@ -40,17 +40,13 @@ user.`user_lat`,
 user.`user_address`,
 user.`user_contact_phone`,
 user.`user_contact_email`,
+user.`user_limit_before_service`,
+user.`user_limit_before_booking`,
 group_service.`group_service_name`,
 DAYOFWEEK(CURRENT_DATE) AS day_of_week,
 DAYOFMONTH(CURRENT_DATE) AS day_of_month,
 YEAR(CURRENT_DATE) AS year,
-YEAR(CURRENT_DATE) + 1 AS next_year,
-MONTH(CURRENT_DATE) AS month, 
-MONTH(CURRENT_DATE + INTERVAL 1 MONTH) AS next_month, 
-MONTH(CURRENT_DATE + INTERVAL 2 MONTH) AS next_2_month,
-DAY( LAST_DAY( CURRENT_DATE ) ) AS total_day_current_month,
-DAY( LAST_DAY( DATE_ADD( CURRENT_DATE , INTERVAL 1 MONTH ) ) ) AS total_day_current_next_month,
-DAY( LAST_DAY( DATE_ADD( CURRENT_DATE , INTERVAL 2 MONTH ) ) ) AS total_day_current_next_2_month
+MONTH(CURRENT_DATE) AS month
 FROM user_service,user,group_service
 WHERE user.user_id = group_service.group_service_user_id
 AND user_service.user_service_group_id = group_service.group_service_id

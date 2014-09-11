@@ -648,7 +648,7 @@
 									</div>
 									<br />
 									<div class="row">
-										<div class="col-md-12">
+										<div id="month_and_year" class="col-md-12">
 											<p class="text-center">&nbsp;&nbsp;&nbsp;AUGUST 2014&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
 										</div>
 									</div>

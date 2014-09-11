@@ -471,12 +471,12 @@ input, select, textarea {
 	margin-top: 6px;
 }
 #days_booking span {
-	margin-right: 10.5px;
-	padding: 5px;
+	margin: 0 5.75px 0 5.75px;
+	padding: 7px;
 }
 #date_booking span {
-	margin-right: 9.5px;
-	padding: 5px;
+	margin: 0 6.9px 0 6.9px;
+	padding: 7px;
 }
 #date_booking span:hover, #days_booking span:focus {
 	cursor: pointer;
@@ -484,7 +484,7 @@ input, select, textarea {
 	border-radius: 50%;
 	color: #FFFFFF;
 	border-width: 5px;
-	padding: 5px;
+	padding: 7px;
 }
 #date_booking span.active {
 	cursor: pointer;

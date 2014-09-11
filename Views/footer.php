@@ -146,6 +146,8 @@
 							      echo $_SESSION['client_username']; 
 						?>";
 		var USER_SERVICE_ID;
+		var WEEK_PAGE = 1;
+		var TOTAL_WEEK = 0;
     </script>
 
     <?php
