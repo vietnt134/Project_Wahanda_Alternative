@@ -17,6 +17,8 @@
         <link rel="shortcut icon" href="" />
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
+        <!-- Chèn link CSS -->
+
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/bootstrap/css/bootstrap.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />

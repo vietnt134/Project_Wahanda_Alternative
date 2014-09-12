@@ -1,9 +1,12 @@
 @charset "utf-8";
 @font-face {
-    font-family: 'OpenSans';
-    src: url('OpenSans-Regular.ttf');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'OpenSans';
+	src: url('OpenSans-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+* {
+	font-family: "OpenSans";
 }
 .container {
 
@@ -501,14 +504,14 @@ input, select, textarea {
 	border-width: 5px;
 	padding: 7px;
 }
-#time_booking{
+#time_booking {
 	margin-top: 15px;
 }
-#time_booking .row{
+#time_booking .row {
 	margin-left: 0px;
 	margin-right: 0px;
 }
-#time_booking .row div{
+#time_booking .row div {
 	height: 50px;
 	line-height: 50px
 }
@@ -516,7 +519,7 @@ input, select, textarea {
 	cursor: pointer;
 	background: none repeat scroll 0% 0% #eee;
 }
-#time_booking hr{
+#time_booking hr {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	border-top: 2px solid #eee;
