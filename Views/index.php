@@ -332,7 +332,7 @@
 										<div class="row">
 											<div class="col-md-6">
 												<span class="service_properties">
-													<i style="color: #FDBD0E;" class="fa fa-adjust"></i> <b>Giá</b>
+													<i style="color: #FDBD0E;" class="fa fa-dollar"></i> <b>Giá</b>
 												</span>
 											</div>
 											<div class="col-md-6">
@@ -343,7 +343,7 @@
 										<div class="row">
 											<div class="col-md-6">
 												<span class="service_properties">
-													<i style="color: #FDBD0E;" class="fa fa-adjust"></i> <b>Thời gian</b>
+													<i style="color: #FDBD0E;" class="fa fa-clock-o"></i> <b>Thời gian</b>
 												</span>
 											</div>
 											<div class="col-md-6">
@@ -354,7 +354,7 @@
 										<div class="row">
 											<div class="col-md-6">
 												<span class="service_properties">
-													<i style="color: #FDBD0E;" class="fa fa-adjust"></i><b> Bạn được lựa chọn</b>
+													<i style="color: #FDBD0E;" class="fa fa-check-square-o"></i><b> Bạn được lựa chọn</b>
 												<span>
 											</div>
 											<div class="col-md-6">
@@ -453,7 +453,7 @@
 													</div>
 												</div>
 											</div>
-											<div class="col-md-6 pull-right" style="border-left: 1px solid #CCCCCA;">
+											<div class="col-md-6  pull-right" style="border-left: 1px solid #CCCCCA;">
 												<div class="row">
 													<div class="col-md-6">
 														<span class="pull-right">Nhiệt tình</span>
@@ -639,17 +639,17 @@
 							<div class="row" style="border: 2px solid #CCCCCA;">
 								<div class="col-md-12" style="padding: 10px;">
 									<div class="row">
-										<div class="col-md-6">
+										<div style="margin-top: 2px" class="col-md-6">
 											<button class="btn btn-block btn-black">ĐẶT HẸN</button>
 										</div>
-										<div class="col-md-6">
+										<div style="margin-top: 2px" class="col-md-6">
 											<button class="btn btn-block btn-black">MUA VOUCHER</button>
 										</div>
 									</div>
 									<br />
 									<div class="row">
-										<div id="month_and_year" class="col-md-12">
-											<p class="text-center">&nbsp;&nbsp;&nbsp;AUGUST 2014&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></p>
+										<div style="cursor: default;" id="month_and_year" class="col-md-12">
+											<div class="text-center">&nbsp;&nbsp;&nbsp;AUGUST 2014&nbsp;&nbsp;&nbsp;<i class="fa fa-angle-right"></i></div>
 										</div>
 									</div>
 									<div class="row" id="days_booking">
@@ -729,7 +729,7 @@
 												<span>400.000 Vnđ</span>
 												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 												<span class="span-separate"></span>
-												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 												<span>ĐẶT</span>
 											</button>
 										</div>

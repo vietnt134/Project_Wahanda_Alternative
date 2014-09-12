@@ -14,6 +14,9 @@ $(document).ready(function() {
 		});
 		$('#user_description_see_more').show();
 	});
+	$('span').on('click', function() {
+		console.log('hello');
+	});
 });
 $(document).on('click', '#login_btn', function() {
 	//alert(window.location.href);
@@ -121,6 +124,7 @@ function loadServiceDetail(user_service_id) {
 				var month_year = '';
 				var this_month_year = '';
 				var day_of_week = parseInt(response[0].day_of_week);
+				var today_of_week = parseInt(response[0].day_of_week);
 				var day_of_month = parseInt(response[0].day_of_month);
 				var total_days_current_month = '';
 				var year = parseInt(response[0].year);
@@ -159,80 +163,82 @@ function loadServiceDetail(user_service_id) {
 					}
 				}
 				var week = 1;
+				month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
+				month_year += ' ' + year + ' </span>';
 				TOTAL_WEEK = week;
 				var days_order = 1;
 				for ( i = 1; i <= user_limit_before_booking; i++) {
 					if (day_of_month < 10) {
 						days_of_month = '0' + day_of_month;
-					}else{
+					} else {
 						days_of_month = day_of_month;
 					}
 					if (day_of_week == 8) {
 						day_of_week = 1;
 					}
 					if (days_order > 7) {
-						date += '<span value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '" style="display:none">' + days_of_month + '</span>';
+						date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '" style="display:none">' + days_of_month + '</span>';
 						if (day_of_week == 1) {
 							day += '<span class="week_' + week + '" style="display:none">CN</span>';
-							month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ' ';
-							month_year += ' ' + year + ' </span>';
 							week++;
+							month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
+							month_year += ' ' + year + ' </span>';
 							TOTAL_WEEK = week;
 						} else if (day_of_week == 2) {
-							day += '<span class="week_' + week + '" style="display:none">T2</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T2</b></span>';
 						} else if (day_of_week == 3) {
-							day += '<span class="week_' + week + '" style="display:none">T3</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T3</b></span>';
 						} else if (day_of_week == 4) {
-							day += '<span class="week_' + week + '" style="display:none">T4</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T4</b></span>';
 						} else if (day_of_week == 5) {
-							day += '<span class="week_' + week + '" style="display:none">T5</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T5</b></span>';
 						} else if (day_of_week == 6) {
-							day += '<span class="week_' + week + '" style="display:none">T6</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T6</b></span>';
 						} else if (day_of_week == 7) {
-							day += '<span class="week_' + week + '" style="display:none">T7</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>T7</b></span>';
 						}
 					} else {
 						if (week == 1) {
-							date += '<span value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '">' + days_of_month + '</span>';
+							date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '">' + days_of_month + '</span>';
 							if (day_of_week == 1) {
 								day += '<span class="week_' + week + '">CN</span>';
-								month_year += '<span class="week_' + week + '"> ' + this_month.toUpperCase() + ' ';
-								month_year += ' ' + year + ' </span>';
 								week++;
+								month_year += '<span class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
+								month_year += ' ' + year + ' </span>';
 								TOTAL_WEEK = week;
 							} else if (day_of_week == 2) {
-								day += '<span class="week_' + week + '">T2</span>';
+								day += '<span class="week_' + week + '"><b>T2</span>';
 							} else if (day_of_week == 3) {
-								day += '<span class="week_' + week + '">T3</span>';
+								day += '<span class="week_' + week + '"><b>T3</span>';
 							} else if (day_of_week == 4) {
-								day += '<span class="week_' + week + '">T4</span>';
+								day += '<span class="week_' + week + '"><b>T4</span>';
 							} else if (day_of_week == 5) {
-								day += '<span class="week_' + week + '">T5</span>';
+								day += '<span class="week_' + week + '"><b>T5</span>';
 							} else if (day_of_week == 6) {
-								day += '<span class="week_' + week + '">T6</span>';
+								day += '<span class="week_' + week + '"><b>T6</span>';
 							} else if (day_of_week == 7) {
-								day += '<span class="week_' + week + '">T7</span>';
+								day += '<span class="week_' + week + '"><b>T7</span>';
 							}
 						} else if (week == 2) {
-							date += '<span value="' + year + '-' + month + '-' + day_of_month + '" class="week_1 week_' + week + '">' + days_of_month + '</span>';
+							date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_1 week_' + week + '">' + days_of_month + '</span>';
 							if (day_of_week == 1) {
 								day += '<span class="week_1 week_' + week + '">CN</span>';
-								month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ' ';
-								month_year += ' ' + year + ' </span>';
 								week++;
+								month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
+								month_year += ' ' + year + ' </span>';
 								TOTAL_WEEK = week;
 							} else if (day_of_week == 2) {
-								day += '<span class="week_1 week_' + week + '">T2</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T2</b></span>';
 							} else if (day_of_week == 3) {
-								day += '<span class="week_1 week_' + week + '">T3</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T3</b></span>';
 							} else if (day_of_week == 4) {
-								day += '<span class="week_1 week_' + week + '">T4</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T4</b></span>';
 							} else if (day_of_week == 5) {
-								day += '<span class="week_1 week_' + week + '">T5</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T5</b></span>';
 							} else if (day_of_week == 6) {
-								day += '<span class="week_1 week_' + week + '">T6</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T6</b></span>';
 							} else if (day_of_week == 7) {
-								day += '<span class="week_1 week_' + week + '">T7</span>';
+								day += '<span class="week_1 week_' + week + '"><b>T7</b></span>';
 							}
 						}
 					}
@@ -280,6 +286,11 @@ function loadServiceDetail(user_service_id) {
 						//console.log(json_user_open_hour);
 						$.each(json_user_open_hour, function(day, hour) {
 							separate_count++;
+							if (separate_count == 8 && today_of_week == 1) {
+
+							} else if (today_of_week == (separate_count + 1)) {
+
+							}
 							if (separate_count > 3) {
 								if (hour[0] == 1) {
 									user_open_hour_2 += '<p><i>' + day + ' : từ ' + hour[1] + ' h - ' + hour[2] + ' h</i></p>';
@@ -307,6 +318,12 @@ function loadServiceDetail(user_service_id) {
 		complete : function() {
 			$('i.waiting_booking_detail').fadeOut();
 			$('#service_detail').modal('show');
+			$('#date_booking span').on('click', function() {
+				$(this).addClass('active');
+				$(this).siblings().removeClass('active');
+				console.log($(this).attr('value'));
+				console.log($(this).attr('day-data'));
+			});
 		}
 	});
 }
@@ -317,7 +334,7 @@ function loadServiceDetail(user_service_id) {
 /*WEEK PAGE*/
 function clickNextWeek() {
 	if (WEEK_PAGE == TOTAL_WEEK) {
-		return false
+		return false;
 	} else {
 		WEEK_PAGE++;
 		for ( i = 1; i <= TOTAL_WEEK; i++) {
@@ -329,7 +346,7 @@ function clickNextWeek() {
 
 function clickLastWeek() {
 	if (WEEK_PAGE == 1) {
-		return false
+		return false;
 	} else {
 		WEEK_PAGE--;
 		for ( i = 1; i <= TOTAL_WEEK; i++) {
