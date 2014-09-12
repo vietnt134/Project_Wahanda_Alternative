@@ -17,18 +17,6 @@
         <link rel="shortcut icon" href="" />
         <link rel="apple-touch-icon" href="../img/ico/Cat-Brown-icon-72px.png" />
 
-        <!-- Chèn link CSS -->
-        <style type="text/css">
-            @font-face {
-                font-family: 'OpenSans';
-                src: url("https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans+Condensed:300,300italic,700");
-            }
-
-            * {
-                font-family: "OpenSans";
-            }
-        </style>
-
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/bootstrap/css/bootstrap.min.css" type="text/css"  />
 
         <link rel="stylesheet" href="<?php echo ASSETS ?>plugins/font-awesome/css/font-awesome.min.css" type="text/css"  />

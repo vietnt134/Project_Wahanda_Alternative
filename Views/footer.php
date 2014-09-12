@@ -148,6 +148,20 @@
 		var USER_SERVICE_ID;
 		var WEEK_PAGE = 1;
 		var TOTAL_WEEK = 0;
+		var MON_OPEN_CLOSE = [];
+		var TUE_OPEN_CLOSE = [];
+		var WED_OPEN_CLOSE = [];
+		var THU_OPEN_CLOSE = [];
+		var FRI_OPEN_CLOSE = [];
+		var SAT_OPEN_CLOSE = [];
+		var SUN_OPEN_CLOSE = [];
+		var TODAY_OF_WEEK;
+		var TODAY_OF_MONTH;
+		var TODAY_MONTH;
+		var TODAY_YEAR;
+		var LIMIT_TIME_BEFORE_SERVICE;
+		var USER_SERVICE_SALE_PRICE;
+		var USER_SERVICE_DURATION;
     </script>
 
     <?php

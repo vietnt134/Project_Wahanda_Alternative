@@ -726,7 +726,7 @@
 										<div class="col-md-12">
 											<button style="height: 48px;box-shadow: 0 0 6px #9A9797;" class="btn btn-block btn-black">
 												<span>Tổng cộng : </span>
-												<span>400.000 Vnđ</span>
+												<span id="btn_user_service_price">400.000 Vnđ</span>
 												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 												<span class="span-separate"></span>
 												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>

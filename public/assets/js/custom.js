@@ -14,9 +14,6 @@ $(document).ready(function() {
 		});
 		$('#user_description_see_more').show();
 	});
-	$('span').on('click', function() {
-		console.log('hello');
-	});
 });
 $(document).on('click', '#login_btn', function() {
 	//alert(window.location.href);
@@ -117,19 +114,23 @@ function loadServiceDetail(user_service_id) {
 				var user_open_hour_1 = '';
 				var user_open_hour_2 = '';
 				var separate_count = 0;
-				var user_limit_before_service = parseInt(response[0].user_limit_before_service);
+				LIMIT_TIME_BEFORE_SERVICE = parseInt(response[0].user_limit_before_service);
 				var user_limit_before_booking = parseInt(response[0].user_limit_before_booking);
 				var day = '';
 				var date = '';
 				var month_year = '';
 				var this_month_year = '';
 				var day_of_week = parseInt(response[0].day_of_week);
-				var today_of_week = parseInt(response[0].day_of_week);
+				TODAY_OF_WEEK = parseInt(response[0].day_of_week);
 				var day_of_month = parseInt(response[0].day_of_month);
+				TODAY_OF_MONTH = parseInt(response[0].day_of_month);
 				var total_days_current_month = '';
 				var year = parseInt(response[0].year);
+				TODAY_YEAR = parseInt(response[0].year);
+				//console.log(today_year);
 				var this_month;
 				var month = parseInt(response[0].month);
+				TODAY_MONTH = parseInt(response[0].month);
 				var month_in_year = [];
 				month_in_year[1] = 31;
 				month_in_year[2] = 28;
@@ -279,6 +280,12 @@ function loadServiceDetail(user_service_id) {
 				$('#date_booking').children().html(date);
 				$('#month_and_year').children().html('<span onclick="clickLastWeek()" id="last_week" style="cursor:pointer" class="glyphicon glyphicon-chevron-left pull-left"></span>' + month_year + '<span onclick="clickNextWeek()" id="next_week" style="cursor:pointer" class="glyphicon glyphicon-chevron-right pull-right"></span>');
 				$.each(response[0], function(key, value) {
+					if (key == 'user_service_sale_price') {
+						USER_SERVICE_SALE_PRICE = value;
+					}
+					if (key == 'user_service_duration') {
+						USER_SERVICE_DURATION = value;
+					}
 					$('#' + key).val(value);
 					$('#' + key + ', .' + key).text(value);
 					if (key == 'user_open_hour') {
@@ -286,10 +293,41 @@ function loadServiceDetail(user_service_id) {
 						//console.log(json_user_open_hour);
 						$.each(json_user_open_hour, function(day, hour) {
 							separate_count++;
-							if (separate_count == 8 && today_of_week == 1) {
-
-							} else if (today_of_week == (separate_count + 1)) {
-
+							if (separate_count == '1') {
+								MON_OPEN_CLOSE['status'] = hour[0];
+								MON_OPEN_CLOSE['open'] = hour[1];
+								MON_OPEN_CLOSE['close'] = hour[2];
+								//console.log(MON_OPEN_CLOSE);
+							} else if (separate_count == '2') {
+								TUE_OPEN_CLOSE['status'] = hour[0];
+								TUE_OPEN_CLOSE['open'] = hour[1];
+								TUE_OPEN_CLOSE['close'] = hour[2];
+								//console.log(TUE_OPEN_CLOSE);
+							} else if (separate_count == '3') {
+								WED_OPEN_CLOSE['status'] = hour[0];
+								WED_OPEN_CLOSE['open'] = hour[1];
+								WED_OPEN_CLOSE['close'] = hour[2];
+								//console.log(WED_OPEN_CLOSE);
+							} else if (separate_count == '4') {
+								THU_OPEN_CLOSE['status'] = hour[0];
+								THU_OPEN_CLOSE['open'] = hour[1];
+								THU_OPEN_CLOSE['close'] = hour[2];
+								//console.log(THU_OPEN_CLOSE);
+							} else if (separate_count == '5') {
+								FRI_OPEN_CLOSE['status'] = hour[0];
+								FRI_OPEN_CLOSE['open'] = hour[1];
+								FRI_OPEN_CLOSE['close'] = hour[2];
+								//console.log(FRI_OPEN_CLOSE);
+							} else if (separate_count == '6') {
+								SAT_OPEN_CLOSE['status'] = hour[0];
+								SAT_OPEN_CLOSE['open'] = hour[1];
+								SAT_OPEN_CLOSE['close'] = hour[2];
+								//console.log(SAT_OPEN_CLOSE);
+							} else if (separate_count == '7') {
+								SUN_OPEN_CLOSE['status'] = hour[0];
+								SUN_OPEN_CLOSE['open'] = hour[1];
+								SUN_OPEN_CLOSE['close'] = hour[2];
+								//console.log(SUN_OPEN_CLOSE);
 							}
 							if (separate_count > 3) {
 								if (hour[0] == 1) {
@@ -318,11 +356,365 @@ function loadServiceDetail(user_service_id) {
 		complete : function() {
 			$('i.waiting_booking_detail').fadeOut();
 			$('#service_detail').modal('show');
+			$('#btn_user_service_price').text(USER_SERVICE_SALE_PRICE);
+			var time_html = '';
 			$('#date_booking span').on('click', function() {
+				var time_html = '';
 				$(this).addClass('active');
 				$(this).siblings().removeClass('active');
-				console.log($(this).attr('value'));
-				console.log($(this).attr('day-data'));
+				$('#time_booking').children().remove();
+				//alert($(this).attr('day-data'));
+				switch($(this).attr('day-data')) {
+				case '2' :
+					if (MON_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(MON_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(MON_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (MON_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '3' :
+					if (TUE_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(TUE_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(TUE_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						// console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (TUE_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '4' :
+					if (WED_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(WED_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(WED_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (WED_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '5' :
+					if (THU_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(THU_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(THU_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (THU_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '6' :
+					if (FRI_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(FRI_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(FRI_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (FRI_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '7' :
+					if (SAT_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(SAT_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(SAT_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (SAT_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				case '1' :
+					if (SUN_OPEN_CLOSE['status'] == '1') {
+						var open_hour_in_min = parseInt(SUN_OPEN_CLOSE['open']) * 60;
+						var close_hour_in_min = parseInt(SUN_OPEN_CLOSE['close']) * 60;
+						var am_pm = '';
+						var minute;
+						var hour;
+						//console.log(close_hour_in_min);
+						//console.log(LIMIT_TIME_BEFORE_SERVICE);
+						while (close_hour_in_min > open_hour_in_min) {
+							if (open_hour_in_min <= 720) {
+								am_pm = 'am';
+							} else {
+								am_pm = 'pm';
+							}
+							if (open_hour_in_min % 60 < 10) {
+								minute = '0' + (open_hour_in_min % 60);
+							} else {
+								minute = open_hour_in_min % 60;
+							}
+							if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+								hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+							} else {
+								hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+							}
+							time_html += '<hr/>';
+							time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+							time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+							time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+							time_html += '</div>';
+							open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+						}
+					} else if (SUN_OPEN_CLOSE['status'] == '0') {
+						time_html += '<hr/>';
+						time_html += '<div class="row">';
+						time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+						time_html += '</div>';
+						time_html += '<hr/>';
+					}
+					$('#time_booking').html(time_html);
+					break;
+				}
+			});
+
+			$('#date_booking span').each(function(index) {
+				if ($(this).attr('value') == TODAY_YEAR + '-' + TODAY_MONTH + '-' + TODAY_OF_MONTH) {
+					$(this).addClass('active');
+					var time_html = '';
+					if ($(this).attr('day-data') == TODAY_OF_WEEK) {
+						var temp_array = [];
+						if ($(this).attr('day-data') == '1') {
+							temp_array = SUN_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '2') {
+							temp_array = MON_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '3') {
+							temp_array = TUE_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '4') {
+							temp_array = WED_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '5') {
+							temp_array = THU_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '6') {
+							temp_array = FRI_OPEN_CLOSE;
+						} else if ($(this).attr('day-data') == '7') {
+							temp_array = SAT_OPEN_CLOSE;
+						}
+						if (temp_array['status'] == '1') {
+							var open_hour_in_min = parseInt(temp_array['open']) * 60;
+							var close_hour_in_min = parseInt(temp_array['close']) * 60;
+							var am_pm = '';
+							var minute;
+							var hour;
+							while (close_hour_in_min > open_hour_in_min) {
+								if (open_hour_in_min <= 720) {
+									am_pm = 'am';
+								} else {
+									am_pm = 'pm';
+								}
+								if (open_hour_in_min % 60 < 10) {
+									minute = '0' + (open_hour_in_min % 60);
+								} else {
+									minute = open_hour_in_min % 60;
+								}
+								if ((open_hour_in_min - open_hour_in_min % 60) / 60 < 10) {
+									hour = '0' + ((open_hour_in_min - open_hour_in_min % 60) / 60);
+								} else {
+									hour = (open_hour_in_min - open_hour_in_min % 60) / 60;
+								}
+								time_html += '<hr/>';
+								time_html += '<div class="row" date-time-data="' + hour + ':' + minute + '">';
+								time_html += '<div class="col-md-offset-1 col-md-6"><strong>' + hour + ':' + minute + am_pm + '</strong></div>';
+								time_html += '<div class="col-md-5">' + USER_SERVICE_SALE_PRICE + ' VNĐ</div>';
+								time_html += '</div>';
+								open_hour_in_min = open_hour_in_min + parseInt(USER_SERVICE_DURATION);
+							}
+						} else if (temp_array['status'] == '0') {
+							time_html += '<hr/>';
+							time_html += '<div class="row">';
+							time_html += '<div class="col-md-offset-1 col-md-11 text-center"><strong>Dịch vụ không mở trong ngày này!<strong></div>';
+							time_html += '</div>';
+							time_html += '<hr/>';
+						}
+					}
+					$('#time_booking').html(time_html);
+				}
 			});
 		}
 	});
