@@ -485,7 +485,7 @@ input, select, textarea {
 	padding: 7px;
 }
 #date_booking span {
-	margin: 0 6.9px 0 6.9px;
+	margin: 0 5.95px 0 5.95px;
 	padding: 7px;
 }
 #date_booking span:hover, #days_booking span:focus {
@@ -533,7 +533,7 @@ input, select, textarea {
 	box-shadow: .5px 0 .1px #FFFFFF;
 }
 .service_properties {
-	font-size: 17px;
+	font-size: 16px;
 }
 p.description, p.name {
 	white-space: nowrap;

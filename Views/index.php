@@ -314,13 +314,13 @@
 									<nav id="service_nav" class="navbar navbar-default" role="navigation">
 										<div class="">
 											<ul class="nav navbar-nav">
-												<li style="font-size: 20px" class="text-center">
+												<li style="font-size: 19px" class="text-center">
 													<a href="#detail"><strong>&nbsp;&nbsp;Chi tiết&nbsp;&nbsp;</strong></a>
 												</li>
-												<li style="font-size: 20px" class="text-center">
+												<li style="font-size: 19px" class="text-center">
 													<a href="#jugg"><strong>&nbsp;&nbsp;Đánh giá&nbsp;&nbsp;</strong></a>
 												</li>
-												<li style="font-size: 20px" class="text-center">
+												<li style="font-size: 19px" class="text-center">
 													<a href="#about_venue"><strong>&nbsp;&nbsp;&nbsp;Về địa điểm này&nbsp;&nbsp;&nbsp;</strong></a>
 												</li>
 											</ul>
@@ -414,7 +414,7 @@
 											<div class="col-md-6">
 												<div class="row">
 													<div class="col-md-offset-1 col-md-3">
-														<span>5 sao </span>
+														<small>5 sao </small>
 													</div>
 													<div class="col-md-8">
 														<span style="width: 100%" class="progress_bar" ></span>
@@ -422,7 +422,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-offset-1 col-md-3">
-														<span>4 sao </span>
+														<small>4 sao </small>
 													</div>
 													<div class="col-md-8">
 														<span style="width: 80%" class="progress_bar" ></span>
@@ -430,7 +430,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-offset-1 col-md-3">
-														<span>3 sao </span>
+														<small>3 sao </small>
 													</div>
 													<div class="col-md-8">
 														<span style="width: 60%" class="progress_bar" ></span>
@@ -438,7 +438,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-offset-1 col-md-3">
-														<span>2 sao </span>
+														<small>2 sao </small>
 													</div>
 													<div class="col-md-8">
 														<span style="width: 40%" class="progress_bar" ></span>
@@ -446,7 +446,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-offset-1 col-md-3">
-														<span>1 sao </span>
+														<small>1 sao </small>
 													</div>
 													<div class="col-md-8">
 														<span style="width: 20%" class="progress_bar" ></span>
@@ -456,7 +456,7 @@
 											<div class="col-md-6  pull-right" style="border-left: 1px solid #CCCCCA;">
 												<div class="row">
 													<div class="col-md-6">
-														<span class="pull-right">Nhiệt tình</span>
+														<small class="pull-right">Nhiệt tình</small>
 													</div>
 													<div class="col-md-6">
 														<span class="pull-right" style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -464,7 +464,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span class="pull-right">Vệ sinh</span>
+														<small class="pull-right">Vệ sinh</small>
 													</div>
 													<div class="col-md-6">
 														<span class="pull-right" style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -472,7 +472,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span class="pull-right">Chất lượng</span>
+														<small class="pull-right">Chất lượng</small>
 													</div>
 													<div class="col-md-6">
 														<span class="pull-right" style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -480,7 +480,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span class="pull-right">Nhân viên</span>
+														<small class="pull-right">Nhân viên</small>
 													</div>
 													<div class="col-md-6">
 														<span class="pull-right" style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -488,7 +488,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span class="pull-right">Giá trị</span>
+														<small class="pull-right">Giá trị</small>
 													</div>
 													<div class="col-md-6">
 														<span class="pull-right" style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -502,7 +502,7 @@
 												<span><b>NAIL</b></span>
 												<div class="row">
 													<div class="col-md-6">
-														<span>Vệ sinh móng</span>
+														<small>Vệ sinh móng</small>
 													</div>
 													<div class="col-md-6">
 														<span style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -510,7 +510,7 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span>Đắp bột</span>
+														<small>Đắp bột</small>
 													</div>
 													<div class="col-md-6">
 														<span style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -518,18 +518,19 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span>Sơn nhiều màu</span>
+														<small>Sơn nhiều màu</small>
 													</div>
 													<div class="col-md-6">
 														<span style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
 													</div>
 												</div>
+												<br />
 											</div>
 											<div class="col-md-12">
 												<span><b>FACE</b></span>
 												<div class="row">
 													<div class="col-md-6">
-														<span>Massage</span>
+														<small>Massage</small>
 													</div>
 													<div class="col-md-6">
 														<span style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
@@ -537,12 +538,13 @@
 												</div>
 												<div class="row">
 													<div class="col-md-6">
-														<span>Đắp mặt nạ</span>
+														<small>Đắp mặt nạ</small>
 													</div>
 													<div class="col-md-6">
 														<span style="color: #FFCC00"> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star"></span> <span class="fa fa-star-half-empty"></span> </span>
 													</div>
 												</div>
+												<br />
 											</div>
 											<div class="col-md-12">
 												<span><a href="">Xem thêm >>></a></span>
@@ -555,7 +557,7 @@
 												<h5 class="media-heading"><strong>Việt Nguyễn</strong><small class="pull-right"><i>tham gia thang 6-2014</i></small></h5>
 												<small><i>cách đây 3 giờ</i></small>
 												<p>
-													Nhân viên tận tình, môi trường sạch sẽ, tác phong...<span><a href="">Xem thêm >>></a></span>
+													Nhân viên tận tình, môi trường sạch sẽ, tác... <span><a href="">Xem thêm >>></a></span>
 												</p>
 											</div>
 										</div>
@@ -565,7 +567,7 @@
 												<h5 class="media-heading"><strong>Việt Nguyễn</strong><small class="pull-right"><i>tham gia thang 6-2014</i></small></h5>
 												<small><i>cách đây 3 giờ</i></small>
 												<p>
-													Nhân viên tận tình, môi trường sạch sẽ, tác phong...<span><a href="">Xem thêm >>></a></span>
+													Nhân viên tận tình, môi trường sạch sẽ, tác... <span><a href="">Xem thêm >>></a></span>
 												</p>
 											</div>
 										</div>
@@ -575,7 +577,7 @@
 												<h5 class="media-heading"><strong>Việt Nguyễn</strong><small class="pull-right"><i>tham gia thang 6-2014</i></small></h5>
 												<small><i>cách đây 3 giờ</i></small>
 												<p>
-													Nhân viên tận tình, môi trường sạch sẽ, tác phong...<span><a href="">Xem thêm >>></a></span>
+													Nhân viên tận tình, môi trường sạch sẽ, tác... <span><a href="">Xem thêm >>></a></span>
 												</p>
 											</div>
 										</div>
@@ -585,7 +587,7 @@
 												<h5 class="media-heading"><strong>Việt Nguyễn</strong><small class="pull-right"><i>tham gia thang 6-2014</i></small></h5>
 												<small><i>cách đây 3 giờ</i></small>
 												<p>
-													Nhân viên tận tình, môi trường sạch sẽ, tác phong...<span><a href="">Xem thêm >>></a></span>
+													Nhân viên tận tình, môi trường sạch sẽ, tác... <span><a href="">Xem thêm >>></a></span>
 												</p>
 											</div>
 										</div>
@@ -622,11 +624,11 @@
 											<div class="col-md-4">
 												<p><b>GIỜ MỞ CỬA</b></p>
 											</div>
-											<div class="col-md-4" id="user_open_hour_1">
+											<div style="font-size: 13px;" class="col-md-4" id="user_open_hour_1">
 												<p>Thứ 2 - Thứ 6 ........ 07am - 20pm</p>
 												<p>Thứ 7 - Chủ nhật ... 07am - 20pm</p>
 											</div>
-											<div class="col-md-4" id="user_open_hour_2">
+											<div style="font-size: 13px;" class="col-md-4" id="user_open_hour_2">
 												<p>Thứ 2 - Thứ 6 ........ 07am - 20pm</p>
 												<p>Thứ 7 - Chủ nhật ... 07am - 20pm</p>
 											</div>
