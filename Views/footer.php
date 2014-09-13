@@ -145,7 +145,9 @@
         var USERNAME = "<?php if(isset($_SESSION['client_username']))
 							      echo $_SESSION['client_username']; 
 						?>";
-		var USER_SERVICE_ID;
+		var USER_SERVICE_ID = '';
+		var BOOKING_DETAIL_DATE;
+		var BOOKING_DETAIL_TIME;
 		var WEEK_PAGE = 1;
 		var TOTAL_WEEK = 0;
 		var MON_OPEN_CLOSE = [];
@@ -159,9 +161,15 @@
 		var TODAY_OF_MONTH;
 		var TODAY_MONTH;
 		var TODAY_YEAR;
+		var TODAY_HOUR;
+		var TODAY_MINUTE;
 		var LIMIT_TIME_BEFORE_SERVICE;
 		var USER_SERVICE_SALE_PRICE;
 		var USER_SERVICE_DURATION;
+		var CHOOSEN_DATE = '';
+		var CHOOSEN_DATE_STORE = '';
+		var CHOOSEN_TIME = '';
+		var CHOOSEN_PRICE = '';
     </script>
 
     <?php

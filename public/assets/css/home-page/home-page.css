@@ -519,6 +519,10 @@ input, select, textarea {
 	cursor: pointer;
 	background: none repeat scroll 0% 0% #eee;
 }
+#time_booking div.active {
+	background: #000000;
+	color: #FFFFFF;
+}
 #time_booking hr {
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -544,4 +548,12 @@ p#user_description {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+.btn-choose {
+	color: #FFFFFF;
+	background-color: #000000;
+	border: #000000;
+}
+.btn-choose:hover, .btn-choose:focus, .btn-choose:active {
+	color: #FFFFFF;
 }

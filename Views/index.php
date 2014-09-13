@@ -642,10 +642,10 @@
 								<div class="col-md-12" style="padding: 10px;">
 									<div class="row">
 										<div style="margin-top: 2px" class="col-md-6">
-											<button class="btn btn-block btn-black">ĐẶT HẸN</button>
+											<button onclick="jumbToTab('online_booking_zone')" id="btn_online_booking_zone" class="btn btn-block btn-orange">ĐẶT HẸN</button>
 										</div>
 										<div style="margin-top: 2px" class="col-md-6">
-											<button class="btn btn-block btn-black">MUA VOUCHER</button>
+											<button onclick="jumbToTab('evoucher_booking_zone')" id="btn_evoucher_booking_zone" class="btn btn-block btn-orange">MUA VOUCHER</button>
 										</div>
 									</div>
 									<br />
@@ -676,63 +676,70 @@
 											<span>18</span>
 										</div>
 									</div>
-									<div id="time_booking">
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">08:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
+									<div>
+										<div id="online_booking_zone">
+											<div id="time_booking">
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">08:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">09:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">10:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">11:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">12:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">13:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">14:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">15:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+												<hr />
+												<div class="row">
+													<div class="col-md-offset-1 col-md-6">16:00am</div>
+													<div class="col-md-5">400.000 Vnđ</div>
+												</div>
+											</div>
 										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">09:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">10:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">11:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">12:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">13:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">14:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">15:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
-										</div>
-										<hr />
-										<div class="row">
-											<div class="col-md-offset-1 col-md-6">16:00am</div>
-											<div class="col-md-5">400.000 Vnđ</div>
+										<div id="evoucher_booking_zone" style="display: none;">
+											<!-- evoucher here -->
 										</div>
 									</div>
 									<br />
 									<div class="row">
 										<div class="col-md-12">
-											<button style="height: 48px;box-shadow: 0 0 6px #9A9797;" class="btn btn-block btn-black">
+											<button onclick="getBookingInfo()" id="booking_button" style="height: 48px;box-shadow: 0 0 6px #9A9797;" class="btn btn-block btn-black">
 												<span>Tổng cộng : </span>
-												<span id="btn_user_service_price">400.000 Vnđ</span>
+												<span id="btn_user_service_price">400.000</span><span> VNĐ</span>
 												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
 												<span class="span-separate"></span>
 												<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-												<span>ĐẶT</span>
+												<span>ĐẶT <i id="waiting_for_booking_save" style="display: none;" class="fa fa-refresh fa-spin"></i></span>
 											</button>
 										</div>
 									</div>

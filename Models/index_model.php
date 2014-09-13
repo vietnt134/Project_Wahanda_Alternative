@@ -46,7 +46,9 @@ group_service.`group_service_name`,
 DAYOFWEEK(CURRENT_DATE) AS day_of_week,
 DAYOFMONTH(CURRENT_DATE) AS day_of_month,
 YEAR(CURRENT_DATE) AS year,
-MONTH(CURRENT_DATE) AS month
+MONTH(CURRENT_DATE) AS month,
+HOUR(CURRENT_TIME) as hour,
+MINUTE(CURRENT_TIME) as minute
 FROM user_service,user,group_service
 WHERE user.user_id = group_service.group_service_user_id
 AND user_service.user_service_group_id = group_service.group_service_id
