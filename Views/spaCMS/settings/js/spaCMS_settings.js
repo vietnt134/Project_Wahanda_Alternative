@@ -5,6 +5,17 @@ $("#venue_name, #venue_type, #venue_location_1, #venue_location_2, #venue_addres
     container : 'body'
 });
 
+function get_thumbnail(url_image, user_id) {
+    var res = url_image.split('/'); // chặt url ra
+    var image_name = res[res.length - 1]; // lấy tên image
+    res[res.length - 1] = "thumbnails/" + user_id; // thay thế phần tên image = "/thumbnails/{user_id}"
+    var thumbnail_name = image_name.split('.'); // tách phần extension
+    thumbnail_name = thumbnail_name[0] + '_165x95.jpg'; // đổi tên => tên file thumbnail
+    res[res.length] = thumbnail_name// chèn tên hình thumbnail vào cuối
+    var url_thumbnail = res.join('/');// ghép lại thành => url thumbnail
+    return url_thumbnail;
+}
+
 var ImageManager = function () {
     return {
         init: function() {
@@ -23,14 +34,41 @@ var ImageManager = function () {
                 var cover_id = $(this).attr('cover_id');
                 // Define selected image 
                 var radio_checked = $("input:radio[name='iM-radio']:checked"); // Radio checked
-                //
-                $('#' + cover_id + '_thumbnail').attr('src', radio_checked.attr('data-image'));
-                $('input[name=' + cover_id + ']').val(radio_checked.val());
+                // image and thumbnail_image
+                var image = radio_checked.val();
+                var thumbnail = radio_checked.attr('data-image');
+
+                // Truong hop dac biet
+                if(cover_id == 'user_slide') {
+                    var out = null;
+                    var list_image = $('div.list_user_slide');
+                    var html = '<li class="single-picture">';
+                        html += '<div class="single-picture-wrapper">';
+                        html += '<img id="user_slide_thumbnail" src=":img_thumbnail">';
+                        html += '<input type="hidden" name="user_slide[]" value=":user_slide_val">';
+                        html += '</div>';
+                        html += '<div class="del_image icons-delete2"></div>';
+                        html += '</li>';
+
+                    out = html.replace(':img_thumbnail', thumbnail);
+                    out = out.replace(':user_slide_val', image);
+
+                    list_image.append(out);
+
+                    // del image 
+                    $('.del_image').on("click", function(){
+                        var self = $(this).parent();
+                        self.attr("disabled","disabled");
+                        self.fadeOut();
+                    });
+                } else {
+                    $('#' + cover_id + '_thumbnail').attr('src', thumbnail);
+                    $('input[name=' + cover_id + ']').val(image);
+                }
 
                 // Hide Modal
                 $("#imageManager_modal").modal('hide'); 
             });
-
         }
     }
 }();
@@ -76,13 +114,7 @@ var UserDetail = function (){
         $.get(url, function(data){
             // get image thumbnail
             if(data[0]['user_logo'] != ""){
-                var res = data[0]['user_logo'].split('/'); // chặt url ra
-                var image_name = res[res.length - 1]; // lấy tên image
-                res[res.length - 1] = "thumbnails"; // thay thế phần tên = "thumbnails"
-                var thumbnail_name = image_name.split('.');
-                thumbnail_name = thumbnail_name[0] + '_165x95.jpg';
-                res[res.length] = thumbnail_name// chèn tên hình thumbnail vào cuối
-                var url_thumbnail = res.join('/');// ghép lại thành url => url thumbnail
+                var url_thumbnail = get_thumbnail(data[0]['user_logo'], user_id);
             }
 
             $('#user_logo_thumbnail').attr('src', url_thumbnail);
@@ -146,12 +178,51 @@ var UserDetail = function (){
         });
     }
 
+    var xhrGet_user_slide = function () {
+        var url = URL + 'spaCMS/settings/xhrGet_user_slide';
+        
+        var html = '<li class="single-picture">';
+            html += '<div class="single-picture-wrapper">';
+            html += '<img id="user_slide_thumbnail" src=":img_thumbnail">';
+            html += '<input type="hidden" name="user_slide[]" value=":user_slide_val">';
+            html += '</div>';
+            html += '<div class="del_image icons-delete2"></div>';
+            html += '</li>';
+
+        var images = null;
+        var out = null;
+        var list_image = $('div.list_user_slide');
+        
+        $.get(url, function(data){
+            if(typeof data !== 'undefined'){
+                images = data[0]['user_slide'].split(",");
+                console.log(images[0]);
+                for(var i=0; i<images.length; i++) {
+                    var url_thumbnail = get_thumbnail(images[i], user_id);
+                    out = html.replace(':img_thumbnail', url_thumbnail);
+                    out = out.replace(':user_slide_val', images[i]);
+                    list_image.append(out);
+                }
+            }
+
+            // del image 
+            $('.del_image').on("click", function(){
+                var self = $(this).parent();
+                self.fadeOut();
+                self.html('');
+            });
+        }, 'json');
+
+
+    }
+
     return {
         init: function(){
             xhrGet_user_detail();
             xhrUpdate_user_detail();
             xhrGet_user_is_use_voucher();
             xhrUpdate_user_is_use_voucher();
+            xhrGet_user_slide();
         }
     }
 }();

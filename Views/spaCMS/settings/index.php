@@ -177,16 +177,10 @@
 											Ảnh địa điểm
 										</div>
 										<ul class="menu-item-pictures">
-											<li class="single-picture">
-												<div class="single-picture-wrapper">
-													<img id="user_slide_thumbnail" src="">
-													<input type="hidden" name="user_slide">
-												</div>
-												<div class="single-picture-title">
-													<span>Primary image</span>
-												</div>
-												<div class="icons-delete2"></div>
-											</li>
+											<div class="list_user_slide">
+												
+											</div>
+											
 
 											<li class="single-picture empty">
 												<div id="iM_user_slide" class="single-picture-wrapper imageManager_openModal" style="position: relative;" data-toggle="modal" data-target="#imageManager_modal">
@@ -194,9 +188,6 @@
 														<div class="icon icons-plus3"></div>
 														Thêm ảnh
 													</div>
-												</div>
-												<div class="single-picture-title">
-													<span>Primary image</span>
 												</div>
 											</li>
 										</ul>

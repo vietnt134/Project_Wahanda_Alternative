@@ -166,6 +166,10 @@
 					$this->model->update_user_bank_acc();
 					break;
 
+				case 'xhrGet_user_slide':
+					$this->model->get_user_slide();
+					break;
+
 				default:
 					$this->view->style = array(
 						ASSETS . 'plugins/image-manager/css/image-manager.min.css',

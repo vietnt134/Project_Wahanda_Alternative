@@ -27,6 +27,10 @@ class SpaCMS_Settings_Model {
 			if($key == "url") {
 				continue;
 			}
+			if($key == "user_slide"){
+				$data["$key"] = implode(',', $value);
+				continue;
+			}
 			$data["$key"] = $value;
 		}
 		$sth = $this->db->update('user', $data, "user_id = $user_id");
@@ -191,5 +195,14 @@ class SpaCMS_Settings_Model {
 		}
 	}
 	
+
+	function get_user_slide() {
+		$user_id = Session::get('user_id');
+		$query = "SELECT user_slide
+		FROM user 
+		WHERE user_id = $user_id";
+		$result = $this->db->select($query);
+		echo json_encode($result);
+	}
 
 }

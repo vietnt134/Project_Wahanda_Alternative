@@ -112,31 +112,44 @@ if(isset($_POST['user_id'])){
 
   }
   else {
+    // Phân quyền user quản lý ảnh
+    $has_user = false;
+    $user_id = $_POST['user_id'];
+
     // file_name = name + extension
     $file_name = $_FILES["file"]["name"];
     $name      = getName($file_name); // name
     $extension = getExtension($file_name); // extension
 
-    // create thumbnail name, such as: abc_165x95.jpg
+    // create thumbnail name, example: abc_165x95.jpg
     $thumbnail_name = $name . "_" . WIDTH . "x" . HEIGHT . "." . $extension;
 
     $title      = $_POST['cover_title'];  // Title of Image
     $image_size = round( ($_FILES["file"]["size"] / (1024*1024)), 2) . " MB"; // size of image
 
-    $url        = "upload/" . $file_name; // image location in store
-    $url_thumb  = "upload/thumbnails/" . $thumbnail_name; // thumbnail location in store
+    $path = "upload/";
+    $upload_path_image      = $path . $user_id . "/";
+    $upload_path_thumbnail  = $upload_path_image . "/thumbnails/" . $user_id . "/";
+
+    if(!is_dir($upload_path_image)) {
+      mkdir($upload_path_image, 0775, true);
+    }
+    if(!is_dir($upload_path_thumbnail)) {
+      mkdir($upload_path_thumbnail , 0775, true);
+    }
+
+    $url        = $upload_path_image . $file_name; // image location in store
+    $url_thumb  = $upload_path_thumbnail . $thumbnail_name; // thumbnail location in store
     
     // Save file
-    move_uploaded_file($_FILES["file"]["tmp_name"], "upload/" . $file_name);
+    move_uploaded_file($_FILES["file"]["tmp_name"], $url);
 
     // Create thumbnail image
     make_thumb($url, $url_thumb, WIDTH, HEIGHT);
 
     // Save image info
     $sXML = new SimpleXMLElement('uploaded.xml', null, true); // Load the entire xml
-    // Phân quyền user quản lý ảnh
-    $has_user = false;
-    $user_id = $_POST['user_id'];
+    
     // Check user has exists in XML
     foreach ($sXML as $user) {
       if($user['uid'] == $user_id) {
@@ -160,7 +173,7 @@ if(isset($_POST['user_id'])){
       $newchild_user = $sXML->addChild("user");
         $newchild_user->addAttribute("uid", $user_id);  
         $newchild_cover = $newchild_user->addChild("cover");
-        $newchild_cover->addAttribute("pid", $user_id . '1');        //Notice am now using the $newchild object not the $sXML object
+        $newchild_cover->addAttribute("pid", $user_id . '1'); //Notice am now using the $newchild object not the $sXML object
         $newchild_cover->addChild("title", $title);
         $newchild_cover->addChild("image_name", $file_name);
         $newchild_cover->addChild("image_size", $image_size);

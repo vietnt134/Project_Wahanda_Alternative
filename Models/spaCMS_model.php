@@ -104,4 +104,9 @@ class SpaCMS_Model extends Model {
 		SpaCMS_Settings_Model::update_user_bank_acc();
 	}
 
+
+	function get_user_slide() {
+		SpaCMS_Settings_Model::get_user_slide();
+	}
+
 }
