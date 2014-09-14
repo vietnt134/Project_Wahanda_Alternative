@@ -42,9 +42,18 @@ class Index extends Controller {
 				$_SESSION['booking_detail'][$index][$key] = $value;
 			}
 		}
-		echo "<pre/>";
-		print_r($_SESSION['booking_detail']);
+		// echo "<pre/>";
+		// print_r($_SESSION['booking_detail']);
 		echo($index + 1);
+	}
+	
+	public function shoppingCartDetail(){
+		Session::init();
+		if(isset($_SESSION['booking_detail'])){
+			echo json_encode($_SESSION['booking_detail']);
+		}else{
+			echo '[]';
+		}
 	}
 
 }

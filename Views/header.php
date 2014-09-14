@@ -132,7 +132,7 @@
                             </ul>
 
                             <div class="navbar-form navbar-right">
-                                <button data-toggle="modal" data-target="#Shopping_cart_info" type="submit" class="btn btn-sm btn-default cart-shop">
+                                <button onclick="shoppingCartDetail()" data-toggle="modal" data-target="#Shopping_cart_info" type="submit" class="btn btn-sm btn-default cart-shop">
                                     <i class="fa fa-shopping-cart"></i> 
                                     	<span>
                                     		GIỎ HÀNG 

@@ -196,7 +196,7 @@ function loadServiceDetail(user_service_id) {
 					if (days_order > 7) {
 						date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '" style="display:none">' + days_of_month + '</span>';
 						if (day_of_week == 1) {
-							day += '<span class="week_' + week + '" style="display:none">CN</span>';
+							day += '<span class="week_' + week + '" style="display:none"><b>CN</b></span>';
 							
 							month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
 							month_year += ' ' + year + ' </span>';
@@ -219,7 +219,7 @@ function loadServiceDetail(user_service_id) {
 						if (week == 1) {
 							date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_' + week + '">' + days_of_month + '</span>';
 							if (day_of_week == 1) {
-								day += '<span class="week_' + week + '">CN</span>';
+								day += '<span class="week_' + week + '"><b>CN</b></span>';
 								
 								month_year += '<span class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
 								month_year += ' ' + year + ' </span>';
@@ -241,7 +241,7 @@ function loadServiceDetail(user_service_id) {
 						} else if (week == 2) {
 							date += '<span day-data="' + day_of_week + '" value="' + year + '-' + month + '-' + day_of_month + '" class="week_1 week_' + week + '">' + days_of_month + '</span>';
 							if (day_of_week == 1) {
-								day += '<span class="week_1 week_' + week + '">CN</span>';
+								day += '<span class="week_1 week_' + week + '"><b>CN</b></span>';
 								
 								month_year += '<span style="display:none" class="week_' + week + '"> ' + this_month.toUpperCase() + ', ';
 								month_year += ' ' + year + ' </span>';
@@ -306,7 +306,13 @@ function loadServiceDetail(user_service_id) {
 					}
 					if (key == 'user_service_duration') {
 						USER_SERVICE_DURATION = value;
-					}		
+					}
+					if (key == 'user_business_name') {
+						USER_BUSINESS_NAME = value;
+					}
+					if (key == 'user_service_name') {
+						USER_SERVICE_NAME = value;
+					}			
 					if (key == 'user_service_use_evoucher') {
 						if (value == '0') {
 							$('#btn_evoucher_booking_zone').attr('disabled', 'disabled');
@@ -681,8 +687,15 @@ function logout() {
 	$.ajax({
 		url : URL + 'clientlogin/clientLogout',
 		complete : function() {
+			$('#booking_amount').text('0');
 			$('#login_group').children().remove();
-			$('#login_group').append('<div class="col-sm-5 remove-padding">' + '<button id="login_btn" class="btn btn-block login-btn" data-toggle="modal" data-target="#login_modal" type="button">Đăng nhập</button>' + '</div>' + '<div class="col-sm-2"></div>' + '<div class="col-sm-5 remove-padding">' + '<button class="btn btn-block login-face-btn" type="button">Login Face</button>' + '</div>');
+			$('#login_group').append('<div class="col-sm-5 remove-padding">' + 
+									 '<button id="login_btn" class="btn btn-block login-btn" data-toggle="modal" data-target="#login_modal" type="button">Đăng nhập</button>' + 
+									 '</div>' + 
+									 '<div class="col-sm-2"></div>' + 
+									 '<div class="col-sm-5 remove-padding">' + 
+									 '<button class="btn btn-block login-face-btn" type="button">Login Face</button>' + 
+									 '</div>');
 			var http_path = window.location.href.replace('http:', '');
 			var https_path = window.location.href.replace('https:', '');
 			if (http_path != URL && https_path != URL) {
@@ -723,6 +736,9 @@ function getBookingInfo() {
 				user_service_id : USER_SERVICE_ID,
 				booking_detail_date : CHOOSEN_DATE,
 				booking_detail_time : CHOOSEN_TIME,
+				choosen_price : CHOOSEN_PRICE,
+				user_business_name : USER_BUSINESS_NAME,
+				user_service_name : USER_SERVICE_NAME,
 				booking_quantity : 1
 			},
 			success: function(response){
@@ -739,3 +755,55 @@ function getBookingInfo() {
 	}
 }
 /*END GET ONLINE BOOKING INFOMATION*/
+/*-----------------------*/
+
+/*LOAD SHOPPING CART*/
+function shoppingCartDetail(){
+	$.ajax({
+		url : URL + 'index/shoppingCartDetail',
+		type: 'post',
+		dataType : 'json',
+		success : function(response){
+			var html = '';
+			if(response[0] != null){
+				html = '<tr>';
+				html += '<th  style="border: none">DỊCH VỤ</th>';
+				html += '<th  style="border: none">NGÀY - GIỜ</th>';
+				html += '<th  style="border: none">GIÁ</th>';
+				html += '<th  style="border: none">SỐ LƯỢNG</th>';
+				html += '<th  style="border: none">TỔNG TIỀN</th>';
+				html += '</tr>';
+				$('#update_cart').attr('disabled',false);
+				$('#confirm_cart').attr('disabled',false);
+				$('#cart_amount').text(response.length);
+				var total_money = 0;
+				$.each(response, function(index, item){
+					html += '<tr>';
+					html += '<td width="30%">' + item.user_service_name.toUpperCase() + ' - <b>' + item.user_business_name + '</b></td>';
+					html += '<td width="20%">' + item.booking_detail_date + ' - ' + item.booking_detail_time + '</td>'; 
+					html += '<td width="19%">' + item.choosen_price + ' VNĐ</td>';
+					html += '<td width="12%"><input type="text" class="form-control appointment_quantity" value="' + item.booking_quantity + '"/></td>';
+					html += '<td width="19%">' + parseInt(item.choosen_price) * parseInt(item.booking_quantity) + ' VNĐ</td>';
+					html += '</tr>';
+					total_money = total_money + parseInt(item.choosen_price) * parseInt(item.booking_quantity);
+				});
+				$('#total_cart').text(total_money);	
+			}else{	
+				$('#update_cart').attr('disabled',true);
+				$('#confirm_cart').attr('disabled',true);
+				$('#total_cart').text('0');	
+				$('#cart_amount').text('0');	
+				html = '<tr>';
+				html += '<th  style="border: none">DỊCH VỤ</th>';
+				html += '<th  style="border: none">NGÀY - GIỜ</th>';
+				html += '<th  style="border: none">GÍA</th>';
+				html += '<th  style="border: none">SỐ LƯỢNG</th>';
+				html += '<th  style="border: none">TỔNG TIỀN</th>';
+				html += '</tr>';
+				html += '<tr><td class="text-center" colspan="5"><h3><i class="fa fa-exclamation-circle"></i> Giỏ hàng của bạn đang rỗng! <i class="fa fa-frown-o"></i></h3></td></tr>';
+			}
+			$('table#table_shopping_cart').html(html); 
+		}
+	});
+}
+/*END LOAD SHOPPING CART*/
