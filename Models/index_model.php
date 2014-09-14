@@ -13,7 +13,11 @@ class index_model extends Model {
 							   FROM `user_service` 
 							   WHERE `user_service_delete_flg` = 0 order by `user_service_id` desc 
 							   limit 3');
-		echo json_encode($select);
+		if($select){
+			echo json_encode($select);
+		}else{
+			echo '[]';
+		}		
 	}
 
 	function loadServiceDetail($user_service_id = 1) {
@@ -56,7 +60,11 @@ AND`user_service_delete_flg` = 0 AND `user_service_id`= {$user_service_id}
 SQL;
 		
 		$select = $this -> db -> select($query);
-		echo json_encode($select);
+		if($select){
+			echo json_encode($select);
+		}else{
+			echo '[]';
+		}		
 	}
 
 }

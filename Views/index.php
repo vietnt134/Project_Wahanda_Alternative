@@ -272,7 +272,7 @@
 		</div>
 	</div>
 	<!-- MODAL -->
-	<div id="service_detail" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-max-height="640">
+	<div id="service_detail" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-max-height="840">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content" >
 				<div style="display: none;" class="modal-body" id="error_service_detail_modal_body">

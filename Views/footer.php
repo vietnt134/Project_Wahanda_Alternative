@@ -28,14 +28,59 @@
 		        </form>
 		      </div>
 		      <div class="modal-footer" id="footer_login">
-		        <button type="button" class="btn btn-warning" data-dismiss="modal">Hủy</button>
 		        <button type="button" id="check_login_btn" onclick="login()" class="btn btn-default">Đăng Nhập</button>
+		      	<button type="button" class="btn btn-warning" data-dismiss="modal">Hủy</button>
 		      </div>
 		    </div>
 		  </div>
         </div>
-        <!-- End Modal -->
-        
+        <!-- End Modal Login -->
+        <!-- Modal Shopping Cart -->
+        <div id="Shopping_cart_info" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        	<div class="modal-dialog modal-lg">
+        		<div class="modal-content">
+        			<div class="modal-header" >
+			        	<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			        	<h4 class="modal-title" id="myModalLabel">
+			        		<strong><i class="fa fa-shopping-cart"></i> GIỎ HÀNG CỦA BẠN</strong> 
+			        		<span><i>(Bạn đang có 10 cuộc hẹn)</i></span>
+			        	</h4>
+			      	</div>
+			      	<div class="modal-body">
+			      		<div class="table-responsive" style="height: 370px;overflow: auto;">
+				      		<table class="table table-responsive table-hover">
+				      			<tr>
+				      				<th  style="border: none">DỊCH VỤ</th>
+				      				<th  style="border: none">NGÀY - GIỜ</th>
+				      				<th  style="border: none">GÍA</th>
+				      				<th  style="border: none">SỐ lƯỢNG</th>
+				      				<th  style="border: none">THÀNH TIỀN</th>
+				      			</tr>
+				      			<tr>
+				      				<td width="30%">CẮT TÓC CÔ DÂU - Spa Ngọc Trinh</td>
+				      				<td width="20%">15/9/2014 - 09:00AM</td>
+				      				<td width="19%">450000 VNĐ</td>
+				      				<td width="12%">2</td>
+				      				<td width="19%">900000 VNĐ</td>
+				      			</tr>
+				      		</table>
+			      		</div>
+			      		<div class="row">
+				      		<div class="col-md-12">
+				      			<h4 class="pull-right"><strong>Thành Tiền</strong> : 
+				      				<span class="text-success">900000 VNĐ</span>
+				      			</h4>
+				      		</div>
+			      		</div>
+			      	</div>
+			      	<div class="modal-footer">
+			      		<button type="button" id="confirm_cart" class="btn btn-danger">Thanh toán</button>
+			      		<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+			      	</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- End Modal Shopping Cart -->
         <footer id="footer">
             <div id="footer-info">
                 <div class="container">

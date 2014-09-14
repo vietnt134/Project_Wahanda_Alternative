@@ -12,13 +12,40 @@ class Index extends Controller {
 	function index() {
 		$this -> view -> render('index');
 	}
-	
-	function loadServiceList(){
+
+	function loadServiceList() {
 		$this -> model -> loadServiceList();
 	}
-	
-	function loadServiceDetail(){
+
+	function loadServiceDetail() {
 		$user_service_id = $_POST['user_service_id'];
 		$this -> model -> loadServiceDetail($user_service_id);
 	}
+
+	function getBookingInfo() {
+		Session::init();
+		if (empty($_SESSION['booking_detail'])) {
+			$index = 0;
+			foreach ($_POST as $key => $value) {
+				$_SESSION['booking_detail'][$index][$key] = $value;
+			}
+		} else {
+			$index = count($_SESSION['booking_detail']);
+			foreach ($_SESSION['booking_detail'] as $key => $value) {
+				if ($value['user_service_id'] == $_POST['user_service_id'] && $value['booking_detail_date'] == $_POST['booking_detail_date'] && $value['booking_detail_time'] == $_POST['booking_detail_time']) {
+					$_SESSION['booking_detail'][$key]['booking_quantity'] = $value['booking_quantity'] + 1;
+					echo ($index);
+					return FALSE;
+				}
+			}
+			foreach ($_POST as $key => $value) {
+				$_SESSION['booking_detail'][$index][$key] = $value;
+			}
+		}
+		echo "<pre/>";
+		print_r($_SESSION['booking_detail']);
+		echo($index + 1);
+	}
+
 }
+?>

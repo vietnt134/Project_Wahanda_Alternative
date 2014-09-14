@@ -39,6 +39,11 @@ function loadServiceList() {
 		dataType : 'json',
 		success : function(response) {
 			//console.log(response);
+			// console.log(CHOOSEN_DATE);
+			// console.log(CHOOSEN_TIME);
+			// console.log(CHOOSEN_PRICE);
+			// console.log(USER_SERVICE_ID);
+
 			var html = '';
 			$.each(response, function(key, value) {
 				html += '<div class="col-sm-6 col-md-4 top_service_items" style="display : none;">';
@@ -73,13 +78,13 @@ function loadServiceList() {
 			});
 			if (response[0] != null) {
 				$('#error_loading').remove();
+				$('#top_service').append(html);
 			} else {
 				$('#top_service').append('<div id="error_loading" style="color : #A1A1A1;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
 				setTimeout(function() {
 					$('#error_loading').fadeIn();
-				}, 600);
+				}, 600);				
 			}
-			$('#top_service').append(html);
 		},
 		complete : function() {
 			$('#waiting_for_top_service').fadeOut(function() {
@@ -103,7 +108,11 @@ function loadServiceList() {
 /*-----------------------*/
 
 /*LOAD SERVICE DETAIL*/
-function loadServiceDetail(user_service_id) {
+function loadServiceDetail(user_service_id) {				
+	// console.log(CHOOSEN_DATE);
+	// console.log(CHOOSEN_TIME);
+	// console.log(CHOOSEN_PRICE);
+	// console.log(USER_SERVICE_ID);
 	$.ajax({
 		url : URL + 'index/loadServiceDetail',
 		type : 'post',
@@ -298,11 +307,11 @@ function loadServiceDetail(user_service_id) {
 					if (key == 'user_service_duration') {
 						USER_SERVICE_DURATION = value;
 					}		
-					// if (key == 'user_service_use_evoucher') {
-						// if (value == '0') {
-							// $('#btn_evoucher_zone').attr('disabled', 'disabled');
-						// }
-					// }
+					if (key == 'user_service_use_evoucher') {
+						if (value == '0') {
+							$('#btn_evoucher_booking_zone').attr('disabled', 'disabled');
+						}
+					}
 					$('#' + key).val(value);
 					$('#' + key + ', .' + key).text(value);
 					if (key == 'user_open_hour') {
@@ -490,6 +499,7 @@ function loadServiceDetail(user_service_id) {
 					CHOOSEN_DATE = $(this).attr('value');
 					var service_remain_default = false;
 					$(this).addClass('active');
+					$('#btn_online_booking_zone').addClass('btn-choose').removeClass('btn-orange');
 					var time_html = '';
 					if ($(this).attr('day-data') == TODAY_OF_WEEK) {
 						var temp_2_array = [];
@@ -695,17 +705,37 @@ function jumbToTab(tab) {
 /*END JUMP TO TAB*/
 /*-----------------------*/
 
-/*GET BOOKING INFOMATION*/
-function getBookingInfo(){
-	if(USER_SERVICE_ID == '' || CHOOSEN_DATE == '' || CHOOSEN_DATE_STORE == '' || CHOOSEN_TIME == '' || CHOOSEN_PRICE == ''){
+/*GET ONLINE BOOKING INFOMATION*/
+function getBookingInfo() {
+	if (USER_SERVICE_ID == '' || CHOOSEN_DATE == '' || CHOOSEN_DATE_STORE == '' || CHOOSEN_TIME == '' || CHOOSEN_PRICE == '') {
 		alert('Bạn chưa chọn dịch vụ, vui lòng chọn!');
-	}else{
+	} else {
 		$('#waiting_for_booking_save').fadeIn();
-		console.log(CHOOSEN_DATE);
-		console.log(CHOOSEN_TIME);
-		console.log(CHOOSEN_PRICE);
-		console.log(USER_SERVICE_ID);
-		//$('#service_detail').modal('hide');
+		// console.log(CHOOSEN_DATE);
+		// console.log(CHOOSEN_TIME);
+		// console.log(CHOOSEN_PRICE);
+		// console.log(USER_SERVICE_ID);
+		$.ajax({
+			url : URL + 'index/getBookingInfo',
+			type : 'post',
+			//dataType : 'json',
+			data : {
+				user_service_id : USER_SERVICE_ID,
+				booking_detail_date : CHOOSEN_DATE,
+				booking_detail_time : CHOOSEN_TIME,
+				booking_quantity : 1
+			},
+			success: function(response){
+				//console.log(response);
+				$('#booking_amount').text(response);
+			},
+			complete: function(){
+				$('#waiting_for_booking_save').fadeOut(function(){
+					$('#service_detail').modal('hide');
+				});
+			}
+		});
+		
 	}
 }
-/*END GET BOOKING INFOMATION*/
+/*END GET ONLINE BOOKING INFOMATION*/

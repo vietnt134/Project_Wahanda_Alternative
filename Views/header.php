@@ -131,13 +131,25 @@
                                 <li><a href="#">&#149; FITNESS</a></li>
                             </ul>
 
-                            <form class="navbar-form navbar-right">
-                                <button type="submit" class="btn btn-sm btn-default cart-shop">
-                                    <i class="fa fa-shopping-cart"></i> GIỎ HÀNG
+                            <div class="navbar-form navbar-right">
+                                <button data-toggle="modal" data-target="#Shopping_cart_info" type="submit" class="btn btn-sm btn-default cart-shop">
+                                    <i class="fa fa-shopping-cart"></i> 
+                                    	<span>
+                                    		GIỎ HÀNG 
+                                    	</span>
+                                    	<span id="booking_amount">
+                                    		<?php Session::init(); 
+                                    			if (empty($_SESSION['booking_detail'])) {
+													echo 0;
+												} else {
+													echo count($_SESSION['booking_detail']);
+												}
+                                    		?>
+                                    	</span>
                                 </button>
                                 <button type="submit" class="btn btn-sm btn-default languages">VI</button>
                                 <button type="submit" class="btn btn-sm btn-default languages">EN</button>
-                            </form>
+                            </div>
                         </div><!-- /.navbar-collapse -->
                     </div><!-- /.container-fluid -->
                 </nav>
