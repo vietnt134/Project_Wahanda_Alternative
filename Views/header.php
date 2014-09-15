@@ -43,7 +43,7 @@
                 </div>
                 <div id="top-header-center" class="col-md-6">
                     <div class="logo">
-                        <h1 class="logo-text text-center">COMPANY NAME</h1>
+                        <h1 class="logo-text text-center"><a href="<?php echo URL; ?>">COMPANY NAME</a></h1>
                         <img class="logo-image" src=""/>
                     </div>
                 </div>         
@@ -132,20 +132,21 @@
                             </ul>
 
                             <div class="navbar-form navbar-right">
-                                <button onclick="shoppingCartDetail()" data-toggle="modal" data-target="#Shopping_cart_info" type="submit" class="btn btn-sm btn-default cart-shop">
+                            	<i id="waiting_cart_detail" class="fa fa-refresh fa-spin" style="display: none;"></i>
+                                <button onclick="shoppingCartDetail()" type="submit" class="btn btn-sm btn-default cart-shop">    
                                     <i class="fa fa-shopping-cart"></i> 
-                                    	<span>
-                                    		GIỎ HÀNG 
-                                    	</span>
-                                    	<span id="booking_amount">
-                                    		<?php Session::init(); 
-                                    			if (empty($_SESSION['booking_detail'])) {
-													echo 0;
-												} else {
-													echo count($_SESSION['booking_detail']);
-												}
-                                    		?>
-                                    	</span>
+                                	<span>
+                                		GIỎ HÀNG 
+                                	</span>
+                                	<span id="booking_amount">
+                                		<?php Session::init(); 
+                                			if (empty($_SESSION['booking_detail'])) {
+												echo 0;
+											} else {
+												echo count($_SESSION['booking_detail']);
+											}
+                                		?>
+                                	</span>
                                 </button>
                                 <button type="submit" class="btn btn-sm btn-default languages">VI</button>
                                 <button type="submit" class="btn btn-sm btn-default languages">EN</button>

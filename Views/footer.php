@@ -36,7 +36,7 @@
         </div>
         <!-- End Modal Login -->
         <!-- Modal Shopping Cart -->
-        <div id="Shopping_cart_info" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="Shopping_cart_info" class="modal fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
         	<div class="modal-dialog modal-lg">
         		<div class="modal-content">
         			<div class="modal-header" >
@@ -60,14 +60,17 @@
 				      				<td width="30%">CẮT TÓC CÔ DÂU - Spa Ngọc Trinh</td>
 				      				<td width="20%">15/9/2014 - 09:00AM</td>
 				      				<td width="19%">450000 VNĐ</td>
-				      				<td width="12%"><input class="form-control appointment_quantity" type="text" value="2" /></td>
+				      				<td width="12%"><input onkeypress="inputNumbers(event)" maxlength="1" class="form-control appointment_quantity" type="text" value="2" /></td>
 				      				<td width="19%">900000 VNĐ</td>
 				      			</tr>
 				      		</table>
 			      		</div>
 			      		<div class="row">
 				      		<div class="col-md-12">
-				      			<button id="update_cart" class="btn btn-success pull-right"><span>Cập nhật giỏ hàng</span></button>
+				      			<button onclick="saveQuantityNumber()" id="update_cart" class="btn btn-success pull-right">
+				      				<i id="waiting_for_update_cart" class="fa fa-refresh text-success fa-spin" style="display: none;"></i>
+				      				<span>Cập nhật giỏ hàng</span>
+				      			</button>
 				      		</div>
 			      		</div>
 			      		<div class="row">
@@ -80,7 +83,7 @@
 			      	</div>
 			      	<div class="modal-footer">
 			      		<button type="button" id="confirm_cart" class="btn btn-danger">Thanh toán</button>
-			      		<button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+			      		<button type="button" class="btn btn-default" data-dismiss="modal">Trở về</button>
 			      	</div>
         		</div>
         	</div>
@@ -165,7 +168,7 @@
                         </li>
                     </ul>
 
-                    <p>2014 Design by Sunstory</p>
+                    <p>2014 Design by Suntory</p>
                 </div>
                 
             </div>
@@ -176,6 +179,7 @@
     <script src="<?php echo ASSETS ?>plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
    	<script type="text/javascript" src="<?php echo ASSETS; ?>js/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="<?php echo ASSETS; ?>js/messages_vi.js"></script>
+	<script type="text/javascript" src="<?php echo ASSETS; ?>js/common.js"></script>
 	<script type="text/javascript" src="<?php echo ASSETS; ?>js/custom.js"></script>
     <script type="text/javascript">
 	  	// Active menu	
@@ -222,6 +226,7 @@
 		var CHOOSEN_DATE_STORE = '';
 		var CHOOSEN_TIME = '';
 		var CHOOSEN_PRICE = '';
+		var QUANTITY_LIST_BEFORE = '';
     </script>
 
     <?php

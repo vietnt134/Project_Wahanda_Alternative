@@ -1,5 +1,6 @@
 $(document).ready(function() {
-	loadServiceList();
+	loadTopServiceList();
+	loadNewServiceList();
 	$('#user_description_see_more').on('click', function() {
 		$('#user_description').css({
 			'white-space' : 'normal',
@@ -31,10 +32,10 @@ $(document).on('click', '#login_btn', function() {
 $('#login_modal').on('shown.bs.modal', function() {
 	$('#email_login').focus();
 });
-/*LOAD SERVICE LIST*/
-function loadServiceList() {
+/*LOAD TOP SERVICE LIST*/
+function loadTopServiceList() {
 	$.ajax({
-		url : URL + 'index/loadServiceList',
+		url : URL + 'index/loadTopServiceList',
 		type : 'post',
 		dataType : 'json',
 		success : function(response) {
@@ -77,12 +78,12 @@ function loadServiceList() {
 				html += '</div>';
 			});
 			if (response[0] != null) {
-				$('#error_loading').remove();
+				$('#error_top_ser_loading').remove();
 				$('#top_service').append(html);
 			} else {
-				$('#top_service').append('<div id="error_loading" style="color : #A1A1A1;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
+				$('#top_service').append('<div id="error_top_ser_loading" style="color : #A1A1A1;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
 				setTimeout(function() {
-					$('#error_loading').fadeIn();
+					$('#error_top_ser_loading').fadeIn();
 				}, 600);				
 			}
 		},
@@ -104,7 +105,78 @@ function loadServiceList() {
 	});
 }
 
-/*END LOAD SERVICE LIST*/
+/*END LOAD TOP SERVICE LIST*/
+/*-----------------------*/
+
+/*LOAD NEW SERVICE LIST*/
+function loadNewServiceList(){
+	$.ajax({
+		url : URL + 'index/loadNewServiceList',
+		type : 'post',
+		dataType : 'json',
+		success : function(response) {
+			//console.log(response);
+			// console.log(CHOOSEN_DATE);
+			// console.log(CHOOSEN_TIME);
+			// console.log(CHOOSEN_PRICE);
+			// console.log(USER_SERVICE_ID);
+			var html = '';
+			$.each(response, function(key, value) {
+				html += '<div class="col-sm-6 col-md-3 col-padding-5px new_service_items" style="display : none;">';
+				html += '<div class="item">';
+				html += '<input class="user_service_id" name="user_service_id" type="hidden" value="' + value.user_service_id + '"/>';
+				html += '<div class="image" class="clearfix">';
+				html += '<img class="img-responsive" alt="Responsive image" src="' + URL + 'public/assets/img/tp-hcm-thanh-dai-cong-truong-thi-cong-metro-1408499845_490x294.jpg" />';
+				html += '</div>';
+				html += '<div class="col-md-4 remove-padding">';
+				html += '<span class="rating"> <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i> </span>';
+				html += '<small class="count-rating pull-right">345 lượt đánh giá</small>';
+				html += '</div>';
+				html += '<div class="price col-md-5">';
+				html += '<span>' + value.user_service_sale_price + ' VNĐ</span>';
+				html += '</div>';
+				html += '<div class="sale-percent col-md-3">';
+				html += '<span>GIẢM' +  + Math.floor((value.user_service_full_price - value.user_service_sale_price) / value.user_service_full_price * 100) + '%</span>';
+				html += '</div>';
+				html += '<div class="clearfix"></div>';
+				html += '<p align="center" class="name">' + value.user_service_name.toUpperCase() + '</p>';
+				html += '<p title="' + value.user_service_description + '" class="description">' + value.user_service_description + '</p>';
+				html += '<div class="clearfix">';
+				html += '<button class="btn btn-xs btn-brown pull-right">';
+				html += '<i style="display:none;" class="waiting_booking_detail fa fa-refresh fa-spin"></i> BOOK NOW</button>';
+				html += '<a href="#" class="service-similar pull-left">DỊCH VỤ TƯƠNG TỰ</a>';
+				html += '</div>';
+				html += '</div>';
+				html += '</div>';
+			});
+			if (response[0] != null) {
+				$('#error_new_ser_loading').remove();
+				$('#new_service').append(html);
+			} else {
+				$('#new_service').append('<div id="error_new_ser_loading" style="color : #A1A1A1;display : none" class="text-center"><h4>Xin lỗi quý khách, hiện không có dịch vụ nào cả!</h4></div>');
+				setTimeout(function() {
+					$('#error_new_ser_loading').fadeIn();
+				}, 600);				
+			}
+		},
+		complete : function() {
+			$('#waiting_for_new_service').fadeOut(function() {
+				$('.new_service_items').fadeIn();
+			});
+
+			$('.new_service_items').on('click', function(e) {
+				if (e.target.className != 'service-similar pull-left') {
+					$(this).find('i.waiting_booking_detail').fadeIn();
+					USER_SERVICE_ID = $(this).find('.user_service_id').val();
+					//console.log(USER_SERVICE_ID);
+					loadServiceDetail(USER_SERVICE_ID);
+					//$(this).find('i.waiting_booking_detail').fadeOut();
+				}
+			});
+		}
+	});
+}
+/*END LOAD NEW SERVICE LIST*/
 /*-----------------------*/
 
 /*LOAD SERVICE DETAIL*/
@@ -322,7 +394,7 @@ function loadServiceDetail(user_service_id) {
 					$('#' + key + ', .' + key).text(value);
 					if (key == 'user_open_hour') {
 						json_user_open_hour = jQuery.parseJSON(value);
-						//console.log(json_user_open_hour);
+						console.log(json_user_open_hour);
 						$.each(json_user_open_hour, function(day, hour) {
 							separate_count++;
 							if (separate_count == '1') {
@@ -360,6 +432,29 @@ function loadServiceDetail(user_service_id) {
 								SUN_OPEN_CLOSE['open'] = hour[1];
 								SUN_OPEN_CLOSE['close'] = hour[2];
 								//console.log(SUN_OPEN_CLOSE);
+							}							
+							switch(day) {
+							case 'Mon':
+								day = 'Thứ 2';
+								break;
+							case 'Tue':
+								day = 'Thứ 3';
+								break;
+							case 'Wed':
+								day = 'Thứ 4';
+								break;
+							case 'Thu':
+								day = 'Thứ 5';
+								break;
+							case 'Fri':
+								day = 'Thứ 6';
+								break;
+							case 'Sat':
+								day = 'Thứ 7';
+								break;
+							case 'Sun':
+								day = 'Chủ Nhật';
+								break;
 							}
 							if (separate_count > 3) {
 								if (hour[0] == 1) {
@@ -759,6 +854,7 @@ function getBookingInfo() {
 
 /*LOAD SHOPPING CART*/
 function shoppingCartDetail(){
+	$('#waiting_cart_detail').fadeIn();
 	$.ajax({
 		url : URL + 'index/shoppingCartDetail',
 		type: 'post',
@@ -782,7 +878,7 @@ function shoppingCartDetail(){
 					html += '<td width="30%">' + item.user_service_name.toUpperCase() + ' - <b>' + item.user_business_name + '</b></td>';
 					html += '<td width="20%">' + item.booking_detail_date + ' - ' + item.booking_detail_time + '</td>'; 
 					html += '<td width="19%">' + item.choosen_price + ' VNĐ</td>';
-					html += '<td width="12%"><input type="text" class="form-control appointment_quantity" value="' + item.booking_quantity + '"/></td>';
+					html += '<td width="12%"><input onkeypress="inputNumbers(event)" maxlength="1" type="text" class="form-control appointment_quantity" value="' + item.booking_quantity + '"/></td>';
 					html += '<td width="19%">' + parseInt(item.choosen_price) * parseInt(item.booking_quantity) + ' VNĐ</td>';
 					html += '</tr>';
 					total_money = total_money + parseInt(item.choosen_price) * parseInt(item.booking_quantity);
@@ -796,14 +892,60 @@ function shoppingCartDetail(){
 				html = '<tr>';
 				html += '<th  style="border: none">DỊCH VỤ</th>';
 				html += '<th  style="border: none">NGÀY - GIỜ</th>';
-				html += '<th  style="border: none">GÍA</th>';
+				html += '<th  style="border: none">GIÁ</th>';
 				html += '<th  style="border: none">SỐ LƯỢNG</th>';
 				html += '<th  style="border: none">TỔNG TIỀN</th>';
 				html += '</tr>';
 				html += '<tr><td class="text-center" colspan="5"><h3><i class="fa fa-exclamation-circle"></i> Giỏ hàng của bạn đang rỗng! <i class="fa fa-frown-o"></i></h3></td></tr>';
 			}
 			$('table#table_shopping_cart').html(html); 
+		},
+		complete : function(){
+			$('#waiting_cart_detail').fadeOut(function(){
+				QUANTITY_LIST_BEFORE = getQuantityNumber();
+				$('#Shopping_cart_info').modal('show');
+			});			
 		}
 	});
 }
 /*END LOAD SHOPPING CART*/
+/*-----------------------*/
+
+/*GET QUANTITY*/
+function getQuantityNumber(){
+	var quantity_list = '';
+	$('.appointment_quantity').each(function(index){
+		quantity_list += $(this).val()+',';
+	});
+	return quantity_list;
+}
+/*END GET QUANTITY*/
+/*-----------------------*/
+
+/*SAVE QUANTITY*/
+function saveQuantityNumber() {
+	var quantity_list_after = getQuantityNumber();
+	// console.log(QUANTITY_LIST_BEFORE);
+	// console.log(quantity_list_after);
+	if(QUANTITY_LIST_BEFORE != quantity_list_after){
+		$('#waiting_for_update_cart').fadeIn();
+		$.ajax({
+			url : URL + 'index/updateShoppingCart',
+			type : 'post',
+			data : {
+				quantity_list : quantity_list_after
+			},
+			success : function(response) {
+				//console.log(response);
+				$('#booking_amount').text(response);				
+			},
+			complete : function(){
+				$('#waiting_for_update_cart').fadeOut(function(){
+					shoppingCartDetail();
+				});
+			}
+		});
+	}
+}
+/*END SAVE QUANTITY*/
+/*-----------------------*/
